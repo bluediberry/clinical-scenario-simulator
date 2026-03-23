@@ -205,6 +205,12 @@ def _render_language_toggle():
 SCENARIOS_DIR = Path(__file__).parent / "scenarios"
 
 
+_ARCHITECTURE_LABELS = {
+    "context_engineering": "Context Engineering",
+    "multi_agent": "Multi-Agent",
+}
+
+
 def _load_bundled_scenarios() -> list[dict]:
     """Load all JSON scenario files from the bundled scenarios/ folder."""
     entries: list[dict] = []
@@ -217,9 +223,12 @@ def _load_bundled_scenarios() -> list[dict]:
         except (OSError, json.JSONDecodeError):
             continue
         if isinstance(scenario, dict):
+            meta = scenario.get("metadata", {})
+            arch = meta.get("architecture", "")
+            label = _ARCHITECTURE_LABELS.get(arch, "Bundled")
             entries.append({
                 "data": scenario,
-                "source": "Bundled",
+                "source": label,
                 "title": scenario.get("title", path.stem),
                 "scenario_id": path.stem,
             })
@@ -230,8 +239,7 @@ def _format_label(entry: dict) -> str:
     """Format a scenario entry label for the selector."""
     title = entry.get("title", "Untitled")
     source = entry.get("source", "Unknown")
-    scenario_id = entry.get("scenario_id", "?")
-    return f"[{source}] {title} ({scenario_id})"
+    return f"[{source}] {title}"
 
 
 # ---------------------------------------------------------------------------
