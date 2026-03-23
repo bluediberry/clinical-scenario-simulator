@@ -8,7 +8,9 @@ import streamlit as st
 
 # ---------------------------------------------------------------------------
 # Global CSS — injected once per page via apply_theme()
-# Color tokens are defined as CSS custom properties in :root below.
+# Color palette:
+#   Graphite #353535 | Stormy Teal #3c6e71 | White #ffffff
+#   Dust Grey #d9d9d9 | Yale Blue #284b63
 # ---------------------------------------------------------------------------
 _GLOBAL_CSS = """
 <style>
@@ -17,29 +19,34 @@ _GLOBAL_CSS = """
 
 /* ── Root variables ─────────────────────────────────────────────────── */
 :root {
-    --c-primary: #1B2A4A;
-    --c-primary-light: #2563EB;
-    --c-accent-warm: #C2410C;
-    --c-accent-teal: #0F766E;
-    --c-bg: #F8F6F3;
-    --c-surface: #FFFFFF;
-    --c-surface-alt: #EFECE8;
-    --c-border: #E5E1DC;
-    --c-border-strong: #D1CBC3;
-    --c-text: #1A1A2E;
-    --c-text-muted: #6B7280;
-    --c-text-light: #9CA3AF;
+    --c-graphite: #353535;
+    --c-teal: #3c6e71;
+    --c-teal-light: #4a8a8d;
+    --c-teal-dark: #2d5557;
+    --c-yale: #284b63;
+    --c-yale-light: #3a6580;
+    --c-white: #ffffff;
+    --c-dust: #d9d9d9;
+    --c-dust-light: #f0f0f0;
+    --c-bg: #ffffff;
+    --c-surface: #ffffff;
+    --c-surface-alt: #f5f5f5;
+    --c-border: #e0e0e0;
+    --c-border-strong: #d9d9d9;
+    --c-text: #353535;
+    --c-text-muted: #6b7280;
+    --c-text-light: #9ca3af;
     --c-success: #059669;
-    --c-warning: #D97706;
-    --c-error: #DC2626;
+    --c-warning: #d97706;
+    --c-error: #dc2626;
     --font-display: 'Fraunces', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 14px;
-    --shadow-sm: 0 1px 3px rgba(27,42,74,0.06);
-    --shadow-md: 0 4px 12px rgba(27,42,74,0.08);
-    --shadow-lg: 0 8px 24px rgba(27,42,74,0.10);
+    --shadow-sm: 0 1px 3px rgba(40,75,99,0.06);
+    --shadow-md: 0 4px 12px rgba(40,75,99,0.08);
+    --shadow-lg: 0 8px 24px rgba(40,75,99,0.10);
 }
 
 /* ── Global typography ──────────────────────────────────────────────── */
@@ -49,7 +56,7 @@ html, body, [class*="css"] {
 
 h1, h2, h3, .main-header {
     font-family: var(--font-display) !important;
-    color: var(--c-primary) !important;
+    color: var(--c-yale) !important;
     letter-spacing: -0.02em;
 }
 
@@ -65,21 +72,69 @@ h1, h2, h3, .main-header {
 
 /* ── Sidebar ────────────────────────────────────────────────────────── */
 [data-testid="stSidebar"] {
-    background: var(--c-primary) !important;
+    background: var(--c-yale) !important;
     border-right: none !important;
 }
 
 [data-testid="stSidebar"] * {
-    color: #E0E7F1 !important;
+    color: #e0e7f1 !important;
 }
 
 [data-testid="stSidebar"] .stRadio label,
 [data-testid="stSidebar"] .stSelectbox label {
-    color: #B0BFD4 !important;
+    color: #b0bfd4 !important;
+}
+
+/* Vital signs rows in sidebar */
+[data-testid="stSidebar"] .vital-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.25rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: var(--radius-sm);
+}
+[data-testid="stSidebar"] .vital-label {
+    font-size: 0.78rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #b0bfd4 !important;
+}
+[data-testid="stSidebar"] .vital-value {
+    font-family: var(--font-display) !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+}
+
+/* Metrics inside sidebar (elapsed time): dark text on white card */
+[data-testid="stSidebar"] [data-testid="stMetric"] *,
+[data-testid="stSidebar"] [data-testid="stMetric"] label,
+[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: var(--c-yale) !important;
+}
+[data-testid="stSidebar"] [data-testid="stMetric"] label *,
+[data-testid="stSidebar"] [data-testid="stMetric"] label {
+    color: var(--c-text-muted) !important;
+}
+
+/* Expanders inside sidebar: dark text on white background */
+[data-testid="stSidebar"] [data-testid="stExpander"] *,
+[data-testid="stSidebar"] [data-testid="stExpander"] summary {
+    color: var(--c-text) !important;
+}
+
+/* Captions inside sidebar: brighter on dark background */
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] *,
+[data-testid="stSidebar"] [data-testid="stCaptionContainer"] {
+    color: #ffffff !important;
+    opacity: 0.85;
 }
 
 [data-testid="stSidebar"] [data-testid="stSidebarNav"] a {
-    color: #CBD5E1 !important;
+    color: #cbd5e1 !important;
     font-weight: 500;
     padding: 0.6rem 1rem;
     border-radius: var(--radius-sm);
@@ -90,7 +145,7 @@ h1, h2, h3, .main-header {
 [data-testid="stSidebar"] [data-testid="stSidebarNav"] a:hover,
 [data-testid="stSidebar"] [data-testid="stSidebarNav"] a[aria-selected="true"] {
     background: rgba(255,255,255,0.12) !important;
-    color: #FFFFFF !important;
+    color: #ffffff !important;
 }
 
 /* Home icon for main page (first nav link) */
@@ -121,44 +176,44 @@ h1, h2, h3, .main-header {
     border-radius: var(--radius-sm) !important;
     border: 1.5px solid var(--c-border-strong) !important;
     background: var(--c-surface) !important;
-    color: var(--c-primary) !important;
+    color: var(--c-graphite) !important;
     padding: 0.45rem 1.2rem !important;
     transition: all 0.15s ease;
     box-shadow: var(--shadow-sm);
 }
 
 .stButton > button:hover {
-    background: var(--c-primary) !important;
-    color: #FFFFFF !important;
-    border-color: var(--c-primary) !important;
+    background: var(--c-teal) !important;
+    color: #ffffff !important;
+    border-color: var(--c-teal) !important;
     box-shadow: var(--shadow-md);
     transform: translateY(-1px);
 }
 
 .stButton > button[kind="primary"],
 .stButton > button[data-testid="stFormSubmitButton"] {
-    background: var(--c-primary) !important;
-    color: #FFFFFF !important;
-    border-color: var(--c-primary) !important;
+    background: var(--c-teal) !important;
+    color: #ffffff !important;
+    border-color: var(--c-teal) !important;
 }
 
 .stButton > button[kind="primary"]:hover {
-    background: var(--c-primary-light) !important;
-    border-color: var(--c-primary-light) !important;
+    background: var(--c-teal-dark) !important;
+    border-color: var(--c-teal-dark) !important;
 }
 
 /* Form submit button */
 [data-testid="stFormSubmitButton"] > button {
-    background: var(--c-primary) !important;
-    color: #FFFFFF !important;
-    border-color: var(--c-primary) !important;
+    background: var(--c-teal) !important;
+    color: #ffffff !important;
+    border-color: var(--c-teal) !important;
     font-weight: 700;
     letter-spacing: 0.02em;
 }
 
 [data-testid="stFormSubmitButton"] > button:hover {
-    background: var(--c-primary-light) !important;
-    border-color: var(--c-primary-light) !important;
+    background: var(--c-teal-dark) !important;
+    border-color: var(--c-teal-dark) !important;
 }
 
 /* ── Metrics ────────────────────────────────────────────────────────── */
@@ -179,7 +234,7 @@ h1, h2, h3, .main-header {
 }
 
 [data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: var(--c-primary) !important;
+    color: var(--c-yale) !important;
     font-family: var(--font-display) !important;
     font-weight: 700 !important;
 }
@@ -201,13 +256,13 @@ h1, h2, h3, .main-header {
 }
 
 .stTabs [data-baseweb="tab"]:hover {
-    color: var(--c-primary);
-    background: rgba(27,42,74,0.03);
+    color: var(--c-yale);
+    background: rgba(40,75,99,0.03);
 }
 
 .stTabs [aria-selected="true"] {
-    color: var(--c-primary) !important;
-    border-bottom-color: var(--c-primary-light) !important;
+    color: var(--c-yale) !important;
+    border-bottom-color: var(--c-teal) !important;
 }
 
 /* ── Expanders ──────────────────────────────────────────────────────── */
@@ -221,7 +276,7 @@ h1, h2, h3, .main-header {
 
 [data-testid="stExpander"] summary {
     font-weight: 600;
-    color: var(--c-primary);
+    color: var(--c-yale);
 }
 
 /* ── Forms ───────────────────────────────────────────────────────────── */
@@ -243,8 +298,8 @@ h1, h2, h3, .main-header {
 
 .stTextInput > div > div > input:focus,
 .stTextArea > div > div > textarea:focus {
-    border-color: var(--c-primary-light) !important;
-    box-shadow: 0 0 0 3px rgba(37,99,235,0.1) !important;
+    border-color: var(--c-teal) !important;
+    box-shadow: 0 0 0 3px rgba(60,110,113,0.12) !important;
 }
 
 /* ── Select boxes ────────────────────────────────────────────────────── */
@@ -268,8 +323,8 @@ h1, h2, h3, .main-header {
 }
 
 .stTable th {
-    background: var(--c-primary) !important;
-    color: #FFFFFF !important;
+    background: var(--c-yale) !important;
+    color: #ffffff !important;
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.78rem;
@@ -293,7 +348,7 @@ h1, h2, h3, .main-header {
 }
 
 .stProgress > div > div > div {
-    background: linear-gradient(90deg, var(--c-primary), var(--c-primary-light)) !important;
+    background: linear-gradient(90deg, var(--c-teal), var(--c-teal-light)) !important;
     border-radius: 99px;
 }
 
@@ -344,7 +399,7 @@ hr {
     font-family: var(--font-display);
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--c-primary);
+    color: var(--c-yale);
     margin-bottom: 0.3rem;
     letter-spacing: -0.02em;
     line-height: 1.2;
@@ -370,49 +425,36 @@ hr {
 
 .nav-card {
     background: var(--c-surface);
-    border: 1px solid var(--c-border);
+    border: 1.5px solid var(--c-border);
     border-radius: var(--radius-lg);
-    padding: 1.6rem;
+    padding: 1.6rem 1.6rem 1rem;
     height: 100%;
-    transition: all 0.2s ease;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-shadow: var(--shadow-sm);
-    position: relative;
-    overflow: hidden;
-}
-
-.nav-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--c-primary), var(--c-primary-light));
-    opacity: 0;
-    transition: opacity 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-card:hover {
-    border-color: var(--c-primary-light);
+    border-color: var(--c-teal);
     box-shadow: var(--shadow-md);
-    transform: translateY(-2px);
 }
 
-.nav-card:hover::before {
-    opacity: 1;
-}
-
-.nav-card-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.8rem;
-    display: block;
+.nav-card-number {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--c-teal);
+    margin-bottom: 0.6rem;
+    opacity: 0.5;
 }
 
 .nav-card-title {
     font-family: var(--font-display);
     font-size: 1.15rem;
     font-weight: 700;
-    color: var(--c-primary);
+    color: var(--c-yale);
     margin-bottom: 0.4rem;
 }
 
@@ -420,6 +462,7 @@ hr {
     font-size: 0.88rem;
     color: var(--c-text-muted);
     line-height: 1.5;
+    flex: 1;
 }
 
 .stat-pill {
@@ -432,7 +475,7 @@ hr {
     padding: 0.35rem 0.9rem;
     font-size: 0.82rem;
     font-weight: 600;
-    color: var(--c-primary);
+    color: var(--c-yale);
 }
 
 .stat-pill-value {
@@ -442,8 +485,8 @@ hr {
 }
 
 .config-banner {
-    background: linear-gradient(135deg, var(--c-primary), #2D4470);
-    color: #FFFFFF;
+    background: linear-gradient(135deg, var(--c-yale), var(--c-teal-dark));
+    color: #ffffff;
     padding: 1.2rem 1.6rem;
     border-radius: var(--radius-lg);
     display: flex;
@@ -483,7 +526,7 @@ hr {
     font-family: var(--font-display);
     font-size: 0.95rem;
     font-weight: 700;
-    color: var(--c-primary);
+    color: var(--c-yale);
     padding-bottom: 0.4rem;
     border-bottom: 2px solid var(--c-border);
     margin: 1.2rem 0 0.8rem 0;
@@ -510,27 +553,27 @@ hr {
     transition: all 0.15s;
 }
 .sim-phase-indicator .phase.active {
-    background: var(--c-primary);
-    color: #FFFFFF;
-    border-color: var(--c-primary);
+    background: var(--c-teal);
+    color: #ffffff;
+    border-color: var(--c-teal);
 }
 .sim-phase-indicator .phase.done {
     background: var(--c-success);
-    color: #FFFFFF;
+    color: #ffffff;
     border-color: var(--c-success);
 }
 .sim-phase-indicator .sep {
     color: var(--c-border-strong);
 }
 .sim-action-hit-critical {
-    background: #F0FDF4;
+    background: #f0fdf4;
     border-left: 4px solid var(--c-success);
     padding: 0.5rem 0.8rem;
     border-radius: var(--radius-sm);
     margin-bottom: 0.4rem;
 }
 .sim-action-missed-critical {
-    background: #FEF2F2;
+    background: #fef2f2;
     border-left: 4px solid var(--c-error);
     padding: 0.5rem 0.8rem;
     border-radius: var(--radius-sm);
@@ -548,7 +591,7 @@ hr {
     font-family: var(--font-display);
     font-size: 2.4rem;
     font-weight: 700;
-    color: var(--c-primary);
+    color: var(--c-yale);
     line-height: 1.1;
 }
 .sim-score-card .score-label {
@@ -563,8 +606,8 @@ hr {
 .sim-score-card.warning { border-top: 4px solid var(--c-warning); }
 .sim-score-card.danger  { border-top: 4px solid var(--c-error); }
 .sim-dp-header {
-    background: linear-gradient(135deg, var(--c-primary), #2D4470);
-    color: #FFFFFF;
+    background: linear-gradient(135deg, var(--c-yale), var(--c-teal-dark));
+    color: #ffffff;
     padding: 1rem 1.4rem;
     border-radius: var(--radius-md);
     margin-bottom: 1rem;
@@ -631,7 +674,7 @@ def nav_card(icon: str, title: str, description: str) -> None:
     """Render the HTML part of a navigation card. Place a st.button after this."""
     st.markdown(
         f'<div class="nav-card">'
-        f'<span class="nav-card-icon">{icon}</span>'
+        f'<span class="nav-card-number">{icon}</span>'
         f'<div class="nav-card-title">{title}</div>'
         f'<div class="nav-card-desc">{description}</div>'
         f'</div>',

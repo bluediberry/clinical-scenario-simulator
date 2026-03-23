@@ -4,7 +4,6 @@ from html import escape as _esc
 
 import streamlit as st
 
-
 # ---------------------------------------------------------------------------
 # Utility
 # ---------------------------------------------------------------------------
@@ -29,22 +28,22 @@ def format_minutes_as_hours(minutes: int | float | None) -> str:
 
 REVIEW_CSS = """
 <style>
-    .badge-critical { background: #C2410C; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
-    .badge-supportive { background: #2563EB; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
+    .badge-critical { background: #284b63; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
+    .badge-supportive { background: #3c6e71; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
     .badge-optional { background: #6B7280; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
-    .badge-positive { background: #C2410C; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; }
-    .badge-negative { background: #0F766E; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; }
+    .badge-confirmatory { background: #284b63; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; }
+    .badge-exclusionary { background: #dc2626; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; }
     .badge-noncontrib { background: #9CA3AF; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; }
     .badge-commission { background: #D97706; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; }
     .badge-omission { background: #7C3AED; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; }
-    .badge-duration { background: #1B2A4A; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.72rem; }
+    .badge-duration { background: #353535; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.72rem; }
     .badge-branch-trigger { background: #DB2777; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.72rem; font-weight: 700; }
-    .time-window-alert { background: #FFFBEB; padding: 1rem 1.2rem; border-radius: 10px; border-left: 4px solid #D97706; margin: 0.5rem 0; }
-    .key-learning-card { background: #F0FDF4; padding: 1rem 1.2rem; border-radius: 10px; border-left: 4px solid #059669; margin: 0.5rem 0; }
-    .vital-signs-card { background: #EFF6FF; padding: 0.8rem; border-radius: 10px; border: 1px solid #BFDBFE; margin: 0.5rem 0; }
-    .action-hint-critical { border-left: 3px solid #C2410C; padding-left: 0.6rem; margin-bottom: 0.15rem; }
-    .action-hint-supportive { border-left: 3px solid #2563EB; padding-left: 0.6rem; margin-bottom: 0.15rem; }
-    .action-hint-optional { border-left: 3px solid #D1D5DB; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .time-window-alert { background: #FFFBEB; padding: 1rem 1.2rem; border-radius: 10px; margin: 0.5rem 0; }
+    .key-learning-card { background: #f0fdf4; padding: 1rem 1.2rem; border-radius: 10px; margin: 0.5rem 0; }
+    .vital-signs-card { background: #f0f7f7; padding: 0.8rem; border-radius: 10px; border: 1px solid #b8d4d5; margin: 0.5rem 0; }
+    .action-hint-critical { border-left: 3px solid #284b63; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .action-hint-supportive { border-left: 3px solid #3c6e71; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .action-hint-optional { border-left: 3px solid #d9d9d9; padding-left: 0.6rem; margin-bottom: 0.15rem; }
     .citation-inline { font-size: 0.78rem; color: #6B7280; font-style: italic; margin-top: 2px; }
 </style>
 """
@@ -56,10 +55,13 @@ _REQUIREMENT_MAP = {
 }
 
 _RELEVANCE_MAP = {
-    "positive": "badge-positive",
-    "negative": "badge-negative",
+    "confirmatory": "badge-confirmatory",
+    "exclusionary": "badge-exclusionary",
     "non contributory": "badge-noncontrib",
     "non_contributory": "badge-noncontrib",
+    # Backward compat for old scenario files
+    "positive": "badge-confirmatory",
+    "negative": "badge-exclusionary",
 }
 
 
@@ -122,17 +124,24 @@ def render_vital_signs(vital_signs: dict) -> None:
         st.caption("No vital signs recorded")
         return
 
-    cols_per_row = 4
-    for row_start in range(0, len(present), cols_per_row):
-        row_items = present[row_start:row_start + cols_per_row]
-        cols = st.columns(cols_per_row)
-        for col, (label, value) in zip(cols, row_items, strict=False):
-            with col:
-                st.metric(label, value)
+    for label, value in present:
+        st.markdown(
+            f'<div class="vital-row">'
+            f'<span class="vital-label">{_esc(label)}</span>'
+            f'<span class="vital-value">{_esc(str(value))}</span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
 
     rhythm = vital_signs.get("cardiac_rhythm")
     if rhythm:
-        st.markdown(f"**Cardiac Rhythm:** {rhythm}")
+        st.markdown(
+            f'<div class="vital-row">'
+            f'<span class="vital-label">Cardiac Rhythm</span>'
+            f'<span class="vital-value">{_esc(str(rhythm))}</span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
 
 
 def build_action_index(scenario: dict) -> dict:
@@ -306,6 +315,12 @@ def render_action_card_interactive(
         rel_badge = get_relevance_badge(action.get("finding_relevance", "non contributory"))
         dur_badge_full = get_duration_badge(action)
 
+        branch_badge = ""
+        branch_trigger = action.get("branch_trigger")
+        if action.get("is_branch_trigger") and branch_trigger:
+            branch_id = _esc(str(branch_trigger.get("branch_id", "?")))
+            branch_badge = f' <span class="badge-branch-trigger">Branch {branch_id}</span>'
+
         if is_critical:
             css_class = "sim-action-hit-critical" if selected else "sim-action-missed-critical"
         else:
@@ -313,7 +328,7 @@ def render_action_card_interactive(
 
         finding = _esc(action.get("finding", "N/A"))
         rationale = _esc(action.get("rationale", ""))
-        parts = [f"{req_badge} {rel_badge}{dur_badge_full}", f"<b>Finding:</b> {finding}"]
+        parts = [f"{req_badge} {rel_badge}{dur_badge_full}{branch_badge}", f"<b>Finding:</b> {finding}"]
         if rationale:
             parts.append(f'<span style="font-size:0.85rem;color:#6B7280;">Rationale: {rationale}</span>')
         # Citation
