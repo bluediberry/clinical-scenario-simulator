@@ -42,6 +42,10 @@ REVIEW_CSS = """
     .time-window-alert { background: #FFFBEB; padding: 1rem 1.2rem; border-radius: 10px; border-left: 4px solid #D97706; margin: 0.5rem 0; }
     .key-learning-card { background: #F0FDF4; padding: 1rem 1.2rem; border-radius: 10px; border-left: 4px solid #059669; margin: 0.5rem 0; }
     .vital-signs-card { background: #EFF6FF; padding: 0.8rem; border-radius: 10px; border: 1px solid #BFDBFE; margin: 0.5rem 0; }
+    .action-hint-critical { border-left: 3px solid #C2410C; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .action-hint-supportive { border-left: 3px solid #2563EB; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .action-hint-optional { border-left: 3px solid #D1D5DB; padding-left: 0.6rem; margin-bottom: 0.15rem; }
+    .citation-inline { font-size: 0.78rem; color: #6B7280; font-style: italic; margin-top: 2px; }
 </style>
 """
 
@@ -244,6 +248,28 @@ def compute_action_duration(action: dict) -> float:
     return 0.0
 
 
+def _render_citation_inline(citation) -> str:
+    """Return HTML string for an inline citation display."""
+    if not citation:
+        return ""
+    if isinstance(citation, str):
+        return f'<div class="citation-inline">Citation: {_esc(citation)}</div>'
+    if isinstance(citation, list):
+        labels = []
+        for entry in citation:
+            if isinstance(entry, dict):
+                src = entry.get("source", "")
+                sec = entry.get("section", "")
+                label = src
+                if sec:
+                    label += f", Section {sec}"
+                labels.append(label)
+            else:
+                labels.append(str(entry))
+        return f'<div class="citation-inline">Citation: {_esc("; ".join(labels))}</div>'
+    return ""
+
+
 def render_action_card_interactive(
     action: dict,
     dp_id: str,
@@ -255,6 +281,20 @@ def render_action_card_interactive(
     action_id = action.get("id", "?")
     key = f"sim_cb_{dp_id}_{action_id}"
 
+    # Determine requirement-based hint class (subtle left border before reveal)
+    req = (action.get("requirement") or "optional").lower()
+    hint_class = f"action-hint-{req}" if req in ("critical", "supportive", "optional") else "action-hint-optional"
+
+    # Duration badge shown even before submission
+    dur_badge = get_duration_badge(action)
+    dur_html = f'<span style="float:right;">{dur_badge}</span>' if dur_badge else ""
+
+    # Wrap in a hint div for the subtle border
+    if dur_html and not revealed:
+        st.markdown(f'<div class="{hint_class}">{dur_html}</div>', unsafe_allow_html=True)
+    elif not revealed:
+        st.markdown(f'<div class="{hint_class}" style="min-height:2px;"></div>', unsafe_allow_html=True)
+
     selected = st.checkbox(
         action.get("description", "Unknown action"),
         key=key,
@@ -264,7 +304,7 @@ def render_action_card_interactive(
     if revealed:
         req_badge = get_requirement_badge(action.get("requirement", "optional"))
         rel_badge = get_relevance_badge(action.get("finding_relevance", "non contributory"))
-        dur_badge = get_duration_badge(action)
+        dur_badge_full = get_duration_badge(action)
 
         if is_critical:
             css_class = "sim-action-hit-critical" if selected else "sim-action-missed-critical"
@@ -273,9 +313,13 @@ def render_action_card_interactive(
 
         finding = _esc(action.get("finding", "N/A"))
         rationale = _esc(action.get("rationale", ""))
-        parts = [f"{req_badge} {rel_badge}{dur_badge}", f"<b>Finding:</b> {finding}"]
+        parts = [f"{req_badge} {rel_badge}{dur_badge_full}", f"<b>Finding:</b> {finding}"]
         if rationale:
             parts.append(f'<span style="font-size:0.85rem;color:#6B7280;">Rationale: {rationale}</span>')
+        # Citation
+        citation_html = _render_citation_inline(action.get("citation"))
+        if citation_html:
+            parts.append(citation_html)
         inner_html = "<br>".join(parts)
 
         if css_class:
