@@ -1,0 +1,925 @@
+{
+  "title": "Diagn\u00f3stico de Cefaleia Prim\u00e1ria: Enxaqueca com Aura",
+  "domain": "Neurology",
+  "subdomain": "Diagn\u00f3stico de Cefaleia Prim\u00e1ria",
+  "target_learner": "Student",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Aplicar crit\u00e9rios de diagn\u00f3stico ICHD-3 para enxaqueca com aura",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Identificar e classificar subtipos de aura incluindo manifesta\u00e7\u00f5es visuais, sensoriais e da fala",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP2"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Diferenciar aura de enxaqueca de acidente isqu\u00e9mico transit\u00f3rio",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP1",
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Reconhecer apresenta\u00e7\u00f5es at\u00edpicas de aura que requerem investiga\u00e7\u00e3o adicional",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP3"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 35,
+  "difficulty": "Intermediate",
+  "prerequisites": [
+    "Conhecimento b\u00e1sico sobre os tipos de cefaleias prim\u00e1rias.",
+    "Capacidade de realizar um exame neurol\u00f3gico sum\u00e1rio.",
+    "Familiaridade com os sinais de alarme ('red flags') em cefaleias.",
+    "No\u00e7\u00f5es b\u00e1sicas de interpreta\u00e7\u00e3o de uma TC craneoencef\u00e1lica."
+  ],
+  "patient": {
+    "age": 28,
+    "gender": "Female",
+    "presenting_complaint": "In\u00edcio de perturba\u00e7\u00f5es visuais, seguido de parestesias na m\u00e3o direita e dificuldade em falar, com posterior instala\u00e7\u00e3o de cefaleia.",
+    "medical_history": [
+      "Sem antecedentes patol\u00f3gicos de relevo"
+    ],
+    "medications": [
+      "Contracetivo oral combinado (etinilestradiol/drospirenona)"
+    ],
+    "allergies": [
+      "Sem alergias conhecidas"
+    ],
+    "social_history": "Estudante universit\u00e1ria. Nega tabagismo. Consumo ocasional de \u00e1lcool. Vive com os pais. Nega hist\u00f3ria familiar de enxaqueca."
+  },
+  "initial_presentation": "Sofia, uma estudante universit\u00e1ria de 28 anos, chega ao Servi\u00e7o de Urg\u00eancia ansiosa, descrevendo um primeiro epis\u00f3dio de sintomas neurol\u00f3gicos. H\u00e1 cerca de 40 minutos, come\u00e7ou a ver 'luzes a piscar', seguido de 'formigueiro' na m\u00e3o direita e dificuldade em encontrar as palavras. H\u00e1 10 minutos, instalou-se uma cefaleia. A sua \u00fanica medica\u00e7\u00e3o habitual \u00e9 um contracetivo oral combinado.",
+  "interaction_prompt": "\u00c9 o m\u00e9dico respons\u00e1vel pela avalia\u00e7\u00e3o inicial desta doente no Servi\u00e7o de Urg\u00eancia. Recolha a informa\u00e7\u00e3o cl\u00ednica relevante e tome as decis\u00f5es diagn\u00f3sticas e terap\u00eauticas adequadas.",
+  "clinical_time_window": {
+    "symptom_onset_minutes_ago": 40,
+    "max_treatment_window_minutes": 270,
+    "remaining_window_minutes": 230,
+    "time_pressure_rationale": "Standard acute treatment window"
+  },
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Avalia\u00e7\u00e3o Inicial e Anamnese Detalhada",
+      "setting": "ICU",
+      "initial_state": "Sofia, 28 anos, estudante, chega ao Servi\u00e7o de Urg\u00eancia. Refere ter visto 'luzes a piscar' h\u00e1 40 minutos, seguido de 'formigueiro' na m\u00e3o direita e dificuldade em encontrar as palavras. H\u00e1 10 minutos iniciou uma cefaleia. Est\u00e1 ansiosa e \u00e9 a primeira vez que sente estes sintomas.",
+      "vital_signs": {
+        "blood_pressure": "138/88 mmHg",
+        "heart_rate": "95 bpm",
+        "respiratory_rate": "18 cpm",
+        "temperature": "36.7\u00b0C",
+        "oxygen_saturation": "99% em ar ambiente",
+        "gcs": "15 (E4V5M6)",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "Rever 'Red Flags' para cefaleia",
+          "finding": "Sinais de alarme para cefaleia secund\u00e1ria incluem: in\u00edcio s\u00fabito ou 'explosivo', primeiro ou pior epis\u00f3diode cefaleia, mudan\u00e7a de padr\u00e3o, associa\u00e7\u00e3o com febre ou sinais men\u00edngeos, d\u00e9fice neurol\u00f3gico focal (presente neste caso), in\u00edcio ap\u00f3s os 50 anos, cefaleia posicional.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "Hist\u00f3ria familiar",
+          "finding": "A doente nega hist\u00f3ria familiar conhecida de enxaqueca ou outras doen\u00e7as neurol\u00f3gicas.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Detalhes sobre o contracetivo oral",
+          "finding": "Toma um contracetivo oral combinado (COC) contendo etinilestradiol e drospirenona h\u00e1 3 anos. O uso de COC em mulheres com enxaqueca com aura est\u00e1 associado a um risco aumentado de AVC isqu\u00e9mico.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "A Sofia est\u00e1 na sala de observa\u00e7\u00e3o do SU. Encontra-se alerta, orientada, mas visivelmente preocupada com os seus sintomas. O enfermeiro solicita as suas indica\u00e7\u00f5es para a avalia\u00e7\u00e3o inicial.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Avaliar sinais vitais (PA, FC, FR, SatO2, Temp.)",
+              "finding": "PA: 138/88 mmHg, FC: 95 bpm (taquicardia sinusal), FR: 18 cpm, SatO2: 99% em ar ambiente, Temp: 36.7\u00b0C. Os sinais vitais est\u00e3o est\u00e1veis, com uma ligeira taquicardia provavelmente devida a ansiedade e dor.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A avalia\u00e7\u00e3o dos sinais vitais \u00e9 um passo fundamental na abordagem de qualquer doente no SU para identificar instabilidade hemodin\u00e2mica ou febre, que seria um sinal de alarme.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A avalia\u00e7\u00e3o dos sinais vitais \u00e9 um passo fundamental na abordagem de qualquer doente no SU para identificar instabilidade hemodin\u00e2mica ou febre, que seria um sinal de alarme.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.4",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Medir glicemia capilar",
+              "finding": "Glicemia capilar: 102 mg/dL. A normoglicemia exclui a hipoglicemia como causa dos sintomas neurol\u00f3gicos.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "A hipoglicemia \u00e9 um importante mimetizador de d\u00e9fices neurol\u00f3gicos focais e deve ser exclu\u00edda de imediato em qualquer doente com altera\u00e7\u00f5es neurol\u00f3gicas agudas.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A hipoglicemia \u00e9 um importante mimetizador de d\u00e9fices neurol\u00f3gicos focais e deve ser exclu\u00edda de imediato em qualquer doente com altera\u00e7\u00f5es neurol\u00f3gicas agudas.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.4",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Realizar exame neurol\u00f3gico sum\u00e1rio",
+              "finding": "Exame neurol\u00f3gico: Consciente, orientada no tempo e espa\u00e7o. Pares cranianos sem altera\u00e7\u00f5es, incluindo fundoscopia normal. For\u00e7a muscular (grau 5/5) e sensibilidade sim\u00e9tricas. Reflexos osteotendinosos vivos e sim\u00e9tricos. Provas cerebelosas normais. Apresenta ligeira disfasia de express\u00e3o (anomia), com dificuldade em nomear objetos comuns.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "O exame neurol\u00f3gico permite objetivar os d\u00e9fices referidos e identificar outros sinais que possam orientar o diagn\u00f3stico diferencial, sendo crucial para distinguir um d\u00e9fice focal (presente) de uma condi\u00e7\u00e3o sist\u00e9mica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Exclus\u00e3o de outras hip\u00f3teses diagn\u00f3sticas atrav\u00e9s de hist\u00f3ria cl\u00ednica, exame objectivo e meios auxiliares de diagn\u00f3stico complementares.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A4",
+              "description": "Iniciar colheita da hist\u00f3ria cl\u00ednica detalhada",
+              "finding": "A doente descreve o in\u00edcio dos sintomas visuais como 'pontos brilhantes e linhas em ziguezague' que apareceram no campo visual direito e se expandiram gradualmente ao longo de cerca de 15-20 minutos. Nega perda de vis\u00e3o. Ap\u00f3s os sintomas visuais, sentiu um formigueiro que come\u00e7ou nos dedos da m\u00e3o direita e subiu at\u00e9 ao antebra\u00e7o, durando cerca de 20 minutos. A dificuldade em falar iniciou-se de seguida. A cefaleia come\u00e7ou quando os sintomas sensitivos estavam a desaparecer.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A caracteriza\u00e7\u00e3o detalhada da cronologia e das caracter\u00edsticas dos sintomas \u00e9 essencial para diferenciar uma aura de enxaqueca (progress\u00e3o gradual, sintomas em sucess\u00e3o) de um AIT (in\u00edcio s\u00fabito, d\u00e9fices negativos).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Pelo menos um sintoma de aura se desenvolve gradualmente em \u2265 5 minutos e/ou diferentes sintomas de aura ocorrem em sucess\u00e3o em \u2265 5 minutos. Cada sintoma de aura dura \u2265 5 e \u2264 60 minutos.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.2.1",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                8,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A5",
+              "description": "Administrar aspirina 300mg por suspeita de AIT",
+              "finding": "A ordem para administrar aspirina \u00e9 inserida. Esta a\u00e7\u00e3o viola o protocolo de seguran\u00e7a para d\u00e9fices neurol\u00f3gicos agudos, que pro\u00edbe a administra\u00e7\u00e3o de antiagregantes antes da exclus\u00e3o de hemorragia por imagem. Se a doente tivesse uma hemorragia intracraniana, a aspirina agravaria o quadro.",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "A administra\u00e7\u00e3o de aspirina seria indicada na suspeita de um evento isqu\u00e9mico (AIT/AVC), mas \u00e9 prematura e incorreta antes da exclus\u00e3o de hemorragia por imagem e com uma hist\u00f3ria t\u00e3o sugestiva de enxaqueca.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Exige exclus\u00e3o de patologia intracraniana, nomeadamente com Meios Auxiliares de Diagn\u00f3stico por Imagem...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.1",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O cl\u00ednico suspeita de um evento isqu\u00e9mico agudo (AIT/AVC) devido aos d\u00e9fices neurol\u00f3gicos focais e decide iniciar terap\u00eautica antiagregante imediatamente, sem aguardar por exames de imagem."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "feedback_on_completion": "A avalia\u00e7\u00e3o inicial est\u00e1 completa. Os sinais vitais est\u00e3o est\u00e1veis, a glicemia \u00e9 normal e o exame neurol\u00f3gico objetivo confirma uma ligeira disfasia expressiva. A hist\u00f3ria inicial revela uma progress\u00e3o de sintomas que \u00e9 crucial para o diagn\u00f3stico diferencial. O pr\u00f3ximo passo \u00e9 aprofundar a caracteriza\u00e7\u00e3o destes sintomas."
+        },
+        {
+          "id": "DP2",
+          "context": "A avalia\u00e7\u00e3o inicial foi conclu\u00edda. Os sinais vitais est\u00e3o est\u00e1veis e a glicemia \u00e9 normal. O exame neurol\u00f3gico confirma uma ligeira disfasia de express\u00e3o sem outros d\u00e9fices. A anamnese inicial sugere uma sequ\u00eancia de sintomas neurol\u00f3gicos transit\u00f3rios. \u00c9 agora necess\u00e1rio aprofundar a caracteriza\u00e7\u00e3o destes sintomas para classificar o evento.",
+          "available_actions": [
+            {
+              "id": "A6",
+              "description": "Inquirir sobre as caracter\u00edsticas da aura visual",
+              "finding": "A doente confirma que os sintomas visuais eram positivos (escotomas cintilantes, espectro de fortifica\u00e7\u00e3o) e n\u00e3o negativos (perda de vis\u00e3o). A dura\u00e7\u00e3o foi de aproximadamente 20 minutos e a instala\u00e7\u00e3o foi gradual, expandindo-se pelo campo visual.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A presen\u00e7a de sintomas visuais positivos e com progress\u00e3o gradual \u00e9 altamente caracter\u00edstica de uma aura de enxaqueca, em contraste com os d\u00e9fices negativos (ex: amaurose) e de in\u00edcio s\u00fabito de um AIT.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Completamente revers\u00edveis fen\u00f3menos visuais monoculares de car\u00e1cter positivo e/ou negativo (ex. cintila\u00e7\u00f5es, escotomas ou cegueira)...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.4",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A6"
+          ],
+          "feedback_on_completion": "A caracteriza\u00e7\u00e3o detalhada da aura foi efetuada. A presen\u00e7a de sintomas visuais positivos com progress\u00e3o, marcha sensitiva e disfasia, seguidos por uma cefaleia t\u00edpica, \u00e9 altamente consistente com o diagn\u00f3stico de enxaqueca com aura. O passo seguinte \u00e9 decidir a necessidade de investiga\u00e7\u00e3o complementar."
+        }
+      ],
+      "progression_criteria": "Anamnese detalhada da aura e cefaleia conclu\u00edda."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Investiga\u00e7\u00e3o e Diagn\u00f3stico Diferencial",
+      "setting": "Servi\u00e7o de Urg\u00eancia",
+      "initial_state": "A anamnese detalhada revelou uma sequ\u00eancia de sintomas neurol\u00f3gicos transit\u00f3rios: aura visual positiva, seguida de aura sensitiva com marcha e, por fim, disfasia. A cefaleia com caracter\u00edsticas de enxaqueca iniciou-se durante a aura. Trata-se do primeiro epis\u00f3dio com esta apresenta\u00e7\u00e3o complexa.",
+      "vital_signs": {
+        "blood_pressure": "130/80 mmHg",
+        "heart_rate": "85 bpm",
+        "respiratory_rate": "16 cpm",
+        "temperature": "36.7\u00b0C",
+        "oxygen_saturation": "99% em ar ambiente",
+        "gcs": "15 (E4V5M6)",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Crit\u00e9rios ICHD-3 para Enxaqueca com Aura T\u00edpica",
+          "finding": "A. Pelo menos dois ataques. B. Aura com um ou mais sintomas revers\u00edveis (visual, sensitivo, fala/linguagem, etc.). C. Pelo menos 2 de 4 caracter\u00edsticas: 1) pelo menos um sintoma de aura espalha-se gradualmente em \u22655 min, e/ou \u22652 sintomas ocorrem em sucess\u00e3o; 2) cada sintoma individual dura 5-60 min; 3) pelo menos um sintoma \u00e9 unilateral; 4) a aura \u00e9 acompanhada ou seguida em 60 min por cefaleia. D. N\u00e3o \u00e9 melhor explicada por outro diagn\u00f3stico.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Diferen\u00e7as Aura vs. AIT",
+          "finding": "AURA: Progress\u00e3o gradual (minutos), sintomas positivos (cintila\u00e7\u00f5es, parestesias), sintomas em sucess\u00e3o, dura\u00e7\u00e3o t\u00edpica 5-60 min/sintoma. AIT: In\u00edcio s\u00fabito (segundos), d\u00e9fices negativos (perda de vis\u00e3o/for\u00e7a), todos os sintomas em simult\u00e2neo, dura\u00e7\u00e3o vari\u00e1vel.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_6",
+          "description": "Indica\u00e7\u00f5es para neuroimagem em cefaleia",
+          "finding": "A neuroimagem est\u00e1 indicada na presen\u00e7a de 'red flags', incluindo: primeira ou pior cefaleia da vida, mudan\u00e7a de padr\u00e3o, d\u00e9fice neurol\u00f3gico focal, in\u00edcio s\u00fabito/explosivo, associa\u00e7\u00e3o com febre ou sinais men\u00edngeos, ou in\u00edcio ap\u00f3s os 50 anos.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP3",
+          "context": "A hist\u00f3ria cl\u00ednica \u00e9 fortemente sugestiva de enxaqueca com aura. No entanto, por ser um primeiro epis\u00f3dio com m\u00faltiplos tipos de aura, a exclus\u00e3o de patologia secund\u00e1ria \u00e9 uma considera\u00e7\u00e3o importante. Qual o plano de investiga\u00e7\u00e3o a seguir?",
+          "available_actions": [
+            {
+              "id": "A10",
+              "description": "Requisitar TC craneoencef\u00e1lica (TC-CE) sem contraste, urgente",
+              "finding": "Relat\u00f3rio da TC-CE: Par\u00eanquima cerebral sem evid\u00eancia de hemorragia intracraniana, les\u00e3o isqu\u00e9mica aguda, ou processo expansivo. Sistema ventricular e cisternas da base de morfologia e dimens\u00f5es normais. Exame sem altera\u00e7\u00f5es agudas.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "A TC-CE sem contraste \u00e9 o exame de elei\u00e7\u00e3o na urg\u00eancia para excluir hemorragia ou outras les\u00f5es estruturais major que possam mimetizar uma aura de enxaqueca, especialmente numa primeira apresenta\u00e7\u00e3o com d\u00e9fices neurol\u00f3gicos focais.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A TC-CE sem contraste \u00e9 o exame de elei\u00e7\u00e3o na urg\u00eancia para excluir hemorragia ou outras les\u00f5es estruturais major que possam mimetizar uma aura de enxaqueca, especialmente numa primeira...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.1",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                25,
+                45
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A11",
+              "description": "Requisitar estudo anal\u00edtico (hemograma, bioqu\u00edmica, coagula\u00e7\u00e3o)",
+              "finding": "Resultados laboratoriais: Hemograma, fun\u00e7\u00e3o renal, i\u00f5es e estudo de coagula\u00e7\u00e3o dentro dos valores de refer\u00eancia. A aus\u00eancia de altera\u00e7\u00f5es refor\u00e7a a baixa probabilidade de uma causa metab\u00f3lica ou sist\u00e9mica.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "O estudo anal\u00edtico \u00e9 \u00fatil para excluir causas metab\u00f3licas ou sist\u00e9micas, embora seja menos prov\u00e1vel que explique este quadro cl\u00ednico. Faz parte da avalia\u00e7\u00e3o geral de um doente no SU com uma nova queixa neurol\u00f3gica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O estudo anal\u00edtico \u00e9 \u00fatil para excluir causas metab\u00f3licas ou sist\u00e9micas, embora seja menos prov\u00e1vel que explique este quadro cl\u00ednico.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.4",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                25
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "N\u00e3o realizar exames de imagem e assumir diagn\u00f3stico de enxaqueca",
+              "finding": "A decis\u00e3o de n\u00e3o realizar imagem \u00e9 tomada. Esta omiss\u00e3o representa um risco significativo, pois n\u00e3o exclui patologias secund\u00e1rias graves (ex: MAV, tumor, dissec\u00e7\u00e3o) que podem mimetizar uma primeira aura complexa.",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "Omitir a imagiologia num primeiro epis\u00f3dio de aura complexa \u00e9 um erro, pois n\u00e3o permite excluir causas secund\u00e1rias graves que podem mimetizar a enxaqueca.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Exige exclus\u00e3o de patologia intracraniana, nomeadamente com Meios Auxiliares de Diagn\u00f3stico por Imagem...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.1",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                2
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O cl\u00ednico considera a hist\u00f3ria t\u00e3o t\u00edpica de enxaqueca com aura que decide n\u00e3o realizar qualquer exame de imagem, assumindo a natureza prim\u00e1ria da cefaleia e evitando expor a doente a radia\u00e7\u00e3o."
+              }
+            },
+            {
+              "id": "A13",
+              "description": "Requisitar RM-CE com contraste como exame inicial",
+              "finding": "A RM-CE n\u00e3o est\u00e1 dispon\u00edvel em tempo \u00fatil no servi\u00e7o de urg\u00eancia para esta indica\u00e7\u00e3o. A sua requisi\u00e7\u00e3o atrasaria a decis\u00e3o cl\u00ednica sem oferecer vantagens sobre a TC-CE na exclus\u00e3o de hemorragia aguda, que \u00e9 a principal preocupa\u00e7\u00e3o imediata.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Embora a RM seja mais sens\u00edvel para certas patologias, a TC sem contraste \u00e9 o exame de primeira linha, mais r\u00e1pido e eficaz para a quest\u00e3o prim\u00e1ria no SU: excluir hemorragia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Embora a RM seja mais sens\u00edvel para certas patologias, a TC sem contraste \u00e9 o exame de primeira linha, mais r\u00e1pido e eficaz para a quest\u00e3o prim\u00e1ria no SU: excluir hemorragia.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "6.2.2",
+                  "location": "ichd3_headache_pt_chunk_006_benign_paroxysmal_torticollis_.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A10"
+          ],
+          "feedback_on_completion": "A decis\u00e3o de realizar uma TC-CE foi acertada. O exame excluiu patologia aguda grave como hemorragia ou um enfarte extenso. Com a imagem normal e os estudos laboratoriais sem altera\u00e7\u00f5es, o diagn\u00f3stico de cefaleia prim\u00e1ria torna-se muito mais seguro. Pode agora proceder ao diagn\u00f3stico final e orienta\u00e7\u00e3o."
+        },
+        {
+          "id": "DP4",
+          "context": "A TC craneoencef\u00e1lica n\u00e3o revelou altera\u00e7\u00f5es patol\u00f3gicas agudas e o estudo anal\u00edtico \u00e9 normal. A doente continua com cefaleia moderada. Com base em todos os dados recolhidos, qual o diagn\u00f3stico final e a orienta\u00e7\u00e3o a dar?",
+          "available_actions": [
+            {
+              "id": "A14",
+              "description": "Diagn\u00f3stico: Enxaqueca com aura t\u00edpica",
+              "finding": "A doente cumpre os crit\u00e9rios ICHD-3 para enxaqueca com aura: m\u00faltiplos sintomas de aura (visual, sensitivo, fala) totalmente revers\u00edveis; desenvolvimento gradual e em sucess\u00e3o; cada sintoma com dura\u00e7\u00e3o entre 5 a 60 minutos; cefaleia a seguir-se \u00e0 aura em <60 minutos; e exclus\u00e3o de outras causas pela TC-CE.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "Este \u00e9 o diagn\u00f3stico correto, pois a apresenta\u00e7\u00e3o cl\u00ednica \u00e9 consistente com os crit\u00e9rios de diagn\u00f3stico internacionais para enxaqueca com aura t\u00edpica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Pelo menos um sintoma de aura se desenvolve gradualmente em \u2265 5 minutos e/ou diferentes sintomas de aura ocorrem em sucess\u00e3o em \u2265 5 minutos. Cada sintoma de aura dura \u2265 5 e \u2264 60 minutos.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.2.1",
+                  "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A15",
+              "description": "Diagn\u00f3stico: Acidente Isqu\u00e9mico Transit\u00f3rio (AIT)",
+              "finding": "O diagn\u00f3stico de AIT \u00e9 registado. Esta \u00e9 uma interpreta\u00e7\u00e3o incorreta dos achados cl\u00ednicos. As caracter\u00edsticas da apresenta\u00e7\u00e3o (progress\u00e3o gradual, sintomas positivos, sucess\u00e3o de auras) s\u00e3o cl\u00e1ssicas da enxaqueca e at\u00edpicas de AIT.",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "Este diagn\u00f3stico \u00e9 incorreto. A progress\u00e3o gradual dos sintomas, a presen\u00e7a de fen\u00f3menos positivos (visuais) e a cefaleia subsequente s\u00e3o at\u00edpicos para um AIT.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Este diagn\u00f3stico \u00e9 incorreto.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.4",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O cl\u00ednico valoriza excessivamente os d\u00e9fices neurol\u00f3gicos focais e a sua natureza transit\u00f3ria, diagnosticando um Acidente Isqu\u00e9mico Transit\u00f3rio (AIT), apesar de as caracter\u00edsticas da apresenta\u00e7\u00e3o serem mais consistentes com uma aura migranosa."
+              }
+            },
+            {
+              "id": "A16",
+              "description": "Orienta: AINE, educar, aconselhar suspens\u00e3o de COC e referenciar",
+              "finding": "A doente recebe ibuprofeno 600mg com al\u00edvio significativo da cefaleia. \u00c9 tranquilizada sobre a natureza benigna do seu quadro e \u00e9-lhe explicada a enxaqueca com aura. \u00c9 firmemente aconselhada a suspender o contracetivo oral combinado (COC) devido ao risco aumentado de AVC e a discutir alternativas n\u00e3o-hormonais ou com progestag\u00e9nio isolado. \u00c9 referenciada para Consulta de Cefaleias.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A orienta\u00e7\u00e3o correta inclui o tratamento da crise aguda, a educa\u00e7\u00e3o da doente, a mitiga\u00e7\u00e3o de fatores de risco (suspens\u00e3o de COC) e a referencia\u00e7\u00e3o para uma consulta especializada para gest\u00e3o a longo prazo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A orienta\u00e7\u00e3o correta inclui o tratamento da crise aguda, a educa\u00e7\u00e3o da doente, a mitiga\u00e7\u00e3o de fatores de risco (suspens\u00e3o de COC) e a referencia\u00e7\u00e3o para uma consulta especializada para gest\u00e3o a...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "II",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A17",
+              "description": "Diagn\u00f3stico: Cefaleia n\u00e3o especificada",
+              "finding": "Este diagn\u00f3stico \u00e9 demasiado vago e representa uma oportunidade perdida. N\u00e3o reflete a riqueza dos dados cl\u00ednicos que permitem um diagn\u00f3stico espec\u00edfico de acordo com a classifica\u00e7\u00e3o internacional, o que impede uma orienta\u00e7\u00e3o terap\u00eautica e aconselhamento adequados.",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "Evitar diagn\u00f3sticos espec\u00edficos quando os crit\u00e9rios s\u00e3o preenchidos constitui uma m\u00e1 pr\u00e1tica cl\u00ednica, pois n\u00e3o orienta a gest\u00e3o futura nem o aconselhamento ao doente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Evitar diagn\u00f3sticos espec\u00edficos quando os crit\u00e9rios s\u00e3o preenchidos constitui uma m\u00e1 pr\u00e1tica cl\u00ednica, pois n\u00e3o orienta a gest\u00e3o futura nem o aconselhamento ao doente.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "1.3",
+                  "location": "ichd3_headache_pt_chunk_053_daily_persistent_headache_from.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A14",
+            "A16"
+          ],
+          "feedback_on_completion": "Diagn\u00f3stico e plano de tratamento corretos. A doente foi diagnosticada com enxaqueca com aura, tratada sintomaticamente, e recebeu educa\u00e7\u00e3o e orienta\u00e7\u00e3o cruciais, incluindo a gest\u00e3o do risco associado ao contracetivo oral. A referencia\u00e7\u00e3o para uma consulta especializada \u00e9 o passo adequado para a gest\u00e3o a longo prazo. O caso est\u00e1 conclu\u00eddo."
+        }
+      ],
+      "progression_criteria": "Diagn\u00f3stico final estabelecido e plano de orienta\u00e7\u00e3o definido."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP1",
+      "trigger_action_id": "A5",
+      "trigger_context": "O cl\u00ednico suspeita de um evento isqu\u00e9mico agudo (AIT/AVC) devido aos d\u00e9fices neurol\u00f3gicos focais e decide iniciar terap\u00eautica antiagregante imediatamente, sem aguardar por exames de imagem.",
+      "consequence_context": "A administra\u00e7\u00e3o de aspirina \u00e9 prematura. Embora neste caso a TC-CE tenha posteriormente exclu\u00eddo uma hemorragia, esta a\u00e7\u00e3o representa um erro no racioc\u00ednio diagn\u00f3stico e um risco para a seguran\u00e7a do doente. A prioridade perante um d\u00e9fice neurol\u00f3gico agudo \u00e9 a neuroimagem para diferenciar AVC isqu\u00e9mico de hemorr\u00e1gico antes de qualquer terap\u00eautica antitromb\u00f3tica.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "Foi administrada aspirina 300mg. A doente \u00e9 agora encaminhada para a Tomografia Computorizada. A hist\u00f3ria cl\u00ednica e o exame objetivo mant\u00eam-se inalterados.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Realizar TC-CE e reavaliar o caso",
+              "finding": "A TC-CE n\u00e3o revela hemorragia. \u00c9 informado de que a decis\u00e3o de administrar aspirina antes da imagem foi incorreta, apesar de n\u00e3o ter resultado em complica\u00e7\u00f5es neste caso espec\u00edfico. O cen\u00e1rio prossegue para reavaliar o diagn\u00f3stico e decidir sobre a investiga\u00e7\u00e3o.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "Este passo destaca o erro processual e a import\u00e2ncia da sequ\u00eancia correta de a\u00e7\u00f5es (imagem antes de tratamento antitromb\u00f3tico).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Exige exclus\u00e3o de patologia intracraniana, nomeadamente com Meios Auxiliares de Diagn\u00f3stico por Imagem...",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                25,
+                45
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1"
+          ],
+          "feedback_on_completion": "A TC-CE n\u00e3o mostrou hemorragia, felizmente. No entanto, o erro processual de administrar aspirina antes da imagem foi identificado. O caso retorna agora ao ponto de decis\u00e3o principal para decidir sobre a investiga\u00e7\u00e3o complementar.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP3",
+        "target_action_id": "A11",
+        "transition_context": "Ap\u00f3s a realiza\u00e7\u00e3o da TC-CE, que felizmente n\u00e3o mostrou hemorragia, a equipa reconhece o erro processual e retoma a abordagem correta, procedendo \u00e0 investiga\u00e7\u00e3o complementar."
+      }
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A12",
+      "trigger_context": "O cl\u00ednico considera a hist\u00f3ria t\u00e3o t\u00edpica de enxaqueca com aura que decide n\u00e3o realizar qualquer exame de imagem, assumindo a natureza prim\u00e1ria da cefaleia e evitando expor a doente a radia\u00e7\u00e3o.",
+      "consequence_context": "A aus\u00eancia de imagiologia num primeiro epis\u00f3dio com m\u00faltiplos e diferentes tipos de aura \u00e9 uma omiss\u00e3o clinicamente significativa. As 'red flags' que justificam a imagem incluem um primeiro epis\u00f3dio de aura e a presen\u00e7a de sintomas neurol\u00f3gicos complexos, para excluir patologia estrutural (ex: MAV, tumor) ou vascular (ex: dissec\u00e7\u00e3o, TVC) que podem mimetizar a enxaqueca.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "Decidiu-se n\u00e3o realizar exames de imagem. A doente \u00e9 medicada para a cefaleia e orientada para ter alta. No entanto, a aus\u00eancia de exclus\u00e3o de causas secund\u00e1rias numa primeira apresenta\u00e7\u00e3o complexa representa um risco.",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Concluir o cen\u00e1rio e rever o erro",
+              "finding": "A doente tem alta, mas o diagn\u00f3stico n\u00e3o foi confirmado com a exclus\u00e3o de causas secund\u00e1rias, o que representa uma falha no padr\u00e3o de cuidados. O cen\u00e1rio termina para debriefing sobre a import\u00e2ncia da imagiologia na presen\u00e7a de 'red flags'.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "Este ramo ensina a import\u00e2ncia de seguir protocolos de seguran\u00e7a para excluir patologias graves, mesmo quando o diagn\u00f3stico mais prov\u00e1vel \u00e9 benigno.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Este ramo ensina a import\u00e2ncia de seguir protocolos de seguran\u00e7a para excluir patologias graves, mesmo quando o diagn\u00f3stico mais prov\u00e1vel \u00e9 benigno.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "A sua decis\u00e3o de n\u00e3o realizar imagem, embora baseada numa forte suspeita cl\u00ednica, n\u00e3o segue as boas pr\u00e1ticas para uma primeira apresenta\u00e7\u00e3o de aura complexa. A n\u00e3o exclus\u00e3o de causas secund\u00e1rias poderia ter consequ\u00eancias graves se uma patologia subjacente estivesse presente. O cen\u00e1rio termina aqui.",
+          "outcome_type": "end"
+        }
+      ],
+      "merge_point": null
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP4",
+      "trigger_action_id": "A15",
+      "trigger_context": "O cl\u00ednico valoriza excessivamente os d\u00e9fices neurol\u00f3gicos focais e a sua natureza transit\u00f3ria, diagnosticando um Acidente Isqu\u00e9mico Transit\u00f3rio (AIT), apesar de as caracter\u00edsticas da apresenta\u00e7\u00e3o serem mais consistentes com uma aura migranosa.",
+      "consequence_context": "O diagn\u00f3stico de AIT leva a uma orienta\u00e7\u00e3o e investiga\u00e7\u00e3o subsequente incorretas. A doente seria submetida a exames desnecess\u00e1rios para estudo de fontes emb\u00f3licas e medicada com antiagrega\u00e7\u00e3o. O tratamento sintom\u00e1tico e preventivo da enxaqueca seria negligenciado, resultando em prov\u00e1vel recorr\u00eancia dos epis\u00f3dios.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "O diagn\u00f3stico de AIT foi assumido. O plano inclui alta com antiagrega\u00e7\u00e3o, e referencia\u00e7\u00e3o para consulta e exames adicionais para estudo de etiologia.",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Confirmar orienta\u00e7\u00e3o e terminar o cen\u00e1rio",
+              "finding": "A doente tem alta com um plano incorreto baseado no diagn\u00f3stico de AIT. O cen\u00e1rio termina para debriefing sobre o erro de diagn\u00f3stico e as suas implica\u00e7\u00f5es.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "Este ramo foca-se no erro de interpreta\u00e7\u00e3o dos achados da anamnese e na aplica\u00e7\u00e3o incorreta dos crit\u00e9rios de diagn\u00f3stico, levando a um plano de gest\u00e3o completamente errado.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Este ramo foca-se no erro de interpreta\u00e7\u00e3o dos achados da anamnese e na aplica\u00e7\u00e3o incorreta dos crit\u00e9rios de diagn\u00f3stico, levando a um plano de gest\u00e3o completamente errado.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "O seu diagn\u00f3stico de AIT est\u00e1 incorreto. Ignorou caracter\u00edsticas chave da aura de enxaqueca, como a progress\u00e3o gradual e a natureza positiva dos sintomas visuais. A orienta\u00e7\u00e3o proposta submete a doente a investiga\u00e7\u00f5es e tratamentos desnecess\u00e1rios para a sua condi\u00e7\u00e3o, falhando em abordar a patologia real, a enxaqueca. O cen\u00e1rio termina aqui.",
+          "outcome_type": "end"
+        }
+      ],
+      "merge_point": null
+    }
+  ],
+  "max_branch_length": 1,
+  "debriefing": [
+    {
+      "key_learning": "A progress\u00e3o gradual dos sintomas neurol\u00f3gicos e a presen\u00e7a de fen\u00f3menos positivos s\u00e3o caracter\u00edsticas chave que distinguem a aura de enxaqueca de um Acidente Isqu\u00e9mico Transit\u00f3rio (AIT).",
+      "clinical_reasoning": "O diagn\u00f3stico diferencial entre aura de enxaqueca e AIT \u00e9 crucial. A aura tipicamente desenvolve-se de forma gradual ao longo de 5 a 20 minutos e cada sintoma dura menos de 60 minutos, muitas vezes ocorrendo em sucess\u00e3o. Os sintomas visuais s\u00e3o frequentemente 'positivos' (escotomas cintilantes). Em contraste, os d\u00e9fices de um AIT s\u00e3o 'negativos' (perda de vis\u00e3o, for\u00e7a ou sensibilidade) e de in\u00edcio s\u00fabito. A presen\u00e7a de uma cefaleia com caracter\u00edsticas de enxaqueca ap\u00f3s a aura refor\u00e7a o diagn\u00f3stico.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Diagnosticar AIT perante sintomas neurol\u00f3gicos focais sem caracterizar a sua cronologia e natureza (positiva vs. negativa).",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A15"
+          },
+          "consequence": "Investiga\u00e7\u00e3o e tratamento inadequados (antiagrega\u00e7\u00e3o desnecess\u00e1ria), falhando o tratamento correto para a enxaqueca."
+        },
+        {
+          "error_type": "omission",
+          "description": "Falhar em perguntar sobre a progress\u00e3o temporal dos sintomas (in\u00edcio s\u00fabito vs. gradual).",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A4"
+          },
+          "consequence": "Perda da informa\u00e7\u00e3o mais importante para o diagn\u00f3stico diferencial entre aura e isquemia."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o questionar sobre a presen\u00e7a de sintomas positivos, como escotomas cintilantes.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A6"
+          },
+          "consequence": "Pode levar a uma interpreta\u00e7\u00e3o errada dos sintomas visuais como sendo um d\u00e9fice (ex: amaurose), favorecendo incorretamente o diagn\u00f3stico de AIT."
+        }
+      ],
+      "related_objectives": [
+        "LO3",
+        "LO1",
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A6",
+            "A7",
+            "A8"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A14",
+            "A15"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Pelo menos um sintoma de aura se desenvolve gradualmente em \u2265 5 minutos e/ou diferentes sintomas de aura ocorrem em sucess\u00e3o em \u2265 5 minutos. Cada sintoma de aura dura \u2265 5 e \u2264 60 minutos. A cefaleia que preenche os crit\u00e9rios B-D para 1.1 Enxaqueca sem aura come\u00e7a durante ou segue-se \u00e0 aura em \u2264 60 minutos.",
+          "source": "SPN/SPC Headache Treatment 2004",
+          "section": "1.2.1",
+          "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "Num primeiro epis\u00f3dio de enxaqueca com aura, especialmente com manifesta\u00e7\u00f5es complexas (m\u00faltiplos tipos de aura), a neuroimagem \u00e9 essencial para excluir causas secund\u00e1rias.",
+      "clinical_reasoning": "Apesar de a enxaqueca ser uma cefaleia prim\u00e1ria, v\u00e1rias condi\u00e7\u00f5es graves podem mimetiz\u00e1-la. As diretrizes recomendam a realiza\u00e7\u00e3o de um exame de imagem (preferencialmente TC-CE sem contraste no servi\u00e7o de urg\u00eancia) em doentes com um primeiro epis\u00f3dio de cefaleia severa ou com uma aura at\u00edpica ou complexa. Esta abordagem visa excluir patologias que requerem tratamento urgente. A decis\u00e3o de n\u00e3o realizar imagem deve ser reservada para doentes com uma longa hist\u00f3ria de ataques de enxaqueca estereotipados e sem sinais de alarme.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o requisitar um exame de imagem num primeiro epis\u00f3dio de aura complexa, assumindo que \u00e9 uma condi\u00e7\u00e3o prim\u00e1ria.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A12"
+          },
+          "consequence": "Risco de n\u00e3o diagnosticar uma condi\u00e7\u00e3o secund\u00e1ria grave (ex: hemorragia, trombose venosa) com potencial de morbilidade e mortalidade significativas."
+        },
+        {
+          "error_type": "commission",
+          "description": "Requisitar uma RM como primeira linha na urg\u00eancia, atrasando a exclus\u00e3o de hemorragia.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A13"
+          },
+          "consequence": "Atraso no diagn\u00f3stico e na tomada de decis\u00e3o. A TC sem contraste \u00e9 mais r\u00e1pida e eficaz para a quest\u00e3o urgente de excluir sangue."
+        }
+      ],
+      "related_objectives": [
+        "LO4",
+        "LO3"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A10",
+            "A12"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Exige exclus\u00e3o de patologia intracraniana, nomeadamente com Meios Auxiliares de Diagn\u00f3stico por Imagem e Pun\u00e7\u00e3o Lombar.",
+          "source": "SPN/SPC Headache Treatment 2004",
+          "section": "1.5.1",
+          "location": "spn_headache_treatment_2004_chunk_010_chronic_migraine.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "O diagn\u00f3stico de enxaqueca com aura baseia-se na aplica\u00e7\u00e3o rigorosa dos crit\u00e9rios ICHD-3, que definem a dura\u00e7\u00e3o, sucess\u00e3o e caracter\u00edsticas da aura e da cefaleia associada.",
+      "clinical_reasoning": "A Classifica\u00e7\u00e3o Internacional de Cefaleias (ICHD-3) fornece crit\u00e9rios operacionais para o diagn\u00f3stico. Para a enxaqueca com aura, \u00e9 necess\u00e1rio pelo menos um sintoma de aura totalmente revers\u00edvel. Pelo menos um sintoma deve desenvolver-se gradualmente em 5 ou mais minutos, e/ou diferentes sintomas devem ocorrer em sucess\u00e3o. Cada sintoma individual deve durar entre 5 a 60 minutos. A cefaleia deve iniciar-se durante a aura ou nos 60 minutos seguintes. A aplica\u00e7\u00e3o sistem\u00e1tica destes crit\u00e9rio permite um diagn\u00f3stico preciso.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o caracterizar completamente todos os tipos de aura apresentados pela doente (visual, sensitiva e da fala).",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A6"
+          },
+          "consequence": "Pode levar a um diagn\u00f3stico incompleto ou a uma subestima\u00e7\u00e3o da complexidade do quadro, influenciando a decis\u00e3o de investigar."
+        },
+        {
+          "error_type": "commission",
+          "description": "Considerar a dura\u00e7\u00e3o total de m\u00faltiplas auras sucessivas como um \u00fanico evento, violando o crit\u00e9rio de 5-60 minutos por sintoma.",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A14"
+          },
+          "consequence": "Pode levar a uma classifica\u00e7\u00e3o incorreta do evento como 'aura prolongada' ou a uma maior suspeita de AIT, quando na verdade se trata de auras t\u00edpicas em sucess\u00e3o."
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A6",
+            "A7",
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A14"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Pelo menos um sintoma de aura se desenvolve gradualmente em \u2265 5 minutos e/ou diferentes sintomas de aura ocorrem em sucess\u00e3o em \u2265 5 minutos. Cada sintoma de aura dura \u2265 5 e \u2264 60 minutos.",
+          "source": "SPN/SPC Headache Treatment 2004",
+          "section": "1.2.1",
+          "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "key_takeaways": [
+    "A caracteriza\u00e7\u00e3o da cronologia (in\u00edcio gradual vs. s\u00fabito) e da natureza (sintomas positivos vs. negativos) dos d\u00e9fices neurol\u00f3gicos \u00e9 fundamental para distinguir enxaqueca com aura de AIT.",
+    "Um primeiro epis\u00f3dio de aura, especialmente se for complexa (m\u00faltiplos tipos de sintomas), constitui um sinal de alarme que justifica a realiza\u00e7\u00e3o de neuroimagem para excluir causas secund\u00e1rias.",
+    "A TC craneoencef\u00e1lica sem contraste \u00e9 o exame de imagem de primeira linha no servi\u00e7o de urg\u00eancia para avaliar um d\u00e9fice neurol\u00f3gico agudo.",
+    "O diagn\u00f3stico de enxaqueca com aura deve ser feito aplicando os crit\u00e9rios formais da Classifica\u00e7\u00e3o Internacional de Cefaleias (ICHD-3).",
+    "\u00c9 mandat\u00f3rio aconselhar a suspens\u00e3o de contracetivos orais combinados em mulheres com enxaqueca com aura para reduzir o risco de AVC isqu\u00e9mico."
+  ],
+  "metadata": {
+    "scenario_id": "0c0fa5ce-34c2-481f-86c1-b1cb6a2c797e",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-03-17T10:37:10.746229",
+    "architecture": "multi_agent",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "generation_time_ms": 499397.015,
+    "token_count": {
+      "input": 161530,
+      "output": 47138,
+      "total": 208668
+    },
+    "revision_count": 0,
+    "sources_consulted": [
+      "ICHD-3 Classificacao Cefaleias (PT) ",
+      "SPN/SPC Headache Treatment 2004 "
+    ],
+    "retrieval_coverage": 1.0
+  }
+}

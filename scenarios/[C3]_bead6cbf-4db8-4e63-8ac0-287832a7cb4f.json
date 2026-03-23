@@ -1,0 +1,1647 @@
+{
+  "title": "Crise Miast\u00e9nica Aguda Precipitada por Infe\u00e7\u00e3o",
+  "domain": "Neurology",
+  "subdomain": "Gest\u00e3o de Crise Miast\u00e9nica",
+  "target_learner": "Specialist",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Reconhecer as caracter\u00edsticas cl\u00ednicas da crise miast\u00e9nica incluindo a insufici\u00eancia ventilat\u00f3ria e necessidade de ventila\u00e7\u00e3o mec\u00e2nica invasiva",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1",
+        "DP2"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Identificar fatores precipitantes da crise atrav\u00e9s da anamnese",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP5"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Requisitar exames complementares adequados para diagn\u00f3stico definitivo de miastenia gravis",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Questionar dados da anamnese relevantes para a escolha do imunomodulador adequado",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO5",
+      "description": "Determinar o imunomodulador adequado e iniciar IgIV, seguido de corticoster\u00f3ides e azatioprina",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP6",
+        "DP7"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 45,
+  "difficulty": "Advanced",
+  "prerequisites": [
+    "Conhecimento da fisiopatologia da miastenia gravis.",
+    "Familiaridade com a avalia\u00e7\u00e3o da via a\u00e9rea e suporte avan\u00e7ado de vida.",
+    "Princ\u00edpios de ventila\u00e7\u00e3o mec\u00e2nica e gest\u00e3o de doente cr\u00edtico."
+  ],
+  "patient": {
+    "age": 40,
+    "gender": "Female",
+    "presenting_complaint": "Dispneia e diplopia com agravamento r\u00e1pido nas \u00faltimas 24 horas, associado a fraqueza generalizada.",
+    "medical_history": [
+      "Infe\u00e7\u00e3o do trato urin\u00e1rio h\u00e1 1 semana",
+      "Hist\u00f3ria de 3 meses de fadiga, disfagia para s\u00f3lidos e ptose palpebral flutuante, n\u00e3o valorizada previamente."
+    ],
+    "medications": [
+      "Ciprofloxacina 500 mg bid, iniciado h\u00e1 5 dias",
+      "Sem outra medica\u00e7\u00e3o habitual."
+    ],
+    "allergies": [
+      "Sem alergias conhecidas."
+    ],
+    "social_history": "Professora do ensino b\u00e1sico. Vive com o marido. Nega h\u00e1bitos tab\u00e1gicos ou alco\u00f3licos."
+  },
+  "initial_presentation": "Mulher de 40 anos, previamente aut\u00f3noma, recorre ao Servi\u00e7o de Urg\u00eancia por dispneia de agravamento progressivo nas \u00faltimas 24 horas, associada a diplopia, disfonia e fraqueza generalizada. Refere hist\u00f3ria nos \u00faltimos 3 meses de cansa\u00e7o f\u00e1cil, dificuldade em engolir alimentos s\u00f3lidos e 'p\u00e1lpebras ca\u00eddas' ao final do dia. H\u00e1 uma semana foi-lhe diagnosticada uma infe\u00e7\u00e3o urin\u00e1ria, tendo iniciado ciprofloxacina. O marido, que a acompanha, est\u00e1 muito ansioso.",
+  "interaction_prompt": "\u00c9 o m\u00e9dico respons\u00e1vel pela avalia\u00e7\u00e3o inicial desta doente no Servi\u00e7o de Urg\u00eancia. A sua tarefa \u00e9 realizar a avalia\u00e7\u00e3o, solicitar os exames necess\u00e1rios e iniciar o tratamento adequado para estabilizar a doente.",
+  "clinical_time_window": null,
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Avalia\u00e7\u00e3o Inicial e Insufici\u00eancia Respirat\u00f3ria Iminente",
+      "setting": "Emergency Department",
+      "initial_state": "A doente encontra-se numa box de reanima\u00e7\u00e3o, visivelmente dispneica, com fala dis\u00e1rtrica e ansiosa. Apresenta ptose palpebral bilateral.",
+      "vital_signs": {
+        "blood_pressure": "145/90 mmHg",
+        "heart_rate": "120 bpm",
+        "respiratory_rate": "28 cpm",
+        "temperature": "37.6\u00b0C",
+        "oxygen_saturation": "91% em ar ambiente",
+        "gcs": "E4V4M6 = 14/15 (confusa, dis\u00e1rtrica)",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "Hist\u00f3ria m\u00e9dica completa",
+          "finding": "Doente refere 3 meses de ptose palpebral flutuante, disfagia para s\u00f3lidos, e fadiga generalizada que piora com o esfor\u00e7o e ao longo do dia. Diagnosticada com ITU h\u00e1 uma semana e medicada com ciprofloxacina.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "Medica\u00e7\u00e3o atual",
+          "finding": "Ciprofloxacina 500 mg de 12 em 12 horas, h\u00e1 5 dias. Nega outra medica\u00e7\u00e3o.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Alergias",
+          "finding": "Sem alergias medicamentosas conhecidas.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "A doente acaba de dar entrada na sala de emerg\u00eancia. A equipa de enfermagem est\u00e1 a posicion\u00e1-la no monitor.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Avaliar via a\u00e9rea, ventila\u00e7\u00e3o e circula\u00e7\u00e3o (ABC)",
+              "finding": "Via a\u00e9rea perme\u00e1vel mas com acumula\u00e7\u00e3o de secre\u00e7\u00f5es que a doente n\u00e3o consegue tossir eficazmente. Esfor\u00e7o respirat\u00f3rio aumentado com uso de m\u00fasculos acess\u00f3rios. Pulsos perif\u00e9ricos presentes, r\u00e1pidos e filiformes.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A avalia\u00e7\u00e3o ABC \u00e9 a prioridade em qualquer doente cr\u00edtico para identificar e corrigir amea\u00e7as imediatas \u00e0 vida, como a insufici\u00eancia respirat\u00f3ria iminente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A avalia\u00e7\u00e3o inicial de qualquer doente em estado cr\u00edtico deve seguir a abordagem ABC para garantir a estabiliza\u00e7\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Monitorizar sinais vitais e oximetria de pulso",
+              "finding": "PA: 145/90 mmHg, FC: 120 bpm, FR: 28 cpm, T: 37.6 \u00b0C, SpO2: 91% em ar ambiente.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A taquicardia, taquipneia e hipoxemia s\u00e3o sinais de dificuldade respirat\u00f3ria e descompensa\u00e7\u00e3o que requerem interven\u00e7\u00e3o imediata.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A monitoriza\u00e7\u00e3o cont\u00ednua dos sinais vitais \u00e9 essencial para detetar a deteriora\u00e7\u00e3o cl\u00ednica na crise miast\u00e9nica.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Avaliar glicemia capilar",
+              "finding": "Glicemia capilar: 115 mg/dL.",
+              "finding_relevance": "Negative",
+              "requirement": "Supportive",
+              "rationale": "Excluir hipoglicemia como causa de altera\u00e7\u00e3o do estado de consci\u00eancia, embora menos prov\u00e1vel neste contexto.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Excluir hipoglicemia como causa de altera\u00e7\u00e3o do estado de consci\u00eancia, embora menos prov\u00e1vel neste contexto.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A4",
+              "description": "Obter acesso venoso perif\u00e9rico",
+              "finding": "Dois acessos venosos perif\u00e9ricos de bom calibre (18G) estabelecidos.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "O acesso venoso \u00e9 fundamental para a administra\u00e7\u00e3o de fluidos e medica\u00e7\u00e3o de emerg\u00eancia, incluindo f\u00e1rmacos para sequ\u00eancia r\u00e1pida de intuba\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O acesso venoso \u00e9 fundamental para a administra\u00e7\u00e3o de fluidos e medica\u00e7\u00e3o de emerg\u00eancia, incluindo f\u00e1rmacos para sequ\u00eancia r\u00e1pida de intuba\u00e7\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                7
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2",
+            "A4"
+          ],
+          "feedback_on_completion": "A avalia\u00e7\u00e3o inicial revela uma doente em insufici\u00eancia respirat\u00f3ria aguda com hipoxemia e taquicardia. A prioridade agora \u00e9 quantificar a gravidade da fal\u00eancia neuromuscular respirat\u00f3ria e preparar a prote\u00e7\u00e3o da via a\u00e9rea."
+        },
+        {
+          "id": "DP2",
+          "context": "A doente est\u00e1 monitorizada e tem acesso venoso. A SpO2 melhorou para 95% com m\u00e1scara de oxig\u00e9nio com reservat\u00f3rio, mas mant\u00e9m esfor\u00e7o respirat\u00f3rio e incapacidade para gerir secre\u00e7\u00f5es.",
+          "available_actions": [
+            {
+              "id": "A5",
+              "description": "Medir Capacidade Vital For\u00e7ada (CVF) \u00e0 cabeceira",
+              "finding": "CVF \u00e9 de 12 mL/kg. Um valor <15-20 mL/kg indica insufici\u00eancia respirat\u00f3ria grave e risco de paragem iminente.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A CVF \u00e9 um indicador objetivo e sens\u00edvel da for\u00e7a dos m\u00fasculos respirat\u00f3rios. Valores criticamente baixos (<15-20 mL/kg) s\u00e3o uma indica\u00e7\u00e3o formal para intuba\u00e7\u00e3o eletiva para prevenir paragem respirat\u00f3ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A avalia\u00e7\u00e3o da fun\u00e7\u00e3o respirat\u00f3ria com medi\u00e7\u00f5es como a capacidade vital for\u00e7ada \u00e9 crucial para decidir a necessidade de suporte ventilat\u00f3rio.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_005_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Medir For\u00e7a Inspirat\u00f3ria Negativa (FIN) \u00e0 cabeceira",
+              "finding": "FIN \u00e9 de -18 cmH2O. Um valor pior que -20 a -30 cmH2O indica fraqueza muscular inspirat\u00f3ria grave.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A FIN avalia a for\u00e7a do diafragma. Valores criticamente baixos (piores que -20 a -30 cmH2O) s\u00e3o preditivos da necessidade de ventila\u00e7\u00e3o mec\u00e2nica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A monitoriza\u00e7\u00e3o da for\u00e7a muscular respirat\u00f3ria, incluindo a for\u00e7a inspirat\u00f3ria negativa, \u00e9 fundamental na gest\u00e3o da crise miast\u00e9nica.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_015_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A7",
+              "description": "Avaliar fun\u00e7\u00e3o bulbar (degluti\u00e7\u00e3o, voz, tosse)",
+              "finding": "Disfonia nasalada, tosse fraca e ineficaz, incapacidade para deglutir saliva, levando a acumula\u00e7\u00e3o de secre\u00e7\u00f5es na orofaringe. Alto risco de aspira\u00e7\u00e3o.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A disfun\u00e7\u00e3o bulbar grave aumenta o risco de aspira\u00e7\u00e3o e compromisso da via a\u00e9rea, refor\u00e7ando a necessidade de intuba\u00e7\u00e3o para prote\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A disfun\u00e7\u00e3o bulbar grave aumenta o risco de aspira\u00e7\u00e3o e compromisso da via a\u00e9rea, refor\u00e7ando a necessidade de intuba\u00e7\u00e3o para prote\u00e7\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A8",
+              "description": "Colher gasimetria arterial (GSA)",
+              "finding": "A colheita da GSA \u00e9 realizada. Esta a\u00e7\u00e3o atrasa a decis\u00e3o de intuba\u00e7\u00e3o. A doente desenvolve hipoxemia e bradicardia enquanto aguarda pelo resultado, necessitando de intuba\u00e7\u00e3o de emerg\u00eancia. A GSA n\u00e3o \u00e9 um pr\u00e9-requisito para intubar quando os par\u00e2metros respirat\u00f3rios (CVF/FIN) indicam fal\u00eancia iminente.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Erro de comiss\u00e3o. A GSA confirma a insufici\u00eancia respirat\u00f3ria mas n\u00e3o deve atrasar a intuba\u00e7\u00e3o quando a CVF e a FIN s\u00e3o criticamente baixas. Atrasar a prote\u00e7\u00e3o da via a\u00e9rea para aguardar resultados laboratoriais coloca a doente em risco de paragem cardiorrespirat\u00f3ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A decis\u00e3o de intubar na crise miast\u00e9nica baseia-se primariamente em par\u00e2metros cl\u00ednicos e de fun\u00e7\u00e3o pulmonar \u00e0 cabeceira, n\u00e3o devendo ser adiada por exames confirmat\u00f3rios.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B5",
+                "condition": "O utilizador opta por realizar uma gasimetria arterial antes de proteger a via a\u00e9rea, apesar dos sinais cl\u00ednicos (CVF e FIN baixas) de fal\u00eancia respirat\u00f3ria iminente."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A5",
+            "A6",
+            "A7"
+          ],
+          "feedback_on_completion": "A avalia\u00e7\u00e3o respirat\u00f3ria objetiva confirma insufici\u00eancia respirat\u00f3ria neuromuscular grave (CVF 12 mL/kg, FIN -18 cmH2O) com disfun\u00e7\u00e3o bulbar. A intuba\u00e7\u00e3o orotraqueal eletiva \u00e9 urgente para prevenir uma paragem respirat\u00f3ria. [Source: Portuguese Consensus Myasthenia Gravis]"
+        },
+        {
+          "id": "DP3",
+          "context": "A decis\u00e3o de intubar foi tomada. A equipa prepara o material para sequ\u00eancia r\u00e1pida de intuba\u00e7\u00e3o.",
+          "available_actions": [
+            {
+              "id": "A9",
+              "description": "Administrar rocur\u00f3nio em dose reduzida para MG (0.3 mg/kg)",
+              "finding": "Rocur\u00f3nio 0.3 mg/kg administrado. A doente desenvolve relaxamento muscular adequado para a intuba\u00e7\u00e3o, que \u00e9 realizada sem intercorr\u00eancias.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "Doentes com MG s\u00e3o hipersens\u00edveis a bloqueadores neuromusculares n\u00e3o-despolarizantes. \u00c9 necess\u00e1ria uma dose reduzida (50-70% da dose habitual) para evitar bloqueio prolongado. O rocur\u00f3nio \u00e9 prefer\u00edvel por ser revers\u00edvel com sugammadex.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Na crise miast\u00e9nica, a utiliza\u00e7\u00e3o de bloqueadores neuromusculares n\u00e3o despolarizantes requer ajuste de dose devido \u00e0 hipersensibilidade.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A10",
+              "description": "Confirmar disponibilidade de sugammadex",
+              "finding": "A equipa confirma que o sugammadex est\u00e1 imediatamente dispon\u00edvel para o caso de ser necess\u00e1ria a revers\u00e3o do bloqueio neuromuscular.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A disponibilidade do agente de revers\u00e3o sugammadex \u00e9 uma medida de seguran\u00e7a essencial quando se utiliza rocur\u00f3nio num doente com miastenia gravis.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A seguran\u00e7a da sequ\u00eancia r\u00e1pida de intuba\u00e7\u00e3o em doentes com miastenia gravis \u00e9 aumentada pela disponibilidade de agentes de revers\u00e3o espec\u00edficos.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                2
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A11",
+              "description": "Suspender piridostigmina",
+              "finding": "A doente n\u00e3o est\u00e1 a tomar piridostigmina (diagn\u00f3stico n\u00e3o estabelecido), pelo que a a\u00e7\u00e3o n\u00e3o \u00e9 aplic\u00e1vel. No entanto, o racioc\u00ednio \u00e9 anotado: em doentes medicados, a piridostigmina deve ser suspensa para reduzir secre\u00e7\u00f5es br\u00f4nquicas e evitar uma crise colin\u00e9rgica.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Em doentes com miastenia gravis sob tratamento, a piridostigmina \u00e9 suspensa durante a ventila\u00e7\u00e3o mec\u00e2nica para minimizar as secre\u00e7\u00f5es br\u00f4nquicas e o risco de crise colin\u00e9rgica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A gest\u00e3o da medica\u00e7\u00e3o anticolinester\u00e1sica \u00e9 uma componente importante do tratamento da crise miast\u00e9nica em doentes ventilados.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_003_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                2
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "Administrar rocur\u00f3nio (dose reduzida 50-70%) para IOT",
+              "finding": "A rocur\u00f3nio (dose reduzida 50-70%) \u00e9 administrada. Ocorre uma dura\u00e7\u00e3o de a\u00e7\u00e3o prolongada com resist\u00eancia ao f\u00e1rmaco, resultando em condi\u00e7\u00f5es de intuba\u00e7\u00e3o sub\u00f3timas e risco de bloqueio neuromuscular prolongado. Esta a\u00e7\u00e3o \u00e9 perigosa e contraindicada na miastenia gravis.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Erro de comiss\u00e3o. A succinilcolina \u00e9 contraindicada em doentes com miastenia gravis devido \u00e0 resist\u00eancia dos recetores de acetilcolina, levando a uma resposta imprevis\u00edvel e risco de bloqueio neuromuscular prolongado (Fase II).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Certos f\u00e1rmacos, incluindo bloqueadores neuromusculares despolarizantes, s\u00e3o contraindicados ou requerem extrema cautela na miastenia gravis.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O utilizador administra succinilcolina, um bloqueador neuromuscular despolarizante contraindicado na miastenia gravis, para a intuba\u00e7\u00e3o."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A9",
+            "A10"
+          ],
+          "feedback_on_completion": "A doente foi intubada com sucesso utilizando uma dose reduzida de rocur\u00f3nio, protegendo a via a\u00e9rea. A doente est\u00e1 agora ligada a um ventilador. O pr\u00f3ximo passo \u00e9 confirmar o diagn\u00f3stico e iniciar o tratamento espec\u00edfico da crise miast\u00e9nica."
+        }
+      ],
+      "progression_criteria": "A via a\u00e9rea da doente foi protegida atrav\u00e9s de intuba\u00e7\u00e3o orotraqueal e foi iniciada ventila\u00e7\u00e3o mec\u00e2nica."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Investiga\u00e7\u00e3o Diagn\u00f3stica e Tratamento Inicial",
+      "setting": "Emergency Department / Intensive Care Unit",
+      "initial_state": "A doente est\u00e1 sedada, intubada e ventilada. Encontra-se hemodinamicamente est\u00e1vel. A equipa prepara-se para a investiga\u00e7\u00e3o etiol\u00f3gica e tratamento da causa subjacente.",
+      "vital_signs": {
+        "blood_pressure": "130/80 mmHg",
+        "heart_rate": "100 bpm",
+        "respiratory_rate": "12 cpm (controlado pelo ventilador)",
+        "temperature": "37.5\u00b0C",
+        "oxygen_saturation": "98% (FiO2 0.4)",
+        "gcs": "Sedada (RASS -4)",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Rever hist\u00f3ria cl\u00ednica",
+          "finding": "Mulher de 40 anos com hist\u00f3ria de 3 meses de fadiga, disfagia e ptose. Apresenta\u00e7\u00e3o aguda com dispneia ap\u00f3s in\u00edcio de ciprofloxacina para uma ITU.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "F\u00e1rmacos que exacerbam a Miastenia Gravis",
+          "finding": "Aminoglicos\u00eddeos, macr\u00f3lidos, fluoroquinolonas, magn\u00e9sio IV, bloqueadores beta, bloqueadores dos canais de c\u00e1lcio, D-penicilamina, cloroquina.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP4",
+          "context": "Com a via a\u00e9rea segura, a prioridade \u00e9 estabelecer o diagn\u00f3stico definitivo de miastenia gravis e investigar poss\u00edveis comorbilidades associadas.",
+          "available_actions": [
+            {
+              "id": "A13",
+              "description": "Colher sangue para Ac anti-recetor da acetilcolina (AChR) e anti-MuSK",
+              "finding": "Amostras de sangue colhidas e enviadas para o laborat\u00f3rio para doseamento de anticorpos anti-AChR e anti-MuSK. Os resultados estar\u00e3o dispon\u00edveis em alguns dias.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A dete\u00e7\u00e3o de anticorpos patog\u00e9nicos (anti-AChR em 90% dos casos, anti-MuSK em 5%) \u00e9 essencial para confirmar o diagn\u00f3stico de miastenia gravis.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "A dete\u00e7\u00e3o s\u00e9rica de anticorpos patog\u00e9nicos e/ou a realiza\u00e7\u00e3o de estudos neurofisiol\u00f3gicos s\u00e3o tamb\u00e9m essenciais para o diagn\u00f3stico.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A14",
+              "description": "Realizar TC tor\u00e1cica com contraste",
+              "finding": "A TC tor\u00e1cica \u00e9 realizada e n\u00e3o revela a presen\u00e7a de timoma.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "A TC tor\u00e1cica \u00e9 mandat\u00f3ria para excluir um timoma, que est\u00e1 associado \u00e0 miastenia gravis em cerca de 10-15% dos doentes e cuja presen\u00e7a indica a necessidade de timectomia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "A timectomia est\u00e1 indicada em todos os doentes com timoma.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                30,
+                60
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A15",
+              "description": "Realizar teste de gravidez",
+              "finding": "Teste de gravidez na urina \u00e9 negativo.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "\u00c9 crucial excluir gravidez em mulheres em idade f\u00e9rtil antes de iniciar terap\u00eauticas imunossupressoras potencialmente teratog\u00e9nicas, como a azatioprina ou o micofenolato de mofetil.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. \u00c9 crucial excluir gravidez em mulheres em idade f\u00e9rtil antes de iniciar terap\u00eauticas imunossupressoras potencialmente teratog\u00e9nicas, como a azatioprina ou o micofenolato de mofetil.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_014_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A16",
+              "description": "Colher hemoculturas e urocultura",
+              "finding": "Amostras colhidas para investigar foco infecioso, dado o estado febril.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A infe\u00e7\u00e3o \u00e9 um dos precipitantes mais comuns da crise miast\u00e9nica. A identifica\u00e7\u00e3o e tratamento do agente infecioso \u00e9 uma parte fundamental da gest\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A infe\u00e7\u00e3o \u00e9 um dos precipitantes mais comuns da crise miast\u00e9nica.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A13",
+            "A14",
+            "A15"
+          ],
+          "feedback_on_completion": "A investiga\u00e7\u00e3o diagn\u00f3stica inicial foi iniciada. As amostras para os anticorpos espec\u00edficos foram colhidas, a TC tor\u00e1cica excluiu timoma e a gravidez foi afastada. O pr\u00f3ximo passo \u00e9 identificar e remover os fatores precipitantes da crise."
+        },
+        {
+          "id": "DP5",
+          "context": "A hist\u00f3ria cl\u00ednica revela que a doente iniciou ciprofloxacina h\u00e1 5 dias para uma infe\u00e7\u00e3o urin\u00e1ria, coincidindo com o agravamento cl\u00ednico.",
+          "available_actions": [
+            {
+              "id": "A17",
+              "description": "Suspender a ciprofloxacina",
+              "finding": "A ciprofloxacina \u00e9 imediatamente suspensa. A equipa reconhece que as fluoroquinolonas s\u00e3o um conhecido fator precipitante de exacerba\u00e7\u00f5es miast\u00e9nicas.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "As fluoroquinolonas podem exacerbar a fraqueza na miastenia gravis ao interferirem com a transmiss\u00e3o neuromuscular. A sua suspens\u00e3o \u00e9 um passo cr\u00edtico na gest\u00e3o da crise.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. As fluoroquinolonas podem exacerbar a fraqueza na miastenia gravis ao interferirem com a transmiss\u00e3o neuromuscular.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A18",
+              "description": "Iniciar antibi\u00f3tico seguro para tratar a ITU (e.g., Cefuroxima)",
+              "finding": "Iniciada Cefuroxima intravenosa para tratar a infe\u00e7\u00e3o do trato urin\u00e1rio, um antibi\u00f3tico considerado seguro em doentes com miastenia gravis.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "\u00c9 essencial tratar a infe\u00e7\u00e3o subjacente, que \u00e9 um precipitante da crise, mas utilizando um antibi\u00f3tico que n\u00e3o agrave a miastenia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. \u00c9 essencial tratar a infe\u00e7\u00e3o subjacente, que \u00e9 um precipitante da crise, mas utilizando um antibi\u00f3tico que n\u00e3o agrave a miastenia.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A19",
+              "description": "Administrar um antibi\u00f3tico macr\u00f3lido (e.g., Azitromicina)",
+              "finding": "A azitromicina \u00e9 administrada. Esta a\u00e7\u00e3o agrava a fraqueza muscular, prolongando a necessidade de ventila\u00e7\u00e3o mec\u00e2nica. Os macr\u00f3lidos, tal como as fluoroquinolonas, s\u00e3o conhecidos por exacerbar a miastenia gravis.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Erro de comiss\u00e3o. A escolha de outro antibi\u00f3tico inseguro (macr\u00f3lido) perpetua o fator precipitante da crise, contrariando o objetivo terap\u00eautico.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Erro de comiss\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B4",
+                "condition": "O utilizador substitui a ciprofloxacina (uma fluoroquinolona) por azitromicina (um macr\u00f3lido), outro antibi\u00f3tico conhecido por exacerbar a miastenia gravis."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A17",
+            "A18"
+          ],
+          "feedback_on_completion": "O fator precipitante farmacol\u00f3gico (ciprofloxacina) foi corretamente identificado e suspenso, e foi iniciado um tratamento antibi\u00f3tico alternativo e seguro. O pr\u00f3ximo passo \u00e9 iniciar a terap\u00eautica imunomoduladora para tratar a crise."
+        },
+        {
+          "id": "DP6",
+          "context": "A doente est\u00e1 est\u00e1vel na UCI, o fator precipitante foi removido e a infe\u00e7\u00e3o est\u00e1 a ser tratada. \u00c9 tempo de decidir a terap\u00eautica imunomoduladora de primeira linha para a crise miast\u00e9nica.",
+          "available_actions": [
+            {
+              "id": "A20",
+              "description": "Iniciar Imunoglobulina Intravenosa (IgIV)",
+              "finding": "Iniciada perfus\u00e3o de IgIV na dose de 2 g/kg, dividida por 5 dias (0.4 g/kg/dia).",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A IgIV (ou a plasmaferese) \u00e9 o tratamento de primeira linha para a crise miast\u00e9nica, promovendo uma melhoria cl\u00ednica r\u00e1pida.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A IgIV (ou a plasmaferese) \u00e9 o tratamento de primeira linha para a crise miast\u00e9nica, promovendo uma melhoria cl\u00ednica r\u00e1pida.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A21",
+              "description": "Administrar sulfato de magn\u00e9sio IV",
+              "finding": "O sulfato de magn\u00e9sio \u00e9 administrado. Esta a\u00e7\u00e3o causa um agravamento r\u00e1pido e profundo da fraqueza muscular, resultando em bloqueio neuromuscular completo e dificuldade em ventilar a doente. O magn\u00e9sio IV \u00e9 contraindicado na miastenia gravis.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Erro de comiss\u00e3o grave. O magn\u00e9sio intravenoso inibe a liberta\u00e7\u00e3o de acetilcolina na jun\u00e7\u00e3o neuromuscular e pode precipitar ou agravar drasticamente a crise miast\u00e9nica, podendo levar a depress\u00e3o respirat\u00f3ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Erro de comiss\u00e3o grave.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O utilizador administra sulfato de magn\u00e9sio, um f\u00e1rmaco que agrava significativamente a fraqueza na miastenia gravis ao bloquear a transmiss\u00e3o neuromuscular."
+              }
+            },
+            {
+              "id": "A22",
+              "description": "Iniciar pulsoterapia com metilprednisolona ANTES da IgIV",
+              "finding": "A pulsoterapia com corticosteroides \u00e9 iniciada. Nas 48-72 horas seguintes, a doente apresenta um agravamento paradoxal da fraqueza muscular, tornando o desmame ventilat\u00f3rio mais dif\u00edcil. Esta \u00e9 uma complica\u00e7\u00e3o conhecida do in\u00edcio de altas doses de corticoides na miastenia gravis.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Erro de comiss\u00e3o. Os corticosteroides em alta dose podem causar um agravamento transit\u00f3rio da fraqueza miast\u00e9nica. Por seguran\u00e7a, devem ser iniciados apenas ap\u00f3s se observar uma melhoria cl\u00ednica com a IgIV ou plasmaferese.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Erro de comiss\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_009_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O utilizador inicia corticosteroides em alta dose antes da terap\u00eautica de primeira linha (IgIV/Plasmaferese), arriscando um agravamento paradoxal da fraqueza."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A20"
+          ],
+          "feedback_on_completion": "A terap\u00eautica com IgIV foi corretamente iniciada. Espera-se uma melhoria cl\u00ednica nos pr\u00f3ximos dias, o que permitir\u00e1 planear o desmame ventilat\u00f3rio e a terap\u00eautica de manuten\u00e7\u00e3o a longo prazo."
+        }
+      ],
+      "progression_criteria": "Diagn\u00f3stico de miastenia gravis estabelecido, fatores precipitantes removidos e tratamento agudo com IgIV iniciado."
+    },
+    {
+      "id": "S3",
+      "name": "Stage 3: Gest\u00e3o em UCI e Planeamento a Longo Prazo",
+      "setting": "Intensive Care Unit",
+      "initial_state": "A doente completou 5 dias de tratamento com IgIV. Mostra sinais de melhoria da for\u00e7a muscular, com movimentos espont\u00e2neos contra a gravidade e tentativas de respira\u00e7\u00e3o espont\u00e2nea no ventilador.",
+      "vital_signs": {
+        "blood_pressure": "125/75 mmHg",
+        "heart_rate": "85 bpm",
+        "respiratory_rate": "12 cpm (controlado pelo ventilador, com trigger do doente)",
+        "temperature": "36.8\u00b0C",
+        "oxygen_saturation": "99% (FiO2 0.3)",
+        "gcs": "Seda\u00e7\u00e3o desligada, a acordar (RASS -1)",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_6",
+          "description": "Resultados dos anticorpos",
+          "finding": "Resultado laboratorial (Dia 7): Anticorpos anti-recetor da acetilcolina (AChR) fortemente positivos. Anti-MuSK negativos.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_7",
+          "description": "Resultados das culturas",
+          "finding": "Urocultura positiva para E. coli sens\u00edvel a Cefuroxima. Hemoculturas negativas.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP7",
+          "context": "Ap\u00f3s o tratamento agudo, \u00e9 necess\u00e1rio planear a terap\u00eautica imunossupressora de manuten\u00e7\u00e3o para prevenir futuras crises e controlar a doen\u00e7a a longo prazo.",
+          "available_actions": [
+            {
+              "id": "A23",
+              "description": "Iniciar prednisolona oral em dose baixa e com aumento gradual",
+              "finding": "Iniciada prednisolona 20 mg/dia, com plano de aumento gradual. Esta abordagem minimiza o risco de agravamento induzido por corticoides.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "Os corticosteroides s\u00e3o um pilar do tratamento de manuten\u00e7\u00e3o. O in\u00edcio ap\u00f3s a estabiliza\u00e7\u00e3o com IgIV e com titula\u00e7\u00e3o lenta \u00e9 a estrat\u00e9gia mais segura.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "O tratamento de manuten\u00e7\u00e3o baseia-se tradicionalmente na corticoterapia e em imunossupressores n\u00e3o esteroides.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A24",
+              "description": "Discutir in\u00edcio de imunossupressor poupador de corticoides (Azatioprina)",
+              "finding": "Plano para iniciar Azatioprina 50 mg/dia ap\u00f3s avalia\u00e7\u00e3o da atividade da enzima TPMT. A azatioprina permitir\u00e1 reduzir a dose de corticoide a longo prazo.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "Os imunossupressores n\u00e3o esteroides como a azatioprina s\u00e3o usados como agentes poupadores de corticoides, embora o seu efeito demore v\u00e1rios meses a manifestar-se.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "O tratamento de manuten\u00e7\u00e3o baseia-se tradicionalmente na corticoterapia e em imunossupressores n\u00e3o esteroides.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A25",
+              "description": "Iniciar profilaxia de Trombose Venosa Profunda (TVP)",
+              "finding": "Iniciada heparina de baixo peso molecular em dose profil\u00e1tica, dado o risco de TVP associado \u00e0 imobiliza\u00e7\u00e3o.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A profilaxia de TVP \u00e9 uma medida de cuidado padr\u00e3o para doentes cr\u00edticos imobilizados para prevenir tromboembolismo venoso.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A gest\u00e3o de doentes em crise miast\u00e9nica inclui medidas de suporte geral, como a profilaxia de tromboembolismo.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A23",
+            "A24"
+          ],
+          "feedback_on_completion": "O plano terap\u00eautico de manuten\u00e7\u00e3o foi estabelecido, combinando corticosteroides e um agente poupador de corticoides. A doente est\u00e1 a melhorar e o pr\u00f3ximo passo \u00e9 avaliar a possibilidade de desmame ventilat\u00f3rio."
+        },
+        {
+          "id": "DP8",
+          "context": "A doente est\u00e1 clinicamente a melhorar, acordada, colaborante e com for\u00e7a muscular crescente. A equipa considera o desmame da ventila\u00e7\u00e3o mec\u00e2nica.",
+          "available_actions": [
+            {
+              "id": "A26",
+              "description": "Avaliar crit\u00e9rios de desmame ventilat\u00f3rio (CVF, FIN)",
+              "finding": "Repeti\u00e7\u00e3o das medi\u00e7\u00f5es \u00e0 cabeceira mostra CVF > 20 mL/kg e FIN > -30 cmH2O. A doente cumpre os crit\u00e9rios para teste de respira\u00e7\u00e3o espont\u00e2nea.",
+              "finding_relevance": "Positive",
+              "requirement": "Supportive",
+              "rationale": "A decis\u00e3o de extubar deve ser baseada em crit\u00e9rios objetivos de melhoria da for\u00e7a muscular respirat\u00f3ria para minimizar o risco de fal\u00eancia da extuba\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O desmame ventilat\u00f3rio na crise miast\u00e9nica deve ser guiado pela recupera\u00e7\u00e3o da fun\u00e7\u00e3o muscular respirat\u00f3ria.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A27",
+              "description": "Avaliar a degluti\u00e7\u00e3o antes de reiniciar dieta oral (p\u00f3s-extuba\u00e7\u00e3o)",
+              "finding": "Ap\u00f3s extuba\u00e7\u00e3o bem-sucedida, \u00e9 realizado um teste de degluti\u00e7\u00e3o \u00e0 cabeceira que confirma a aus\u00eancia de disfagia significativa. A dieta oral \u00e9 reiniciada com seguran\u00e7a.",
+              "finding_relevance": "Negative",
+              "requirement": "Supportive",
+              "rationale": "A avalia\u00e7\u00e3o formal da degluti\u00e7\u00e3o \u00e9 crucial ap\u00f3s a extuba\u00e7\u00e3o para prevenir pneumonia de aspira\u00e7\u00e3o, uma complica\u00e7\u00e3o comum em doentes com envolvimento bulbar.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A gest\u00e3o da disfun\u00e7\u00e3o bulbar \u00e9 um aspeto central no tratamento de doentes com miastenia gravis.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                25
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A28",
+              "description": "Planear reintrodu\u00e7\u00e3o de piridostigmina oral",
+              "finding": "Planeada a reintrodu\u00e7\u00e3o de piridostigmina 60 mg tid ap\u00f3s a extuba\u00e7\u00e3o e confirma\u00e7\u00e3o de degluti\u00e7\u00e3o segura, para controlo sintom\u00e1tico.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A piridostigmina melhora a for\u00e7a muscular e \u00e9 reiniciada assim que a degluti\u00e7\u00e3o \u00e9 considerada segura, para facilitar a recupera\u00e7\u00e3o funcional.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A piridostigmina melhora a for\u00e7a muscular e \u00e9 reiniciada assim que a degluti\u00e7\u00e3o \u00e9 considerada segura, para facilitar a recupera\u00e7\u00e3o funcional.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_003_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A29",
+              "description": "Registar alerta de f\u00e1rmacos a evitar no processo cl\u00ednico",
+              "finding": "Um alerta proeminente \u00e9 adicionado ao processo cl\u00ednico eletr\u00f3nico e em papel, listando os f\u00e1rmacos contraindicados ou a usar com precau\u00e7\u00e3o (fluoroquinolonas, macr\u00f3lidos, aminoglicos\u00eddeos, magn\u00e9sio IV).",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A comunica\u00e7\u00e3o eficaz e o registo de alertas de seguran\u00e7a s\u00e3o essenciais para prevenir a exposi\u00e7\u00e3o futura a f\u00e1rmacos que possam precipitar uma nova crise.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A comunica\u00e7\u00e3o eficaz e o registo de alertas de seguran\u00e7a s\u00e3o essenciais para prevenir a exposi\u00e7\u00e3o futura a f\u00e1rmacos que possam precipitar uma nova crise.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A29"
+          ],
+          "feedback_on_completion": "A doente foi extubada com sucesso e a terap\u00eautica de manuten\u00e7\u00e3o foi otimizada. Foi criado um alerta de seguran\u00e7a farmacol\u00f3gica. O caso foi gerido de forma abrangente, desde a emerg\u00eancia aguda at\u00e9 ao planeamento de cuidados a longo prazo, resultando numa boa recupera\u00e7\u00e3o."
+        }
+      ],
+      "progression_criteria": "Doente extubada com sucesso e com plano terap\u00eautico de manuten\u00e7\u00e3o estabelecido."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP6",
+      "trigger_action_id": "A21",
+      "trigger_context": "O utilizador administra sulfato de magn\u00e9sio, um f\u00e1rmaco que agrava significativamente a fraqueza na miastenia gravis ao bloquear a transmiss\u00e3o neuromuscular.",
+      "consequence_context": "A administra\u00e7\u00e3o de magn\u00e9sio causa um agravamento catastr\u00f3fico da fraqueza muscular, resultando em bloqueio neuromuscular completo. A doente torna-se imposs\u00edvel de ventilar devido ao aumento das press\u00f5es na via a\u00e9rea e \u00e0 perda de todo o t\u00f3nus muscular.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "Imediatamente ap\u00f3s a administra\u00e7\u00e3o de magn\u00e9sio, os alarmes do ventilador disparam por press\u00e3o elevada. A doente est\u00e1 completamente fl\u00e1cida, sem qualquer movimento espont\u00e2neo, e a satura\u00e7\u00e3o de oxig\u00e9nio come\u00e7a a cair rapidamente.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Interromper imediatamente a perfus\u00e3o de magn\u00e9sio",
+              "finding": "A perfus\u00e3o de sulfato de magn\u00e9sio \u00e9 interrompida. Esta \u00e9 a primeira e mais crucial medida a tomar.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A remo\u00e7\u00e3o do agente causal \u00e9 o passo mais importante para reverter a toxicidade.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A remo\u00e7\u00e3o do agente causal \u00e9 o passo mais importante para reverter a toxicidade.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                2
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A2",
+              "description": "Aumentar a seda\u00e7\u00e3o",
+              "finding": "A seda\u00e7\u00e3o \u00e9 aumentada, o que n\u00e3o resolve o bloqueio neuromuscular e pode mascarar a avalia\u00e7\u00e3o neurol\u00f3gica, agravando a hipotens\u00e3o.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Esta a\u00e7\u00e3o n\u00e3o aborda a causa subjacente (toxicidade por magn\u00e9sio) e pode piorar a situa\u00e7\u00e3o hemodin\u00e2mica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Esta a\u00e7\u00e3o n\u00e3o aborda a causa subjacente (toxicidade por magn\u00e9sio) e pode piorar a situa\u00e7\u00e3o hemodin\u00e2mica.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1"
+          ],
+          "feedback_on_completion": "A perfus\u00e3o de magn\u00e9sio foi interrompida. A doente continua em bloqueio neuromuscular profundo e requer suporte ventilat\u00f3rio m\u00e1ximo. A recupera\u00e7\u00e3o ser\u00e1 lenta e dependente da elimina\u00e7\u00e3o do magn\u00e9sio.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S3",
+        "target_dp_id": "DP7",
+        "target_action_id": "A23",
+        "transition_context": "Ap\u00f3s um per\u00edodo prolongado de suporte m\u00e1ximo, a doente recupera lentamente do bloqueio induzido pelo magn\u00e9sio. A equipa, reconhecendo o erro, procede agora com a terap\u00eautica correta, iniciando a IgIV."
+      }
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A12",
+      "trigger_context": "O utilizador administra succinilcolina, um bloqueador neuromuscular despolarizante contraindicado na miastenia gravis, para a intuba\u00e7\u00e3o.",
+      "consequence_context": "Devido \u00e0 downregulation dos recetores de acetilcolina, a doente mostra resist\u00eancia \u00e0 succinilcolina, n\u00e3o atingindo relaxamento muscular adequado. Ap\u00f3s m\u00faltiplas tentativas e doses, desenvolve um bloqueio de Fase II, resultando em paralisia prolongada e apneia, complicando a ventila\u00e7\u00e3o.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "A doente n\u00e3o relaxou adequadamente com a succinilcolina, levando a uma intuba\u00e7\u00e3o dif\u00edcil. Agora, ap\u00f3s a intuba\u00e7\u00e3o, ela permanece completamente paralisada, sem qualquer esfor\u00e7o respirat\u00f3rio, muito para al\u00e9m da dura\u00e7\u00e3o de a\u00e7\u00e3o esperada do f\u00e1rmaco.",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Manter ventila\u00e7\u00e3o mec\u00e2nica e seda\u00e7\u00e3o",
+              "finding": "A equipa reconhece o bloqueio prolongado e decide manter a doente sedada e ventilada, aguardando a recupera\u00e7\u00e3o espont\u00e2nea da fun\u00e7\u00e3o neuromuscular, que pode demorar v\u00e1rias horas.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "N\u00e3o existe um agente de revers\u00e3o espec\u00edfico para o bloqueio neuromuscular prolongado induzido pela rocur\u00f3nio (dose reduzida 50-70%). O tratamento \u00e9 de suporte, mantendo a ventila\u00e7\u00e3o e a seda\u00e7\u00e3o at\u00e9 \u00e0 resolu\u00e7\u00e3o do bloqueio.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. N\u00e3o existe um agente de revers\u00e3o espec\u00edfico para o bloqueio neuromuscular prolongado induzido pela rocur\u00f3nio (dose reduzida 50-70%).",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                60,
+                120
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A2",
+              "description": "Administrar neostigmina para reverter",
+              "finding": "A neostigmina \u00e9 administrada. Esta a\u00e7\u00e3o pode agravar de forma imprevis\u00edvel o bloqueio despolarizante de Fase II, em vez de o reverter. A doente n\u00e3o melhora.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "A administra\u00e7\u00e3o de inibidores da acetilcolinesterase para reverter um bloqueio de Fase II \u00e9 controversa e potencialmente perigosa, podendo agravar o bloqueio.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A administra\u00e7\u00e3o de inibidores da acetilcolinesterase para reverter um bloqueio de Fase II \u00e9 controversa e potencialmente perigosa, podendo agravar o bloqueio.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "O erro foi reconhecido. A gest\u00e3o passa agora por um suporte ventilat\u00f3rio prolongado. Este evento adverso atrasou significativamente o in\u00edcio da investiga\u00e7\u00e3o diagn\u00f3stica e terap\u00eautica.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP4",
+        "target_action_id": "A13",
+        "transition_context": "Ap\u00f3s v\u00e1rias horas de suporte, a fun\u00e7\u00e3o neuromuscular da doente come\u00e7a a recuperar. A equipa, tendo aprendido com a complica\u00e7\u00e3o, retoma o plano de cuidados, procedendo \u00e0 investiga\u00e7\u00e3o diagn\u00f3stica."
+      }
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP6",
+      "trigger_action_id": "A22",
+      "trigger_context": "O utilizador inicia corticosteroides em alta dose antes da terap\u00eautica de primeira linha (IgIV/Plasmaferese), arriscando um agravamento paradoxal da fraqueza.",
+      "consequence_context": "Conforme esperado, a doente desenvolve um agravamento da fraqueza muscular 48 horas ap\u00f3s o in\u00edcio da pulsoterapia. Torna-se mais dif\u00edcil de ventilar e o desmame do ventilador, que parecia pr\u00f3ximo, \u00e9 agora adiado.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "A doente est\u00e1 mais fraca do que antes do in\u00edcio do tratamento. A equipa est\u00e1 a rever a estrat\u00e9gia terap\u00eautica.",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Manter suporte ventilat\u00f3rio e iniciar IgIV",
+              "finding": "A equipa reconhece o agravamento induzido por corticoides e decide manter o suporte ventilat\u00f3rio m\u00e1ximo, iniciando agora o tratamento correto de primeira linha com IgIV.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "O tratamento para o agravamento induzido por corticoides \u00e9 o suporte e a introdu\u00e7\u00e3o da terap\u00eautica de a\u00e7\u00e3o r\u00e1pida (IgIV ou plasmaferese) que deveria ter sido a primeira escolha.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O tratamento para o agravamento induzido por corticoides \u00e9 o suporte e a introdu\u00e7\u00e3o da terap\u00eautica de a\u00e7\u00e3o r\u00e1pida (IgIV ou plasmaferese) que deveria ter sido a primeira escolha.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_009_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B3_A2",
+              "description": "Administrar mais uma dose de metilprednisolona",
+              "finding": "Outra dose de corticoide \u00e9 administrada, o que pode perpetuar ou agravar ainda mais a fraqueza muscular. A decis\u00e3o correta seria mudar de estrat\u00e9gia.",
+              "finding_relevance": "Positive",
+              "requirement": "Optional",
+              "rationale": "Continuar com uma terap\u00eautica que causou deteriora\u00e7\u00e3o cl\u00ednica \u00e9 um erro que demonstra falta de reconhecimento da complica\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A reavalia\u00e7\u00e3o da estrat\u00e9gia terap\u00eautica \u00e9 mandat\u00f3ria perante uma deteriora\u00e7\u00e3o cl\u00ednica inesperada.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "A IgIV foi iniciada. A escolha terap\u00eautica inicial incorreta levou a um retrocesso cl\u00ednico e a um prolongamento da ventila\u00e7\u00e3o mec\u00e2nica. A doente ir\u00e1 agora receber o tratamento adequado.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S3",
+        "target_dp_id": "DP7",
+        "target_action_id": "A23",
+        "transition_context": "Ap\u00f3s completar o ciclo de IgIV, a doente melhora significativamente, superando o agravamento inicial. A equipa, tendo corrigido o curso, avan\u00e7a para o planeamento da terap\u00eautica de manuten\u00e7\u00e3o."
+      }
+    },
+    {
+      "id": "B4",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP5",
+      "trigger_action_id": "A19",
+      "trigger_context": "O utilizador substitui a ciprofloxacina (uma fluoroquinolona) por azitromicina (um macr\u00f3lido), outro antibi\u00f3tico conhecido por exacerbar a miastenia gravis.",
+      "consequence_context": "Apesar do tratamento com IgIV, a doente n\u00e3o apresenta a melhoria esperada. A fraqueza muscular persiste e o desmame ventilat\u00f3rio falha repetidamente, porque o fator precipitante farmacol\u00f3gico continua presente.",
+      "decision_points": [
+        {
+          "id": "B4_DP1",
+          "context": "Passaram v\u00e1rios dias e a doente n\u00e3o melhora como esperado. A equipa de neurologia \u00e9 chamada para reavaliar o caso.",
+          "available_actions": [
+            {
+              "id": "B4_A1",
+              "description": "Rever novamente toda a medica\u00e7\u00e3o com o neurologista",
+              "finding": "O neurologista rev\u00ea a prescri\u00e7\u00e3o e identifica imediatamente a azitromicina como um potencial fator de perpetua\u00e7\u00e3o da crise. Recomenda a sua suspens\u00e3o imediata.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "Uma revis\u00e3o sistem\u00e1tica da medica\u00e7\u00e3o \u00e9 crucial quando um doente n\u00e3o responde \u00e0 terap\u00eautica como esperado.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Uma revis\u00e3o sistem\u00e1tica da medica\u00e7\u00e3o \u00e9 crucial quando um doente n\u00e3o responde \u00e0 terap\u00eautica como esperado.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B4_A2",
+              "description": "Suspender a azitromicina e substituir por cefuroxima",
+              "finding": "Seguindo a recomenda\u00e7\u00e3o, a azitromicina \u00e9 suspensa e a cefuroxima \u00e9 (re)iniciada. Nos dias seguintes, a doente come\u00e7a finalmente a mostrar uma melhoria cl\u00ednica significativa.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A remo\u00e7\u00e3o do agente agressor e a substitui\u00e7\u00e3o por uma alternativa segura \u00e9 a \u00fanica forma de permitir que a terap\u00eautica imunomoduladora seja eficaz.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A remo\u00e7\u00e3o do agente agressor e a substitui\u00e7\u00e3o por uma alternativa segura \u00e9 a \u00fanica forma de permitir que a terap\u00eautica imunomoduladora seja eficaz.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "General",
+                  "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B4_A1",
+            "B4_A2"
+          ],
+          "feedback_on_completion": "O erro na escolha do antibi\u00f3tico foi identificado e corrigido. Este lapso levou a um internamento prolongado na UCI e a falhas de desmame. A doente est\u00e1 agora no caminho certo para a recupera\u00e7\u00e3o.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S3",
+        "target_dp_id": "DP7",
+        "target_action_id": "A23",
+        "transition_context": "Com o fator precipitante finalmente removido, a doente recupera a for\u00e7a muscular. A equipa procede agora com o planeamento da terap\u00eautica de manuten\u00e7\u00e3o a longo prazo."
+      }
+    },
+    {
+      "id": "B5",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP2",
+      "trigger_action_id": "A8",
+      "trigger_context": "O utilizador opta por realizar uma gasimetria arterial antes de proteger a via a\u00e9rea, apesar dos sinais cl\u00ednicos (CVF e FIN baixas) de fal\u00eancia respirat\u00f3ria iminente.",
+      "consequence_context": "Enquanto a equipa aguarda a colheita e o resultado da GSA, a doente sofre uma paragem respirat\u00f3ria devido a exaust\u00e3o muscular e obstru\u00e7\u00e3o por secre\u00e7\u00f5es. \u00c9 necess\u00e1ria uma intuba\u00e7\u00e3o de emerg\u00eancia em condi\u00e7\u00f5es muito mais perigosas.",
+      "decision_points": [
+        {
+          "id": "B5_DP1",
+          "context": "A doente subitamente fica cian\u00f3tica e apneica. O monitor mostra bradicardia extrema e a SpO2 a cair para 40%. \u00c9 uma paragem cardiorrespirat\u00f3ria.",
+          "available_actions": [
+            {
+              "id": "B5_A1",
+              "description": "Iniciar manobras de Suporte Avan\u00e7ado de Vida (SAV)",
+              "finding": "A equipa inicia compress\u00f5es tor\u00e1cicas e ventila\u00e7\u00e3o com bal\u00e3o e m\u00e1scara. \u00c9 chamada ajuda adicional. A situa\u00e7\u00e3o \u00e9 ca\u00f3tica e de alto risco.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A paragem cardiorrespirat\u00f3ria exige a aplica\u00e7\u00e3o imediata do algoritmo de SAV para tentar reverter a situa\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A paragem cardiorrespirat\u00f3ria exige a aplica\u00e7\u00e3o imediata do algoritmo de SAV para tentar reverter a situa\u00e7\u00e3o.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B5_A2",
+              "description": "Intuba\u00e7\u00e3o orotraqueal de emerg\u00eancia",
+              "finding": "\u00c9 realizada uma intuba\u00e7\u00e3o de emerg\u00eancia sem tempo para a farmacologia ideal. A via a\u00e9rea \u00e9 finalmente protegida, mas a doente sofreu um per\u00edodo significativo de hip\u00f3xia.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "Proteger a via a\u00e9rea \u00e9 a prioridade m\u00e1xima numa paragem respirat\u00f3ria. O atraso em intubar eletivamente levou a esta situa\u00e7\u00e3o de emerg\u00eancia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A gest\u00e3o da via a\u00e9rea \u00e9 a prioridade na insufici\u00eancia respirat\u00f3ria aguda.",
+                  "source": "Portuguese Consensus Myasthenia Gravis",
+                  "section": "",
+                  "location": "pt_consensus_myasthenia_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B5_A1",
+            "B5_A2"
+          ],
+          "feedback_on_completion": "A doente foi reanimada e intubada, mas o atraso na prote\u00e7\u00e3o da via a\u00e9rea levou a uma paragem cardiorrespirat\u00f3ria e a uma prov\u00e1vel les\u00e3o cerebral an\u00f3xica. Este \u00e9 um resultado grave que poderia ter sido evitado com uma intuba\u00e7\u00e3o eletiva mais precoce.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP4",
+        "target_action_id": "A13",
+        "transition_context": "Ap\u00f3s a reanima\u00e7\u00e3o, a doente \u00e9 transferida para a UCI em estado cr\u00edtico. A equipa, abalada pelo evento, prossegue com a investiga\u00e7\u00e3o diagn\u00f3stica, mas o progn\u00f3stico da doente foi significativamente ensombrado pelo erro de timing."
+      }
+    }
+  ],
+  "max_branch_length": 2,
+  "debriefing": [
+    {
+      "key_learning": "A decis\u00e3o de intubar na crise miast\u00e9nica baseia-se em par\u00e2metros cl\u00ednicos e funcionais respirat\u00f3rios (CVF, FIN), e n\u00e3o deve ser atrasada por exames complementares como a GSA.",
+      "clinical_reasoning": "Na crise miast\u00e9nica, a insufici\u00eancia respirat\u00f3ria \u00e9 do tipo II (hiperc\u00e1pnica) por fal\u00eancia da bomba muscular. A deteriora\u00e7\u00e3o pode ser muito r\u00e1pida. Par\u00e2metros como uma Capacidade Vital For\u00e7ada (CVF) < 15-20 mL/kg ou uma For\u00e7a Inspirat\u00f3ria Negativa (FIN) pior que -20 a -30 cmH2O indicam exaust\u00e3o iminente e s\u00e3o indica\u00e7\u00f5es para intuba\u00e7\u00e3o eletiva, mesmo que a oxigena\u00e7\u00e3o e a GSA ainda n\u00e3o estejam drasticamente alteradas. Atrasar a intuba\u00e7\u00e3o para aguardar a confirma\u00e7\u00e3o gasim\u00e9trica exp\u00f5e o doente a um risco inaceit\u00e1vel de paragem respirat\u00f3ria.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o medir a CVF e a FIN \u00e0 cabeceira do doente com dispneia e suspeita de miastenia.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A5"
+          },
+          "consequence": "Subestima\u00e7\u00e3o da gravidade da insufici\u00eancia respirat\u00f3ria, levando a um atraso na prote\u00e7\u00e3o da via a\u00e9rea e potencial paragem respirat\u00f3ria."
+        },
+        {
+          "error_type": "commission",
+          "description": "Atrasar a intuba\u00e7\u00e3o para aguardar o resultado de uma gasimetria arterial.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A8"
+          },
+          "consequence": "Paragem respirat\u00f3ria iatrog\u00e9nica por exaust\u00e3o muscular enquanto se aguarda por um teste confirmat\u00f3rio, mas n\u00e3o decis\u00f3rio."
+        }
+      ],
+      "related_objectives": [
+        "LO1"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A5",
+            "A6",
+            "A7",
+            "A8"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Cf. A avalia\u00e7\u00e3o da fun\u00e7\u00e3o respirat\u00f3ria com medi\u00e7\u00f5es como a capacidade vital for\u00e7ada \u00e9 crucial para decidir a necessidade de suporte ventilat\u00f3rio.",
+          "source": "Portuguese Consensus Myasthenia Gravis",
+          "section": "",
+          "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A gest\u00e3o farmacol\u00f3gica na crise miast\u00e9nica exige conhecimento dos f\u00e1rmacos contraindicados e da sequ\u00eancia terap\u00eautica correta (IgIV/Plasmaferese antes de corticoides).",
+      "clinical_reasoning": "V\u00e1rios f\u00e1rmacos podem exacerbar a miastenia gravis, sendo crucial identific\u00e1-los e suspend\u00ea-los. Os mais not\u00f3rios s\u00e3o as fluoroquinolonas, macr\u00f3lidos, aminoglicos\u00eddeos e o magn\u00e9sio IV. O tratamento da crise em si baseia-se em terap\u00eauticas de a\u00e7\u00e3o r\u00e1pida como a Imunoglobulina IV (IgIV) ou a plasmaferese. Os corticosteroides em alta dose, embora eficazes a longo prazo, podem causar um agravamento paradoxal inicial e, por isso, s\u00f3 devem ser introduzidos ap\u00f3s a estabiliza\u00e7\u00e3o cl\u00ednica com IgIV ou plasmaferese.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o identificar e suspender um f\u00e1rmaco precipitante, como uma fluoroquinolona.",
+          "related_action": {
+            "decision_point": "DP5",
+            "action": "A17"
+          },
+          "consequence": "Falha terap\u00eautica e necessidade prolongada de ventila\u00e7\u00e3o mec\u00e2nica, apesar do tratamento imunomodulador."
+        },
+        {
+          "error_type": "commission",
+          "description": "Administrar sulfato de magn\u00e9sio IV.",
+          "related_action": {
+            "decision_point": "DP6",
+            "action": "A21"
+          },
+          "consequence": "Agravamento catastr\u00f3fico da fraqueza, bloqueio neuromuscular completo e paragem respirat\u00f3ria."
+        },
+        {
+          "error_type": "commission",
+          "description": "Iniciar corticosteroides em alta dose antes da IgIV ou plasmaferese.",
+          "related_action": {
+            "decision_point": "DP6",
+            "action": "A22"
+          },
+          "consequence": "Agravamento paradoxal da fraqueza, prolongando a ventila\u00e7\u00e3o mec\u00e2nica e o internamento em UCI."
+        }
+      ],
+      "related_objectives": [
+        "LO2",
+        "LO5"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP5",
+          "actions": [
+            "A17",
+            "A18",
+            "A19"
+          ]
+        },
+        {
+          "decision_point": "DP6",
+          "actions": [
+            "A20",
+            "A21",
+            "A22"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Although in most cases the evidence for causal association is limited, the following pharmacological groups have been especially associated with the onset or exacerbation of clinical manifestations of MG: ... Aminoglycoside antibiotics (except tobramycin), macrolides and fluoroquinolones. ... Magnesium (especially intravenous).",
+          "source": "Portuguese Consensus Myasthenia Gravis",
+          "section": "General",
+          "location": "pt_consensus_myasthenia_chunk_013_general.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A intuba\u00e7\u00e3o de um doente com miastenia gravis requer ajustes farmacol\u00f3gicos espec\u00edficos, nomeadamente o uso de doses reduzidas de bloqueadores neuromusculares n\u00e3o-despolarizantes e a contraindica\u00e7\u00e3o absoluta da succinilcolina.",
+      "clinical_reasoning": "Doentes com miastenia gravis t\u00eam um n\u00famero reduzido de recetores de acetilcolina funcionais. Isto causa resist\u00eancia aos bloqueadores despolarizantes (succinilcolina) e hipersensibilidade aos n\u00e3o-despolarizantes (e.g., rocur\u00f3nio). O uso de succinilcolina \u00e9 imprevis\u00edvel e perigoso. O rocur\u00f3nio \u00e9 o f\u00e1rmaco de escolha, mas a dose deve ser reduzida para 50-70% da habitual (e.g., 0.3-0.6 mg/kg) para evitar um bloqueio prolongado. A disponibilidade do seu agente de revers\u00e3o, o sugammadex, \u00e9 uma importante medida de seguran\u00e7a.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Administrar succinilcolina para a sequ\u00eancia r\u00e1pida de intuba\u00e7\u00e3o.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A12"
+          },
+          "consequence": "Resposta imprevis\u00edvel, condi\u00e7\u00f5es de intuba\u00e7\u00e3o sub\u00f3timas e risco de bloqueio neuromuscular prolongado (Fase II)."
+        },
+        {
+          "error_type": "commission",
+          "description": "Administrar uma dose padr\u00e3o de rocur\u00f3nio sem ajuste para a miastenia gravis.",
+          "related_action": null,
+          "consequence": "Bloqueio neuromuscular excessivamente longo, dificultando a avalia\u00e7\u00e3o neurol\u00f3gica e o desmame ventilat\u00f3rio."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o confirmar a disponibilidade de sugammadex antes de usar rocur\u00f3nio.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A10"
+          },
+          "consequence": "Incapacidade de reverter rapidamente um bloqueio neuromuscular profundo ou prolongado, se necess\u00e1rio."
+        }
+      ],
+      "related_objectives": [
+        "LO1"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A9",
+            "A10",
+            "A12"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Cf. Na crise miast\u00e9nica, a utiliza\u00e7\u00e3o de bloqueadores neuromusculares n\u00e3o despolarizantes requer ajuste de dose devido \u00e0 hipersensibilidade.",
+          "source": "Portuguese Consensus Myasthenia Gravis",
+          "section": "",
+          "location": "pt_consensus_myasthenia_chunk_002_general.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "key_takeaways": [
+    "Na suspeita de crise miast\u00e9nica com dispneia, me\u00e7a a CVF e a FIN imediatamente; valores cr\u00edticos (e.g., CVF <15 mL/kg) indicam necessidade de intuba\u00e7\u00e3o. [Source: Portuguese Consensus Myasthenia Gravis]",
+    "Nunca atrase a intuba\u00e7\u00e3o para aguardar por uma gasimetria arterial se os par\u00e2metros cl\u00ednicos e funcionais indicarem fal\u00eancia respirat\u00f3ria iminente.",
+    "Para intubar um doente com miastenia, use uma dose reduzida de rocur\u00f3nio (0.3-0.6 mg/kg) e evite a todo o custo a succinilcolina. [Source: Portuguese Consensus Myasthenia Gravis]",
+    "Reveja sempre a medica\u00e7\u00e3o para identificar e suspender f\u00e1rmacos precipitantes, como fluoroquinolonas, macr\u00f3lidos ou magn\u00e9sio IV.",
+    "O tratamento da crise miast\u00e9nica inicia-se com IgIV ou plasmaferese; os corticoides s\u00f3 devem ser introduzidos ap\u00f3s a melhoria inicial para evitar um agravamento paradoxal. [Source: Portuguese Consensus Myasthenia Gravis]",
+    "Ap\u00f3s a estabiliza\u00e7\u00e3o, \u00e9 mandat\u00f3rio criar um alerta no processo cl\u00ednico sobre os f\u00e1rmacos a evitar para garantir a seguran\u00e7a futura do doente. [Source: Portuguese Consensus Myasthenia Gravis]"
+  ],
+  "metadata": {
+    "scenario_id": "bead6cbf-4db8-4e63-8ac0-287832a7cb4f",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-03-17T00:21:45.662860",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "generation_time_ms": 173986.16075515747,
+    "token_count": {
+      "input": 55473,
+      "output": 20192,
+      "total": 75665
+    },
+    "revision_count": 0,
+    "sources_consulted": [
+      "Portuguese Consensus Myasthenia Gravis "
+    ],
+    "retrieval_coverage": 1.0
+  }
+}

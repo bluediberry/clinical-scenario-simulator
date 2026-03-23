@@ -1,0 +1,889 @@
+{
+  "title": "Diagn\u00f3stico e Orienta\u00e7\u00e3o de Nevralgia do Trig\u00e9meo em Ambulat\u00f3rio",
+  "domain": "Neurology",
+  "subdomain": "Diagn\u00f3stico de Nevralgia Craniana",
+  "target_learner": "Student",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Aplicar crit\u00e9rios de diagn\u00f3stico ICHD-3 para nevralgia do trig\u00e9meo",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1",
+        "DP3",
+        "DP5"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Diferenciar nevralgia do trig\u00e9meo cl\u00e1ssica de secund\u00e1ria e idiop\u00e1tica",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP2",
+        "DP3",
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Identificar fatores desencadeantes e caracter\u00edsticas t\u00edpicas da dor",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1",
+        "DP2"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Determinar via de investiga\u00e7\u00e3o adequada incluindo RM para compress\u00e3o neurovascular",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP4"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 30,
+  "difficulty": "Intermediate",
+  "prerequisites": [
+    "Conhecimento da anatomia dos pares cranianos",
+    "Familiaridade com a semiologia da dor neurop\u00e1tica",
+    "Princ\u00edpios b\u00e1sicos de farmacologia de antiepil\u00e9pticos"
+  ],
+  "patient": {
+    "age": 62,
+    "gender": "Male",
+    "presenting_complaint": "Epis\u00f3dios de dor facial unilateral esquerda muito intensa, tipo choque el\u00e9trico, desencadeada pelo toque, com in\u00edcio h\u00e1 3 semanas.",
+    "medical_history": [
+      "Tabagismo ativo"
+    ],
+    "medications": [
+      "sem medica\u00e7\u00e3o habitual conhecida"
+    ],
+    "allergies": [
+      "sem alergias conhecidas"
+    ],
+    "social_history": "Vive com a esposa. Trabalhador de constru\u00e7\u00e3o civil. Fumador (1 ma\u00e7o/dia h\u00e1 40 anos). Nega consumo regular de \u00e1lcool."
+  },
+  "initial_presentation": "Um homem de 62 anos, fumador, recorre \u00e0 consulta externa acompanhado pela esposa, por epis\u00f3dios recorrentes de dor facial unilateral esquerda muito intensa. Refere que a dor tem a qualidade de um choque el\u00e9trico, dura apenas alguns segundos e \u00e9 frequentemente desencadeada por atividades di\u00e1rias como barbear-se ou lavar a face. Os sintomas iniciaram-se h\u00e1 cerca de 3 semanas e t\u00eam vindo a agravar-se, limitando a sua qualidade de vida e alimenta\u00e7\u00e3o.",
+  "interaction_prompt": "\u00c9 o m\u00e9dico respons\u00e1vel por esta consulta de ambulat\u00f3rio. Avalie a hist\u00f3ria cl\u00ednica, realize o exame f\u00edsico adequado, estabele\u00e7a o diagn\u00f3stico diferencial e defina o plano de investiga\u00e7\u00e3o e tratamento.",
+  "clinical_time_window": null,
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Avalia\u00e7\u00e3o Cl\u00ednica e Diagn\u00f3stico Diferencial",
+      "setting": "Outpatient Consultation",
+      "initial_state": "O doente encontra-se no gabinete de consulta. Aparenta ansiedade e hesita em tocar no lado esquerdo da face enquanto fala.",
+      "vital_signs": {
+        "blood_pressure": "135/82 mmHg",
+        "heart_rate": "78 bpm",
+        "respiratory_rate": "14 breaths/min",
+        "temperature": "36.5\u00b0C",
+        "oxygen_saturation": "98% on room air",
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "Escala Visual Anal\u00f3gica (EVA) da dor",
+          "finding": "O doente classifica a dor durante os epis\u00f3dios como 10/10.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "Hist\u00f3ria dent\u00e1ria recente",
+          "finding": "N\u00e3o teve infe\u00e7\u00f5es dent\u00e1rias recentes nem foi submetido a procedimentos odontol\u00f3gicos nos \u00faltimos 2 anos.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Medica\u00e7\u00e3o atual detalhada",
+          "finding": "Confirma que n\u00e3o toma qualquer medica\u00e7\u00e3o de forma cr\u00f3nica, nem medicamentos de venda livre.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "A consulta inicia-se. O doente relata epis\u00f3dios de dor muito intensa e incapacitante na face esquerda.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Caracterizar tipo, dura\u00e7\u00e3o e localiza\u00e7\u00e3o da dor",
+              "finding": "Dor tipo choque el\u00e9trico, com dura\u00e7\u00e3o inferior a 2 minutos. Localiza-se na bochecha e mand\u00edbula esquerda (territ\u00f3rios V2 e V3).",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A nevralgia do trig\u00e9meo cl\u00e1ssica manifesta-se por ataques parox\u00edsticos curtos (<2 min) com dor tipo choque el\u00e9trico nos territ\u00f3rios V2 e/out V3.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A nevralgia do trig\u00e9meo cl\u00e1ssica manifesta-se por ataques parox\u00edsticos curtos (<2 min) com dor tipo choque el\u00e9trico nos territ\u00f3rios V2 e/out V3.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.1.1.",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Pesquisar est\u00edmulos desencadeantes (trigger zones)",
+              "finding": "A dor \u00e9 desencadeada por est\u00edmulos t\u00e1teis ligeiros, como lavar a face, barbear-se ou vento frio.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A dor desencadeada por est\u00edmulos in\u00f3cuos no lado afetado da face \u00e9 um crit\u00e9rio diagn\u00f3stico central da nevralgia do trig\u00e9meo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A dor desencadeada por est\u00edmulos in\u00f3cuos no lado afetado da face \u00e9 um crit\u00e9rio diagn\u00f3stico central da nevralgia do trig\u00e9meo.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.12.2",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Referenciar imediatamente para medicina dent\u00e1ria",
+              "finding": "A referencia\u00e7\u00e3o para medicina dent\u00e1ria sem investiga\u00e7\u00e3o neurol\u00f3gica atrasa o diagn\u00f3stico. O doente \u00e9 submetido a procedimentos dent\u00e1rios desnecess\u00e1rios sem al\u00edvio da dor neurop\u00e1tica prim\u00e1ria. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "Assumir patologia dent\u00e1ria perante dor neurop\u00e1tica parox\u00edstica sem excluir nevralgia do trig\u00e9meo leva a interven\u00e7\u00f5es irrevers\u00edveis inapropriadas.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Assumir patologia dent\u00e1ria perante dor neurop\u00e1tica parox\u00edstica sem excluir nevralgia do trig\u00e9meo leva a interven\u00e7\u00f5es irrevers\u00edveis inapropriadas.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.1.1.",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O formando referenciou o doente para medicina dent\u00e1ria perante uma dor neurop\u00e1tica parox\u00edstica, sem realizar uma avalia\u00e7\u00e3o neurol\u00f3gica pr\u00e9via."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2"
+          ],
+          "feedback_on_completion": "A caracteriza\u00e7\u00e3o da dor revelou epis\u00f3dios parox\u00edsticos tipo choque el\u00e9trico, com dura\u00e7\u00e3o inferior a 2 minutos, desencadeados por est\u00edmulos in\u00f3cuos nos territ\u00f3rios V2 e V3. Estas caracter\u00edsticas s\u00e3o fortemente sugestivas de nevralgia do trig\u00e9meo. [Source: ICHD-3 Classificacao Cefaleias (PT)]"
+        },
+        {
+          "id": "DP2",
+          "context": "A dor apresenta caracter\u00edsticas t\u00edpicas de nevralgia do trig\u00e9meo. No entanto, \u00e9 necess\u00e1rio excluir outras s\u00edndromes de dor facial parox\u00edstica, nomeadamente SUNCT/SUNA e nevralgia do glossofar\u00edngeo.",
+          "available_actions": [
+            {
+              "id": "A4",
+              "description": "Pesquisar presen\u00e7a de per\u00edodo refrat\u00e1rio entre crises",
+              "finding": "O doente confirma que, ap\u00f3s um ataque de dor, existe um per\u00edodo de alguns minutos em que a dor n\u00e3o pode ser desencadeada novamente.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A presen\u00e7a de per\u00edodo refrat\u00e1rio \u00e9 fundamental para distinguir a nevralgia do trig\u00e9meo das s\u00edndromes SUNCT/SUNA, que n\u00e3o possuem este per\u00edodo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "SUNCT and 3.3.2 SUNA can generally be triggered without a refractory period. This contrasts with 13.1 Trigeminal neuralgia, which typically has a refractory period after each attack.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.3.1",
+                  "location": "ichd3_headache_pt_chunk_032_sunct_and_332_suna_can_gener.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A5",
+              "description": "Questionar sobre dor desencadeada ao engolir",
+              "finding": "O doente nega que a dor seja desencadeada pela degluti\u00e7\u00e3o e nega dor localizada na garganta ou ouvido.",
+              "finding_relevance": "Negative",
+              "requirement": "Supportive",
+              "rationale": "Exclui nevralgia do glossofar\u00edngeo, que \u00e9 tipicamente precipitada por engolir e afeta a fossa tonsilar ou ouvido.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Exclui nevralgia do glossofar\u00edngeo, que \u00e9 tipicamente precipitada por engolir e afeta a fossa tonsilar ou ouvido.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.1.2.1",
+                  "location": "ichd3_headache_pt_chunk_206_painful_trigeminal_neuropathy_.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Pesquisar sintomas auton\u00f3micos cranianos ipsilaterais",
+              "finding": "Refere lacrimejo muito ligeiro apenas durante as crises mais fortes. Sem hiperemia conjuntival marcada ou rinorreia.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Sintomas auton\u00f3micos subtis podem ocorrer na nevralgia do trig\u00e9meo severa, mas sintomas proeminentes sugeririam SUNCT/SUNA.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Sintomas auton\u00f3micos subtis podem ocorrer na nevralgia do trig\u00e9meo severa, mas sintomas proeminentes sugeririam SUNCT/SUNA.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.1.1.",
+                  "location": "ichd3_headache_pt_chunk_032_sunct_and_332_suna_can_gener.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A4"
+          ],
+          "feedback_on_completion": "A presen\u00e7a de um per\u00edodo refrat\u00e1rio ap\u00f3s as crises exclui s\u00edndromes SUNCT/SUNA, e a aus\u00eancia de dor \u00e0 degluti\u00e7\u00e3o exclui nevralgia do glossofar\u00edngeo. O diagn\u00f3stico cl\u00ednico de nevralgia do trig\u00e9meo est\u00e1 consolidado na anamnese."
+        },
+        {
+          "id": "DP3",
+          "context": "A hist\u00f3ria cl\u00ednica \u00e9 fortemente sugestiva de nevralgia do trig\u00e9meo. \u00c9 necess\u00e1rio realizar o exame f\u00edsico para distinguir entre a forma cl\u00e1ssica e formas secund\u00e1rias.",
+          "available_actions": [
+            {
+              "id": "A7",
+              "description": "Realizar exame neurol\u00f3gico focado aos pares cranianos",
+              "finding": "Exame neurol\u00f3gico normal. Sensibilidade facial preservada em todos os territ\u00f3rios. Reflexo corneano normal. Sem assimetrias motoras.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "A nevralgia do trig\u00e9meo cl\u00e1ssica n\u00e3o apresenta d\u00e9fices neurol\u00f3gicos. A presen\u00e7a de hipoestesia ou altera\u00e7\u00e3o do reflexo corneano indicaria les\u00e3o axonal e etiologia secund\u00e1ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A nevralgia do trig\u00e9meo cl\u00e1ssica n\u00e3o apresenta d\u00e9fices neurol\u00f3gicos.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.12.2",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                8,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A8",
+              "description": "Inspecionar cavidade oral e articula\u00e7\u00e3o temporomandibular",
+              "finding": "Sem dor \u00e0 palpa\u00e7\u00e3o da ATM. Sem les\u00f5es na mucosa oral ou sinais de infe\u00e7\u00e3o dent\u00e1ria evidente.",
+              "finding_relevance": "Negative",
+              "requirement": "Supportive",
+              "rationale": "Apoia a exclus\u00e3o de patologia odontol\u00f3gica ou disfun\u00e7\u00e3o temporomandibular concomitante.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Apoia a exclus\u00e3o de patologia odontol\u00f3gica ou disfun\u00e7\u00e3o temporomandibular concomitante.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.11",
+                  "location": "ichd3_headache_pt_chunk_214_idiopathic_persistent_facial_p.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A7"
+          ],
+          "feedback_on_completion": "O exame neurol\u00f3gico n\u00e3o revelou qualquer d\u00e9fice sensitivo ou motor, o que apoia o diagn\u00f3stico de nevralgia do trig\u00e9meo cl\u00e1ssica. \u00c9 agora necess\u00e1rio avan\u00e7ar para o plano de investiga\u00e7\u00e3o imagiol\u00f3gica."
+        }
+      ],
+      "progression_criteria": "Hist\u00f3ria cl\u00ednica completa, exclus\u00e3o de diagn\u00f3sticos diferenciais e exame neurol\u00f3gico sem d\u00e9fices."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Investiga\u00e7\u00e3o e Planeamento Terap\u00eautico",
+      "setting": "Outpatient Consultation",
+      "initial_state": "A avalia\u00e7\u00e3o cl\u00ednica aponta para o diagn\u00f3stico de nevralgia do trig\u00e9meo cl\u00e1ssica sem d\u00e9fices neurol\u00f3gicos associados. O doente aguarda a defini\u00e7\u00e3o do plano de marcha diagn\u00f3stica e terap\u00eautica.",
+      "vital_signs": {
+        "blood_pressure": "135/82 mmHg",
+        "heart_rate": "78 bpm",
+        "respiratory_rate": "14 breaths/min",
+        "temperature": "36.5\u00b0C",
+        "oxygen_saturation": "98% on room air",
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Impacto funcional",
+          "finding": "O doente refere que perdeu 2 kg nas \u00faltimas 3 semanas por ter medo de mastigar e desencadear a dor.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Hist\u00f3ria familiar",
+          "finding": "Sem hist\u00f3ria familiar conhecida de nevralgia do trig\u00e9meo ou esclerose m\u00faltipla.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_6",
+          "description": "Contraindica\u00e7\u00f5es a resson\u00e2ncia magn\u00e9tica",
+          "finding": "O doente n\u00e3o possui pacemaker, implantes met\u00e1licos ou claustrofobia.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP4",
+          "context": "O diagn\u00f3stico cl\u00ednico foi estabelecido. \u00c9 imperativo selecionar a modalidade de imagem adequada para investigar a etiologia da nevralgia.",
+          "available_actions": [
+            {
+              "id": "A9",
+              "description": "Requisitar RM cr\u00e2nio-encef\u00e1lica com protocolo para trig\u00e9meo",
+              "finding": "Resson\u00e2ncia Magn\u00e9tica agendada. A RM \u00e9 o exame de elei\u00e7\u00e3o para identificar compress\u00e3o neurovascular e excluir patologia estrutural ou desmielinizante.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A RM \u00e9 obrigat\u00f3ria para excluir causas secund\u00e1rias e demonstrar compress\u00e3o neurovascular do nervo trig\u00e9meo, frequentemente pela art\u00e9ria cerebelosa superior.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Classical trigeminal neuralgia is caused by neurovascular compression, most often by the superior cerebellar artery. Imaging (preferably by MRI) should be obtained to exclude secondary causes and, in most patients, to demonstrate neurovascular compression of the trigeminal nerve.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.12.2",
+                  "location": "ichd3_headache_pt_chunk_201_central_pain_poststroke.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A10",
+              "description": "Requisitar TC cr\u00e2nio-encef\u00e1lica sem contraste",
+              "finding": "A TC \u00e9 insuficiente. N\u00e3o possui resolu\u00e7\u00e3o adequada para demonstrar compress\u00e3o neurovascular do nervo trig\u00e9meo ou excluir placas de desmieliniza\u00e7\u00e3o associadas \u00e0 esclerose m\u00faltipla. O doente mant\u00e9m-se sem o estudo adequado. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "A tomografia computorizada n\u00e3o visualiza adequadamente o conflito neurovascular na fossa posterior, sendo um exame sub\u00f3timo neste contexto cl\u00ednico.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A tomografia computorizada n\u00e3o visualiza adequadamente o conflito neurovascular na fossa posterior, sendo um exame sub\u00f3timo neste contexto cl\u00ednico.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.12.2",
+                  "location": "ichd3_headache_pt_chunk_208_glossopharyngeal_neuralgia_gen.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O formando requisitou uma TC cr\u00e2nio-encef\u00e1lica em vez da RM, que \u00e9 o exame gold-standard para avaliar o conflito neurovascular."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A9"
+          ],
+          "feedback_on_completion": "A resson\u00e2ncia magn\u00e9tica com protocolo espec\u00edfico foi corretamente solicitada. Este exame \u00e9 crucial para confirmar a compress\u00e3o neurovascular e excluir causas secund\u00e1rias."
+        },
+        {
+          "id": "DP5",
+          "context": "A investiga\u00e7\u00e3o imagiol\u00f3gica est\u00e1 em curso. O doente necessita de al\u00edvio sintom\u00e1tico imediato para a dor incapacitante.",
+          "available_actions": [
+            {
+              "id": "A11",
+              "description": "Requisitar an\u00e1lises laboratoriais basais (hemograma, fun\u00e7\u00e3o renal, hep\u00e1tica e ionograma)",
+              "finding": "An\u00e1lises colhidas. S\u00f3dio 140 mEq/L, provas de fun\u00e7\u00e3o hep\u00e1tica e hemograma dentro dos par\u00e2metros normais.",
+              "finding_relevance": "Negative",
+              "requirement": "Critical",
+              "rationale": "A carbamazepina exige monitoriza\u00e7\u00e3o laboratorial basal devido ao risco de hiponatremia, hepatotoxicidade e discrasias sangu\u00edneas.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A carbamazepina exige monitoriza\u00e7\u00e3o laboratorial basal devido ao risco de hiponatremia, hepatotoxicidade e discrasias sangu\u00edneas.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.2",
+                  "location": "ichd3_headache_pt_chunk_121_for_diagnostic_purposes_csf_p.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "Prescrever carbamazepina com plano de titula\u00e7\u00e3o ap\u00f3s colheita de an\u00e1lises",
+              "finding": "Carbamazepina iniciada a 100 mg duas vezes por dia, com instru\u00e7\u00f5es claras para titula\u00e7\u00e3o gradual conforme resposta e toler\u00e2ncia.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A carbamazepina \u00e9 o tratamento farmacol\u00f3gico de primeira linha para nevralgia do trig\u00e9meo, devendo ser iniciada em dose baixa e titulada.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A carbamazepina \u00e9 o tratamento farmacol\u00f3gico de primeira linha para nevralgia do trig\u00e9meo, devendo ser iniciada em dose baixa e titulada.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.2",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A13",
+              "description": "Prescrever carbamazepina de imediato sem requisi\u00e7\u00e3o de an\u00e1lises pr\u00e9vias",
+              "finding": "Carbamazepina prescrita sem avalia\u00e7\u00e3o laboratorial basal. O doente fica exposto ao risco n\u00e3o monitorizado de desenvolver hiponatremia grave, agranulocitose ou toxicidade hep\u00e1tica. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+              "finding_relevance": "Negative",
+              "requirement": "Optional",
+              "rationale": "A introdu\u00e7\u00e3o de antiepil\u00e9pticos de primeira linha sem estabelecer os valores laboratoriais basais viola as normas de seguran\u00e7a farmacol\u00f3gica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A introdu\u00e7\u00e3o de antiepil\u00e9pticos de primeira linha sem estabelecer os valores laboratoriais basais viola as normas de seguran\u00e7a farmacol\u00f3gica.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "1.",
+                  "location": "ichd3_headache_pt_chunk_001_there_may_be_additional_sympto.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O formando prescreveu carbamazepina sem realizar o estudo anal\u00edtico basal recomendado, ignorando o risco de toxicidade medicamentosa."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A11",
+            "A12"
+          ],
+          "feedback_on_completion": "O estudo anal\u00edtico basal foi assegurado e a terap\u00eautica de primeira linha com carbamazepina foi iniciada de forma segura. O doente tem agora um plano terap\u00eautico adequado e est\u00e1 orientado para reavalia\u00e7\u00e3o com o resultado da RM."
+        }
+      ],
+      "progression_criteria": "Imagiologia correta requisitada e tratamento farmacol\u00f3gico de primeira linha institu\u00eddo de forma segura."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP1",
+      "trigger_action_id": "A3",
+      "trigger_context": "O formando referenciou o doente para medicina dent\u00e1ria perante uma dor neurop\u00e1tica parox\u00edstica, sem realizar uma avalia\u00e7\u00e3o neurol\u00f3gica pr\u00e9via.",
+      "consequence_context": "O diagn\u00f3stico neurol\u00f3gico foi atrasado. O doente regressa \u00e0 consulta ap\u00f3s ter sido submetido a procedimentos dent\u00e1rios invasivos desnecess\u00e1rios, mantendo a dor incapacitante.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "O doente regressa \u00e0 sua consulta 2 meses depois. Refere que o dentista extraiu dois molares esquerdos, mas a dor facial intensa tipo choque el\u00e9trico persiste exatamente igual. O doente est\u00e1 frustrado e com perda de peso marcada.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Reavaliar hist\u00f3ria cl\u00ednica e realizar exame neurol\u00f3gico focado",
+              "finding": "O exame neurol\u00f3gico n\u00e3o revela d\u00e9fices. A dor mant\u00e9m padr\u00e3o parox\u00edstico e apresenta um per\u00edodo refrat\u00e1rio claro.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "Perante fal\u00eancia do tratamento dent\u00e1rio e manuten\u00e7\u00e3o de dor neurop\u00e1tica, a hip\u00f3tese de nevralgia do trig\u00e9meo deve ser imediatamente retomada.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Perante fal\u00eancia do tratamento dent\u00e1rio e manuten\u00e7\u00e3o de dor neurop\u00e1tica, a hip\u00f3tese de nevralgia do trig\u00e9meo deve ser imediatamente retomada.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.1.1.",
+                  "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1"
+          ],
+          "feedback_on_completion": "A reavalia\u00e7\u00e3o neurol\u00f3gica corrigiu o erro inicial. A dor facial parox\u00edstica com est\u00edmulos in\u00f3cuos \u00e9 neurol\u00f3gica e n\u00e3o dent\u00e1ria.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S1",
+        "target_dp_id": "DP2",
+        "target_action_id": "A4",
+        "transition_context": "Ap\u00f3s o atraso no diagn\u00f3stico, a avalia\u00e7\u00e3o neurol\u00f3gica sistem\u00e1tica \u00e9 retomada para confirmar a nevralgia craniana."
+      }
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP4",
+      "trigger_action_id": "A10",
+      "trigger_context": "O formando requisitou uma TC cr\u00e2nio-encef\u00e1lica em vez da RM, que \u00e9 o exame gold-standard para avaliar o conflito neurovascular.",
+      "consequence_context": "A TC \u00e9 realizada, mas o relat\u00f3rio radiol\u00f3gico indica que o exame n\u00e3o tem resolu\u00e7\u00e3o para avaliar a fossa posterior e os nervos cranianos.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "O doente regressa \u00e0 consulta com o resultado da TC. O relat\u00f3rio indica: 'Sem les\u00f5es isqu\u00e9micas ou hemorr\u00e1gicas agudas. Exame limitado para avalia\u00e7\u00e3o de conflito neurovascular na fossa posterior.'",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Requisitar RM cr\u00e2nio-encef\u00e1lica com protocolo para trig\u00e9meo",
+              "finding": "Resson\u00e2ncia Magn\u00e9tica agendada. A RM \u00e9 o exame de elei\u00e7\u00e3o para identificar compress\u00e3o neurovascular e excluir patologia estrutural ou desmielinizante.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A RM \u00e9 o \u00fanico exame de imagem com sensibilidade adequada para detetar compress\u00e3o neurovascular ou placas de desmieliniza\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A RM \u00e9 o \u00fanico exame de imagem com sensibilidade adequada para detetar compress\u00e3o neurovascular ou placas de desmieliniza\u00e7\u00e3o.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "13.12.2",
+                  "location": "ichd3_headache_pt_chunk_201_central_pain_poststroke.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "A modalidade imagiol\u00f3gica correta foi finalmente requisitada, permitindo o estudo etiol\u00f3gico adequado do doente.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP5",
+        "target_action_id": "A11",
+        "transition_context": "Com a RM devidamente requisitada, o foco regressa \u00e0 gest\u00e3o farmacol\u00f3gica da dor."
+      }
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP5",
+      "trigger_action_id": "A13",
+      "trigger_context": "O formando prescreveu carbamazepina sem realizar o estudo anal\u00edtico basal recomendado, ignorando o risco de toxicidade medicamentosa.",
+      "consequence_context": "O doente desenvolve uma complica\u00e7\u00e3o associada \u00e0 medica\u00e7\u00e3o que n\u00e3o foi prevenida devido \u00e0 falta de monitoriza\u00e7\u00e3o.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "O doente recorre ao Servi\u00e7o de Urg\u00eancia 3 semanas depois, apresentando letargia, confus\u00e3o mental ligeira e n\u00e1useas. Est\u00e1 a tomar carbamazepina 200 mg duas vezes ao dia.",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Requisitar ionograma urgente e suspender carbamazepina temporariamente",
+              "finding": "O ionograma revela S\u00f3dio plasm\u00e1tico de 122 mEq/L (Hiponatremia grave). A medica\u00e7\u00e3o \u00e9 suspensa.",
+              "finding_relevance": "Positive",
+              "requirement": "Critical",
+              "rationale": "A hiponatremia \u00e9 um efeito adverso comum e potencialmente grave da carbamazepina, exigindo monitoriza\u00e7\u00e3o anal\u00edtica e interven\u00e7\u00e3o imediata se sintom\u00e1tica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Antiepileptic pharmacotherapy, particularly carbamazepine, can cause significant adverse effects requiring laboratory monitoring.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "2.",
+                  "location": "ichd3_headache_pt_chunk_121_for_diagnostic_purposes_csf_p.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "A complica\u00e7\u00e3o iatrog\u00e9nica foi identificada. A hiponatremia sintom\u00e1tica induzida pela carbamazepina sublinha a import\u00e2ncia cr\u00edtica da avalia\u00e7\u00e3o laboratorial basal e da monitoriza\u00e7\u00e3o regular.",
+          "outcome_type": "end"
+        }
+      ],
+      "merge_point": null
+    }
+  ],
+  "max_branch_length": 1,
+  "debriefing": [
+    {
+      "key_learning": "A distin\u00e7\u00e3o entre dor neurop\u00e1tica prim\u00e1ria e patologia dent\u00e1ria evita interven\u00e7\u00f5es desnecess\u00e1rias",
+      "clinical_reasoning": "A nevralgia do trig\u00e9meo cl\u00e1ssica manifesta-se por dor parox\u00edstica severa com qualidade de choque el\u00e9trico, desencadeada por est\u00edmulos in\u00f3cuos (trigger zones) num ou mais territ\u00f3rios do nervo trig\u00e9meo. O desconhecimento desta apresenta\u00e7\u00e3o leva frequentemente a extra\u00e7\u00f5es dent\u00e1rias inapropriadas, que n\u00e3o resolvem a dor e causam dano irrevers\u00edvel.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Referenciar imediatamente para medicina dent\u00e1ria perante queixas de dor facial sem realizar anamnese neurol\u00f3gica detalhada",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A3"
+          },
+          "consequence": "Atraso no diagn\u00f3stico neurol\u00f3gico e risco de submiss\u00e3o do doente a procedimentos dent\u00e1rios invasivos in\u00fateis"
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o pesquisar ativamente os fatores desencadeantes in\u00f3cuos (ex: vento, toque suave)",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A2"
+          },
+          "consequence": "Dificuldade em estabelecer os crit\u00e9rios diagn\u00f3sticos ICHD-3 para nevralgia craniana"
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO3"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP1",
+          "actions": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Classical trigeminal neuralgia usually begins in the second or third division of the nerve.",
+          "source": "ICHD-3 Classificacao Cefaleias (PT)",
+          "section": "13.1.1.",
+          "location": "ichd3_headache_pt_chunk_202_classical_trigeminal_neuralgia.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "O per\u00edodo refrat\u00e1rio \u00e9 o principal diferenciador cl\u00ednico entre nevralgia do trig\u00e9meo e SUNCT/SUNA",
+      "clinical_reasoning": "Embora partilhem a apresenta\u00e7\u00e3o de dor facial unilateral de curta dura\u00e7\u00e3o, a nevralgia do trig\u00e9meo possui caracteristicamente um per\u00edodo refrat\u00e1rio ap\u00f3s cada crise, durante o qual a dor n\u00e3o pode ser desencadeada. As s\u00edndromes SUNCT e SUNA n\u00e3o possuem este per\u00edodo refrat\u00e1rio. A diferencia\u00e7\u00e3o \u00e9 cr\u00edtica porque as op\u00e7\u00f5es de tratamento farmacol\u00f3gico diferem consideravelmente.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "Omitir a pesquisa do per\u00edodo refrat\u00e1rio na anamnese da dor facial parox\u00edstica",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A4"
+          },
+          "consequence": "Risco de diagn\u00f3stico incorreto e fal\u00eancia terap\u00eautica subsequente"
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o inquirir sobre sintomas auton\u00f3micos cranianos",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A6"
+          },
+          "consequence": "Dificuldade em considerar s\u00edndromes TACs (Trigeminal Autonomic Cephalalgias) no diagn\u00f3stico diferencial"
+        }
+      ],
+      "related_objectives": [
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A4",
+            "A6"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "SUNCT and 3.3.2 SUNA can generally be triggered without a refractory period. This contrasts with 13.1 Trigeminal neuralgia, which typically has a refractory period after each attack.",
+          "source": "ICHD-3 Classificacao Cefaleias (PT)",
+          "section": "3.3.1",
+          "location": "ichd3_headache_pt_chunk_032_sunct_and_332_suna_can_gener.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A Resson\u00e2ncia Magn\u00e9tica \u00e9 obrigat\u00f3ria no estudo da etiologia da nevralgia do trig\u00e9meo",
+      "clinical_reasoning": "A RM com protocolo espec\u00edfico para o nervo trig\u00e9meo \u00e9 o exame de elei\u00e7\u00e3o para demonstrar compress\u00e3o neurovascular (mais frequentemente pela art\u00e9ria cerebelosa superior) e excluir les\u00f5es estruturais ou placas de desmieliniza\u00e7\u00e3o associadas \u00e0 Esclerose M\u00faltipla. A TC cranioencef\u00e1lica n\u00e3o possui resolu\u00e7\u00e3o suficiente para a fossa posterior, sendo inadequada neste contexto.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Requisitar TC cranioencef\u00e1lica em vez de RM para estudo etiol\u00f3gico",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A10"
+          },
+          "consequence": "Falsa sensa\u00e7\u00e3o de seguran\u00e7a com um exame normal que n\u00e3o consegue visualizar o conflito neurovascular"
+        },
+        {
+          "error_type": "commission",
+          "description": "Iniciar terap\u00eautica com carbamazepina sem realizar estudo anal\u00edtico basal pr\u00e9vio",
+          "related_action": {
+            "decision_point": "DP5",
+            "action": "A13"
+          },
+          "consequence": "Exposi\u00e7\u00e3o do doente a risco iatrog\u00e9nico grave (hiponatremia, hepatotoxicidade) sem monitoriza\u00e7\u00e3o adequada"
+        }
+      ],
+      "related_objectives": [
+        "LO4"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A9",
+            "A10"
+          ]
+        },
+        {
+          "decision_point": "DP5",
+          "actions": [
+            "A11",
+            "A13"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Imaging (preferably by MRI) should be obtained to exclude secondary causes and, in most patients, to demonstrate neurovascular compression of the trigeminal nerve.",
+          "source": "ICHD-3 Classificacao Cefaleias (PT)",
+          "section": "13.12.2",
+          "location": "ichd3_headache_pt_chunk_207_glossopharyngeal_neuralgia_is_.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "key_takeaways": [
+    "A nevralgia do trig\u00e9meo cl\u00e1ssica caracteriza-se por dor parox\u00edstica tipo choque el\u00e9trico desencadeada por est\u00edmulos in\u00f3cuos.",
+    "A presen\u00e7a de um per\u00edodo refrat\u00e1rio ap\u00f3s a crise dolorosa \u00e9 essencial para excluir as s\u00edndromes SUNCT e SUNA.",
+    "O exame neurol\u00f3gico numa nevralgia do trig\u00e9meo cl\u00e1ssica n\u00e3o apresenta d\u00e9fices; a presen\u00e7a de hipoestesia sugere causa secund\u00e1ria.",
+    "A Resson\u00e2ncia Magn\u00e9tica (e n\u00e3o a TC) \u00e9 imperativa para avaliar a compress\u00e3o neurovascular e excluir patologia estrutural ou desmielinizante.",
+    "A carbamazepina \u00e9 o tratamento de primeira linha, mas exige obrigatoriamente avalia\u00e7\u00e3o laboratorial basal (fun\u00e7\u00e3o hep\u00e1tica, renal, ionograma e hemograma)."
+  ],
+  "metadata": {
+    "scenario_id": "0885ed6a-e298-4dd3-b989-2b15758123c8",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-03-19T18:40:10.516256",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-3.1-pro-preview",
+    "generation_time_ms": 135131.57606124878,
+    "token_count": {
+      "input": 52527,
+      "output": 10994,
+      "total": 63521
+    },
+    "revision_count": 0,
+    "sources_consulted": [
+      "ICHD-3 Classificacao Cefaleias (PT) "
+    ],
+    "retrieval_coverage": 1.0
+  }
+}
