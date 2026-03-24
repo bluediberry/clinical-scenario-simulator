@@ -111,13 +111,17 @@ h1, h2, h3, .main-header {
 
 /* Metrics inside sidebar (elapsed time): dark text on white card */
 [data-testid="stSidebar"] [data-testid="stMetric"] *,
-[data-testid="stSidebar"] [data-testid="stMetric"] label,
-[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricValue"] {
-    color: var(--c-yale) !important;
+[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricValue"],
+[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricValue"] div {
+    color: #284b63 !important;
+    font-size: 2rem !important;
 }
+[data-testid="stSidebar"] [data-testid="stMetric"] label,
 [data-testid="stSidebar"] [data-testid="stMetric"] label *,
-[data-testid="stSidebar"] [data-testid="stMetric"] label {
-    color: var(--c-text-muted) !important;
+[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricLabel"],
+[data-testid="stSidebar"] [data-testid="stMetric"] [data-testid="stMetricLabel"] div {
+    color: #6b7280 !important;
+    font-size: 0.8rem !important;
 }
 
 /* Expanders inside sidebar: dark text on white background */
