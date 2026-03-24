@@ -1,0 +1,1200 @@
+{
+  "title": "Diagn\u00f3stico de Cefaleia Trig\u00e9mino-Auton\u00f3mica em Idosa",
+  "domain": "Neurology",
+  "subdomain": "Diagn\u00f3stico e Tratamento de Cefaleia Trig\u00e9mino-Auton\u00f3mica",
+  "target_learner": "Student",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Aplicar crit\u00e9rios de diagn\u00f3stico ICHD-3 para hemicrania parox\u00edstica",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Diferenciar hemicrania parox\u00edstica de cefaleia em salvas e outras cefaleias trig\u00e9mino-auton\u00f3micas",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP1",
+        "DP2"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Reconhecer o significado diagn\u00f3stico da resposta absoluta a indometacina",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP3",
+        "DP5"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Classificar subtipos epis\u00f3dico versus cr\u00f3nico",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP5"
+      ]
+    },
+    {
+      "id": "LO5",
+      "description": "Iniciar tratamento com indometacina como terap\u00eautica sintom\u00e1tica e preventiva em doses de 75-150 mg/dia",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP3"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 35,
+  "difficulty": "Advanced",
+  "prerequisites": [
+    "Conhecimento b\u00e1sico da classifica\u00e7\u00e3o de cefaleias prim\u00e1rias.",
+    "Familiaridade com a realiza\u00e7\u00e3o de anamnese e exame neurol\u00f3gico."
+  ],
+  "patient": {
+    "age": 70,
+    "gender": "Female",
+    "presenting_complaint": "Epis\u00f3dios de cefaleia periorbit\u00e1ria esquerda, muito intensa e de curta dura\u00e7\u00e3o (cerca de 5 minutos), com lacrimejo e congest\u00e3o nasal ipsilateral, ocorrendo m\u00faltiplas vezes ao dia.",
+    "medical_history": [
+      "Hipertens\u00e3o arterial",
+      "Osteoartrose",
+      "Dislipidemia"
+    ],
+    "medications": [
+      "Lisinopril 10 mg id",
+      "Atorvastatina 20 mg id",
+      "Ibuprofeno 400 mg SOS para dor articular"
+    ],
+    "allergies": [
+      "sem alergias conhecidas"
+    ],
+    "social_history": "Reformada, vive com o marido. Nega tabagismo ou consumo regular de \u00e1lcool."
+  },
+  "initial_presentation": "Mulher de 70 anos, reformada, recorre \u00e0 consulta de Neurologia por quadro com duas semanas de evolu\u00e7\u00e3o de crises de dor muito intensa, 'lancinante', localizada na regi\u00e3o periorbit\u00e1ria esquerda. Refere que os epis\u00f3dios duram cerca de 5 minutos e ocorrem 6 a 8 vezes por dia, sem padr\u00e3o hor\u00e1rio fixo. Durante as crises, nota o olho esquerdo vermelho, com lacrimejo abundante e congest\u00e3o nasal \u00e0 esquerda. Entre as crises, sente-se perfeitamente bem. Teve um epis\u00f3dio semelhante h\u00e1 2 anos que resolveu espontaneamente ap\u00f3s 3 semanas. Tem antecedentes de hipertens\u00e3o e osteoartrose, medicada com lisinopril, atorvastatina e ibuprofeno ocasional.",
+  "interaction_prompt": "\u00c9 o m\u00e9dico neurologista respons\u00e1vel pela avalia\u00e7\u00e3o desta doente em consulta externa. O seu objetivo \u00e9 coligir a hist\u00f3ria cl\u00ednica, realizar o exame objetivo, estabelecer um diagn\u00f3stico e delinear um plano terap\u00eautico e de seguimento.",
+  "clinical_time_window": null,
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Diagn\u00f3stico Cl\u00ednico e Diferencial",
+      "setting": "Consulta de Neurologia",
+      "initial_state": "A doente est\u00e1 sentada \u00e0 sua frente na sala de consulta, acompanhada pelo marido. Parece ansiosa mas n\u00e3o se encontra em crise de dor no momento.",
+      "vital_signs": {
+        "blood_pressure": "138/82 mmHg",
+        "heart_rate": "76 bpm",
+        "respiratory_rate": "16 cpm",
+        "temperature": "36.5\u00b0C",
+        "oxygen_saturation": "98% ar ambiente",
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "Rever medica\u00e7\u00e3o habitual da doente",
+          "finding": "Lisinopril 10 mg id, Atorvastatina 20 mg id, Ibuprofeno 400 mg SOS (usou cerca de 2-3 vezes na \u00faltima semana para dor no joelho).",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "Questionar sobre hist\u00f3ria familiar de cefaleias",
+          "finding": "A doente nega hist\u00f3ria familiar relevante de enxaqueca ou outras cefaleias.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Questionar sobre fatores desencadeantes",
+          "finding": "A doente n\u00e3o identifica nenhum desencadeante consistente para as crises de dor.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "A doente descreveu a sua queixa principal. \u00c9 necess\u00e1rio aprofundar a hist\u00f3ria cl\u00ednica para caracterizar a cefaleia de acordo com os crit\u00e9rios diagn\u00f3sticos internacionais.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Caracterizar dura\u00e7\u00e3o e frequ\u00eancia dos ataques de dor",
+              "finding": "Dura\u00e7\u00e3o de 2-5 minutos. Frequ\u00eancia de 6-8 ataques por dia. Estes par\u00e2metros s\u00e3o consistentes com Hemicrania Parox\u00edstica (dura\u00e7\u00e3o 2-30 min, frequ\u00eancia >5/dia).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A caracteriza\u00e7\u00e3o temporal \u00e9 fundamental para o diagn\u00f3stico diferencial das Cefaleias Trig\u00e9mino-Auton\u00f3micas (CTAs). A curta dura\u00e7\u00e3o e alta frequ\u00eancia s\u00e3o t\u00edpicas da Hemicrania Parox\u00edstica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A caracteriza\u00e7\u00e3o temporal \u00e9 fundamental para o diagn\u00f3stico diferencial das Cefaleias Trig\u00e9mino-Auton\u00f3micas (CTAs).",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_080_the_headache_developed_in_clos.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Investigar a presen\u00e7a de sintomas auton\u00f3micos cranianos ipsilaterais",
+              "finding": "Confirma hiperemia conjuntival, lacrimejo e rinorreia ipsilaterais \u00e0 dor. N\u00e3o nota ptose ou miose. A presen\u00e7a destes sintomas \u00e9 um crit\u00e9rio major para as CTAs.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A presen\u00e7a de sintomas auton\u00f3micos exuberantes, ipsilaterais \u00e0 dor, \u00e9 a imagem de marca das CTAs, incluindo a Hemicrania Parox\u00edstica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A presen\u00e7a de sintomas auton\u00f3micos exuberantes, ipsilaterais \u00e0 dor, \u00e9 a imagem de marca das CTAs, incluindo a Hemicrania Parox\u00edstica.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_035_continuous_hemicrania_has_been.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Questionar sobre a exist\u00eancia de dor de fundo cont\u00ednua entre as crises",
+              "finding": "A doente nega categoricamente qualquer dor ou desconforto entre os ataques. A aus\u00eancia de dor cont\u00ednua de base \u00e9 crucial para excluir Hemicrania Cont\u00ednua.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "Esta \u00e9 a quest\u00e3o chave para diferenciar Hemicrania Parox\u00edstica (sem dor de base) de Hemicrania Cont\u00ednua (com dor de base persistente e exacerba\u00e7\u00f5es).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Esta \u00e9 a quest\u00e3o chave para diferenciar Hemicrania Parox\u00edstica (sem dor de base) de Hemicrania Cont\u00ednua (com dor de base persistente e exacerba\u00e7\u00f5es).",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.4",
+                  "location": "ichd3_headache_pt_chunk_035_continuous_hemicrania_has_been.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2",
+            "A3"
+          ],
+          "feedback_on_completion": "A hist\u00f3ria cl\u00ednica \u00e9 altamente sugestiva de Hemicrania Parox\u00edstica, com base na dura\u00e7\u00e3o (2-5 min), frequ\u00eancia (>5/dia), sintomas auton\u00f3micos e aus\u00eancia de dor intercr\u00edtica. A diferencia\u00e7\u00e3o de Hemicrania Cont\u00ednua foi estabelecida. O pr\u00f3ximo passo \u00e9 o exame objetivo para excluir causas secund\u00e1rias e 'red flags'. [Source: ICHD-3 Classificacao Cefaleias (PT)]"
+        },
+        {
+          "id": "DP2",
+          "context": "A anamnese est\u00e1 conclu\u00edda e aponta fortemente para Hemicrania Parox\u00edstica. Procede-se ao exame f\u00edsico e neurol\u00f3gico.",
+          "available_actions": [
+            {
+              "id": "A4",
+              "description": "Realizar exame neurol\u00f3gico completo",
+              "finding": "O exame neurol\u00f3gico, incluindo avalia\u00e7\u00e3o de pares cranianos, for\u00e7a motora, sensibilidade, coordena\u00e7\u00e3o e reflexos, \u00e9 inteiramente normal.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "Um exame neurol\u00f3gico normal entre as crises \u00e9 o esperado numa cefaleia prim\u00e1ria, mas a sua realiza\u00e7\u00e3o \u00e9 mandat\u00f3ria para excluir les\u00f5es estruturais que possam mimetizar uma CTA.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "When a new headache with the characteristics of a trigeminal-autonomic headache (CTA) occurs for the first time in close temporal relation to another disorder, a recognised cause of headache... the new headache is classified as a secondary headache attributed to the causative disorder.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.5.4",
+                  "location": "ichd3_headache_pt_chunk_080_the_headache_developed_in_clos.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                8,
+                12
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A5",
+              "description": "Palpar art\u00e9rias temporais e avaliar sensibilidade do escalpe",
+              "finding": "As art\u00e9rias temporais s\u00e3o bilaterlamente palp\u00e1veis, el\u00e1sticas e n\u00e3o dolorosas. N\u00e3o h\u00e1 hipersensibilidade do escalpe.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "\u00c9 mandat\u00f3rio excluir Arterite de C\u00e9lulas Gigantes (ACG) em qualquer doente com >50 anos e cefaleia de novo. A palpa\u00e7\u00e3o das art\u00e9rias temporais \u00e9 um passo essencial deste rastreio.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A avalia\u00e7\u00e3o de causas secund\u00e1rias de cefaleia, como a arterite de c\u00e9lulas gigantes, \u00e9 um princ\u00edpio fundamental no diagn\u00f3stico de cefaleias em idosos.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "5",
+                  "location": "ichd3_headache_pt_chunk_167_headache_attributed_to_pheochr.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Questionar sobre sintomas de Arterite de C\u00e9lulas Gigantes (ACG)",
+              "finding": "A doente nega claudica\u00e7\u00e3o da mand\u00edbula, amaurose fugaz, diplopia, febre, perda de peso ou mialgias proximais. A aus\u00eancia destes sintomas diminui a probabilidade de ACG.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "O rastreio cl\u00ednico de sintomas sist\u00e9micos e visuais de ACG \u00e9 um passo de seguran\u00e7a indispens\u00e1vel antes de assumir um diagn\u00f3stico de cefaleia prim\u00e1ria nesta faixa et\u00e1ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O diagn\u00f3stico diferencial de cefaleias em doentes com mais de 50 anos deve sempre incluir a exclus\u00e3o de causas secund\u00e1rias graves, como a arterite temporal.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "6",
+                  "location": "ichd3_headache_pt_chunk_080_the_headache_developed_in_clos.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A7",
+              "description": "Realizar exame f\u00edsico geral, incluindo ausculta\u00e7\u00e3o card\u00edaca e pulmonar",
+              "finding": "Exame f\u00edsico geral sem altera\u00e7\u00f5es de relevo. TA 138/82 mmHg. Ausculta\u00e7\u00e3o cardiopulmonar normal.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Contribui para a avalia\u00e7\u00e3o global da doente, mas n\u00e3o \u00e9 esperado que revele achados diretamente relacionados com a cefaleia em quest\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Contribui para a avalia\u00e7\u00e3o global da doente, mas n\u00e3o \u00e9 esperado que revele achados diretamente relacionados com a cefaleia em quest\u00e3o.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_195_headache_attributed_to_psychot.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A4",
+            "A5",
+            "A6"
+          ],
+          "feedback_on_completion": "O exame f\u00edsico e neurol\u00f3gico \u00e9 normal, o que refor\u00e7a a suspeita de uma cefaleia prim\u00e1ria. O rastreio cl\u00ednico para Arterite de C\u00e9lulas Gigantes foi negativo. A hip\u00f3tese diagn\u00f3stica mais prov\u00e1vel continua a ser Hemicrania Parox\u00edstica. O passo seguinte \u00e9 confirmar o diagn\u00f3stico com um ensaio terap\u00eautico."
+        }
+      ],
+      "progression_criteria": "Conclus\u00e3o da anamnese e do exame objetivo, com formula\u00e7\u00e3o de uma hip\u00f3tese diagn\u00f3stica prim\u00e1ria."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Ensaio Terap\u00eautico e Investiga\u00e7\u00e3o Complementar",
+      "setting": "Consulta de Neurologia",
+      "initial_state": "A avalia\u00e7\u00e3o cl\u00ednica est\u00e1 completa, com uma forte suspeita de Hemicrania Parox\u00edstica. A doente aguarda o plano de a\u00e7\u00e3o.",
+      "vital_signs": {
+        "blood_pressure": "138/82 mmHg",
+        "heart_rate": "76 bpm",
+        "respiratory_rate": "16 cpm",
+        "temperature": "36.5\u00b0C",
+        "oxygen_saturation": "98% ar ambiente",
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Rever crit\u00e9rios ICHD-3 para Hemicrania Parox\u00edstica",
+          "finding": "A) Pelo menos 20 ataques. B) Dor severa unilateral (orbit\u00e1ria, supraorbit\u00e1ria, temporal) de 2-30 min. C) Sintomas auton\u00f3micos ipsilaterais. D) Frequ\u00eancia >5/dia. E) Resposta absoluta a indometacina.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Rever crit\u00e9rios ICHD-3 para Cefaleia em Salvas",
+          "finding": "Dor severa unilateral (orbit\u00e1ria, supraorbit\u00e1ria, temporal) de 15-180 min. Frequ\u00eancia de 1 a cada 2 dias at\u00e9 8/dia. Sintomas auton\u00f3micos e/ou agita\u00e7\u00e3o.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_6",
+          "description": "Contraindica\u00e7\u00f5es da Indometacina",
+          "finding": "Hipersensibilidade a AINEs, \u00falcera p\u00e9ptica ativa, hemorragia gastrointestinal recente, insufici\u00eancia renal ou card\u00edaca graves.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP3",
+          "context": "A suspeita cl\u00ednica de Hemicrania Parox\u00edstica necessita de confirma\u00e7\u00e3o. \u00c9 tempo de decidir a abordagem terap\u00eautica inicial, que neste caso tem tamb\u00e9m valor diagn\u00f3stico.",
+          "available_actions": [
+            {
+              "id": "A9",
+              "description": "Co-prescrever um Inibidor da Bomba de Prot\u00f5es (IBP)",
+              "finding": "\u00c9 prescrito Omeprazol 20 mg/dia para prote\u00e7\u00e3o g\u00e1strica, a tomar em jejum. A doente \u00e9 alertada para o risco de toxicidade g\u00e1strica dos AINEs, especialmente na sua idade.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A gastroprote\u00e7\u00e3o com um IBP \u00e9 mandat\u00f3ria ao iniciar um AINE como a indometacina, especialmente numa doente idosa (>65 anos) com hist\u00f3ria de uso de outros AINEs, para prevenir complica\u00e7\u00f5es graves como \u00falcera p\u00e9ptica ou hemorragia digestiva.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A utiliza\u00e7\u00e3o cr\u00f3nica de AINEs, como a indometacina, acarreta um risco significativo de efeitos adversos gastrointestinais, sendo a co-prescri\u00e7\u00e3o de um protetor g\u00e1strico uma medida de seguran\u00e7a essencial, particularmente em popula\u00e7\u00f5es de risco como os idosos.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A10",
+              "description": "Prescrever Indometacina 25 mg, 1 vez/dia",
+              "finding": "\u00c9 prescrita uma dose sub-terap\u00eautica de indometacina. Esta abordagem incorreta levar\u00e1 a uma falha no controlo dos sintomas e a uma conclus\u00e3o diagn\u00f3stica errada (falso negativo), atrasando o tratamento adequado.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Optional",
+              "rationale": "Esta dose \u00e9 insuficiente para um ensaio diagn\u00f3stico v\u00e1lido. A aus\u00eancia de resposta a uma dose sub-terap\u00eautica n\u00e3o exclui o diagn\u00f3stico e representa um erro cl\u00ednico comum que leva a confus\u00e3o diagn\u00f3stica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Esta dose \u00e9 insuficiente para um ensaio diagn\u00f3stico v\u00e1lido.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_035_continuous_hemicrania_has_been.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O utilizador prescreveu uma dose sub-terap\u00eautica de indometacina (25 mg/dia) para o ensaio diagn\u00f3stico."
+              }
+            },
+            {
+              "id": "A11",
+              "description": "Prescrever Indometacina 75 mg/dia sem gastroprote\u00e7\u00e3o",
+              "finding": "\u00c9 prescrita uma dose adequada de indometacina, mas omite-se a prote\u00e7\u00e3o g\u00e1strica. Esta omiss\u00e3o coloca a doente de 70 anos, com uso pr\u00e9vio de AINEs, em risco elevado de hemorragia digestiva alta, uma complica\u00e7\u00e3o potencialmente fatal.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Optional",
+              "rationale": "Omitir a gastroprote\u00e7\u00e3o com um IBP ao prescrever indometacina a uma doente idosa \u00e9 uma falha de seguran\u00e7a grave. O risco de gastropatia por AINEs \u00e9 significativamente aumentado nesta popula\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. O risco de complica\u00e7\u00f5es gastrointestinais associadas ao uso de AINEs aumenta com a idade, sendo a prote\u00e7\u00e3o g\u00e1strica fortemente recomendada em doentes com mais de 65 anos.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_002_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O utilizador prescreveu indometacina a uma doente idosa sem a devida gastroprote\u00e7\u00e3o com um Inibidor da Bomba de Prot\u00f5es (IBP)."
+              }
+            },
+            {
+              "id": "A12",
+              "description": "Prescrever Oxig\u00e9nio a 100% com m\u00e1scara facial",
+              "finding": "\u00c9 prescrita oxigenoterapia em alto fluxo. Esta \u00e9 a terap\u00eautica de primeira linha para a cefaleia em salvas, mas \u00e9 ineficaz na Hemicrania Parox\u00edstica. Esta escolha reflete um erro de diagn\u00f3stico diferencial e ir\u00e1 atrasar a institui\u00e7\u00e3o da terap\u00eautica correta.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Optional",
+              "rationale": "A oxigenoterapia \u00e9 o tratamento agudo de elei\u00e7\u00e3o para a cefaleia em salvas, n\u00e3o para a Hemicrania Parox\u00edstica. A sua prescri\u00e7\u00e3o indica um erro no diagn\u00f3stico diferencial dentro das CTAs.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Kudrow L. Response of cluster headache attacks to oxygen inhalation. Headache 1981; 21: 1-4.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "3.4.3",
+                  "location": "spn_headache_treatment_2004_chunk_035_probable_sunct.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O utilizador diagnosticou erradamente a condi\u00e7\u00e3o como Cefaleia em Salvas e prescreveu o tratamento de primeira linha para essa condi\u00e7\u00e3o (oxigenoterapia)."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A9"
+          ],
+          "feedback_on_completion": "Foi corretamente iniciado um ensaio terap\u00eautico com uma dose adequada de indometacina (75 mg/dia) e, crucialmente, foi adicionada gastroprote\u00e7\u00e3o com um IBP. A doente foi instru\u00edda sobre como tomar a medica\u00e7\u00e3o e o que esperar. O pr\u00f3ximo passo \u00e9 solicitar exames complementares para excluir causas secund\u00e1rias e agendar o seguimento. [Source: SPN/SPC Headache Treatment 2004]"
+        },
+        {
+          "id": "DP4",
+          "context": "O plano terap\u00eautico inicial foi estabelecido. \u00c9 prudente solicitar exames complementares para excluir patologia estrutural e avaliar par\u00e2metros basais antes de iniciar terap\u00eautica cr\u00f3nica com AINEs.",
+          "available_actions": [
+            {
+              "id": "A13",
+              "description": "Requisitar Resson\u00e2ncia Magn\u00e9tica (RM) Cr\u00e2nio-encef\u00e1lica",
+              "finding": "\u00c9 requisitada uma RM-CE para excluir causas secund\u00e1rias de CTA, como les\u00f5es da hip\u00f3fise ou do seio cavernoso.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "A neuroimagem \u00e9 recomendada na avalia\u00e7\u00e3o inicial de uma CTA para excluir les\u00f5es estruturais que podem mimetizar uma forma prim\u00e1ria, sendo a RM o exame de elei\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A neuroimagem \u00e9 recomendada na avalia\u00e7\u00e3o inicial de uma CTA para excluir les\u00f5es estruturais que podem mimetizar uma forma prim\u00e1ria, sendo a RM o exame de elei\u00e7\u00e3o.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.4",
+                  "location": "ichd3_headache_pt_chunk_028_probable_continuous_hemicrania.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A14",
+              "description": "Requisitar estudo anal\u00edtico com hemograma, fun\u00e7\u00e3o renal e VS",
+              "finding": "\u00c9 requisitado um estudo anal\u00edtico para avalia\u00e7\u00e3o basal da fun\u00e7\u00e3o renal (importante pela nefrotoxicidade dos AINEs) e para completar o rastreio de ACG (VS).",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "\u00c9 essencial avaliar a fun\u00e7\u00e3o renal basal antes de iniciar um AINE cronicamente e obter marcadores inflamat\u00f3rios (VS, PCR) para complementar o rastreio de ACG numa doente de 70 anos.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A avalia\u00e7\u00e3o da fun\u00e7\u00e3o renal \u00e9 um pr\u00e9-requisito de seguran\u00e7a antes da prescri\u00e7\u00e3o de terap\u00eautica cr\u00f3nica com anti-inflamat\u00f3rios n\u00e3o esteroides.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "3.4.3",
+                  "location": "spn_headache_treatment_2004_chunk_039_probable_sunct.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A15",
+              "description": "Agendar consulta de seguimento para reavalia\u00e7\u00e3o em 1 semana",
+              "finding": "\u00c9 agendada uma consulta de seguimento (telef\u00f3nica ou presencial) para da\u00ed a uma semana, para avaliar a resposta \u00e0 indometacina e os resultados dos exames.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "O seguimento pr\u00f3ximo \u00e9 fundamental para avaliar a efic\u00e1cia do ensaio terap\u00eautico (a resposta \u00e9 tipicamente r\u00e1pida, em 1-3 dias) e monitorizar eventuais efeitos adversos.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A resposta \u00e0 indometacina na hemicrania parox\u00edstica \u00e9 tipicamente r\u00e1pida, pelo que uma reavalia\u00e7\u00e3o precoce \u00e9 essencial para confirmar o diagn\u00f3stico.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_156_headache_attributed_to_intracr.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A13",
+            "A14",
+            "A15"
+          ],
+          "feedback_on_completion": "O plano de investiga\u00e7\u00e3o est\u00e1 completo, incluindo neuroimagem para exclus\u00e3o de causas secund\u00e1rias e an\u00e1lises para seguran\u00e7a terap\u00eautica e rastreio de ACG. O agendamento de um follow-up pr\u00f3ximo \u00e9 crucial para o sucesso desta abordagem diagn\u00f3stica e terap\u00eautica."
+        }
+      ],
+      "progression_criteria": "Institui\u00e7\u00e3o de um ensaio terap\u00eautico seguro e pedido de exames complementares adequados."
+    },
+    {
+      "id": "S3",
+      "name": "Stage 3: Confirma\u00e7\u00e3o Diagn\u00f3stica e Gest\u00e3o a Longo Prazo",
+      "setting": "Consulta de Neurologia (Follow-up)",
+      "initial_state": "Passou uma semana. A doente regressa para a consulta de seguimento para reavaliar a sua situa\u00e7\u00e3o cl\u00ednica e rever os resultados dos exames.",
+      "vital_signs": {
+        "blood_pressure": "134/80 mmHg",
+        "heart_rate": "74 bpm",
+        "respiratory_rate": "16 cpm",
+        "temperature": "36.6\u00b0C",
+        "oxygen_saturation": "98% ar ambiente",
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      },
+      "all_optional": [
+        {
+          "id": "INFO_7",
+          "description": "Rever resultados anal\u00edticos",
+          "finding": "Hemograma, fun\u00e7\u00e3o renal e hep\u00e1tica sem altera\u00e7\u00f5es. Velocidade de Sedimenta\u00e7\u00e3o (VS) de 18 mm/h (normal para a idade).",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_8",
+          "description": "Rever relat\u00f3rio da RM-CE",
+          "finding": "RM Cr\u00e2nio-encef\u00e1lica n\u00e3o revelou altera\u00e7\u00f5es parenquimatosas, vasculares ou da regi\u00e3o selar e parasselar com significado patol\u00f3gico.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP5",
+          "context": "A doente est\u00e1 na consulta de seguimento. \u00c9 altura de avaliar a resposta ao ensaio terap\u00eautico, rever os exames e estabelecer o diagn\u00f3stico e plano definitivos.",
+          "available_actions": [
+            {
+              "id": "A16",
+              "description": "Avaliar resposta cl\u00ednica \u00e0 indometacina",
+              "finding": "A doente relata que as crises de dor cessaram completamente cerca de 24 horas ap\u00f3s iniciar a indometacina. N\u00e3o teve mais nenhum ataque desde ent\u00e3o. Esta \u00e9 uma 'resposta absoluta'.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A resposta completa e absoluta \u00e0 indometacina \u00e9 a pedra angular do diagn\u00f3stico de Hemicrania Parox\u00edstica, confirmando a suspeita cl\u00ednica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A resposta completa e absoluta \u00e0 indometacina \u00e9 a pedra angular do diagn\u00f3stico de Hemicrania Parox\u00edstica, confirmando a suspeita cl\u00ednica.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_042_primary_cough_headache_is_gene.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                7
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A17",
+              "description": "Rever resultados da RM-CE e an\u00e1lises",
+              "finding": "Tanto a RM-CE como o estudo anal\u00edtico (incluindo VS) s\u00e3o normais. Isto exclui eficazmente causas secund\u00e1rias e ACG, respetivamente.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "A normalidade dos exames complementares \u00e9 essencial para confirmar o diagn\u00f3stico de uma cefaleia prim\u00e1ria, ap\u00f3s a exclus\u00e3o de patologia estrutural e inflamat\u00f3ria.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A normalidade dos exames complementares \u00e9 essencial para confirmar o diagn\u00f3stico de uma cefaleia prim\u00e1ria, ap\u00f3s a exclus\u00e3o de patologia estrutural e inflamat\u00f3ria.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_080_the_headache_developed_in_clos.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A18",
+              "description": "Formular o diagn\u00f3stico final e classificar o subtipo",
+              "finding": "Com base nos crit\u00e9rios cl\u00ednicos (dura\u00e7\u00e3o, frequ\u00eancia, sintomas auton\u00f3micos), resposta \u00e0 indometacina e exames normais, o diagn\u00f3stico \u00e9 Hemicrania Parox\u00edstica. Como houve um per\u00edodo de remiss\u00e3o >3 meses no passado, classifica-se como Hemicrania Parox\u00edstica Epis\u00f3dica.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A s\u00edntese de todos os dados permite o diagn\u00f3stico final e a sua correta classifica\u00e7\u00e3o, o que tem implica\u00e7\u00f5es no progn\u00f3stico e na comunica\u00e7\u00e3o com a doente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A s\u00edntese de todos os dados permite o diagn\u00f3stico final e a sua correta classifica\u00e7\u00e3o, o que tem implica\u00e7\u00f5es no progn\u00f3stico e na comunica\u00e7\u00e3o com a doente.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2.1",
+                  "location": "ichd3_headache_pt_chunk_053_daily_persistent_headache_from.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A19",
+              "description": "Discutir plano terap\u00eautico a longo prazo",
+              "finding": "\u00c9 explicado \u00e0 doente que deve manter a terap\u00eautica. O plano \u00e9 tentar reduzir gradualmente a dose de indometacina para a menor dose eficaz que mantenha o controlo completo dos sintomas (e.g., 25 mg 2x/dia ou 1x/dia), mantendo sempre o IBP.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A gest\u00e3o a longo prazo visa minimizar a exposi\u00e7\u00e3o ao AINE e os seus potenciais efeitos adversos, titulando a dose para o m\u00ednimo necess\u00e1rio para a profilaxia dos ataques.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A gest\u00e3o a longo prazo visa minimizar a exposi\u00e7\u00e3o ao AINE e os seus potenciais efeitos adversos, titulando a dose para o m\u00ednimo necess\u00e1rio para a profilaxia dos ataques.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_033_sunct_and_332_suna_can_gener.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A16",
+            "A17",
+            "A18"
+          ],
+          "feedback_on_completion": "Diagn\u00f3stico de Hemicrania Parox\u00edstica Epis\u00f3dica confirmado com sucesso. A resposta absoluta \u00e0 indometacina foi o elemento chave, e a investiga\u00e7\u00e3o complementar excluiu patologias graves. A doente est\u00e1 agora sem sintomas e com um plano de tratamento a longo prazo estabelecido e seguro."
+        }
+      ],
+      "progression_criteria": "Estabelecimento de um diagn\u00f3stico definitivo e de um plano de gest\u00e3o a longo prazo."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A11",
+      "trigger_context": "O utilizador prescreveu indometacina a uma doente idosa sem a devida gastroprote\u00e7\u00e3o com um Inibidor da Bomba de Prot\u00f5es (IBP).",
+      "consequence_context": "Devido \u00e0 aus\u00eancia de prote\u00e7\u00e3o g\u00e1strica, a doente desenvolve uma complica\u00e7\u00e3o gastrointestinal grave (hemorragia digestiva alta) que requer interven\u00e7\u00e3o urgente, atrasando o tratamento da sua cefaleia.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "Tr\u00eas dias ap\u00f3s a consulta, recebe um telefonema da doente. Queixa-se de dor abdominal superior intensa, n\u00e1useas e refere que as suas fezes est\u00e3o 'negras e pegajosas'. Continua a tomar a indometacina e as cefaleias desapareceram, mas sente-se muito fraca.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Aconselhar a suspens\u00e3o imediata da indometacina",
+              "finding": "A doente \u00e9 instru\u00edda a parar imediatamente a indometacina.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Perante a suspeita de hemorragia digestiva alta (melenas) induzida por AINE, a primeira e mais urgente medida \u00e9 suspender o agente agressor.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Os efeitos adversos gastrointestinais s\u00e3o a principal limita\u00e7\u00e3o da terap\u00eautica com indometacina, exigindo vigil\u00e2ncia e, se ocorrerem, a suspens\u00e3o do f\u00e1rmaco.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A2",
+              "description": "Referenciar a doente ao Servi\u00e7o de Urg\u00eancia",
+              "finding": "A doente \u00e9 instru\u00edda a dirigir-se imediatamente ao Servi\u00e7o de Urg\u00eancia para avalia\u00e7\u00e3o de uma potencial hemorragia digestiva alta.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Melenas e dor epig\u00e1strica num doente a tomar AINEs constituem uma emerg\u00eancia m\u00e9dica que requer avalia\u00e7\u00e3o hospitalar imediata.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A hemorragia digestiva alta \u00e9 uma complica\u00e7\u00e3o grave do uso de AINEs e requer tratamento emergente.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "1.5.4",
+                  "location": "spn_headache_treatment_2004_chunk_011_infarction_attributed_to_migra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1",
+            "B1_A2"
+          ],
+          "feedback_on_completion": "A suspeita de hemorragia digestiva alta foi corretamente identificada como uma emerg\u00eancia. A doente foi instru\u00edda a suspender o AINE e a procurar o Servi\u00e7o de Urg\u00eancia, as duas a\u00e7\u00f5es cr\u00edticas nesta situa\u00e7\u00e3o.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B1_DP2",
+          "context": "No Servi\u00e7o de Urg\u00eancia, a doente \u00e9 avaliada. Apresenta-se p\u00e1lida, taquic\u00e1rdica (110 bpm) e hipotensa (95/60 mmHg). O hemograma revela uma hemoglobina de 8.5 g/dL (valor pr\u00e9vio de 13 g/dL).",
+          "available_actions": [
+            {
+              "id": "B1_A3",
+              "description": "Realizar Endoscopia Digestiva Alta (EDA) urgente",
+              "finding": "A EDA revela uma \u00falcera g\u00e1strica de 2 cm na pequena curvatura com hemorragia ativa (Forrest Ib), que \u00e9 tratada endoscopicamente. A causa \u00e9 atribu\u00edda \u00e0 indometacina.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A EDA \u00e9 o exame de elei\u00e7\u00e3o para diagnosticar e tratar a hemorragia digestiva alta de origem ulcerosa.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. A endoscopia permite n\u00e3o s\u00f3 o diagn\u00f3stico da les\u00e3o hemorr\u00e1gica, mas tamb\u00e9m a sua terap\u00eautica, sendo fulcral na gest\u00e3o da hemorragia digestiva alta.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                60,
+                90
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A3"
+          ],
+          "feedback_on_completion": "A complica\u00e7\u00e3o grave da omiss\u00e3o da gastroprote\u00e7\u00e3o foi confirmada e tratada. A doente necessitar\u00e1 de internamento e estabiliza\u00e7\u00e3o. O tratamento da sua cefaleia foi interrompido e ter\u00e1 de ser repensado ap\u00f3s a resolu\u00e7\u00e3o do problema gastrointestinal.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP4",
+        "target_action_id": "A15",
+        "transition_context": "Ap\u00f3s o internamento e tratamento da hemorragia digestiva, a doente tem alta. As cefaleias, entretanto, recome\u00e7aram. Regressa \u00e0 sua consulta. A experi\u00eancia sublinha a necessidade absoluta de gastroprote\u00e7\u00e3o. O plano de investiga\u00e7\u00e3o original (RM e an\u00e1lises) e o agendamento do seguimento mant\u00eam-se v\u00e1lidos, mas o ensaio terap\u00eautico ter\u00e1 de ser reiniciado com a devida precau\u00e7\u00e3o."
+      }
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A10",
+      "trigger_context": "O utilizador prescreveu uma dose sub-terap\u00eautica de indometacina (25 mg/dia) para o ensaio diagn\u00f3stico.",
+      "consequence_context": "A dose insuficiente leva a uma resposta parcial, resultando num 'ensaio falso-negativo'. Isto gera incerteza diagn\u00f3stica e atrasa o tratamento eficaz, pois a resposta absoluta n\u00e3o \u00e9 observada.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "Na consulta de seguimento, a doente refere que as crises de cefaleia melhoraram, mas n\u00e3o desapareceram. 'Agora s\u00f3 tenho 2 ou 3 por dia, e talvez um pouco mais fracas'. N\u00e3o est\u00e1 totalmente satisfeita.",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Reconhecer a dose como sub-terap\u00eautica e aumentar para 75 mg/dia",
+              "finding": "Percebe-se que a resposta parcial pode dever-se a uma dose insuficiente. A dose de indometacina \u00e9 aumentada para 25 mg 3x/dia (75 mg/dia) e \u00e9 agendado novo contacto telef\u00f3nico em 3 dias.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Uma resposta parcial deve levantar a suspeita de dose inadequada. \u00c9 necess\u00e1rio titular a indometacina para uma dose terap\u00eautica (pelo menos 75-150 mg/dia) antes de se poder avaliar conclusivamente a resposta.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "In an adult, oral indomethacin should be used initially at a dose of at least 150 mg daily and increased, if necessary, to 225 mg daily.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_030_probable_continuous_hemicrania.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A2",
+              "description": "Abandonar o diagn\u00f3stico de Hemicrania Parox\u00edstica",
+              "finding": "Interpreta-se erradamente a resposta parcial como uma falha do ensaio. O diagn\u00f3stico de Hemicrania Parox\u00edstica \u00e9 abandonado e outras terap\u00eauticas (ineficazes) s\u00e3o consideradas, deixando a doente com controlo sub-\u00f3timo da sua condi\u00e7\u00e3o.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Optional",
+              "rationale": "Concluir que o diagn\u00f3stico est\u00e1 errado com base numa resposta a dose sub-terap\u00eautica \u00e9 um erro. Impede a confirma\u00e7\u00e3o do diagn\u00f3stico correto e a institui\u00e7\u00e3o do tratamento eficaz.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Cf. Concluir que o diagn\u00f3stico est\u00e1 errado com base numa resposta a dose sub-terap\u00eautica \u00e9 um erro.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "3.2",
+                  "location": "ichd3_headache_pt_chunk_078_headache_attributed_to_pituita.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "O erro da dose inicial foi corretamente identificado. Ao aumentar a indometacina para uma dose terap\u00eautica, d\u00e1-se uma nova oportunidade para avaliar a resposta de forma conclusiva.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S3",
+        "target_dp_id": "DP5",
+        "target_action_id": "A16",
+        "transition_context": "Tr\u00eas dias depois, a doente telefona a dizer que, com a nova dose de 75 mg/dia, as cefaleias desapareceram por completo. A consulta de seguimento prossegue agora com a informa\u00e7\u00e3o correta de uma 'resposta absoluta' \u00e0 dose terap\u00eautica."
+      }
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A12",
+      "trigger_context": "O utilizador diagnosticou erradamente a condi\u00e7\u00e3o como Cefaleia em Salvas e prescreveu o tratamento de primeira linha para essa condi\u00e7\u00e3o (oxigenoterapia).",
+      "consequence_context": "O tratamento \u00e9 completamente ineficaz, pois a Hemicrania Parox\u00edstica n\u00e3o responde a oxig\u00e9nio. O sofrimento da doente prolonga-se e o diagn\u00f3stico correto \u00e9 atrasado.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "No dia seguinte, a doente telefona, muito frustrada. Diz: 'Tive mais quatro crises desde ontem. Tentei o oxig\u00e9nio como me disse, mas n\u00e3o fez absolutamente nada. A dor continuou exatamente igual'.",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Reconhecer a falha terap\u00eautica e reconsiderar o diagn\u00f3stico",
+              "finding": "A aus\u00eancia total de resposta ao oxig\u00e9nio \u00e9 uma forte evid\u00eancia contra o diagn\u00f3stico de Cefaleia em Salvas e a favor de outra CTA, como a Hemicrania Parox\u00edstica. A estrat\u00e9gia terap\u00eautica \u00e9 reavaliada.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A falha de uma terap\u00eautica espec\u00edfica de uma doen\u00e7a deve levar \u00e0 reconsidera\u00e7\u00e3o do diagn\u00f3stico. Neste caso, a inefic\u00e1cia do oxig\u00e9nio permite corrigir o erro de diagn\u00f3stico diferencial entre as CTAs.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Kudrow L. Response of cluster headache attacks to oxygen inhalation. Headache 1981; 21: 1-4.",
+                  "source": "SPN/SPC Headache Treatment 2004",
+                  "section": "",
+                  "location": "spn_headache_treatment_2004_chunk_001_general.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "O erro diagn\u00f3stico foi corrigido com base na resposta terap\u00eautica. A inefic\u00e1cia do oxig\u00e9nio permitiu reorientar o racioc\u00ednio cl\u00ednico para a Hemicrania Parox\u00edstica e a necessidade de um ensaio com indometacina.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP4",
+        "target_action_id": "A13",
+        "transition_context": "Ap\u00f3s a falha da oxigenoterapia, a hip\u00f3tese de Hemicrania Parox\u00edstica torna-se a principal. A decis\u00e3o \u00e9 agora iniciar o ensaio terap\u00eautico correto com indometacina."
+      }
+    }
+  ],
+  "max_branch_length": 2,
+  "debriefing": [
+    {
+      "key_learning": "A Hemicrania Parox\u00edstica \u00e9 definida pela sua resposta terap\u00eautica absoluta \u00e0 indometacina, que serve como teste diagn\u00f3stico.",
+      "clinical_reasoning": "O diagn\u00f3stico das Cefaleias Trig\u00e9mino-Auton\u00f3micas (CTAs) baseia-se em crit\u00e9rios cl\u00ednicos precisos definidos pelo ICHD-3, focados na dura\u00e7\u00e3o, frequ\u00eancia e sintomas associados. A Hemicrania Parox\u00edstica distingue-se pela curta dura\u00e7\u00e3o (2-30 min) e alta frequ\u00eancia (>5/dia) dos ataques. Contudo, a sua caracter\u00edstica mais distintiva e um crit\u00e9rio diagn\u00f3stico obrigat\u00f3rio \u00e9 a resposta preventiva absoluta a doses terap\u00eauticas de indometacina. Um ensaio terap\u00eautico com uma dose adequada (e.g., 75-150 mg/dia) \u00e9, portanto, o passo mais importante para confirmar o diagn\u00f3stico ap\u00f3s a suspeita cl\u00ednica. Uma resposta parcial deve levantar a suspeita de dose insuficiente, e n\u00e3o de falha diagn\u00f3stica.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Utilizar uma dose sub-terap\u00eautica de indometacina para o ensaio diagn\u00f3stico.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A10"
+          },
+          "consequence": "Resultado falso-negativo, abandono de um diagn\u00f3stico correto e atraso no tratamento eficaz."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o questionar sobre a exist\u00eancia de dor de fundo cont\u00ednua entre as crises.",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A3"
+          },
+          "consequence": "Incapacidade de diferenciar Hemicrania Parox\u00edstica de Hemicrania Cont\u00ednua, que tamb\u00e9m responde \u00e0 indometacina mas tem um padr\u00e3o temporal diferente."
+        },
+        {
+          "error_type": "commission",
+          "description": "Confundir Hemicrania Parox\u00edstica com Cefaleia em Salvas e prescrever oxigenoterapia.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A12"
+          },
+          "consequence": "Tratamento ineficaz e atraso no in\u00edcio da terap\u00eautica correta (indometacina)."
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO2",
+        "LO3",
+        "LO5"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP1",
+          "actions": [
+            "A1",
+            "A3"
+          ]
+        },
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A8"
+          ]
+        },
+        {
+          "decision_point": "DP5",
+          "actions": [
+            "A16"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "The attacks are absolutely prevented by therapeutic doses of indomethacin... In an adult, oral indomethacin should be used initially at a dose of at least 150 mg daily and increased, if necessary, to 225 mg daily.",
+          "source": "ICHD-3 Classificacao Cefaleias (PT)",
+          "section": "3.2",
+          "location": "ichd3_headache_pt_chunk_183_headache_or_facial_pain_attrib.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A prescri\u00e7\u00e3o de indometacina, especialmente em doentes idosos, exige obrigatoriamente a co-prescri\u00e7\u00e3o de um protetor g\u00e1strico.",
+      "clinical_reasoning": "A indometacina \u00e9 um anti-inflamat\u00f3rio n\u00e3o esteroide (AINE) com um perfil de toxicidade gastrointestinal significativo. O risco de desenvolver \u00falcera p\u00e9ptica, gastrite erosiva e hemorragia digestiva alta \u00e9 substancial, e aumenta com a idade (>65 anos), a dura\u00e7\u00e3o da terap\u00eautica e o uso concomitante de outros AINEs. Neste caso, a doente de 70 anos com hist\u00f3ria de uso de ibuprofeno apresentava um risco elevado. A omiss\u00e3o da gastroprote\u00e7\u00e3o com um Inibidor da Bomba de Prot\u00f5es (IBP) constitui um erro de seguran\u00e7a grave, que pode levar a complica\u00e7\u00f5es potencialmente fatais, como demonstrado na via de consequ\u00eancia. A seguran\u00e7a do doente deve sobrepor-se sempre \u00e0 efic\u00e1cia terap\u00eautica.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o prescrever um Inibidor da Bomba de Prot\u00f5es (IBP) juntamente com a indometacina.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A11"
+          },
+          "consequence": "Risco elevado de hemorragia digestiva alta, hospitaliza\u00e7\u00e3o e interrup\u00e7\u00e3o do tratamento."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o avaliar a fun\u00e7\u00e3o renal basal antes de iniciar um AINE de forma cr\u00f3nica.",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A14"
+          },
+          "consequence": "Risco de agravar uma insufici\u00eancia renal pr\u00e9-existente n\u00e3o diagnosticada, devido \u00e0 nefrotoxicidade dos AINEs."
+        }
+      ],
+      "related_objectives": [
+        "LO5"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A9",
+            "A11"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A14"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Cf. A utiliza\u00e7\u00e3o cr\u00f3nica de AINEs, como a indometacina, acarreta um risco significativo de efeitos adversos gastrointestinais, sendo a co-prescri\u00e7\u00e3o de um protetor g\u00e1strico uma medida de seguran\u00e7a essencial, particularmente em popula\u00e7\u00f5es de risco como os idosos.",
+          "source": "SPN/SPC Headache Treatment 2004",
+          "section": "",
+          "location": "spn_headache_treatment_2004_chunk_002_general.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "Num doente com mais de 50 anos com uma cefaleia de novo, a exclus\u00e3o de Arterite de C\u00e9lulas Gigantes (ACG) \u00e9 um passo de seguran\u00e7a mandat\u00f3rio.",
+      "clinical_reasoning": "A Arterite de C\u00e9lulas Gigantes \u00e9 uma vasculite sist\u00e9mica que afeta predominantemente indiv\u00edduos com mais de 50 anos e pode apresentar-se como uma cefaleia de in\u00edcio recente. Embora as caracter\u00edsticas da dor neste caso fossem mais t\u00edpicas de uma CTA, a idade da doente (70 anos) obriga a um elevado \u00edndice de suspeita. A falha no diagn\u00f3stico de ACG pode levar a complica\u00e7\u00f5es isqu\u00e9micas graves e irrevers\u00edveis, como a perda de vis\u00e3o. O rastreio deve incluir uma anamnese dirigida (claudica\u00e7\u00e3o mandibular, sintomas visuais), exame f\u00edsico (palpa\u00e7\u00e3o das art\u00e9rias temporais) e avalia\u00e7\u00e3o de marcadores inflamat\u00f3rios (VS, PCR).",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o questionar ativamente sobre sintomas de ACG (claudica\u00e7\u00e3o mandibular, sintomas visuais).",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A6"
+          },
+          "consequence": "Pode-se perder o diagn\u00f3stico de uma emerg\u00eancia m\u00e9dica, resultando em perda de vis\u00e3o permanente."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o palpar as art\u00e9rias temporais como parte do exame f\u00edsico de rotina.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A5"
+          },
+          "consequence": "Omiss\u00e3o de um sinal cl\u00ednico importante que poderia aumentar a suspeita de ACG."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o requisitar marcadores inflamat\u00f3rios (VS/PCR) na avalia\u00e7\u00e3o inicial.",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A14"
+          },
+          "consequence": "Perda de uma ferramenta de rastreio sens\u00edvel para ACG, atrasando o diagn\u00f3stico e tratamento."
+        }
+      ],
+      "related_objectives": [
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A5",
+            "A6"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A14"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "Cf. O diagn\u00f3stico diferencial de cefaleias em doentes com mais de 50 anos deve sempre incluir a exclus\u00e3o de causas secund\u00e1rias graves, como a arterite temporal.",
+          "source": "ICHD-3 Classificacao Cefaleias (PT)",
+          "section": "6",
+          "location": "ichd3_headache_pt_chunk_167_headache_attributed_to_pheochr.txt",
+          "location_type": "RAG",
+          "title": ""
+        }
+      ]
+    }
+  ],
+  "key_takeaways": [
+    "A Hemicrania Parox\u00edstica caracteriza-se por ataques de dor unilateral, curtos (2-30 min) e frequentes (>5/dia), com sintomas auton\u00f3micos. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+    "A resposta absoluta \u00e0 indometacina em doses terap\u00eauticas (\u226575 mg/dia) \u00e9 diagn\u00f3stica de Hemicrania Parox\u00edstica. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+    "\u00c9 obrigat\u00f3rio co-prescrever um protetor g\u00e1strico (IBP) com a indometacina, especialmente em doentes idosos.",
+    "Em doentes com >50 anos e cefaleia de novo, \u00e9 mandat\u00f3rio excluir Arterite de C\u00e9lulas Gigantes. [Source: ICHD-3 Classificacao Cefaleias (PT)]",
+    "A aus\u00eancia de dor cont\u00ednua entre as crises distingue a Hemicrania Parox\u00edstica da Hemicrania Cont\u00ednua.",
+    "A neuroimagem (preferencialmente RM) \u00e9 recomendada para excluir causas secund\u00e1rias em todas as Cefaleias Trig\u00e9mino-Auton\u00f3micas."
+  ],
+  "metadata": {
+    "scenario_id": "be9ef82b-02a2-490a-811a-fbbde08cf146",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-03-23T23:17:10.606995",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "generation_time_ms": 145521.71897888184,
+    "token_count": {
+      "input": 55412,
+      "output": 15640,
+      "total": 71052
+    },
+    "revision_count": 0,
+    "sources_consulted": [
+      "ICHD-3 Classificacao Cefaleias (PT) ",
+      "SPN/SPC Headache Treatment 2004 "
+    ],
+    "retrieval_coverage": 1.0
+  }
+}
