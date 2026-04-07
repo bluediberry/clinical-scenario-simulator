@@ -4,10 +4,7 @@ from html import escape as _esc
 
 import streamlit as st
 
-# ---------------------------------------------------------------------------
 # Utility
-# ---------------------------------------------------------------------------
-
 def format_minutes_as_hours(minutes: int | float | None) -> str:
     """Format a duration in minutes as a human-readable hours string."""
     if minutes is None or minutes == "?":
@@ -22,10 +19,7 @@ def format_minutes_as_hours(minutes: int | float | None) -> str:
     return f"{hours}h {remainder}min"
 
 
-# ---------------------------------------------------------------------------
 # CSS
-# ---------------------------------------------------------------------------
-
 REVIEW_CSS = """
 <style>
     .badge-critical { background: #284b63; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
@@ -65,10 +59,7 @@ _RELEVANCE_MAP = {
 }
 
 
-# ---------------------------------------------------------------------------
 # Badge helpers
-# ---------------------------------------------------------------------------
-
 def get_requirement_badge(requirement: str) -> str:
     """Return an HTML badge for action requirement level."""
     req = (requirement or "optional").lower()
@@ -97,26 +88,19 @@ def get_duration_badge(action: dict) -> str:
     return f' <span class="badge-duration">{label}</span>'
 
 
-# ---------------------------------------------------------------------------
 # Rendering functions
-# ---------------------------------------------------------------------------
+def render_vital_signs(vital_signs: dict, layout: str = "row") -> None:
+    """Render vital signs, showing only fields present in the data.
 
-def render_vital_signs(vital_signs: dict) -> None:
-    """Render vital signs in a clean grid, showing only fields present in the data."""
+    Parameters
+    ----------
+    layout : str
+        ``"row"`` (default) renders one row per vital (for sidebar).
+        ``"grid"`` renders a responsive card grid (for main content / print).
+    """
     if not vital_signs:
         st.caption("No vital signs recorded")
         return
-
-    _VITAL_FIELDS = [
-        ("blood_pressure", "Blood Pressure"),
-        ("heart_rate", "Heart Rate"),
-        ("respiratory_rate", "Respiratory Rate"),
-        ("temperature", "Temperature"),
-        ("oxygen_saturation", "SpO2"),
-        ("blood_glucose", "Blood Glucose"),
-        ("gcs", "GCS"),
-        ("nihss", "NIHSS"),
-    ]
 
     present = [(label, vital_signs[key]) for key, label in _VITAL_FIELDS if vital_signs.get(key) is not None]
 
@@ -124,24 +108,53 @@ def render_vital_signs(vital_signs: dict) -> None:
         st.caption("No vital signs recorded")
         return
 
-    for label, value in present:
-        st.markdown(
+    if layout == "grid":
+        cards = "".join(
+            f'<div class="vital-card">'
+            f'<span class="vital-label">{_esc(label)}</span>'
+            f'<span class="vital-value">{_esc(str(value))}</span>'
+            f'</div>'
+            for label, value in present
+        )
+        st.markdown(f'<div class="vital-grid">{cards}</div>', unsafe_allow_html=True)
+    else:
+        rows = "".join(
             f'<div class="vital-row">'
             f'<span class="vital-label">{_esc(label)}</span>'
             f'<span class="vital-value">{_esc(str(value))}</span>'
-            f'</div>',
-            unsafe_allow_html=True,
+            f'</div>'
+            for label, value in present
         )
+        st.markdown(rows, unsafe_allow_html=True)
 
-    rhythm = vital_signs.get("cardiac_rhythm")
-    if rhythm:
-        st.markdown(
-            f'<div class="vital-row">'
-            f'<span class="vital-label">Cardiac Rhythm</span>'
-            f'<span class="vital-value">{_esc(str(rhythm))}</span>'
-            f'</div>',
-            unsafe_allow_html=True,
-        )
+
+_VITAL_FIELDS = [
+    ("blood_pressure", "Blood Pressure"),
+    ("heart_rate", "Heart Rate"),
+    ("respiratory_rate", "Respiratory Rate"),
+    ("temperature", "Temperature"),
+    ("oxygen_saturation", "SpO2"),
+    ("blood_glucose", "Blood Glucose"),
+    ("gcs", "GCS"),
+    ("nihss", "NIHSS"),
+    ("cardiac_rhythm", "Cardiac Rhythm"),
+]
+
+
+def compute_vital_signs_diff(current: dict, previous: dict) -> dict | None:
+    """Return only the vital signs that changed between two stages.
+
+    Returns ``None`` if nothing changed.
+    """
+    if not current or not previous:
+        return current
+    changed = {}
+    for key, _label in _VITAL_FIELDS:
+        cur_val = current.get(key)
+        prev_val = previous.get(key)
+        if cur_val is not None and cur_val != prev_val:
+            changed[key] = cur_val
+    return changed if changed else None
 
 
 def build_action_index(scenario: dict) -> dict:
@@ -243,10 +256,7 @@ def render_patient_profile(patient: dict) -> None:
         st.markdown("- No known allergies")
 
 
-# ---------------------------------------------------------------------------
 # Interactive Simulation helpers
-# ---------------------------------------------------------------------------
-
 def compute_action_duration(action: dict) -> float:
     """Return the midpoint duration in minutes for an action."""
     dur = action.get("duration_minutes")

@@ -5,12 +5,17 @@ Standalone interactive simulator for clinical scenarios. Reviewers can walk thro
 ## Quick Start
 
 # Create virtual environment
+```bash
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
+```
 
 # Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
+# Run the app
 ```bash
 streamlit run app.py
 ```
@@ -21,20 +26,7 @@ streamlit run app.py
 
 **Upload:** Use the file uploader in the app to load scenario JSON files on the fly.
 
-## Deploy to Streamlit Cloud
-
-1. Push this `standalone_simulator/` folder to a GitHub repository
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Point it to `app.py` in the repository
-4. Deploy
-
 No API keys or cloud services needed — everything runs client-side.
-
-## Deploy to Hugging Face Spaces
-
-1. Create a new Space with the Streamlit SDK
-2. Upload the contents of this folder
-3. Done
 
 ## Project Structure
 

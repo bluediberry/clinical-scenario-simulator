@@ -1,6 +1,5 @@
-"""Standalone interactive simulation walkthrough of clinical scenarios.
-
-This is a self-contained Streamlit app that can be deployed independently.
+"""
+Standalone interactive simulation walkthrough of clinical scenarios.
 Scenarios are loaded from the bundled `scenarios/` folder or uploaded as JSON.
 """
 
@@ -15,9 +14,7 @@ st.set_page_config(
     layout="wide",
 )
 
-# ---------------------------------------------------------------------------
 # Imports — simulation engine lives in simulation.py
-# ---------------------------------------------------------------------------
 try:
     from standalone_simulator.simulation import (  # noqa: E402
         REVIEW_CSS,
@@ -48,9 +45,7 @@ st.markdown(REVIEW_CSS, unsafe_allow_html=True)
 init_session_state()
 
 
-# ---------------------------------------------------------------------------
-# Scenario loading (simplified — no Firestore, no settings)
-# ---------------------------------------------------------------------------
+# Scenario loading
 SCENARIOS_DIR = Path(__file__).parent / "scenarios"
 
 _ARCHITECTURE_LABELS = {
@@ -90,10 +85,7 @@ def _format_label(entry: dict) -> str:
     return f"[{source}] {title}"
 
 
-# ---------------------------------------------------------------------------
 # PHASE: SELECT (standalone-specific scenario loading)
-# ---------------------------------------------------------------------------
-
 def phase_select():
     render_language_toggle()
     page_header(_t("page_title"), _t("page_subtitle"))
@@ -169,7 +161,5 @@ def phase_select():
                 st.rerun()
 
 
-# ---------------------------------------------------------------------------
 # Main phase router
-# ---------------------------------------------------------------------------
 run_phase_router(phase_select)

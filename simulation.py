@@ -1,23 +1,17 @@
-"""Shared simulation engine used by both the standalone simulator and the main app.
-
-This module contains the simulation state machine, i18n, phase rendering
-(briefing, play, branch, debrief), and all helper functions.  Only the
-``phase_select`` function (scenario loading) is left to the calling app.
-"""
+"""Shared simulation engine used by both the standalone simulator and the main app."""
 
 from html import escape as _esc
 
 import streamlit as st
 
-# ---------------------------------------------------------------------------
 # Imports — work both as a package import and when running standalone
-# ---------------------------------------------------------------------------
 try:
     from standalone_simulator.scenario_viewer import (
         REVIEW_CSS,
         build_action_index,
         compute_action_duration,
         compute_simulation_score,
+        compute_vital_signs_diff,
         format_minutes_as_hours,
         match_common_errors,
         render_action_card_interactive,
@@ -34,6 +28,7 @@ except ImportError:
         build_action_index,
         compute_action_duration,
         compute_simulation_score,
+        compute_vital_signs_diff,
         format_minutes_as_hours,
         match_common_errors,
         render_action_card_interactive,
@@ -46,9 +41,6 @@ except ImportError:
     from theme import apply_theme, config_banner, page_header, section_label  # type: ignore[no-redef]  # noqa: F401
 
 
-# ---------------------------------------------------------------------------
-# Internationalisation (i18n)
-# ---------------------------------------------------------------------------
 _STRINGS = {
     "en": {
         "page_title": "Clinical Scenario Simulator",
@@ -128,6 +120,8 @@ _STRINGS = {
         "merge_point": "Merge Point",
         "terminal_branch": "Terminal Branch",
         "branch_type": "Branch Type",
+        "vital_signs_changed": "Vital Signs (changes from previous stage)",
+        "no_vital_changes": "Vital signs unchanged from previous stage.",
     },
     "pt": {
         "page_title": "Simulador de Cen\u00e1rios Cl\u00ednicos",
@@ -207,6 +201,8 @@ _STRINGS = {
         "merge_point": "Ponto de Converg\u00eancia",
         "terminal_branch": "Ramo Terminal",
         "branch_type": "Tipo de Ramo",
+        "vital_signs_changed": "Sinais Vitais (altera\u00e7\u00f5es em rela\u00e7\u00e3o \u00e0 fase anterior)",
+        "no_vital_changes": "Sinais vitais sem altera\u00e7\u00f5es em rela\u00e7\u00e3o \u00e0 fase anterior.",
     },
 }
 
@@ -242,9 +238,7 @@ def render_language_toggle():
             st.rerun()
 
 
-# ---------------------------------------------------------------------------
 # Session state defaults
-# ---------------------------------------------------------------------------
 _DEFAULTS: dict[str, object] = {
     "sim_scenario_data": None,
     "sim_phase": "select",       # select | briefing | play | branch | debrief
@@ -280,9 +274,7 @@ def reset_simulation():
     st.session_state.lang = lang
 
 
-# ---------------------------------------------------------------------------
 # Phase indicator
-# ---------------------------------------------------------------------------
 _PHASES = ["select", "briefing", "play", "debrief"]
 
 
@@ -312,10 +304,7 @@ def render_phase_indicator(current: str):
     st.markdown(f'<div class="sim-phase-indicator">{"".join(parts)}</div>', unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------------------------
 # Metadata banner helper
-# ---------------------------------------------------------------------------
-
 def render_scenario_banner(scenario: dict):
     """Render a metadata banner for the scenario."""
     items = []
@@ -337,10 +326,7 @@ def render_scenario_banner(scenario: dict):
         config_banner(items)
 
 
-# ---------------------------------------------------------------------------
 # Helper: get current DP list from stage or branch
-# ---------------------------------------------------------------------------
-
 def _get_current_dps(scenario):
     """Return the list of decision points for the current context."""
     if st.session_state.sim_active_branch_id:
@@ -361,10 +347,7 @@ def _get_current_stage(scenario):
     return None
 
 
-# ---------------------------------------------------------------------------
 # PHASE: BRIEFING
-# ---------------------------------------------------------------------------
-
 def phase_briefing():
     render_language_toggle()
     scenario = st.session_state.sim_scenario_data
@@ -438,10 +421,7 @@ def phase_briefing():
             st.rerun()
 
 
-# ---------------------------------------------------------------------------
 # PHASE: PLAY (core simulation loop)
-# ---------------------------------------------------------------------------
-
 def phase_play():
     render_language_toggle()
     scenario = st.session_state.sim_scenario_data
@@ -630,10 +610,7 @@ def _check_branch_triggers(scenario, dp, selected_actions):
                 break
 
 
-# ---------------------------------------------------------------------------
 # PHASE: BRANCH
-# ---------------------------------------------------------------------------
-
 def phase_branch():
     render_language_toggle()
     scenario = st.session_state.sim_scenario_data
@@ -739,10 +716,7 @@ def phase_branch():
             st.rerun()
 
 
-# ---------------------------------------------------------------------------
 # PHASE: DEBRIEF
-# ---------------------------------------------------------------------------
-
 def phase_debrief():
     render_language_toggle()
     scenario = st.session_state.sim_scenario_data
@@ -922,10 +896,7 @@ def phase_debrief():
         st.rerun()
 
 
-# ---------------------------------------------------------------------------
 # PHASE: VIEW (full scenario, print-friendly)
-# ---------------------------------------------------------------------------
-
 def phase_view():
     render_language_toggle()
     scenario = st.session_state.sim_scenario_data
@@ -938,6 +909,36 @@ def phase_view():
     # --- Title & metadata ---
     page_header(scenario.get("title", "Untitled"), scenario.get("domain", ""))
     render_scenario_banner(scenario)
+
+    # --- Quick stats ---
+    stages = scenario.get("stages", [])
+    branches = scenario.get("branches", [])
+    total_dps = sum(len(s.get("decision_points", [])) for s in stages)
+    total_dps += sum(len(b.get("decision_points", [])) for b in branches)
+    total_actions = sum(
+        len(dp.get("available_actions", []))
+        for s in stages for dp in s.get("decision_points", [])
+    )
+    total_actions += sum(
+        len(dp.get("available_actions", []))
+        for b in branches for dp in b.get("decision_points", [])
+    )
+    total_critical = sum(
+        1 for s in stages for dp in s.get("decision_points", [])
+        for a in dp.get("available_actions", [])
+        if (a.get("requirement") or "").lower() == "critical" or a.get("id") in set(dp.get("critical_action_ids", []))
+    )
+
+    stats_html = (
+        f'<div class="view-stats-bar">'
+        f'<div class="view-stat"><div class="view-stat-value">{len(stages)}</div><div class="view-stat-label">{_t("stages")}</div></div>'
+        f'<div class="view-stat"><div class="view-stat-value">{total_dps}</div><div class="view-stat-label">{_t("decision_point")}s</div></div>'
+        f'<div class="view-stat"><div class="view-stat-value">{total_actions}</div><div class="view-stat-label">{_t("available_actions")}</div></div>'
+        f'<div class="view-stat"><div class="view-stat-value">{total_critical}</div><div class="view-stat-label">{_t("critical_actions")}</div></div>'
+        f'<div class="view-stat"><div class="view-stat-value">{len(branches)}</div><div class="view-stat-label">{_t("branches")}</div></div>'
+        f'</div>'
+    )
+    st.markdown(stats_html, unsafe_allow_html=True)
 
     # --- Patient profile ---
     patient = scenario.get("patient")
@@ -1005,10 +1006,10 @@ def phase_view():
             st.markdown(f"**{k.replace('_', ' ').title()}:** {v}")
 
     # --- Stages ---
-    stages = scenario.get("stages", [])
     if stages:
         st.markdown('<div class="view-section-title">' + _t("stages") + f" ({len(stages)})" + '</div>', unsafe_allow_html=True)
 
+        prev_vital_signs = None
         for s_idx, stage in enumerate(stages):
             stage_name = _esc(stage.get("name", f"Stage {s_idx + 1}"))
             setting = _esc(stage.get("setting", ""))
@@ -1028,11 +1029,20 @@ def phase_view():
             if initial_state:
                 st.markdown(f"*{initial_state}*")
 
-            # Vital signs
+            # Vital signs — full for first stage, diff only for subsequent
             vs = stage.get("vital_signs")
             if vs:
-                section_label(_t("vital_signs"))
-                render_vital_signs(vs)
+                if s_idx == 0 or prev_vital_signs is None:
+                    section_label(_t("vital_signs"))
+                    render_vital_signs(vs, layout="grid")
+                else:
+                    diff = compute_vital_signs_diff(vs, prev_vital_signs)
+                    if diff:
+                        section_label(_t("vital_signs_changed"))
+                        render_vital_signs(diff, layout="grid")
+                    else:
+                        st.caption(_t("no_vital_changes"))
+                prev_vital_signs = vs
 
             # Optional info
             all_optional = stage.get("all_optional", [])
@@ -1063,12 +1073,27 @@ def phase_view():
                     unsafe_allow_html=True,
                 )
 
+                actions = dp.get("available_actions", [])
+                n_critical = sum(
+                    1 for a in actions
+                    if (a.get("requirement") or "").lower() == "critical" or a.get("id") in critical_ids
+                )
+                n_supportive = sum(
+                    1 for a in actions
+                    if (a.get("requirement") or "").lower() == "supportive"
+                )
+                st.markdown(
+                    f'<div class="view-dp-summary">'
+                    f'{len(actions)} actions &bull; {n_critical} critical &bull; {n_supportive} supportive'
+                    f'</div>',
+                    unsafe_allow_html=True,
+                )
+
                 # Feedback on completion
                 feedback = dp.get("feedback_on_completion")
                 if feedback:
                     st.success(f"**{_t('feedback')}:** {feedback}")
 
-                actions = dp.get("available_actions", [])
                 for action in actions:
                     action_id = action.get("id", "")
                     is_critical = (action.get("requirement") or "").lower() == "critical" or action_id in critical_ids
@@ -1077,7 +1102,6 @@ def phase_view():
             st.markdown("---")
 
     # --- Branches ---
-    branches = scenario.get("branches", [])
     if branches:
         st.markdown('<div class="view-section-title">' + _t("branches") + f" ({len(branches)})" + '</div>', unsafe_allow_html=True)
 
@@ -1088,47 +1112,59 @@ def phase_view():
             consequence = _esc(branch.get("consequence_context", ""))
             merge = branch.get("merge_point")
 
-            st.markdown(
-                f'<div class="view-branch-section">'
-                f'<div class="view-branch-header">'
-                f'<div class="branch-type">{_t("branch_type")}: {branch_type}</div>'
-                f'<div class="branch-name">{_t("phase_branch")} {branch_id}</div>'
-                f'</div></div>',
-                unsafe_allow_html=True,
-            )
-
-            if trigger_context:
-                st.markdown(f"**{_t('trigger')}:** {trigger_context}")
-            if consequence:
-                st.markdown(f"**{_t('consequence')}:** {consequence}")
-            if merge:
-                st.markdown(f"**{_t('merge_point')}:** {merge}")
-            else:
-                st.warning(_t("terminal_branch"))
-
-            # Branch decision points
-            branch_dps = branch.get("decision_points", [])
-            for dp_idx, dp in enumerate(branch_dps):
-                dp_id = dp.get("id", "")
-                critical_ids = set(dp.get("critical_action_ids", []))
-
+            # Use a Streamlit container so the border-left wraps all content
+            with st.container():
                 st.markdown(
-                    f'<div class="sim-dp-header">'
-                    f'<div class="dp-label">{_t("branch_dp", current=dp_idx + 1, total=len(branch_dps))} &bull; {_esc(str(dp_id))}</div>'
-                    f'<div class="dp-context">{_esc(dp.get("context", ""))}</div>'
-                    f"</div>",
+                    f'<div class="view-branch-header">'
+                    f'<div class="branch-type">{_t("branch_type")}: {branch_type}</div>'
+                    f'<div class="branch-name">{_t("phase_branch")} {branch_id}</div>'
+                    f'</div>',
                     unsafe_allow_html=True,
                 )
 
-                feedback = dp.get("feedback_on_completion")
-                if feedback:
-                    st.success(f"**{_t('feedback')}:** {feedback}")
+                meta_parts = []
+                if trigger_context:
+                    meta_parts.append(f"**{_t('trigger')}:** {trigger_context}")
+                if consequence:
+                    meta_parts.append(f"**{_t('consequence')}:** {consequence}")
+                if merge:
+                    meta_parts.append(f"**{_t('merge_point')}:** {merge}")
+                else:
+                    meta_parts.append(f"**{_t('terminal_branch')}**")
+                st.markdown(" | ".join(meta_parts))
 
-                actions = dp.get("available_actions", [])
-                for action in actions:
-                    action_id = action.get("id", "")
-                    is_critical = (action.get("requirement") or "").lower() == "critical" or action_id in critical_ids
-                    render_action_card_static(action, is_critical=is_critical)
+                # Branch decision points
+                branch_dps = branch.get("decision_points", [])
+                for dp_idx, dp in enumerate(branch_dps):
+                    dp_id = dp.get("id", "")
+                    critical_ids = set(dp.get("critical_action_ids", []))
+
+                    st.markdown(
+                        f'<div class="sim-dp-header">'
+                        f'<div class="dp-label">{_t("branch_dp", current=dp_idx + 1, total=len(branch_dps))} &bull; {_esc(str(dp_id))}</div>'
+                        f'<div class="dp-context">{_esc(dp.get("context", ""))}</div>'
+                        f"</div>",
+                        unsafe_allow_html=True,
+                    )
+
+                    actions = dp.get("available_actions", [])
+                    n_critical = sum(
+                        1 for a in actions
+                        if (a.get("requirement") or "").lower() == "critical" or a.get("id") in critical_ids
+                    )
+                    st.markdown(
+                        f'<div class="view-dp-summary">{len(actions)} actions &bull; {n_critical} critical</div>',
+                        unsafe_allow_html=True,
+                    )
+
+                    feedback = dp.get("feedback_on_completion")
+                    if feedback:
+                        st.success(f"**{_t('feedback')}:** {feedback}")
+
+                    for action in actions:
+                        action_id = action.get("id", "")
+                        is_critical = (action.get("requirement") or "").lower() == "critical" or action_id in critical_ids
+                        render_action_card_static(action, is_critical=is_critical)
 
             st.markdown("---")
 
@@ -1168,10 +1204,7 @@ def phase_view():
         )
 
 
-# ---------------------------------------------------------------------------
 # Phase router helper
-# ---------------------------------------------------------------------------
-
 def run_phase_router(phase_select_fn):
     """Run the simulation phase router.
 

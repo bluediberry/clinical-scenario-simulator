@@ -751,6 +751,98 @@ hr {
     padding-bottom: 0.3rem;
     border-bottom: 2px solid var(--c-border);
 }
+
+/* Vital signs grid (main content area) */
+.vital-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 0.5rem;
+    margin: 0.5rem 0 1rem 0;
+}
+.vital-card {
+    background: var(--c-surface-alt);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 0.6rem 0.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+.vital-card .vital-label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--c-text-muted);
+}
+.vital-card .vital-value {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--c-yale);
+}
+
+/* Keep the row style for sidebar (overridden there) */
+.vital-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.4rem 0.6rem;
+    margin-bottom: 0.25rem;
+    background: var(--c-surface-alt);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--c-border);
+}
+.vital-row .vital-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--c-text-muted);
+}
+.vital-row .vital-value {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--c-yale);
+}
+
+/* Quick stats bar for full scenario view */
+.view-stats-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+.view-stat {
+    background: var(--c-surface-alt);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius-md);
+    padding: 0.6rem 1rem;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+.view-stat-value {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--c-yale);
+}
+.view-stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--c-text-muted);
+}
+
+/* DP summary line in full view */
+.view-dp-summary {
+    font-size: 0.8rem;
+    color: var(--c-text-muted);
+    margin: 0.3rem 0 0.6rem 0;
+}
 </style>
 """
 

@@ -3,7 +3,10 @@
     "allow": [
       "Bash(python3 -c \":*)",
       "Bash(python -c \"import simulation; import scenario_viewer; import theme; print\\(''All imports OK''\\)\")",
-      "Bash(python -c \"import ast; ast.parse\\(open\\(''simulation.py''\\).read\\(\\)\\); ast.parse\\(open\\(''scenario_viewer.py''\\).read\\(\\)\\); ast.parse\\(open\\(''theme.py''\\).read\\(\\)\\); ast.parse\\(open\\(''app.py''\\).read\\(\\)\\); print\\(''All files parse OK''\\)\")"
+      "Bash(python -c \"import ast; ast.parse\\(open\\(''simulation.py''\\).read\\(\\)\\); ast.parse\\(open\\(''scenario_viewer.py''\\).read\\(\\)\\); ast.parse\\(open\\(''theme.py''\\).read\\(\\)\\); ast.parse\\(open\\(''app.py''\\).read\\(\\)\\); print\\(''All files parse OK''\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\(''simulation.py''\\).read\\(\\)\\); ast.parse\\(open\\(''scenario_viewer.py''\\).read\\(\\)\\); ast.parse\\(open\\(''theme.py''\\).read\\(\\)\\); ast.parse\\(open\\(''app.py''\\).read\\(\\)\\); print\\(''All OK''\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\(''simulation.py''\\).read\\(\\)\\); ast.parse\\(open\\(''scenario_viewer.py''\\).read\\(\\)\\); ast.parse\\(open\\(''theme.py''\\).read\\(\\)\\); print\\(''All OK''\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\(''simulation.py''\\).read\\(\\)\\); ast.parse\\(open\\(''scenario_viewer.py''\\).read\\(\\)\\); print\\(''All OK''\\)\")"
     ]
   }
 }
