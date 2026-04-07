@@ -4,9 +4,14 @@ Standalone interactive simulator for clinical scenarios. Reviewers can walk thro
 
 ## Quick Start
 
-```bash
-cd standalone_simulator
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# Install dependencies
 pip install -r requirements.txt
+
+```bash
 streamlit run app.py
 ```
 

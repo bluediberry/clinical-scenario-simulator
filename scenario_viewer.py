@@ -345,6 +345,43 @@ def render_action_card_interactive(
     return selected
 
 
+def render_action_card_static(action: dict, is_critical: bool = False) -> None:
+    """Render a fully-revealed, read-only action card (no checkbox)."""
+    action_id = action.get("id", "?")
+    description = _esc(action.get("description", "Unknown action"))
+
+    req_badge = get_requirement_badge(action.get("requirement", "optional"))
+    rel_badge = get_relevance_badge(action.get("finding_relevance", "non contributory"))
+    dur_badge = get_duration_badge(action)
+
+    branch_badge = ""
+    branch_trigger = action.get("branch_trigger")
+    if action.get("is_branch_trigger") and branch_trigger:
+        branch_id = _esc(str(branch_trigger.get("branch_id", "?")))
+        branch_badge = f' <span class="badge-branch-trigger">Branch {branch_id}</span>'
+
+    hint_class = "action-hint-critical" if is_critical else "action-hint-supportive" if (action.get("requirement") or "").lower() == "supportive" else "action-hint-optional"
+
+    finding = _esc(action.get("finding", "N/A"))
+    rationale = _esc(action.get("rationale", ""))
+
+    parts = [
+        f'<div class="{hint_class}" style="margin-bottom:0.8rem; padding:0.6rem 0.8rem;">',
+        f'<div style="font-weight:600; margin-bottom:0.3rem;">'
+        f'<code style="font-size:0.75rem; color:#6B7280;">{action_id}</code> {description}</div>',
+        f'<div style="margin-bottom:0.3rem;">{req_badge} {rel_badge}{dur_badge}{branch_badge}</div>',
+        f'<div style="font-size:0.88rem;"><b>Finding:</b> {finding}</div>',
+    ]
+    if rationale:
+        parts.append(f'<div style="font-size:0.85rem; color:#6B7280;">Rationale: {rationale}</div>')
+    citation_html = _render_citation_inline(action.get("citation"))
+    if citation_html:
+        parts.append(citation_html)
+    parts.append('</div>')
+
+    st.markdown("".join(parts), unsafe_allow_html=True)
+
+
 def render_time_tracker(elapsed_minutes: float, time_window: dict | None) -> None:
     """Render elapsed time with clinical time window context."""
     st.metric("Elapsed Time", f"{elapsed_minutes:.0f} min")

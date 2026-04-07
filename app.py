@@ -154,11 +154,19 @@ def phase_select():
             )
             st.markdown(f"{len(stages)} stage(s), {total_dps} decision points, {total_actions} actions")
 
-        if st.button(_t("start_simulation"), type="primary", use_container_width=True):
-            reset_simulation()
-            st.session_state.sim_scenario_data = scenario
-            st.session_state.sim_phase = "briefing"
-            st.rerun()
+        col1, col2 = st.columns([3, 1])
+        with col1:
+            if st.button(_t("start_simulation"), type="primary", use_container_width=True):
+                reset_simulation()
+                st.session_state.sim_scenario_data = scenario
+                st.session_state.sim_phase = "briefing"
+                st.rerun()
+        with col2:
+            if st.button(_t("view_full_scenario"), use_container_width=True):
+                reset_simulation()
+                st.session_state.sim_scenario_data = scenario
+                st.session_state.sim_phase = "view"
+                st.rerun()
 
 
 # ---------------------------------------------------------------------------

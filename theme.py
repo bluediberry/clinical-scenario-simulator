@@ -628,6 +628,129 @@ hr {
     font-size: 1rem;
     line-height: 1.5;
 }
+
+/* ── Print styles ────────────────────────────────────────────────── */
+@media print {
+    /* Hide Streamlit chrome */
+    [data-testid="stSidebar"],
+    [data-testid="stHeader"],
+    [data-testid="stToolbar"],
+    .stButton,
+    .stDownloadButton,
+    .sim-phase-indicator,
+    [data-testid="stFileUploader"] {
+        display: none !important;
+    }
+
+    /* Full width */
+    [data-testid="stAppViewBlockContainer"] {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    .stApp {
+        background: white !important;
+    }
+
+    /* Preserve colors in print */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    /* Page breaks */
+    .view-stage-section {
+        page-break-before: always;
+    }
+    .view-stage-section:first-of-type {
+        page-break-before: avoid;
+    }
+
+    .view-branch-section {
+        page-break-before: always;
+    }
+
+    /* Avoid breaking inside cards */
+    .sim-dp-header,
+    .action-hint-critical,
+    .action-hint-supportive,
+    .action-hint-optional,
+    .key-learning-card,
+    .vital-signs-card {
+        page-break-inside: avoid;
+    }
+
+    /* Reduce spacing for print */
+    .page-header {
+        font-size: 1.8rem;
+    }
+
+    hr {
+        margin: 0.8rem 0 !important;
+    }
+}
+
+/* ── Full scenario view styles ───────────────────────────────────── */
+.view-stage-section {
+    margin-top: 1.5rem;
+}
+
+.view-stage-header {
+    background: var(--c-yale);
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.view-stage-header .stage-name {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.view-stage-header .stage-setting {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 0.2rem;
+}
+
+.view-branch-section {
+    margin-top: 1.5rem;
+    border-left: 4px solid #DB2777;
+    padding-left: 1rem;
+}
+
+.view-branch-header {
+    background: linear-gradient(135deg, #DB2777, #9333EA);
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-md);
+    margin-bottom: 1rem;
+}
+
+.view-branch-header .branch-name {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.view-branch-header .branch-type {
+    font-size: 0.78rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.view-section-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--c-yale);
+    margin: 1.5rem 0 0.8rem 0;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--c-border);
+}
 </style>
 """
 
