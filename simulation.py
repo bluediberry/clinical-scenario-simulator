@@ -122,6 +122,8 @@ _STRINGS = {
         "branch_type": "Branch Type",
         "vital_signs_changed": "Vital Signs (changes from previous stage)",
         "no_vital_changes": "Vital signs unchanged from previous stage.",
+        "decision_points_plural": "Decision Points",
+        "no_vital_signs": "No vital signs recorded",
     },
     "pt": {
         "page_title": "Simulador de Cen\u00e1rios Cl\u00ednicos",
@@ -203,6 +205,8 @@ _STRINGS = {
         "branch_type": "Tipo de Ramo",
         "vital_signs_changed": "Sinais Vitais (altera\u00e7\u00f5es em rela\u00e7\u00e3o \u00e0 fase anterior)",
         "no_vital_changes": "Sinais vitais sem altera\u00e7\u00f5es em rela\u00e7\u00e3o \u00e0 fase anterior.",
+        "decision_points_plural": "Pontos de Decis\u00e3o",
+        "no_vital_signs": "Sem sinais vitais registados",
     },
 }
 
@@ -923,8 +927,10 @@ def phase_view():
         len(dp.get("available_actions", []))
         for b in branches for dp in b.get("decision_points", [])
     )
+    _all_dps = [dp for s in stages for dp in s.get("decision_points", [])] + \
+               [dp for b in branches for dp in b.get("decision_points", [])]
     total_critical = sum(
-        1 for s in stages for dp in s.get("decision_points", [])
+        1 for dp in _all_dps
         for a in dp.get("available_actions", [])
         if (a.get("requirement") or "").lower() == "critical" or a.get("id") in set(dp.get("critical_action_ids", []))
     )
@@ -932,7 +938,7 @@ def phase_view():
     stats_html = (
         f'<div class="view-stats-bar">'
         f'<div class="view-stat"><div class="view-stat-value">{len(stages)}</div><div class="view-stat-label">{_t("stages")}</div></div>'
-        f'<div class="view-stat"><div class="view-stat-value">{total_dps}</div><div class="view-stat-label">{_t("decision_point")}s</div></div>'
+        f'<div class="view-stat"><div class="view-stat-value">{total_dps}</div><div class="view-stat-label">{_t("decision_points_plural")}</div></div>'
         f'<div class="view-stat"><div class="view-stat-value">{total_actions}</div><div class="view-stat-label">{_t("available_actions")}</div></div>'
         f'<div class="view-stat"><div class="view-stat-value">{total_critical}</div><div class="view-stat-label">{_t("critical_actions")}</div></div>'
         f'<div class="view-stat"><div class="view-stat-value">{len(branches)}</div><div class="view-stat-label">{_t("branches")}</div></div>'
@@ -1032,14 +1038,15 @@ def phase_view():
             # Vital signs — full for first stage, diff only for subsequent
             vs = stage.get("vital_signs")
             if vs:
+                no_vs_label = _t("no_vital_signs")
                 if s_idx == 0 or prev_vital_signs is None:
                     section_label(_t("vital_signs"))
-                    render_vital_signs(vs, layout="grid")
+                    render_vital_signs(vs, layout="grid", no_data_label=no_vs_label)
                 else:
                     diff = compute_vital_signs_diff(vs, prev_vital_signs)
                     if diff:
                         section_label(_t("vital_signs_changed"))
-                        render_vital_signs(diff, layout="grid")
+                        render_vital_signs(diff, layout="grid", no_data_label=no_vs_label)
                     else:
                         st.caption(_t("no_vital_changes"))
                 prev_vital_signs = vs
@@ -1196,10 +1203,10 @@ def phase_view():
             st.rerun()
     with col2:
         st.markdown(
-            f'<button onclick="window.print()" style="'
+            f'<div class="no-print"><button onclick="window.print()" style="'
             f'width:100%; padding:0.45rem 1.2rem; border-radius:6px; border:1.5px solid #d9d9d9; '
             f'background:#3c6e71; color:white; font-weight:600; font-family:DM Sans,sans-serif; '
-            f'cursor:pointer; font-size:0.875rem;">{_t("print_scenario")}</button>',
+            f'cursor:pointer; font-size:0.875rem;">{_t("print_scenario")}</button></div>',
             unsafe_allow_html=True,
         )
 

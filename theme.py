@@ -638,6 +638,7 @@ hr {
     .stButton,
     .stDownloadButton,
     .sim-phase-indicator,
+    .no-print,
     [data-testid="stFileUploader"] {
         display: none !important;
     }
@@ -656,18 +657,6 @@ hr {
     * {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
-    }
-
-    /* Page breaks */
-    .view-stage-section {
-        page-break-before: always;
-    }
-    .view-stage-section:first-of-type {
-        page-break-before: avoid;
-    }
-
-    .view-branch-section {
-        page-break-before: always;
     }
 
     /* Avoid breaking inside cards */
@@ -713,12 +702,6 @@ hr {
     font-size: 0.85rem;
     opacity: 0.8;
     margin-top: 0.2rem;
-}
-
-.view-branch-section {
-    margin-top: 1.5rem;
-    border-left: 4px solid #DB2777;
-    padding-left: 1rem;
 }
 
 .view-branch-header {

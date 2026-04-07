@@ -89,7 +89,11 @@ def get_duration_badge(action: dict) -> str:
 
 
 # Rendering functions
-def render_vital_signs(vital_signs: dict, layout: str = "row") -> None:
+def render_vital_signs(
+    vital_signs: dict,
+    layout: str = "row",
+    no_data_label: str = "No vital signs recorded",
+) -> None:
     """Render vital signs, showing only fields present in the data.
 
     Parameters
@@ -97,15 +101,17 @@ def render_vital_signs(vital_signs: dict, layout: str = "row") -> None:
     layout : str
         ``"row"`` (default) renders one row per vital (for sidebar).
         ``"grid"`` renders a responsive card grid (for main content / print).
+    no_data_label : str
+        Caption shown when there are no vital signs to display.
     """
     if not vital_signs:
-        st.caption("No vital signs recorded")
+        st.caption(no_data_label)
         return
 
     present = [(label, vital_signs[key]) for key, label in _VITAL_FIELDS if vital_signs.get(key) is not None]
 
     if not present:
-        st.caption("No vital signs recorded")
+        st.caption(no_data_label)
         return
 
     if layout == "grid":
@@ -144,10 +150,10 @@ _VITAL_FIELDS = [
 def compute_vital_signs_diff(current: dict, previous: dict) -> dict | None:
     """Return only the vital signs that changed between two stages.
 
-    Returns ``None`` if nothing changed.
+    Returns ``None`` if nothing changed or if either input is empty.
     """
     if not current or not previous:
-        return current
+        return None
     changed = {}
     for key, _label in _VITAL_FIELDS:
         cur_val = current.get(key)
