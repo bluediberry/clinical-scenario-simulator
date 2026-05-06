@@ -1,21 +1,22 @@
 {
-  "title": "Gestão de AVC Isquémico com Início Desconhecido (Wake-up Stroke)",
-  "domain": "Neurology",
-  "subdomain": "Gestão de AVC com Início Desconhecido",
+  "title": "AVC Isqu\u00e9mico Agudo com In\u00edcio Desconhecido ('Wake-up Stroke')",
+  "domain": "Neurologia",
+  "subdomain": "Gest\u00e3o de AVC com In\u00edcio Desconhecido",
   "target_learner": "Specialist",
-  "target_learner_label": "Médico de Emergência Médica",
+  "target_learner_label": "M\u00e9dico de Emerg\u00eancia M\u00e9dica",
   "learning_objectives": [
     {
       "id": "LO1",
-      "description": "Reconhecer as características clínicas do AVC na fase aguda",
+      "description": "Reconhecer as caracter\u00edsticas cl\u00ednicas do AVC na fase aguda",
       "cognitive_demand": "Intermediate",
       "assessed_at": [
-        "DP1"
+        "DP1",
+        "DP2"
       ]
     },
     {
       "id": "LO2",
-      "description": "Avaliar sinais vitais e garantir estabilização inicial",
+      "description": "Avaliar sinais vitais e garantir estabiliza\u00e7\u00e3o inicial",
       "cognitive_demand": "Intermediate",
       "assessed_at": [
         "DP1"
@@ -23,77 +24,78 @@
     },
     {
       "id": "LO3",
-      "description": "Requisitar exames de imagem e laboratoriais adequados à fase aguda do AVC, incluindo TAC de perfusão e angio-TC",
+      "description": "Requisitar exames de imagem e laboratoriais adequados \u00e0 fase aguda do AVC, incluindo TAC de perfus\u00e3o e angio-TC",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP2",
-        "DP3"
+        "DP3",
+        "DP6"
       ]
     },
     {
       "id": "LO4",
-      "description": "Esclarecer antecedentes médicos e cirúrgicos relevantes",
+      "description": "Esclarecer antecedentes m\u00e9dicos e cir\u00fargicos relevantes",
       "cognitive_demand": "Intermediate",
       "assessed_at": [
-        "DP1"
+        "DP4"
       ]
     },
     {
       "id": "LO5",
-      "description": "Interpretar mismatch DWI-FLAIR e TAC de perfusão para estimar o tempo de início e determinar candidatura a tratamento",
+      "description": "Interpretar mismatch DWI-FLAIR e TAC de perfus\u00e3o para estimar o tempo de in\u00edcio e determinar candidatura a tratamento",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP3",
-        "DP4"
+        "DP8"
       ]
     },
     {
       "id": "LO6",
-      "description": "Determinar se o doente se encontra dentro da janela terapêutica para tratamento de fase aguda",
+      "description": "Determinar se o doente se encontra dentro da janela terap\u00eautica para tratamento de fase aguda",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP4"
+        "DP9"
       ]
     },
     {
       "id": "LO7",
-      "description": "Aplicar critérios de elegibilidade e contraindicações para trombólise e trombectomia",
+      "description": "Aplicar crit\u00e9rios de elegibilidade e contraindica\u00e7\u00f5es para tromb\u00f3lise e trombectomia",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP4",
-        "DP5"
+        "DP9",
+        "DP11"
       ]
     },
     {
       "id": "LO8",
-      "description": "Garantir a segurança da trombólise e trombectomia quando a janela temporal é incerta",
+      "description": "Garantir a seguran\u00e7a da tromb\u00f3lise e trombectomia quando a janela temporal \u00e9 incerta",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP5"
+        "DP10",
+        "DP11"
       ]
     },
     {
       "id": "LO9",
-      "description": "Avaliar criticamente a segurança da trombólise em janela temporal incerta com base em achados de neuroimagem (mismatch DWI-FLAIR e TAC de perfusão)",
+      "description": "Avaliar criticamente a seguran\u00e7a da tromb\u00f3lise em janela temporal incerta com base em achados de neuroimagem (mismatch DWI-FLAIR e TAC de perfus\u00e3o)",
       "cognitive_demand": "Advanced",
       "assessed_at": [
-        "DP4"
+        "DP8",
+        "DP9"
       ]
     }
   ],
-  "estimated_duration_minutes": 35,
+  "estimated_duration_minutes": 45,
   "difficulty": "Advanced",
   "prerequisites": [
     "Conhecimento dos protocolos de AVC agudo.",
-    "Familiaridade com a interpretação de neuroimagem avançada (Angio-TC, TC de Perfusão).",
-    "Compreensão dos critérios de elegibilidade para terapêuticas de reperfusão em janela alargada."
+    "Familiaridade com a interpreta\u00e7\u00e3o de neuroimagem avan\u00e7ada (Angio-TC, TC de Perfus\u00e3o).",
+    "Compreens\u00e3o dos crit\u00e9rios de elegibilidade para terap\u00eauticas de reperfus\u00e3o em janela alargada."
   ],
   "patient": {
     "age": 70,
-    "gender": "Male",
-    "presenting_complaint": "Acordou com fraqueza no lado esquerdo do corpo e dificuldade na visão para a esquerda.",
+    "gender": "Masculino",
+    "presenting_complaint": "Hemiparesia esquerda e dificuldade visual \u00e0 esquerda, notadas ao acordar.",
     "medical_history": [
-      "Hipertensão arterial",
+      "Hipertens\u00e3o arterial",
       "Diabetes mellitus tipo 2",
       "Dislipidemia"
     ],
@@ -105,50 +107,52 @@
     "allergies": [
       "sem alergias conhecidas"
     ],
-    "social_history": "Reformado, vive com a esposa. Ex-fumador (cessou há 15 anos). Nega consumo de álcool."
+    "social_history": "Reformado, vive com a esposa. Totalmente aut\u00f3nomo nas atividades de vida di\u00e1ria (escala de Rankin modificada pr\u00e9-morbidade de 0)."
   },
-  "initial_presentation": "Homem de 70 anos, autónomo (mRS prévio de 0), com antecedentes de hipertensão, diabetes tipo 2 e dislipidemia, é trazido ao Serviço de Urgência (SU) pela esposa. Foi visto bem pela última vez na noite anterior, por volta das 23:00, quando se deitou. A esposa encontrou-o às 07:00 com incapacidade de mover o braço e a perna esquerdos, desvio da comissura labial para a direita e dificuldade visual. À chegada ao SU, apresenta-se sonolento mas reativo, com disartria. A avaliação inicial revela uma PA de 172/96 mmHg, FC 88 bpm, SpO2 97% em ar ambiente e uma glicemia capilar de 145 mg/dL. O NIHSS de admissão é 12.",
-  "interaction_prompt": "É o médico especialista responsável pela avaliação e gestão deste doente no Serviço de Urgência. As suas decisões irão determinar o curso clínico e o prognóstico. Proceda à avaliação e inicie o tratamento que considerar mais adequado.",
+  "initial_presentation": "Homem de 70 anos, com antecedentes de hipertens\u00e3o, diabetes tipo 2 e dislipidemia, \u00e9 trazido ao Servi\u00e7o de Urg\u00eancia pela esposa. Foi encontrado ao acordar com incapacidade de mover o lado esquerdo do corpo e queixando-se de n\u00e3o ver para o lado esquerdo. Foi visto bem pela \u00faltima vez na noite anterior, ao deitar, h\u00e1 cerca de 8 horas. \u00c0 chegada, apresenta-se sonolento mas desperta com o est\u00edmulo verbal. PA 195/105 mmHg, FC 88 bpm, SpO2 96% em ar ambiente. Glicemia capilar de 140 mg/dL.",
+  "interaction_prompt": "\u00c9 o m\u00e9dico respons\u00e1vel pela avalia\u00e7\u00e3o inicial deste doente no Servi\u00e7o de Urg\u00eancia. A sua tarefa \u00e9 realizar a avalia\u00e7\u00e3o, solicitar os exames necess\u00e1rios e iniciar o tratamento adequado com a maior celeridade poss\u00edvel.",
   "clinical_time_window": {
     "symptom_onset_minutes_ago": 480,
     "max_treatment_window_minutes": 1440,
     "remaining_window_minutes": 960,
-    "time_pressure_rationale": "O início dos sintomas é desconhecido e superior a 4,5 horas ('wake-up stroke'). A elegibilidade para terapêutica de reperfusão depende da identificação de tecido cerebral recuperável através de imagiologia avançada (perfusão), dentro de uma janela de até 24 horas para trombectomia. A decisão e o tratamento são tempo-dependentes para maximizar a recuperação da penumbra isquémica."
+    "time_pressure_rationale": "O doente foi visto bem pela \u00faltima vez h\u00e1 8 horas. Embora fora da janela de 4,5 horas para tromb\u00f3lise padr\u00e3o, \u00e9 eleg\u00edvel para avalia\u00e7\u00e3o de trombectomia mec\u00e2nica at\u00e9 24 horas, guiada por imagem de perfus\u00e3o (crit\u00e9rios DAWN/DEFUSE-3)."
   },
   "stages": [
     {
       "id": "S1",
-      "name": "Stage 1: Avaliação Inicial e Imagiologia Urgente",
-      "setting": "Serviço de Urgência",
-      "initial_state": "Doente de 70 anos recém-admitido no SU com suspeita de AVC de início desconhecido (wake-up). Encontra-se em maca, monitorizado, com hemiparesia esquerda evidente. NIHSS 12, PA 172/96 mmHg.",
+      "name": "Stage 1: Avalia\u00e7\u00e3o Inicial e Diagn\u00f3stico Preliminar",
+      "setting": "Servi\u00e7o de Urg\u00eancia",
+      "initial_state": "Doente de 70 anos acaba de dar entrada no SU, transportado pela esposa, com suspeita de AVC de in\u00edcio indeterminado ('wake-up stroke'). Apresenta d\u00e9fices neurol\u00f3gicos esquerdos evidentes.",
       "vital_signs": {
-        "blood_pressure": "172/96 mmHg",
+        "blood_pressure": "195/105 mmHg",
         "heart_rate": "88 bpm",
         "respiratory_rate": "16 cpm",
-        "temperature": "36.7°C",
-        "oxygen_saturation": "97% em ar ambiente",
-        "gcs": "E3V4M6 (13/15)",
+        "temperature": "36.7\u00b0C",
+        "oxygen_saturation": "96% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E3V4M6 = 13/15",
         "nihss": 12
       },
       "all_optional": [
         {
           "id": "INFO_1",
-          "description": "Detalhes da história clínica",
-          "finding": "Hipertensão, Diabetes Mellitus tipo 2 e Dislipidemia medicadas. Sem história de AVC, enfarte do miocárdio ou fibrilhação auricular. Última consulta de rotina há 3 meses com bom controlo dos fatores de risco.",
+          "description": "Consultar escala de Rankin modificada pr\u00e9-morbidade",
+          "finding": "Escala de Rankin modificada pr\u00e9-morbidade: 0 (sem sintomas, totalmente independente).",
           "media_reference": null,
           "media_type": null
         },
         {
           "id": "INFO_2",
-          "description": "Medicação habitual",
-          "finding": "Toma Ramipril 10 mg, Metformina 1000 mg e Atorvastatina 40 mg. Confirma adesão terapêutica. Não toma antiagregantes ou anticoagulantes.",
+          "description": "Verificar medica\u00e7\u00e3o cr\u00f3nica detalhada",
+          "finding": "Ramipril 10 mg uma vez ao dia, Metformina 1000 mg duas vezes ao dia, Atorvastatina 40 mg uma vez ao dia. Nenhuma terap\u00eautica antiagregante ou anticoagulante.",
           "media_reference": null,
           "media_type": null
         },
         {
           "id": "INFO_3",
-          "description": "Escala de Rankin Modificada pré-AVC",
-          "finding": "mRS pré-morbidade: 0 (sem sintomas, totalmente independente).",
+          "description": "Detalhes da hist\u00f3ria social",
+          "finding": "Reformado da constru\u00e7\u00e3o civil. Nega tabagismo. Consumo ocasional de \u00e1lcool (menos de 1 bebida por dia).",
           "media_reference": null,
           "media_type": null
         }
@@ -156,101 +160,41 @@
       "decision_points": [
         {
           "id": "DP1",
-          "context": "O doente acaba de chegar à área de reanimação do SU. A equipa de enfermagem está a posicionar o doente e a aplicar monitores.",
+          "context": "O doente est\u00e1 na sala de observa\u00e7\u00e3o do servi\u00e7o de urg\u00eancia. A equipa de enfermagem iniciou a monitoriza\u00e7\u00e3o. Qual a sua abordagem inicial?",
           "available_actions": [
             {
               "id": "A1",
-              "description": "Garantir via aérea, ventilação e circulação (ABC) e obter dois acessos IV",
-              "finding": "Via aérea permeável, ventilação espontânea e eficaz, pulsos periféricos presentes. Obtidos dois acessos venosos periféricos de bom calibre.",
+              "description": "Avalia\u00e7\u00e3o da via a\u00e9rea, ventila\u00e7\u00e3o e circula\u00e7\u00e3o (ABC)",
+              "finding": "Via a\u00e9rea perme\u00e1vel, murm\u00fario vesicular presente e sim\u00e9trico, pulsos perif\u00e9ricos palp\u00e1veis e r\u00edtmicos. Estabelecidos dois acessos venosos perif\u00e9ricos de bom calibre.",
               "finding_relevance": "Exclusionary",
               "requirement": "Critical",
-              "rationale": "A avaliação e estabilização ABC são o primeiro passo obrigatório na abordagem de qualquer doente crítico, garantindo as funções vitais antes de qualquer outra avaliação.",
+              "rationale": "A estabiliza\u00e7\u00e3o inicial do doente \u00e9 a prioridade m\u00e1xima em qualquer emerg\u00eancia m\u00e9dica, garantindo a permeabilidade da via a\u00e9rea e a estabilidade hemodin\u00e2mica antes de qualquer outra avalia\u00e7\u00e3o.",
               "media_reference": null,
               "media_type": null,
               "citation": [
                 {
-                  "source_text": "Avaliação ABC: manutenção da via aérea com controlo da coluna cervical ( A- Airway maintenance with cervical spine control ); Ventilação ( B - Breathing ); circulação com controlo hemorrágico e acesso venoso (C-Circulation with haemorrhage control )",
+                  "source_text": "Avalia\u00e7\u00e3o ABC: (i). Manuten\u00e7\u00e3o da via a\u00e9rea com controlo da coluna cervical; (ii). Ventila\u00e7\u00e3o; (iii). Circula\u00e7\u00e3o com controlo hemorr\u00e1gico e acesso venoso",
                   "source": "DGS Via Verde AVC 2017",
                   "section": "NORMA",
-                  "location": "dgs_via_verde_avc_2017_chunk_003_via_verde_avc.txt",
+                  "location": "",
                   "location_type": "RAG",
-                  "title": ""
+                  "title": null
                 }
               ],
               "duration_minutes": [
-                3,
-                5
+                5,
+                10
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             },
             {
               "id": "A2",
-              "description": "Avaliar e quantificar o défice neurológico com a escala NIHSS",
-              "finding": "NIHSS total: 12. Componentes principais: Nível de consciência (questões) 2, Nível de consciência (comandos) 1, Paresia facial 2, Motor braço esquerdo 3, Motor perna esquerda 2, Negligência 2.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A quantificação do défice neurológico através da escala NIHSS é fundamental para determinar a gravidade do AVC, avaliar a elegibilidade para tratamentos e monitorizar a evolução.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [
-                {
-                  "source_text": "Quantificação do defeito neurológico, através de National Institutes of Health Stroke Scale (NIHSS)",
-                  "source": "DGS Via Verde AVC 2017",
-                  "section": "NORMA",
-                  "location": "dgs_via_verde_avc_2017_chunk_003_via_verde_avc.txt",
-                  "location_type": "RAG",
-                  "title": ""
-                }
-              ],
-              "duration_minutes": [
-                5,
-                10
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            },
-            {
-              "id": "A3",
-              "description": "Colher sangue para análises laboratoriais",
-              "finding": "Amostras de sangue colhidas para hemograma, plaquetas, estudo da coagulação (TP/INR, aPTT), função renal e eletrólitos. Resultados pendentes.",
-              "finding_relevance": "Non Contributory",
-              "requirement": "Supportive",
-              "rationale": "A avaliação laboratorial é importante, mas os resultados não devem atrasar a realização da imagiologia cerebral urgente na maioria dos doentes.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [],
-              "duration_minutes": [
-                5,
-                8
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            },
-            {
-              "id": "A4",
-              "description": "Realizar ECG de 12 derivações",
-              "finding": "Ritmo sinusal, 88 bpm. Sem sinais de isquemia aguda ou arritmias relevantes.",
+              "description": "Medir glicemia capilar",
+              "finding": "Glicemia capilar: 140 mg/dL.",
               "finding_relevance": "Exclusionary",
-              "requirement": "Supportive",
-              "rationale": "O ECG é recomendado para detetar arritmias (como fibrilhação auricular) ou isquemia miocárdica, mas não deve atrasar a realização da TC cerebral.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [],
-              "duration_minutes": [
-                5,
-                10
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            },
-            {
-              "id": "A5",
-              "description": "Administrar aspirina 300 mg PO",
-              "finding": "A ordem para administrar aspirina é inserida. Esta ação viola o protocolo de segurança do AVC agudo, que proíbe a administração de antiagregantes antes da exclusão de hemorragia por imagem. Se o doente tivesse uma hemorragia intracraniana, a aspirina agravaria o quadro hemorrágico.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Optional",
-              "rationale": "A administração de antiagregantes antes da exclusão de hemorragia intracraniana por TC é um erro grave e uma contraindicação absoluta, pois pode exacerbar uma hemorragia.",
+              "requirement": "Critical",
+              "rationale": "\u00c9 mandat\u00f3rio excluir hipoglicemia como causa dos sintomas neurol\u00f3gicos, uma vez que pode mimetizar um AVC.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -260,27 +204,42 @@
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
-            }
-          ],
-          "critical_action_ids": [
-            "A1",
-            "A2"
-          ],
-          "feedback_on_completion": "A avaliação inicial está completa. O doente está hemodinamicamente estável com um défice neurológico significativo (NIHSS 12). O passo crítico seguinte é a realização de uma TC crânio-encefálica (TC-CE) sem contraste para excluir hemorragia."
-        },
-        {
-          "id": "DP2",
-          "context": "O doente está estabilizado e pronto para ser transportado para a imagiologia. A prioridade máxima é excluir uma hemorragia intracraniana.",
-          "available_actions": [
+            },
             {
-              "id": "A6",
-              "description": "Requisitar TC crânio-encefálica (TC-CE) sem contraste",
-              "finding": "TC-CE não revela hemorragia intracraniana. Observa-se uma discreta hipodensidade e perda da diferenciação da substância cinzenta-branca na região insular direita, sugestiva de isquemia aguda (sinal precoce). ASPECTS: 8.",
+              "id": "A3",
+              "description": "Obter hist\u00f3ria cl\u00ednica detalhada da esposa",
+              "finding": "A esposa confirma que o doente se deitou ontem por volta das 22h sem queixas. Acordou hoje \u00e0s 6h e encontrou-o j\u00e1 com dificuldade em mover o lado esquerdo e confuso. Nega trauma, convuls\u00f5es ou dor tor\u00e1cica.",
               "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A TC-CE é o exame de primeira linha obrigatório para excluir hemorragia, uma contraindicação absoluta para a trombólise, e para avaliar sinais precoces de isquemia.",
-              "media_reference": "non_contrast_ct.jpg",
-              "media_type": "image",
+              "requirement": "Supportive",
+              "rationale": "Confirma o cen\u00e1rio de 'wake-up stroke', crucial para definir a estrat\u00e9gia de investiga\u00e7\u00e3o imagiol\u00f3gica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "O cen\u00e1rio descrito, conhecido como 'wake-up stroke' (AVC ao despertar), representa cerca de um em cada cinco acidentes vasculares cerebrais.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A4",
+              "description": "Requisitar radiografia de t\u00f3rax urgente",
+              "finding": "A radiografia de t\u00f3rax \u00e9 realizada, atrasando a avalia\u00e7\u00e3o neurol\u00f3gica e a imagiologia cerebral. N\u00e3o mostra altera\u00e7\u00f5es agudas.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "A radiografia de t\u00f3rax n\u00e3o \u00e9 priorit\u00e1ria na avalia\u00e7\u00e3o inicial do AVC agudo, a menos que haja suspeita de patologia cardiopulmonar aguda, e a sua realiza\u00e7\u00e3o n\u00e3o deve atrasar a neuroimagem.",
+              "media_reference": null,
+              "media_type": null,
               "citation": [],
               "duration_minutes": [
                 15,
@@ -288,115 +247,131 @@
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
-            },
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2"
+          ],
+          "feedback_on_completion": "A estabiliza\u00e7\u00e3o inicial foi conclu\u00edda e a hipoglicemia foi exclu\u00edda. A hist\u00f3ria confirma um 'wake-up stroke'. O pr\u00f3ximo passo \u00e9 a quantifica\u00e7\u00e3o do d\u00e9fice neurol\u00f3gico."
+        },
+        {
+          "id": "DP2",
+          "context": "O doente est\u00e1 estabilizado do ponto de vista hemodin\u00e2mico. A esposa forneceu a informa\u00e7\u00e3o sobre o in\u00edcio incerto dos sintomas. \u00c9 necess\u00e1rio avaliar a gravidade do quadro neurol\u00f3gico.",
+          "available_actions": [
             {
-              "id": "A7",
-              "description": "Iniciar perfusão de alteplase sem aguardar por mais exames de imagem",
-              "finding": "A decisão de iniciar trombólise é tomada. Esta ação é inadequada, pois o doente está fora da janela terapêutica convencional de 4,5 horas e não foi realizada imagiologia de perfusão para confirmar a presença de penumbra recuperável. O tratamento sem esta confirmação aumenta o risco de hemorragia sem probabilidade de benefício.",
+              "id": "A5",
+              "description": "Realizar exame neurol\u00f3gico e quantificar NIHSS",
+              "finding": "Exame neurol\u00f3gico revela hemian\u00f3psia hom\u00f3nima esquerda, paralisia facial central esquerda, hemiparesia esquerda (MS 4/5, MI 3/5), hemi-hipostesia esquerda e neglig\u00eancia esquerda. NIHSS: 12.",
               "finding_relevance": "Confirmatory",
-              "requirement": "Optional",
-              "rationale": "Iniciar trombólise fora da janela de 4,5 horas sem confirmação por imagem de perfusão de tecido recuperável é uma violação das diretrizes atuais e expõe o doente a riscos significativos sem benefício comprovado.",
+              "requirement": "Critical",
+              "rationale": "A quantifica\u00e7\u00e3o do d\u00e9fice neurol\u00f3gico com a escala NIHSS \u00e9 essencial para avaliar a gravidade do AVC, determinar a elegibilidade para terap\u00eauticas de reperfus\u00e3o e monitorizar a evolu\u00e7\u00e3o.",
               "media_reference": null,
               "media_type": null,
               "citation": [
                 {
-                  "source_text": "In adult patients with AIS presenting within 4.5 hours of symptom onset or last known well and eligible for IVT, tenecteplase at a dose of 0.25 mg/kg body weight (max 25 mg) or alteplase at a dose of 0.9 mg/kg body weight is recommended to improve functional outcomes.",
-                  "source": "AHA/ASA 2026",
-                  "section": "4.6.2. Choice of Thrombolytic Agent",
-                  "location": "aha_stroke_2026_chunk_188_recommendationspecific_suppor.txt",
+                  "source_text": "Quantifica\u00e7\u00e3o do defeito neurol\u00f3gico, atrav\u00e9s de National Institutes of Health Stroke Scale (NIHSS).",
+                  "source": "DGS Via Verde AVC 2017",
+                  "section": "NORMA",
+                  "location": "",
                   "location_type": "RAG",
-                  "title": ""
+                  "title": null
                 }
               ],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Realizar ECG de 12 deriva\u00e7\u00f5es",
+              "finding": "ECG mostra ritmo sinusal, sem sinais de isquemia aguda. Frequ\u00eancia card\u00edaca de 85 bpm.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "O ECG \u00e9 importante para detetar arritmias como a fibrilha\u00e7\u00e3o auricular, uma causa comum de AVC, mas n\u00e3o deve atrasar a realiza\u00e7\u00e3o da neuroimagem urgente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
               "duration_minutes": [
                 5,
                 10
               ],
-              "is_branch_trigger": true,
-              "branch_trigger": {
-                "branch_id": "B1",
-                "condition": "O formando inicia trombólise num doente com AVC de início desconhecido (>4,5h) sem realizar imagem de perfusão para confirmar a elegibilidade, expondo o doente a riscos desnecessários."
-              }
+              "is_branch_trigger": false,
+              "branch_trigger": null
             },
             {
-              "id": "A8",
-              "description": "Requisitar Ressonância Magnética (RM) crânio-encefálica como primeiro exame",
-              "finding": "A requisição de RM é feita. Embora a RM seja mais sensível para isquemia precoce, a sua menor disponibilidade e maior tempo de aquisição tornam-na inadequada como exame de primeira linha na fase hiperaguda, atrasando a decisão terapêutica. A TC é o padrão para a exclusão rápida de hemorragia.",
+              "id": "A7",
+              "description": "Aguardar resultados laboratoriais antes de proceder",
+              "finding": "A espera pelos resultados laboratoriais consome tempo valioso da janela terap\u00eautica. A maioria dos resultados n\u00e3o \u00e9 necess\u00e1ria para a decis\u00e3o inicial de imagiologia.",
               "finding_relevance": "Non Contributory",
               "requirement": "Optional",
-              "rationale": "Atrasar a exclusão de hemorragia com um exame demorado como a RM na fase hiperaguda é uma decisão subótima. A TC-CE é o exame de eleição para a avaliação inicial rápida.",
+              "rationale": "No AVC agudo, a neuroimagem n\u00e3o deve ser atrasada pela espera de resultados laboratoriais (exceto glicemia), pois 'tempo \u00e9 c\u00e9rebro'.",
               "media_reference": null,
               "media_type": null,
-              "citation": [
-                {
-                  "source_text": "Ressonância magnética (RM) crânio-encefálica na dúvida do diagnóstico.",
-                  "source": "DGS Via Verde AVC 2017",
-                  "section": "NORMA",
-                  "location": "dgs_via_verde_avc_2017_chunk_005_via_verde_avc.txt",
-                  "location_type": "RAG",
-                  "title": ""
-                }
-              ],
+              "citation": [],
               "duration_minutes": [
-                45,
-                60
+                30,
+                45
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             }
           ],
           "critical_action_ids": [
-            "A6"
+            "A5"
           ],
-          "feedback_on_completion": "A TC-CE excluiu hemorragia, confirmando o diagnóstico de AVC isquémico. Dado que o tempo de início dos sintomas é superior a 4,5 horas, o passo seguinte é realizar imagiologia multimodal (Angio-TC e TC de Perfusão) para determinar se existe uma oclusão de grande vaso e tecido cerebral recuperável. [Source: AHA/ASA 2026]"
-        }
-      ],
-      "progression_criteria": "Completar todas as ações críticas para progredir."
-    },
-    {
-      "id": "S2",
-      "name": "Stage 2: Imagiologia Avançada e Decisão Terapêutica",
-      "setting": "Unidade de Imagiologia / Serviço de Urgência",
-      "initial_state": "A TC-CE sem contraste excluiu hemorragia. O doente permanece com um NIHSS de 12 e está a ser preparado para imagiologia avançada na sala de TC.",
-      "vital_signs": {
-        "blood_pressure": "168/94 mmHg",
-        "heart_rate": "85 bpm",
-        "respiratory_rate": "16 cpm",
-        "temperature": "36.7°C",
-        "oxygen_saturation": "97% em ar ambiente",
-        "gcs": "E3V4M6 (13/15)",
-        "nihss": 12
-      },
-      "all_optional": [
-        {
-          "id": "INFO_4",
-          "description": "Resultados laboratoriais iniciais",
-          "finding": "Hemograma, plaquetas e estudo da coagulação dentro dos valores de referência. Creatinina: 1.1 mg/dL. Glicemia venosa: 150 mg/dL.",
-          "media_reference": null,
-          "media_type": null
+          "feedback_on_completion": "O exame neurol\u00f3gico confirma um d\u00e9fice moderado a grave, com um NIHSS de 12. O pr\u00f3ximo passo cr\u00edtico \u00e9 a realiza\u00e7\u00e3o de neuroimagem para determinar a natureza do AVC."
         },
         {
-          "id": "INFO_5",
-          "description": "Critérios de exclusão para trombólise",
-          "finding": "O doente não tem contraindicações absolutas conhecidas para trombólise, exceto a janela temporal. A PA está <185/110 mmHg. Não há história de hemorragia, cirurgia recente ou trauma.",
-          "media_reference": null,
-          "media_type": null
-        }
-      ],
-      "decision_points": [
-        {
           "id": "DP3",
-          "context": "O doente está na mesa de TC para a realização de exames de imagem adicionais, essenciais para a decisão terapêutica.",
+          "context": "O doente tem um NIHSS de 12. A suspeita cl\u00ednica de AVC isqu\u00e9mico agudo \u00e9 elevada. \u00c9 imperativo obter imagem cerebral.",
           "available_actions": [
             {
-              "id": "A9",
-              "description": "Realizar Angio-TC dos vasos cerebrais e supra-aórticos",
-              "finding": "Angio-TC revela uma oclusão trombótica do segmento M1 da artéria cerebral média (ACM) direita. Restante circulação sem estenoses significativas.",
-              "finding_relevance": "Confirmatory",
+              "id": "A8",
+              "description": "Requisitar TC cr\u00e2nio-encef\u00e1lica (TC-CE) sem contraste, urgente",
+              "finding": "A TC-CE sem contraste \u00e9 realizada e n\u00e3o mostra sinais de hemorragia intracraniana aguda. Observam-se sinais precoces de isquemia no territ\u00f3rio da art\u00e9ria cerebral m\u00e9dia (ACM) direita (perda de diferencia\u00e7\u00e3o cortico-subcortical insular). ASPECTS 8.",
+              "finding_relevance": "Exclusionary",
               "requirement": "Critical",
-              "rationale": "A Angio-TC é indispensável para identificar uma oclusão de grande vaso, que é um requisito para a trombectomia mecânica, o tratamento mais eficaz nestes casos.",
-              "media_reference": "cta_m1_occlusion.jpg",
-              "media_type": "image",
+              "rationale": "A TC sem contraste \u00e9 o primeiro exame de imagem mandat\u00f3rio para excluir hemorragia, uma contraindica\u00e7\u00e3o absoluta para a tromb\u00f3lise.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "A primeira e mais urgente investiga\u00e7\u00e3o \u00e9 uma Tomografia Computorizada (TC) ao cr\u00e2nio sem contraste para excluir uma hemorragia intracraniana. Este \u00e9 um pr\u00e9-requisito absoluto antes de considerar qualquer terapia de reperfus\u00e3o.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "**Neuroimagem de Emerg\u00eancia:** A primeira e mais urgente investiga\u00e7\u00e3o \u00e9 uma Tomografia Computorizada (TC) ao cr\u00e2nio sem contraste para excluir uma hemorragia intracraniana.",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A9",
+              "description": "Requisitar RM cr\u00e2nio-encef\u00e1lica urgente",
+              "finding": "A requisi\u00e7\u00e3o de RM como primeiro exame atrasa a exclus\u00e3o de hemorragia devido \u00e0 menor disponibilidade e maior tempo de aquisi\u00e7\u00e3o. A equipa de radiologia informa que a RM s\u00f3 estar\u00e1 dispon\u00edvel dentro de 90 minutos.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Embora a RM seja \u00fatil para 'wake-up strokes' (mismatch DWI-FLAIR), a TC sem contraste \u00e9 mais r\u00e1pida e universalmente dispon\u00edvel para a exclus\u00e3o inicial e crucial de hemorragia.",
+              "media_reference": null,
+              "media_type": null,
               "citation": [],
               "duration_minutes": [
                 10,
@@ -407,28 +382,11 @@
             },
             {
               "id": "A10",
-              "description": "Realizar TC de Perfusão cerebral",
-              "finding": "Mapas de perfusão demonstram: Volume do core isquémico (CBF <30%): 18 mL. Volume da penumbra (Tmax >6s): 95 mL. Mismatch ratio (Penumbra/Core): 5.3. Perfil de imagem favorável à reperfusão.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A TC de perfusão é crucial em doentes com AVC de início desconhecido para quantificar o core isquémico (dano irreversível) e a penumbra (tecido em risco mas recuperável), identificando aqueles que podem beneficiar de reperfusão em janela alargada.",
-              "media_reference": "ct_perfusion_mismatch.jpg",
-              "media_type": "image",
-              "citation": [],
-              "duration_minutes": [
-                10,
-                15
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            },
-            {
-              "id": "A11",
-              "description": "Proceder diretamente para trombectomia sem avaliar a perfusão",
-              "finding": "A decisão de avançar para trombectomia sem avaliar a perfusão é tomada. Esta abordagem é arriscada, pois sem a TC de perfusão, não há confirmação de que existe um volume significativo de tecido recuperável. A trombectomia num doente com um core isquémico já extenso (sem penumbra) pode não trazer benefício e aumentar o risco de complicações.",
+              "description": "Administrar aspirina 300 mg",
+              "finding": "A administra\u00e7\u00e3o de antiagregantes antes da exclus\u00e3o de hemorragia por imagem \u00e9 um erro grave. Esta a\u00e7\u00e3o \u00e9 interrompida pela equipa de enfermagem, que questiona a prescri\u00e7\u00e3o antes da realiza\u00e7\u00e3o da TC.",
               "finding_relevance": "Confirmatory",
               "requirement": "Optional",
-              "rationale": "Omitir a avaliação da perfusão em doentes fora da janela temporal padrão para trombectomia é inadequado, pois a decisão de tratar baseia-se na presença de um mismatch favorável, não apenas na oclusão vascular.",
+              "rationale": "\u00c9 absolutamente contraindicado administrar antiagregantes ou anticoagulantes antes de uma TC cerebral excluir hemorragia, pois poderia agravar catastroficamente uma hemorragia intracraniana.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -441,22 +399,38 @@
             }
           ],
           "critical_action_ids": [
-            "A9",
-            "A10"
+            "A8"
           ],
-          "feedback_on_completion": "A imagiologia multimodal está completa. Os resultados são críticos: oclusão do segmento M1 da ACM direita com um perfil de perfusão muito favorável (core pequeno, penumbra grande). Estes achados indicam que o doente é um excelente candidato para terapêutica de reperfusão."
+          "feedback_on_completion": "A TC sem contraste excluiu hemorragia, confirmando o diagn\u00f3stico de AVC isqu\u00e9mico. Os sinais precoces sugerem um evento no territ\u00f3rio da ACM direita. O pr\u00f3ximo passo \u00e9 a avalia\u00e7\u00e3o vascular e do tecido em risco."
         },
         {
           "id": "DP4",
-          "context": "Os resultados da Angio-TC e da TC de Perfusão estão disponíveis e confirmam uma oclusão de grande vaso com um mismatch favorável. A equipa deve agora decidir o plano terapêutico.",
+          "context": "A TC-CE excluiu hemorragia. O doente est\u00e1 est\u00e1vel. \u00c9 necess\u00e1rio completar a avalia\u00e7\u00e3o sist\u00e9mica e obter mais informa\u00e7\u00f5es.",
           "available_actions": [
             {
-              "id": "A12",
-              "description": "Aplicar critérios de elegibilidade e decidir por trombectomia mecânica",
-              "finding": "O doente cumpre os critérios dos ensaios de janela alargada (ex: DAWN/DEFUSE-3): oclusão de grande vaso na circulação anterior, core isquémico <70mL, mismatch ratio >1.8 e NIHSS ≥6. A decisão é proceder com trombectomia mecânica de emergência.",
-              "finding_relevance": "Confirmatory",
+              "id": "A11",
+              "description": "Colher amostras de sangue para estudo laboratorial completo",
+              "finding": "Amostras colhidas para hemograma, estudo da coagula\u00e7\u00e3o (TP, aPTT), fun\u00e7\u00e3o renal e hep\u00e1tica. Os resultados ficar\u00e3o pendentes.",
+              "finding_relevance": "Non Contributory",
               "requirement": "Critical",
-              "rationale": "A trombectomia mecânica é o tratamento de eleição para oclusões de grande vaso com perfil de perfusão favorável em janela alargada (até 24 horas), demonstrando um benefício substancial na melhoria dos resultados funcionais.",
+              "rationale": "O estudo laboratorial, especialmente da coagula\u00e7\u00e3o e contagem de plaquetas, \u00e9 necess\u00e1rio para avaliar a seguran\u00e7a das terap\u00eauticas de reperfus\u00e3o, embora n\u00e3o deva atrasar a imagem.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "Rever hist\u00f3ria m\u00e9dica e cir\u00fargica completa",
+              "finding": "A esposa confirma aus\u00eancia de cirurgias major recentes, trauma craniano, hemorragia ativa ou hist\u00f3ria de hemorragia intracraniana. Os antecedentes de HTA, DM2 e dislipidemia s\u00e3o confirmados.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "A revis\u00e3o dos antecedentes \u00e9 crucial para identificar contraindica\u00e7\u00f5es para as terap\u00eauticas de reperfus\u00e3o.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -469,11 +443,11 @@
             },
             {
               "id": "A13",
-              "description": "Considerar trombólise IV em adição à trombectomia ('bridging therapy')",
-              "finding": "Apesar da janela temporal alargada, a presença de um perfil de perfusão favorável (semelhante a um 'relógio de tecido' em vez de um 'relógio de tempo') torna o doente elegível para trombólise IV, a ser administrada imediatamente antes e durante o transporte para a sala de angiografia.",
+              "description": "Consultar neurologia por telefone",
+              "finding": "O neurologista de chamada concorda com a avalia\u00e7\u00e3o at\u00e9 ao momento e recomenda prosseguir com imagem vascular e de perfus\u00e3o, dada a incerteza temporal.",
               "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "Em doentes elegíveis para ambos os tratamentos, a administração de trombólise IV (bridging) antes da trombectomia é segura e pode melhorar a eficácia da reperfusão e os resultados clínicos, não devendo atrasar o início da trombectomia.",
+              "requirement": "Supportive",
+              "rationale": "A discuss\u00e3o com um especialista em AVC \u00e9 uma boa pr\u00e1tica e ajuda a validar o plano de investiga\u00e7\u00e3o, especialmente em casos complexos como 'wake-up strokes'.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -486,31 +460,11 @@
             },
             {
               "id": "A14",
-              "description": "Optar por gestão médica conservadora devido ao tempo de evolução",
-              "finding": "A decisão de não intervir é tomada, ignorando os dados da perfusão. Esta abordagem resulta na perda da oportunidade de salvar a vasta área de penumbra, levando a um enfarte cerebral extenso e a um mau prognóstico funcional, que poderia ter sido evitado.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Optional",
-              "rationale": "Ignorar um perfil de perfusão favorável e optar por tratamento conservador num doente elegível para trombectomia é um erro grave, que priva o doente do tratamento mais eficaz disponível e resulta em incapacidade severa.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [],
-              "duration_minutes": [
-                2,
-                5
-              ],
-              "is_branch_trigger": true,
-              "branch_trigger": {
-                "branch_id": "B2",
-                "condition": "O formando opta por tratamento conservador ('best medical treatment') apesar de a imagiologia de perfusão mostrar um perfil altamente favorável para reperfusão (core pequeno e penumbra grande)."
-              }
-            },
-            {
-              "id": "A15",
-              "description": "Administrar apenas trombólise IV, sem trombectomia",
-              "finding": "A decisão de administrar apenas alteplase é tomada. Embora possa oferecer algum benefício, a trombólise IV tem uma baixa taxa de sucesso na recanalização de oclusões de grandes vasos como a M1. Omitir a trombectomia priva o doente do tratamento mais eficaz para a sua condição.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Optional",
-              "rationale": "Numa oclusão de grande vaso, a trombectomia é superior à trombólise IV isolada. Escolher apenas a trombólise é uma estratégia subótima que resulta em piores taxas de recanalização e piores resultados funcionais.",
+              "description": "Iniciar perfus\u00e3o com soro fisiol\u00f3gico",
+              "finding": "Perfus\u00e3o de soro fisiol\u00f3gico a 80 ml/h iniciada para manuten\u00e7\u00e3o da hidrata\u00e7\u00e3o e como ve\u00edculo para eventuais medica\u00e7\u00f5es IV.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Manter a euvolemia \u00e9 um princ\u00edpio geral de suporte no AVC agudo.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -523,59 +477,41 @@
             }
           ],
           "critical_action_ids": [
-            "A12",
-            "A13"
+            "A11"
           ],
-          "feedback_on_completion": "Decisão correta e baseada na evidência. O doente é candidato a uma estratégia de reperfusão dupla: trombólise IV imediata seguida de trombectomia mecânica. O passo seguinte é iniciar a trombólise e ativar a equipa de neurorradiologia de intervenção."
-        }
-      ],
-      "progression_criteria": "Completar todas as ações críticas para progredir."
-    },
-    {
-      "id": "S3",
-      "name": "Stage 3: Terapêutica de Reperfusão e Cuidados Pós-Procedimento",
-      "setting": "Serviço de Urgência / Sala de Angiografia / Unidade de AVC",
-      "initial_state": "A decisão de proceder com trombólise e trombectomia foi tomada. A equipa de neurorradiologia de intervenção foi ativada. A PA do doente é 178/100 mmHg.",
-      "vital_signs": {
-        "blood_pressure": "178/100 mmHg",
-        "heart_rate": "82 bpm",
-        "respiratory_rate": "16 cpm",
-        "temperature": "36.8°C",
-        "oxygen_saturation": "98% em ar ambiente",
-        "gcs": "E3V4M6 (13/15)",
-        "nihss": 12
-      },
-      "all_optional": [
-        {
-          "id": "INFO_6",
-          "description": "Peso estimado do doente",
-          "finding": "Peso estimado: 80 kg.",
-          "media_reference": null,
-          "media_type": null
+          "feedback_on_completion": "A avalia\u00e7\u00e3o laboratorial est\u00e1 em curso e a hist\u00f3ria cl\u00ednica foi revista. A aus\u00eancia de hemorragia na TC e o in\u00edcio incerto dos sintomas tornam a imagem avan\u00e7ada o passo seguinte decisivo."
         },
         {
-          "id": "INFO_7",
-          "description": "Alvos de Pressão Arterial pós-reperfusão",
-          "finding": "Após trombólise e/ou trombectomia, o alvo tensional é manter a PA < 180/105 mmHg durante as primeiras 24 horas para reduzir o risco de transformação hemorrágica.",
-          "media_reference": null,
-          "media_type": null
-        }
-      ],
-      "decision_points": [
-        {
           "id": "DP5",
-          "context": "A equipa está pronta para iniciar o tratamento de reperfusão. A PA do doente está abaixo do limiar de 185/110 mmHg.",
+          "context": "A avalia\u00e7\u00e3o inicial est\u00e1 completa. Foi exclu\u00edda hemorragia. O doente tem um d\u00e9fice neurol\u00f3gico significativo e est\u00e1 fora da janela temporal para tromb\u00f3lise convencional. A PA permanece elevada em 190/100 mmHg.",
           "available_actions": [
             {
-              "id": "A16",
-              "description": "Administrar trombólise IV com alteplase (0.9 mg/kg)",
-              "finding": "Alteplase iniciada. Dose total para 80 kg: 72 mg. Bólus IV de 7.2 mg (10%) administrado em 1 minuto, seguido de uma perfusão de 64.8 mg (90%) durante 60 minutos. A perfusão continuará durante o transporte e preparação para a trombectomia.",
+              "id": "A15",
+              "description": "Iniciar controlo da press\u00e3o arterial com Labetalol IV",
+              "finding": "Administrado b\u00f3lus de Labetalol 10 mg IV. A PA reduz para 175/95 mmHg. O objetivo \u00e9 manter a PA < 185/110 mmHg para permitir uma eventual terap\u00eautica de reperfus\u00e3o.",
               "finding_relevance": "Confirmatory",
               "requirement": "Critical",
-              "rationale": "A administração de alteplase, mesmo em janela alargada com perfil de perfusão favorável, pode iniciar a recanalização e melhorar os resultados, não devendo atrasar a trombectomia.",
+              "rationale": "O controlo da press\u00e3o arterial \u00e9 mandat\u00f3rio antes de qualquer terap\u00eautica de reperfus\u00e3o para minimizar o risco de transforma\u00e7\u00e3o hemorr\u00e1gica.",
               "media_reference": null,
               "media_type": null,
-              "citation": [],
+              "citation": [
+                {
+                  "source_text": "A press\u00e3o arterial deve ser controlada, mantendo-se abaixo de 185/110 mmHg antes da tromb\u00f3lise e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "**Controlo da Press\u00e3o Arterial:** A press\u00e3o arterial deve ser controlada, mantendo-se abaixo de 185/110 mmHg antes da tromb\u00f3lise e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
               "duration_minutes": [
                 10,
                 15
@@ -584,12 +520,12 @@
               "branch_trigger": null
             },
             {
-              "id": "A17",
-              "description": "Transportar doente para a sala de angiografia para trombectomia",
-              "finding": "O doente é transportado de imediato para a sala de angiografia, onde a equipa de neurorradiologia de intervenção já se encontra a postos.",
+              "id": "A16",
+              "description": "Admitir em Unidade de AVC para tratamento conservador",
+              "finding": "Esta decis\u00e3o ignora a possibilidade de tratamento em janela alargada. O doente seria admitido e receberia apenas antiagrega\u00e7\u00e3o ap\u00f3s 24h, resultando num d\u00e9fice neurol\u00f3gico permanente e grave que poderia ter sido evitado.",
               "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "O tempo é um fator crítico. O transporte rápido e a preparação da equipa de intervenção são essenciais para minimizar o tempo 'porta-punção' e maximizar a probabilidade de um bom resultado.",
+              "requirement": "Optional",
+              "rationale": "Em doentes com AVC de in\u00edcio incerto e d\u00e9fice significativo, a investiga\u00e7\u00e3o com imagem avan\u00e7ada para avaliar a elegibilidade para trombectomia ou tromb\u00f3lise em janela alargada \u00e9 o padr\u00e3o de cuidado.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -597,16 +533,99 @@
                 10,
                 20
               ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O utilizador opta por tratamento conservador, decidindo n\u00e3o prosseguir com a investiga\u00e7\u00e3o por imagem avan\u00e7ada para avaliar a elegibilidade para reperfus\u00e3o em janela alargada."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A15"
+          ],
+          "feedback_on_completion": "A press\u00e3o arterial foi controlada, uma etapa crucial de seguran\u00e7a. Est\u00e3o reunidas as condi\u00e7\u00f5es para avan\u00e7ar para a imagiologia avan\u00e7ada e determinar a viabilidade do tecido cerebral."
+        }
+      ],
+      "progression_criteria": "Hemorragia exclu\u00edda, avalia\u00e7\u00e3o neurol\u00f3gica completa e press\u00e3o arterial controlada, permitindo a transi\u00e7\u00e3o para a avalia\u00e7\u00e3o de reperfus\u00e3o."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Imagiologia Avan\u00e7ada e Decis\u00e3o de Reperfus\u00e3o",
+      "setting": "Servi\u00e7o de Urg\u00eancia / Unidade de Imagiologia",
+      "initial_state": "Doente com AVC isqu\u00e9mico de in\u00edcio incerto, NIHSS 12, sem hemorragia na TC-CE e com PA controlada (<185/110 mmHg). A equipa prepara-se para decidir sobre a elegibilidade para terap\u00eauticas de reperfus\u00e3o em janela alargada.",
+      "vital_signs": {
+        "blood_pressure": "175/95 mmHg",
+        "heart_rate": "82 bpm",
+        "respiratory_rate": "16 cpm",
+        "temperature": "36.7\u00b0C",
+        "oxygen_saturation": "97% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E3V4M6 = 13/15",
+        "nihss": 12
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Rever crit\u00e9rios para trombectomia em janela alargada",
+          "finding": "Os crit\u00e9rios dos ensaios DAWN e DEFUSE-3 permitem a trombectomia at\u00e9 24 horas em doentes selecionados com base na discord\u00e2ncia entre o d\u00e9fice cl\u00ednico e o volume do core isqu\u00e9mico (mismatch cl\u00ednico-core) ou na presen\u00e7a de um mismatch significativo entre o core e a penumbra na imagem de perfus\u00e3o.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Rever crit\u00e9rios para tromb\u00f3lise em 'wake-up stroke'",
+          "finding": "O ensaio WAKE-UP demonstrou benef\u00edcio da tromb\u00f3lise em doentes com AVC de in\u00edcio incerto que apresentam um mismatch DWI-FLAIR na RM (les\u00e3o vis\u00edvel em DWI, mas ausente ou pouco evidente em FLAIR), sugerindo um in\u00edcio nas \u00faltimas 4.5 horas.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP6",
+          "context": "Com a hemorragia exclu\u00edda e a PA controlada, \u00e9 necess\u00e1rio avaliar a presen\u00e7a de oclus\u00e3o de grande vaso e a extens\u00e3o do tecido cerebral em risco versus o j\u00e1 infartado.",
+          "available_actions": [
+            {
+              "id": "A17",
+              "description": "Requisitar Angio-TC e TC de Perfus\u00e3o cr\u00e2nio-encef\u00e1lica",
+              "finding": "O protocolo de imagem avan\u00e7ada \u00e9 ativado. O doente \u00e9 transportado para a TC para realizar os exames.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A imagem avan\u00e7ada com Angio-TC e Perfus\u00e3o \u00e9 essencial em 'wake-up strokes' para identificar oclus\u00e3o de grande vaso e quantificar o tecido salv\u00e1vel (penumbra), guiando a decis\u00e3o sobre trombectomia mec\u00e2nica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Angio-TC para detetar oclus\u00e3o de grande vaso. Se positiva, prosseguir com TC de perfus\u00e3o (ou RM de perfus\u00e3o) para avaliar a elegibilidade para trombectomia mec\u00e2nica, mesmo que tenham passado mais de 6 horas.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "*   **Trombectomia Mec\u00e2nica em Janela Alargada:** Se a avalia\u00e7\u00e3o inicial com Angio-TC ou Angio-RM revelar uma oclus\u00e3o de um grande vaso sangu\u00edneo cerebral (ex: art\u00e9ria car\u00f3tida interna ou cerebral m\u00e9dia), o doente pode ser candidato a trombectomia mec\u00e2nica.",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                25,
+                40
+              ],
               "is_branch_trigger": false,
               "branch_trigger": null
             },
             {
               "id": "A18",
-              "description": "Iniciar trombólise com PA de 195/115 mmHg sem controlo prévio",
-              "finding": "A alteplase é iniciada apesar da PA estar acima do limite de segurança de 185/110 mmHg. Esta ação aumenta drasticamente o risco de transformação hemorrágica do enfarte, uma complicação potencialmente fatal.",
+              "description": "Administrar tenecteplase IV com base na suspeita cl\u00ednica",
+              "finding": "A administra\u00e7\u00e3o de tromb\u00f3lise sem confirma\u00e7\u00e3o de penumbra vi\u00e1vel por imagem avan\u00e7ada num doente com 8 horas de evolu\u00e7\u00e3o \u00e9 perigosa. O risco de tratar um core isqu\u00e9mico j\u00e1 estabelecido aumenta a probabilidade de transforma\u00e7\u00e3o hemorr\u00e1gica sem benef\u00edcio cl\u00ednico.",
               "finding_relevance": "Confirmatory",
               "requirement": "Optional",
-              "rationale": "A administração de trombólise com PA acima de 185/110 mmHg é uma contraindicação relativa forte e uma violação dos protocolos de segurança, devido ao elevado risco de hemorragia intracraniana.",
+              "rationale": "Em doentes fora da janela temporal padr\u00e3o, a tromb\u00f3lise s\u00f3 deve ser considerada se a imagem avan\u00e7ada (RM com mismatch DWI-FLAIR ou, em alguns protocolos, perfus\u00e3o) demonstrar tecido salv\u00e1vel. A administra\u00e7\u00e3o cega \u00e9 um erro.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -616,31 +635,47 @@
               ],
               "is_branch_trigger": true,
               "branch_trigger": {
-                "branch_id": "B3",
-                "condition": "O formando administra trombólise IV sem primeiro controlar a pressão arterial para valores de segurança (<185/110 mmHg)."
+                "branch_id": "B1",
+                "condition": "O utilizador administra tromb\u00f3lise IV num doente com 8 horas de evolu\u00e7\u00e3o de sintomas, sem a orienta\u00e7\u00e3o de imagem de perfus\u00e3o ou RM para confirmar a presen\u00e7a de tecido salv\u00e1vel."
               }
             }
           ],
           "critical_action_ids": [
-            "A16",
             "A17"
           ],
-          "feedback_on_completion": "Trombólise iniciada e doente a caminho da trombectomia. A gestão contínua da pressão arterial e a monitorização neurológica são cruciais durante e após os procedimentos de reperfusão."
+          "feedback_on_completion": "A decis\u00e3o de avan\u00e7ar para imagem multimodal (Angio-TC e Perfus\u00e3o) foi correta. Os resultados destes exames ser\u00e3o determinantes para a elegibilidade do doente para as terap\u00eauticas de reperfus\u00e3o."
         },
         {
-          "id": "DP6",
-          "context": "A trombectomia foi concluída com sucesso, alcançando uma recanalização completa (TICI 3). O doente foi transferido para a Unidade de AVC para cuidados pós-procedimento.",
+          "id": "DP7",
+          "context": "A Angio-TC foi conclu\u00edda. As imagens est\u00e3o dispon\u00edveis para interpreta\u00e7\u00e3o.",
           "available_actions": [
             {
               "id": "A19",
-              "description": "Monitorizar e controlar a Pressão Arterial (PA)",
-              "finding": "Ordem para manter a PA sistólica < 180 mmHg e a PA diastólica < 105 mmHg nas primeiras 24 horas, utilizando labetalol IV em perfusão, se necessário.",
+              "description": "Interpretar relat\u00f3rio da Angio-TC",
+              "finding": "A Angio-TC revela uma oclus\u00e3o do segmento M1 da art\u00e9ria cerebral m\u00e9dia (ACM) direita. As restantes art\u00e9rias intracranianas n\u00e3o mostram estenoses significativas.",
               "finding_relevance": "Confirmatory",
               "requirement": "Critical",
-              "rationale": "O controlo rigoroso da PA após a reperfusão é fundamental para minimizar o risco de edema cerebral e transformação hemorrágica, duas das complicações mais temidas.",
+              "rationale": "A identifica\u00e7\u00e3o de uma oclus\u00e3o de grande vaso (OGV) \u00e9 o pr\u00e9-requisito para considerar a trombectomia mec\u00e2nica, a terap\u00eautica mais eficaz nestes casos.",
               "media_reference": null,
               "media_type": null,
-              "citation": [],
+              "citation": [
+                {
+                  "source_text": "Se a avalia\u00e7\u00e3o inicial com Angio-TC ou Angio-RM revelar uma oclus\u00e3o de um grande vaso sangu\u00edneo cerebral (ex: art\u00e9ria car\u00f3tida interna ou cerebral m\u00e9dia), o doente pode ser candidato a trombectomia mec\u00e2nica.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "*   **Trombectomia Mec\u00e2nica em Janela Alargada:** Se a avalia\u00e7\u00e3o inicial com Angio-TC ou Angio-RM revelar uma oclus\u00e3o de um grande vaso sangu\u00edneo cerebral (ex: art\u00e9ria car\u00f3tida interna ou cerebral m\u00e9dia), o doente pode ser candidato a trombectomia mec\u00e2nica.",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
               "duration_minutes": [
                 5,
                 10
@@ -650,28 +685,99 @@
             },
             {
               "id": "A20",
-              "description": "Realizar monitorização neurológica seriada (escala NIHSS)",
-              "finding": "Protocolo de monitorização neurológica iniciado: avaliação do NIHSS de 15 em 15 minutos nas primeiras 2 horas, seguido de avaliações menos frequentes conforme o protocolo da Unidade de AVC. NIHSS 2 horas pós-procedimento: 6 (melhoria de 6 pontos).",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A monitorização neurológica frequente é essencial para detetar precocemente qualquer deterioração, que pode indicar complicações como ressangramento, edema ou nova oclusão.",
+              "description": "Assumir que a oclus\u00e3o \u00e9 cr\u00f3nica e n\u00e3o tratar",
+              "finding": "Assumir que a oclus\u00e3o \u00e9 cr\u00f3nica sem avaliar a perfus\u00e3o cerebral leva \u00e0 perda da oportunidade de tratamento. A correla\u00e7\u00e3o com o d\u00e9fice agudo torna uma oclus\u00e3o cr\u00f3nica improv\u00e1vel como causa.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Num quadro de AVC agudo, uma oclus\u00e3o de grande vaso deve ser considerada aguda e trat\u00e1vel at\u00e9 prova em contr\u00e1rio atrav\u00e9s da avalia\u00e7\u00e3o do tecido cerebral com perfus\u00e3o.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
               "duration_minutes": [
-                10,
-                15
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A19"
+          ],
+          "feedback_on_completion": "A Angio-TC confirmou uma oclus\u00e3o do segmento M1 da ACM direita. Este achado torna o doente um potencial candidato a trombectomia mec\u00e2nica. A an\u00e1lise da TC de perfus\u00e3o \u00e9 agora crucial."
+        },
+        {
+          "id": "DP8",
+          "context": "A TC de Perfus\u00e3o foi processada e os mapas de core isqu\u00e9mico e penumbra est\u00e3o dispon\u00edveis.",
+          "available_actions": [
+            {
+              "id": "A21",
+              "description": "Interpretar relat\u00f3rio da TC de Perfus\u00e3o",
+              "finding": "A an\u00e1lise da perfus\u00e3o mostra: Volume do core isqu\u00e9mico (CBF <30%): 18 mL. Volume da penumbra (Tmax >6s): 95 mL. Mismatch ratio (Penumbra/Core): 5.2. Perfil de perfus\u00e3o favor\u00e1vel \u00e0 reperfus\u00e3o.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A quantifica\u00e7\u00e3o do core e da penumbra \u00e9 o passo decisivo. Um core pequeno e uma penumbra grande (mismatch favor\u00e1vel) indicam a presen\u00e7a de tecido cerebral salv\u00e1vel e predizem um bom resultado com a reperfus\u00e3o, mesmo em janela alargada.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "A sele\u00e7\u00e3o de doentes para esta terapia em janela alargada \u00e9 guiada por imagem de perfus\u00e3o (por TC ou RM), que permite identificar a exist\u00eancia de uma \u00e1rea de penumbra (tecido em risco, mas ainda vi\u00e1vel) em despropor\u00e7\u00e3o com o n\u00facleo isqu\u00e9mico (tecido j\u00e1 infartado).",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "A sele\u00e7\u00e3o de doentes para esta terapia em janela alargada \u00e9 guiada por imagem de perfus\u00e3o (por TC ou RM), que permite identificar a exist\u00eancia de uma \u00e1rea de penumbra (tecido em risco, mas ainda vi\u00e1vel) em despropor\u00e7\u00e3o com o n\u00facleo isqu\u00e9mico (tecido j\u00e1 infartado).",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             },
             {
-              "id": "A21",
-              "description": "Realizar TC-CE de controlo 24 horas após o tratamento",
-              "finding": "Agendada TC-CE de controlo para 24 horas após a reperfusão para avaliar a extensão final do enfarte e excluir transformação hemorrágica antes de iniciar antiagregação.",
-              "finding_relevance": "Confirmatory",
+              "id": "A22",
+              "description": "Considerar o volume do core (18 mL) demasiado grande e contraindicar tratamento",
+              "finding": "Interpreta\u00e7\u00e3o incorreta. Um core de 18 mL \u00e9 considerado pequeno e, na presen\u00e7a de uma grande penumbra, \u00e9 uma forte indica\u00e7\u00e3o para tratamento, n\u00e3o uma contraindica\u00e7\u00e3o.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Os crit\u00e9rios de inclus\u00e3o dos ensaios de janela alargada (DAWN/DEFUSE-3) aceitam volumes de core at\u00e9 30-50 mL, dependendo da idade e do NIHSS. Um core de 18 mL \u00e9 claramente eleg\u00edvel.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A21"
+          ],
+          "feedback_on_completion": "A TC de Perfus\u00e3o confirma um perfil muito favor\u00e1vel \u00e0 reperfus\u00e3o, com um core isqu\u00e9mico pequeno e uma grande \u00e1rea de penumbra. Todos os dados de imagem apontam para a necessidade de uma interven\u00e7\u00e3o urgente."
+        },
+        {
+          "id": "DP9",
+          "context": "Todos os dados de imagem est\u00e3o dispon\u00edveis: sem hemorragia, oclus\u00e3o de M1 direita e mismatch favor\u00e1vel na perfus\u00e3o. Os resultados laboratoriais preliminares est\u00e3o dispon\u00edveis.",
+          "available_actions": [
+            {
+              "id": "A23",
+              "description": "Rever resultados laboratoriais (Hemograma e Coagula\u00e7\u00e3o)",
+              "finding": "Hemograma sem altera\u00e7\u00f5es significativas. Plaquetas: 210,000/\u03bcL. TP e aPTT dentro dos valores normais. Creatinina 1.1 mg/dL.",
+              "finding_relevance": "Exclusionary",
               "requirement": "Critical",
-              "rationale": "A imagem de controlo às 24 horas é um passo de segurança padrão para avaliar o resultado do tratamento e guiar a terapêutica de prevenção secundária.",
+              "rationale": "A confirma\u00e7\u00e3o de uma contagem de plaquetas e estudo da coagula\u00e7\u00e3o normais \u00e9 um passo de seguran\u00e7a essencial antes de qualquer procedimento de reperfus\u00e3o.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -683,64 +789,29 @@
               "branch_trigger": null
             },
             {
-              "id": "A22",
-              "description": "Iniciar heparina em perfusão para prevenção secundária",
-              "finding": "A ordem para iniciar heparina é inserida. Esta é uma ação incorreta e perigosa nas primeiras 24 horas após a trombólise, pois aumenta significativamente o risco de hemorragia intracraniana grave.",
+              "id": "A24",
+              "description": "Sintetizar dados e confirmar elegibilidade para trombectomia",
+              "finding": "O doente cumpre os crit\u00e9rios para trombectomia mec\u00e2nica em janela alargada: in\u00edcio <24h, oclus\u00e3o de grande vaso (ACM-M1), NIHSS \u22656, e perfil de perfus\u00e3o favor\u00e1vel (core <30mL, mismatch ratio >1.8).",
               "finding_relevance": "Confirmatory",
-              "requirement": "Optional",
-              "rationale": "A anticoagulação plena nas primeiras 24 horas após a trombólise e/ou trombectomia está contraindicada devido ao elevado risco de transformação hemorrágica.",
+              "requirement": "Critical",
+              "rationale": "A integra\u00e7\u00e3o de todos os dados cl\u00ednicos e de imagem \u00e9 necess\u00e1ria para tomar a decis\u00e3o final e fundamentada de avan\u00e7ar para a terap\u00eautica de reperfus\u00e3o, conforme os crit\u00e9rios dos ensaios cl\u00ednicos pivotais.",
               "media_reference": null,
               "media_type": null,
-              "citation": [
-                {
-                  "source_text": "In individuals without a known coagulopathy or other suspicion for significant hematologic abnormalities, waiting for laboratory confirmation (eg, platelet counts, coagulation parameters) has not demonstrated improved safety or outcomes and can instead forfeit the benefits of timely reperfusion.",
-                  "source": "AHA/ASA 2026",
-                  "section": "Table 6. Management of Orolingual Angioedema Associated With IV Thrombolytic Administration for AIS in Adults 53,54",
-                  "location": "aha_stroke_2026_chunk_155_475_endovascular_thrombecto.txt",
-                  "location_type": "RAG",
-                  "title": ""
-                }
-              ],
+              "citation": [],
               "duration_minutes": [
                 5,
                 10
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
-            }
-          ],
-          "critical_action_ids": [
-            "A19",
-            "A20",
-            "A21"
-          ],
-          "feedback_on_completion": "O tratamento de reperfusão foi bem-sucedido, com melhoria neurológica significativa. O doente está agora na fase de cuidados pós-agudos na Unidade de AVC, onde a monitorização rigorosa e a prevenção de complicações são a prioridade para consolidar o bom resultado obtido."
-        }
-      ],
-      "progression_criteria": "Completar todas as ações críticas para progredir."
-    }
-  ],
-  "branches": [
-    {
-      "id": "B1",
-      "branch_type": "consequence",
-      "trigger_stage_id": "S1",
-      "trigger_dp_id": "DP2",
-      "trigger_action_id": "A7",
-      "trigger_context": "O formando inicia trombólise num doente com AVC de início desconhecido (>4,5h) sem realizar imagem de perfusão para confirmar a elegibilidade, expondo o doente a riscos desnecessários.",
-      "consequence_context": "Como o doente não tinha um perfil de perfusão favorável (cenário simulado para esta branch), a trombólise não traz benefício e causa uma transformação hemorrágica do tecido já infartado, levando a uma deterioração neurológica grave.",
-      "decision_points": [
-        {
-          "id": "B1_DP1",
-          "context": "Durante a perfusão de alteplase, o doente desenvolve uma cefaleia intensa, seguida de vómitos. O seu estado de consciência deteriora-se rapidamente e a PA sobe para 220/120 mmHg.",
-          "available_actions": [
+            },
             {
-              "id": "B1_A1",
-              "description": "Parar imediatamente a perfusão de alteplase",
-              "finding": "A perfusão de alteplase é interrompida.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A suspeita de hemorragia intracraniana durante a trombólise é uma emergência que exige a interrupção imediata da perfusão para limitar a exposição ao fármaco.",
+              "id": "A25",
+              "description": "Suspender metformina",
+              "finding": "A metformina \u00e9 suspensa devido ao risco de acidose l\u00e1tica associado \u00e0 administra\u00e7\u00e3o de contraste iodado em doentes com fun\u00e7\u00e3o renal no limite.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "\u00c9 uma medida de precau\u00e7\u00e3o padr\u00e3o em doentes diab\u00e9ticos submetidos a exames com contraste iodado para prevenir a nefropatia induzida por contraste e a acidose l\u00e1tica.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -750,43 +821,25 @@
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
-            },
-            {
-              "id": "B1_A2",
-              "description": "Realizar TC-CE de emergência",
-              "finding": "A TC-CE de emergência revela uma extensa transformação hemorrágica do enfarte isquémico no território da ACM direita, com edema significativo e desvio da linha média.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A imagiologia de emergência é mandatória para confirmar a suspeita de hemorragia e avaliar a sua extensão, o que guiará as medidas seguintes.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [],
-              "duration_minutes": [
-                15,
-                25
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
             }
           ],
           "critical_action_ids": [
-            "B1_A1",
-            "B1_A2"
+            "A23",
+            "A24"
           ],
-          "feedback_on_completion": "A perfusão foi parada e a TC confirmou uma transformação hemorrágica grave, uma complicação direta da administração inadequada de trombólise. A situação é crítica.",
-          "outcome_type": "progress"
+          "feedback_on_completion": "A elegibilidade para trombectomia mec\u00e2nica est\u00e1 confirmada. N\u00e3o existem contraindica\u00e7\u00f5es laboratoriais. O passo seguinte \u00e9 ativar a equipa de interven\u00e7\u00e3o e proceder ao tratamento."
         },
         {
-          "id": "B1_DP2",
-          "context": "A TC confirma uma hemorragia maciça. O doente está em coma (GCS 5), com postura de descerebração.",
+          "id": "DP10",
+          "context": "O doente \u00e9 eleg\u00edvel para trombectomia. A PA est\u00e1 em 170/90 mmHg. A equipa de Neurorradiologia de Interven\u00e7\u00e3o est\u00e1 a ser contactada.",
           "available_actions": [
             {
-              "id": "B1_A3",
-              "description": "Contactar Neurocirurgia para avaliação urgente",
-              "finding": "A equipa de Neurocirurgia é contactada. Após reverem a imagem e o estado clínico do doente, consideram que a hemorragia é demasiado extensa e o prognóstico é fútil, não havendo indicação para intervenção cirúrgica.",
+              "id": "A26",
+              "description": "Ativar equipa de Neurorradiologia de Interven\u00e7\u00e3o para trombectomia mec\u00e2nica",
+              "finding": "A equipa \u00e9 ativada e prepara a sala de angiografia. O doente \u00e9 preparado para transporte.",
               "finding_relevance": "Confirmatory",
               "requirement": "Critical",
-              "rationale": "A consulta de Neurocirurgia é necessária para avaliar a possibilidade de evacuação cirúrgica do hematoma, embora em casos de hemorragia maciça pós-trombólise o prognóstico seja frequentemente reservado.",
+              "rationale": "A ativa\u00e7\u00e3o r\u00e1pida da equipa de interven\u00e7\u00e3o \u00e9 crucial para minimizar o tempo 'porta-pun\u00e7\u00e3o' e maximizar a probabilidade de um bom resultado cl\u00ednico.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -798,26 +851,510 @@
               "branch_trigger": null
             },
             {
-              "id": "B1_A4",
-              "description": "Iniciar medidas de suporte e conforto",
-              "finding": "São iniciadas medidas de suporte, incluindo controlo da dor e sedação. A equipa reúne com a família para discutir o prognóstico extremamente reservado e a limitação do esforço terapêutico.",
-              "finding_relevance": "Confirmatory",
+              "id": "A27",
+              "description": "Considerar tromb\u00f3lise IV 'bridging' antes da trombectomia",
+              "finding": "Dada a janela temporal >4.5h, a tromb\u00f3lise IV \u00e9 controversa e geralmente n\u00e3o recomendada sem evid\u00eancia de mismatch DWI-FLAIR. No entanto, alguns centros podem consider\u00e1-la 'off-label' com base no perfil de perfus\u00e3o. Decide-se n\u00e3o administrar e proceder diretamente para trombectomia.",
+              "finding_relevance": "Exclusionary",
               "requirement": "Supportive",
-              "rationale": "Perante um dano neurológico catastrófico e irreversível, o foco dos cuidados deve transitar para o conforto do doente e o apoio à família.",
+              "rationale": "A decis\u00e3o de administrar ou n\u00e3o tromb\u00f3lise antes da trombectomia em janela alargada \u00e9 complexa. A evid\u00eancia mais robusta suporta a trombectomia isolada nestes casos, evitando potenciais atrasos e riscos hemorr\u00e1gicos da tromb\u00f3lise.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A28",
+              "description": "Abaixar agressivamente a PA para <140 mmHg antes da trombectomia",
+              "finding": "A redu\u00e7\u00e3o agressiva da PA antes da recanaliza\u00e7\u00e3o pode comprometer a perfus\u00e3o da \u00e1rea de penumbra, que depende de press\u00f5es mais elevadas. A PA \u00e9 mantida <185/110 mmHg, mas n\u00e3o excessivamente baixa.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "O alvo de PA <140 mmHg aplica-se \u00e0 hemorragia intracerebral. No AVC isqu\u00e9mico antes da reperfus\u00e3o, o alvo \u00e9 menos estrito (<185/110 mmHg) para evitar hipoperfus\u00e3o da penumbra.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O utilizador aplica um alvo de PA incorreto (<140 mmHg) antes da recanaliza\u00e7\u00e3o, arriscando hipoperfus\u00e3o da penumbra isqu\u00e9mica."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A26"
+          ],
+          "feedback_on_completion": "A equipa de Neurorradiologia de Interven\u00e7\u00e3o foi ativada. O doente est\u00e1 a caminho da sala de angiografia para a trombectomia mec\u00e2nica. A decis\u00e3o de n\u00e3o administrar tromb\u00f3lise IV est\u00e1 de acordo com as diretrizes para esta janela temporal."
+        }
+      ],
+      "progression_criteria": "Elegibilidade para trombectomia em janela alargada confirmada e equipa de interven\u00e7\u00e3o ativada."
+    },
+    {
+      "id": "S3",
+      "name": "Stage 3: Terap\u00eautica de Reperfus\u00e3o e Cuidados P\u00f3s-Interven\u00e7\u00e3o",
+      "setting": "Sala de Angiografia / Unidade de AVC",
+      "initial_state": "O doente foi submetido a trombectomia mec\u00e2nica com sucesso. A recanaliza\u00e7\u00e3o do segmento M1 da ACM direita foi alcan\u00e7ada (TICI 3). O doente \u00e9 transferido para a Unidade de AVC para cuidados p\u00f3s-procedimento.",
+      "vital_signs": {
+        "blood_pressure": "165/85 mmHg",
+        "heart_rate": "78 bpm",
+        "respiratory_rate": "15 cpm",
+        "temperature": "36.8\u00b0C",
+        "oxygen_saturation": "98% com O2 suplementar"
+      },
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 6
+      },
+      "all_optional": [
+        {
+          "id": "INFO_6",
+          "description": "Ver escala de reperfus\u00e3o TICI",
+          "finding": "TICI (Thrombolysis in Cerebral Infarction) \u00e9 uma escala que avalia o sucesso da recanaliza\u00e7\u00e3o. TICI 3 significa reperfus\u00e3o completa do territ\u00f3rio isqu\u00e9mico, que \u00e9 o melhor resultado poss\u00edvel.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_7",
+          "description": "Protocolo de monitoriza\u00e7\u00e3o p\u00f3s-trombectomia",
+          "finding": "Monitoriza\u00e7\u00e3o neurol\u00f3gica (NIHSS) e de sinais vitais de 15/15 min nas primeiras 2h, 30/30 min nas 6h seguintes, e de hora a hora at\u00e9 24h. Controlo rigoroso da PA.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP11",
+          "context": "O doente chegou \u00e0 Unidade de AVC ap\u00f3s a trombectomia. Apresenta uma melhoria neurol\u00f3gica not\u00e1vel, mas requer monitoriza\u00e7\u00e3o intensiva.",
+          "available_actions": [
+            {
+              "id": "A29",
+              "description": "Reavaliar NIHSS na admiss\u00e3o \u00e0 Unidade de AVC",
+              "finding": "O NIHSS melhorou significativamente de 12 para 6. A hemiparesia \u00e9 agora ligeira (grau 2) e a neglig\u00eancia melhorou.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A avalia\u00e7\u00e3o neurol\u00f3gica seriada \u00e9 fundamental para detetar melhorias (indicativas de reperfus\u00e3o bem-sucedida) ou deteriora\u00e7\u00e3o (que pode indicar complica\u00e7\u00f5es como hemorragia ou re-oclus\u00e3o).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A30",
+              "description": "Manter controlo rigoroso da press\u00e3o arterial",
+              "finding": "Iniciada perfus\u00e3o de Labetalol para manter a PA sist\u00f3lica < 180 mmHg e > 110 mmHg. A PA atual \u00e9 de 150/80 mmHg.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "O controlo da PA nas primeiras 24 horas p\u00f3s-recanaliza\u00e7\u00e3o \u00e9 crucial para reduzir o risco de transforma\u00e7\u00e3o hemorr\u00e1gica e outras complica\u00e7\u00f5es.",
               "media_reference": null,
               "media_type": null,
               "citation": [
                 {
-                  "source_text": "Prestroke nutritional status and nutritional support during hospitalization may play an important role in determining stroke outcomes.",
-                  "source": "AHA/ASA 2026",
-                  "section": "Synopsis",
-                  "location": "aha_stroke_2026_chunk_013_synopsis.txt",
-                  "location_type": "RAG",
+                  "source_text": "...e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                },
+                {
+                  "source_text": "**Controlo da Press\u00e3o Arterial:** A press\u00e3o arterial deve ser controlada, mantendo-se abaixo de 185/110 mmHg antes da tromb\u00f3lise e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+                  "source": "cochranelibrary.com",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
                   "title": ""
                 }
               ],
               "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A31",
+              "description": "Iniciar heparina de baixo peso molecular imediatamente",
+              "finding": "A anticoagula\u00e7\u00e3o profil\u00e1tica nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o est\u00e1 associada a um maior risco de hemorragia intracraniana e deve ser evitada.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "A profilaxia para tromboembolismo venoso (TEV) \u00e9 importante, mas deve ser adiada por 24 horas ap\u00f3s a trombectomia, e apenas ap\u00f3s uma TC de controlo excluir hemorragia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A29",
+            "A30"
+          ],
+          "feedback_on_completion": "A melhoria neurol\u00f3gica \u00e9 um excelente sinal. O controlo da PA est\u00e1 otimizado. A monitoriza\u00e7\u00e3o cont\u00ednua nas pr\u00f3ximas horas \u00e9 a prioridade."
+        },
+        {
+          "id": "DP12",
+          "context": "Passaram 6 horas desde a trombectomia. O doente permanece est\u00e1vel, com NIHSS de 6 e PA controlada.",
+          "available_actions": [
+            {
+              "id": "A32",
+              "description": "Realizar avalia\u00e7\u00e3o da degluti\u00e7\u00e3o antes de iniciar dieta oral",
+              "finding": "A avalia\u00e7\u00e3o formal da degluti\u00e7\u00e3o por um terapeuta da fala revela disfagia moderada para l\u00edquidos. \u00c9 recomendada dieta pastosa e l\u00edquidos espessados.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A disfagia \u00e9 uma complica\u00e7\u00e3o comum do AVC e a sua dete\u00e7\u00e3o precoce \u00e9 essencial para prevenir a pneumonia de aspira\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
                 15,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A33",
+              "description": "Manter controlo glic\u00e9mico",
+              "finding": "Monitoriza\u00e7\u00e3o da glicemia capilar 4x/dia. Glicemias entre 110-160 mg/dL. Mantida suspens\u00e3o da metformina, iniciando insulina de curta a\u00e7\u00e3o se >180 mg/dL.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A hiperglicemia est\u00e1 associada a piores resultados no AVC agudo. O controlo glic\u00e9mico rigoroso \u00e9 parte dos cuidados de suporte essenciais.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A34",
+              "description": "Iniciar fisioterapia e terapia ocupacional",
+              "finding": "A equipa de reabilita\u00e7\u00e3o avalia o doente e inicia um programa de mobiliza\u00e7\u00e3o precoce e treino de atividades de vida di\u00e1ria.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A reabilita\u00e7\u00e3o precoce \u00e9 fundamental para maximizar a recupera\u00e7\u00e3o funcional ap\u00f3s um AVC.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "...e in\u00edcio da reabilita\u00e7\u00e3o precoce.",
+                  "source": "cochranelibrary.com [Web]",
+                  "section": null,
+                  "location": "",
+                  "location_type": "Web",
+                  "title": null
+                }
+              ],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A32"
+          ],
+          "feedback_on_completion": "A avalia\u00e7\u00e3o da degluti\u00e7\u00e3o preveniu uma potencial complica\u00e7\u00e3o. Os cuidados de suporte e a reabilita\u00e7\u00e3o precoce est\u00e3o em curso. O pr\u00f3ximo passo \u00e9 planear a imagiologia de controlo."
+        },
+        {
+          "id": "DP13",
+          "context": "24 horas ap\u00f3s a trombectomia. O doente est\u00e1 clinicamente est\u00e1vel, sem novos d\u00e9fices. \u00c9 altura de realizar exames de controlo e planear a profilaxia secund\u00e1ria.",
+          "available_actions": [
+            {
+              "id": "A35",
+              "description": "Requisitar TC-CE ou RM de controlo",
+              "finding": "A RM de controlo mostra uma \u00e1rea de enfarte estabelecida no territ\u00f3rio da ACM direita, significativamente menor do que seria esperado sem reperfus\u00e3o. N\u00e3o h\u00e1 evid\u00eancia de transforma\u00e7\u00e3o hemorr\u00e1gica significativa.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A imagem de controlo \u00e0s 24 horas \u00e9 essencial para avaliar a extens\u00e3o final do enfarte e, crucialmente, para excluir transforma\u00e7\u00e3o hemorr\u00e1gica antes de iniciar antiagrega\u00e7\u00e3o ou anticoagula\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                30,
+                45
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A36",
+              "description": "Iniciar profilaxia para TEV com heparina de baixo peso molecular",
+              "finding": "Ap\u00f3s a imagem de controlo excluir hemorragia, \u00e9 seguro iniciar a profilaxia para tromboembolismo venoso (TEV).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Doentes com hemiparesia t\u00eam um risco elevado de TEV. A profilaxia farmacol\u00f3gica deve ser iniciada ap\u00f3s 24 horas e exclus\u00e3o de hemorragia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A37",
+              "description": "Iniciar imediatamente dupla antiagrega\u00e7\u00e3o (AAS + Clopidogrel)",
+              "finding": "A antiagrega\u00e7\u00e3o \u00e9 iniciada, mas antes de obter a imagem de controlo. Esta a\u00e7\u00e3o acarreta um risco desnecess\u00e1rio. Felizmente, a TC posterior n\u00e3o mostra hemorragia.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Qualquer terap\u00eautica antitromb\u00f3tica (antiagrega\u00e7\u00e3o ou anticoagula\u00e7\u00e3o) deve ser adiada at\u00e9 que uma imagem de controlo, 24 horas ap\u00f3s a reperfus\u00e3o, exclua uma transforma\u00e7\u00e3o hemorr\u00e1gica clinicamente significativa.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A35",
+            "A36"
+          ],
+          "feedback_on_completion": "A imagem de controlo confirma o sucesso da interven\u00e7\u00e3o, com um enfarte limitado e sem hemorragia. \u00c9 agora seguro iniciar a profilaxia secund\u00e1ria."
+        },
+        {
+          "id": "DP14",
+          "context": "O estudo etiol\u00f3gico est\u00e1 em curso para determinar a causa do AVC e orientar a preven\u00e7\u00e3o secund\u00e1ria.",
+          "available_actions": [
+            {
+              "id": "A38",
+              "description": "Realizar monitoriza\u00e7\u00e3o card\u00edaca prolongada (Holter 24h ou telemetria)",
+              "finding": "A monitoriza\u00e7\u00e3o por telemetria na Unidade de AVC deteta epis\u00f3dios de fibrilha\u00e7\u00e3o auricular parox\u00edstica.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A dete\u00e7\u00e3o de fibrilha\u00e7\u00e3o auricular \u00e9 de m\u00e1xima import\u00e2ncia, pois muda a estrat\u00e9gia de preven\u00e7\u00e3o secund\u00e1ria de antiagrega\u00e7\u00e3o para anticoagula\u00e7\u00e3o, que \u00e9 muito mais eficaz na preven\u00e7\u00e3o de AVC cardioemb\u00f3lico.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A39",
+              "description": "Realizar Ecocardiograma Transtor\u00e1cico",
+              "finding": "O ecocardiograma n\u00e3o mostra trombos intracard\u00edacos, disfun\u00e7\u00e3o ventricular significativa ou foramen ovale patente. Hipertrofia ventricular esquerda ligeira.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "O ecocardiograma faz parte do estudo etiol\u00f3gico padr\u00e3o para excluir outras fontes card\u00edacas de embolia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A40",
+              "description": "Realizar Eco-Doppler dos vasos do pesco\u00e7o",
+              "finding": "O Eco-Doppler mostra placas de aterosclerose nas art\u00e9rias car\u00f3tidas, mas sem estenoses hemodinamicamente significativas.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Exclui a doen\u00e7a ateroscler\u00f3tica carot\u00eddea como a causa prim\u00e1ria do AVC, refor\u00e7ando a suspeita de etiologia cardioemb\u00f3lica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A38"
+          ],
+          "feedback_on_completion": "A dete\u00e7\u00e3o de fibrilha\u00e7\u00e3o auricular parox\u00edstica \u00e9 um achado crucial. A causa do AVC foi identificada como cardioemb\u00f3lica, o que ditar\u00e1 a terap\u00eautica de preven\u00e7\u00e3o secund\u00e1ria."
+        },
+        {
+          "id": "DP15",
+          "context": "A fase aguda est\u00e1 ultrapassada e a etiologia foi esclarecida. \u00c9 necess\u00e1rio planear a alta e a preven\u00e7\u00e3o secund\u00e1ria a longo prazo.",
+          "available_actions": [
+            {
+              "id": "A41",
+              "description": "Iniciar anticoagula\u00e7\u00e3o oral para preven\u00e7\u00e3o secund\u00e1ria",
+              "finding": "Dada a dete\u00e7\u00e3o de fibrilha\u00e7\u00e3o auricular, \u00e9 iniciada anticoagula\u00e7\u00e3o com um anticoagulante oral direto (DOAC), como apixabano ou rivaroxabano. A dupla antiagrega\u00e7\u00e3o \u00e9 suspensa.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A anticoagula\u00e7\u00e3o oral \u00e9 o tratamento de elei\u00e7\u00e3o para a preven\u00e7\u00e3o de AVC em doentes com fibrilha\u00e7\u00e3o auricular, sendo superior \u00e0 antiagrega\u00e7\u00e3o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A42",
+              "description": "Otimizar controlo dos fatores de risco vascular",
+              "finding": "A medica\u00e7\u00e3o anti-hipertensora e a estatina s\u00e3o ajustadas para atingir os alvos recomendados (PA <130/80 mmHg, LDL <70 mg/dL). \u00c9 feita referencia\u00e7\u00e3o para consulta de cessa\u00e7\u00e3o tab\u00e1gica e nutri\u00e7\u00e3o.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "O controlo agressivo de todos os fatores de risco vascular modific\u00e1veis (hipertens\u00e3o, dislipidemia, diabetes) \u00e9 fundamental para reduzir o risco de recorr\u00eancia de AVC.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A43",
+              "description": "Planear alta para unidade de reabilita\u00e7\u00e3o",
+              "finding": "Apesar da melhoria, o doente mant\u00e9m d\u00e9fices que beneficiar\u00e3o de um programa de reabilita\u00e7\u00e3o intensiva. \u00c9 planeada a transfer\u00eancia para uma Unidade de Cuidados Continuados de Convalescen\u00e7a.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Um plano de reabilita\u00e7\u00e3o estruturado e continuado ap\u00f3s a alta hospitalar \u00e9 essencial para maximizar a recupera\u00e7\u00e3o funcional a longo prazo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                15,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A41",
+            "A42"
+          ],
+          "feedback_on_completion": "O tratamento agudo foi bem sucedido, a etiologia foi identificada e a preven\u00e7\u00e3o secund\u00e1ria foi otimizada. O doente teve um excelente resultado devido \u00e0 r\u00e1pida avalia\u00e7\u00e3o com imagem avan\u00e7ada e \u00e0 realiza\u00e7\u00e3o de trombectomia mec\u00e2nica, apesar de um in\u00edcio incerto dos sintomas. O caso demonstra o paradigma moderno do tratamento do AVC: 'tempo \u00e9 c\u00e9rebro, mas tecido \u00e9 o alvo'."
+        }
+      ],
+      "progression_criteria": "Tratamento de reperfus\u00e3o conclu\u00eddo, cuidados p\u00f3s-procedimento iniciados, e estudo etiol\u00f3gico em curso."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP6",
+      "trigger_action_id": "A18",
+      "trigger_context": "O utilizador administra tromb\u00f3lise IV num doente com 8 horas de evolu\u00e7\u00e3o de sintomas, sem a orienta\u00e7\u00e3o de imagem de perfus\u00e3o ou RM para confirmar a presen\u00e7a de tecido salv\u00e1vel.",
+      "consequence_context": "A administra\u00e7\u00e3o de tenecteplase num enfarte j\u00e1 estabelecido e possivelmente extenso aumenta significativamente o risco de transforma\u00e7\u00e3o hemorr\u00e1gica sintom\u00e1tica, levando a uma deteriora\u00e7\u00e3o neurol\u00f3gica grave.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "Uma hora ap\u00f3s a administra\u00e7\u00e3o de tenecteplase, o doente apresenta uma deteriora\u00e7\u00e3o neurol\u00f3gica s\u00fabita, com diminui\u00e7\u00e3o do estado de consci\u00eancia (GCS de 13 para 8) e agravamento da hemiparesia esquerda.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Requisitar TC-CE urgente",
+              "finding": "A TC-CE revela uma extensa transforma\u00e7\u00e3o hemorr\u00e1gica do enfarte isqu\u00e9mico no territ\u00f3rio da ACM direita, com edema significativo e desvio da linha m\u00e9dia.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Perante uma deteriora\u00e7\u00e3o neurol\u00f3gica aguda p\u00f3s-tromb\u00f3lise, a repeti\u00e7\u00e3o da imagem cerebral \u00e9 a prioridade m\u00e1xima para diagnosticar uma transforma\u00e7\u00e3o hemorr\u00e1gica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A2",
+              "description": "Aumentar a dose do anti-hipertensor",
+              "finding": "A PA j\u00e1 est\u00e1 controlada. A deteriora\u00e7\u00e3o n\u00e3o \u00e9 por hipertens\u00e3o. Esta a\u00e7\u00e3o atrasa o diagn\u00f3stico da complica\u00e7\u00e3o hemorr\u00e1gica.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Embora o controlo da PA seja importante, a prioridade \u00e9 diagnosticar a causa da deteriora\u00e7\u00e3o neurol\u00f3gica, que \u00e9 muito provavelmente uma complica\u00e7\u00e3o estrutural.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1"
+          ],
+          "feedback_on_completion": "A TC confirma a suspeita de uma transforma\u00e7\u00e3o hemorr\u00e1gica maci\u00e7a, uma complica\u00e7\u00e3o grave da tromb\u00f3lise administrada inadequadamente. O progn\u00f3stico \u00e9 muito reservado.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B1_DP2",
+          "context": "A TC confirma uma hemorragia intracraniana maci\u00e7a com efeito de massa. O doente est\u00e1 em coma (GCS 6).",
+          "available_actions": [
+            {
+              "id": "B1_A3",
+              "description": "Contactar Neurocirurgia para avalia\u00e7\u00e3o urgente",
+              "finding": "O neurocirurgi\u00e3o avalia as imagens e o doente, mas considera que a hemorragia \u00e9 demasiado extensa e o estado neurol\u00f3gico do doente demasiado grave para beneficiar de uma craniotomia descompressiva. O tratamento cir\u00fargico \u00e9 f\u00fatil.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A consulta neurocir\u00fargica \u00e9 obrigat\u00f3ria em caso de hemorragia com efeito de massa, para avaliar a possibilidade de interven\u00e7\u00e3o cir\u00fargica para salvar a vida.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                15,
+                25
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A4",
+              "description": "Administrar crioprecipitado e vitamina K",
+              "finding": "S\u00e3o administrados agentes pro-coagulantes para tentar reverter o efeito da tenecteplase, mas a hemorragia j\u00e1 \u00e9 maci\u00e7a e a interven\u00e7\u00e3o \u00e9 tardia para alterar o resultado.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "A revers\u00e3o do agente trombol\u00edtico \u00e9 indicada, mas tem pouca probabilidade de ser eficaz quando a hemorragia j\u00e1 \u00e9 extensa.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
                 30
               ],
               "is_branch_trigger": false,
@@ -827,7 +1364,7 @@
           "critical_action_ids": [
             "B1_A3"
           ],
-          "feedback_on_completion": "A hemorragia intracraniana é massiva e não tem indicação cirúrgica. O prognóstico é infausto. O erro de tratar sem a devida confirmação por imagem de perfusão levou a um resultado catastrófico.",
+          "feedback_on_completion": "A avalia\u00e7\u00e3o neurocir\u00fargica confirma a futilidade de uma interven\u00e7\u00e3o. O doente n\u00e3o \u00e9 candidato a cirurgia. A decis\u00e3o de administrar tromb\u00f3lise fora de um protocolo de imagem avan\u00e7ada resultou numa complica\u00e7\u00e3o catastr\u00f3fica e irrevers\u00edvel.",
           "outcome_type": "end"
         }
       ],
@@ -837,68 +1374,67 @@
       "id": "B2",
       "branch_type": "consequence",
       "trigger_stage_id": "S2",
-      "trigger_dp_id": "DP4",
-      "trigger_action_id": "A14",
-      "trigger_context": "O formando opta por tratamento conservador ('best medical treatment') apesar de a imagiologia de perfusão mostrar um perfil altamente favorável para reperfusão (core pequeno e penumbra grande).",
-      "consequence_context": "A oportunidade de salvar a penumbra isquémica é perdida. Com o passar do tempo, a área de penumbra evolui para enfarte estabelecido, resultando num défice neurológico severo e permanente.",
+      "trigger_dp_id": "DP10",
+      "trigger_action_id": "A28",
+      "trigger_context": "O utilizador aplica um alvo de PA incorreto (<140 mmHg) antes da recanaliza\u00e7\u00e3o, arriscando hipoperfus\u00e3o da penumbra isqu\u00e9mica.",
+      "consequence_context": "A redu\u00e7\u00e3o excessiva da press\u00e3o arterial antes da trombectomia pode levar ao colapso da circula\u00e7\u00e3o colateral que mant\u00e9m a penumbra vi\u00e1vel, resultando na expans\u00e3o do core isqu\u00e9mico e num pior resultado final, mesmo com uma recanaliza\u00e7\u00e3o bem-sucedida.",
       "decision_points": [
         {
           "id": "B2_DP1",
-          "context": "Passaram 12 horas desde a admissão. O doente não recebeu qualquer terapêutica de reperfusão e permanece internado no SU. O seu estado neurológico não melhorou.",
+          "context": "A PA do doente foi agressivamente reduzida para 130/75 mmHg com uma perfus\u00e3o de Labetalol antes da trombectomia. Durante o procedimento, o doente fica mais sonolento. A trombectomia \u00e9 realizada com sucesso (TICI 3).",
           "available_actions": [
             {
               "id": "B2_A1",
-              "description": "Reavaliar o estado neurológico (NIHSS)",
-              "finding": "O NIHSS permanece em 12. Os défices motores e a negligência estão consolidados. Não há sinais de melhoria espontânea.",
+              "description": "Reavaliar NIHSS ap\u00f3s o procedimento",
+              "finding": "Apesar da recanaliza\u00e7\u00e3o completa, a melhoria neurol\u00f3gica \u00e9 m\u00ednima. O NIHSS na admiss\u00e3o \u00e0 Unidade de AVC \u00e9 de 10, uma melhoria de apenas 2 pontos (comparado com 6 pontos no caminho principal).",
               "finding_relevance": "Confirmatory",
               "requirement": "Critical",
-              "rationale": "A reavaliação confirma a ausência de melhoria, o que era esperado na ausência de reperfusão numa oclusão de grande vaso.",
+              "rationale": "A avalia\u00e7\u00e3o neurol\u00f3gica p\u00f3s-procedimento \u00e9 essencial. A aus\u00eancia de uma melhoria significativa apesar do sucesso t\u00e9cnico da recanaliza\u00e7\u00e3o sugere que ocorreu uma les\u00e3o do par\u00eanquima durante o per\u00edodo de isquemia.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
               "duration_minutes": [
                 5,
                 10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "A recanaliza\u00e7\u00e3o foi bem sucedida, mas o resultado cl\u00ednico \u00e9 dececionante. A melhoria neurol\u00f3gica foi muito inferior \u00e0 esperada, sugerindo que a hipoperfus\u00e3o da penumbra antes do procedimento pode ter aumentado o dano isqu\u00e9mico.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B2_DP2",
+          "context": "24 horas ap\u00f3s a trombectomia, o doente est\u00e1 est\u00e1vel mas com um d\u00e9fice neurol\u00f3gico significativo (NIHSS 10).",
+          "available_actions": [
+            {
+              "id": "B2_A2",
+              "description": "Requisitar RM de controlo",
+              "finding": "A RM de controlo mostra uma \u00e1rea de enfarte extensa no territ\u00f3rio da ACM direita, muito maior do que o core inicial de 18 mL, indicando que a maior parte da penumbra evoluiu para enfarte apesar da recanaliza\u00e7\u00e3o.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A imagem de controlo \u00e9 crucial para compreender a discrep\u00e2ncia entre o sucesso t\u00e9cnico e o resultado cl\u00ednico. Confirma a expans\u00e3o do enfarte.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                30,
+                45
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             },
             {
-              "id": "B2_A2",
-              "description": "Realizar TC-CE de controlo às 24 horas",
-              "finding": "A TC de controlo, realizada 24 horas após a admissão, mostra uma extensa área de hipodensidade estabelecida em todo o território da ACM direita, confirmando a conversão de toda a penumbra em enfarte. O core inicial de 18 mL evoluiu para um enfarte de >100 mL.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A imagem de seguimento documenta o resultado da decisão de não tratar, mostrando a extensão do dano cerebral que poderia ter sido, em grande parte, evitado.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [],
-              "duration_minutes": [
-                15,
-                25
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            }
-          ],
-          "critical_action_ids": [
-            "B2_A1",
-            "B2_A2"
-          ],
-          "feedback_on_completion": "A TC de controlo confirma um enfarte extenso. A decisão de não intervir, apesar da evidência imagiológica favorável, resultou numa perda significativa de tecido cerebral e num mau prognóstico funcional.",
-          "outcome_type": "progress"
-        },
-        {
-          "id": "B2_DP2",
-          "context": "O doente é admitido na enfermaria de Neurologia com um enfarte extenso e incapacidade grave.",
-          "available_actions": [
-            {
               "id": "B2_A3",
-              "description": "Avaliar o prognóstico funcional (escala de Rankin modificada)",
-              "finding": "Na avaliação para a alta, o doente tem uma mRS de 4 (incapaz de andar sem assistência e de tratar dos seus próprios assuntos). Necessitará de cuidados institucionais a longo prazo.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A avaliação funcional quantifica o impacto da decisão terapêutica na vida do doente, sublinhando a importância da intervenção atempada.",
+              "description": "Ajustar alvo de PA p\u00f3s-procedimento para <180/105 mmHg",
+              "finding": "A PA \u00e9 gerida de acordo com o protocolo p\u00f3s-recanaliza\u00e7\u00e3o, mas o dano j\u00e1 est\u00e1 estabelecido.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "O controlo da PA p\u00f3s-recanaliza\u00e7\u00e3o \u00e9 importante para prevenir hemorragia, mas n\u00e3o pode reverter o dano isqu\u00e9mico que ocorreu devido \u00e0 hipoperfus\u00e3o pr\u00e9-procedimento.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
@@ -911,137 +1447,128 @@
             }
           ],
           "critical_action_ids": [
-            "B2_A3"
+            "B2_A2"
           ],
-          "feedback_on_completion": "O resultado final é uma incapacidade grave e permanente. Este caso demonstra a importância crítica de agir com base nos dados da imagem de perfusão para salvar o tecido cerebral em risco.",
-          "outcome_type": "end"
+          "feedback_on_completion": "A RM confirma um mau resultado radiol\u00f3gico que espelha o resultado cl\u00ednico. A gest\u00e3o agressiva e inadequada da PA antes da trombectomia comprometeu o benef\u00edcio de uma interven\u00e7\u00e3o tecnicamente perfeita. O doente \u00e9 agora encaminhado para a via de cuidados de suporte e reabilita\u00e7\u00e3o, mas com um progn\u00f3stico funcional muito pior.",
+          "outcome_type": "merge"
         }
       ],
-      "merge_point": null
+      "merge_point": {
+        "target_stage_id": "S3",
+        "target_dp_id": "DP12",
+        "target_action_id": "A32",
+        "transition_context": "Ap\u00f3s um resultado sub\u00f3timo da trombectomia devido a uma gest\u00e3o inadequada da PA pr\u00e9-procedimento, o doente prossegue com os cuidados de suporte padr\u00e3o na Unidade de AVC, embora com um d\u00e9fice neurol\u00f3gico mais grave."
+      }
     },
     {
       "id": "B3",
       "branch_type": "consequence",
-      "trigger_stage_id": "S3",
+      "trigger_stage_id": "S1",
       "trigger_dp_id": "DP5",
-      "trigger_action_id": "A18",
-      "trigger_context": "O formando administra trombólise IV sem primeiro controlar a pressão arterial para valores de segurança (<185/110 mmHg).",
-      "consequence_context": "A hipertensão grave durante a trombólise aumenta exponencialmente o risco de transformação hemorrágica do enfarte. O doente desenvolve uma deterioração neurológica devido a sangramento no local da isquemia.",
+      "trigger_action_id": "A16",
+      "trigger_context": "O utilizador opta por tratamento conservador, decidindo n\u00e3o prosseguir com a investiga\u00e7\u00e3o por imagem avan\u00e7ada para avaliar a elegibilidade para reperfus\u00e3o em janela alargada.",
+      "consequence_context": "Ao n\u00e3o realizar a Angio-TC e a TC de Perfus\u00e3o, a oclus\u00e3o de grande vaso e o perfil de perfus\u00e3o favor\u00e1vel n\u00e3o s\u00e3o identificados. O doente perde a oportunidade de receber trombectomia mec\u00e2nica, o tratamento mais eficaz para a sua condi\u00e7\u00e3o, resultando num d\u00e9fice neurol\u00f3gico grave e permanente.",
       "decision_points": [
         {
           "id": "B3_DP1",
-          "context": "Trinta minutos após o início da perfusão de alteplase, com a PA a manter-se em 190/110 mmHg, o enfermeiro reporta um agravamento da disartria e uma diminuição da força no hemicorpo esquerdo. O NIHSS aumenta em 4 pontos.",
+          "context": "O doente \u00e9 admitido na Unidade de AVC para tratamento m\u00e9dico conservador. A PA \u00e9 controlada e \u00e9 mantido em vigil\u00e2ncia.",
           "available_actions": [
             {
               "id": "B3_A1",
-              "description": "Parar imediatamente a perfusão de alteplase",
-              "finding": "A perfusão de alteplase é interrompida.",
+              "description": "Reavaliar NIHSS 24 horas ap\u00f3s a admiss\u00e3o",
+              "finding": "O NIHSS permanece inalterado em 12. N\u00e3o h\u00e1 qualquer melhoria neurol\u00f3gica. O doente mant\u00e9m uma hemiparesia esquerda densa e hemian\u00f3psia.",
               "finding_relevance": "Confirmatory",
               "requirement": "Critical",
-              "rationale": "Qualquer deterioração neurológica durante a trombólise deve levantar a suspeita de hemorragia e levar à interrupção imediata da perfusão.",
+              "rationale": "A aus\u00eancia de melhoria \u00e9 o resultado esperado de uma oclus\u00e3o de grande vaso n\u00e3o recanalizada. A avalia\u00e7\u00e3o seriada confirma a estabiliza\u00e7\u00e3o do d\u00e9fice grave.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
               "duration_minutes": [
-                1,
-                2
+                5,
+                10
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             },
             {
               "id": "B3_A2",
-              "description": "Controlar agressivamente a Pressão Arterial com labetalol IV",
-              "finding": "Iniciada perfusão de labetalol IV, conseguindo reduzir a PA para 160/90 mmHg nos 15 minutos seguintes.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "O controlo rápido da PA é essencial para tentar limitar a expansão de um hematoma suspeito.",
-              "media_reference": null,
-              "media_type": null,
-              "citation": [
-                {
-                  "source_text": "Monitorização de parâmetros vitais: pressão arterial",
-                  "source": "DGS Via Verde AVC 2017",
-                  "section": "NORMA",
-                  "location": "dgs_via_verde_avc_2017_chunk_003_via_verde_avc.txt",
-                  "location_type": "RAG",
-                  "title": ""
-                }
-              ],
-              "duration_minutes": [
-                10,
-                15
-              ],
-              "is_branch_trigger": false,
-              "branch_trigger": null
-            },
-            {
-              "id": "B3_A3",
-              "description": "Realizar TC-CE de emergência",
-              "finding": "A TC-CE de emergência revela uma extensa transformação hemorrágica do enfarte isquémico no território da ACM direita, com edema significativo e desvio da linha média.",
-              "finding_relevance": "Confirmatory",
-              "requirement": "Critical",
-              "rationale": "A imagem confirma a complicação hemorrágica, que é uma consequência direta da trombólise em contexto de hipertensão não controlada.",
+              "description": "Iniciar aspirina 24 horas ap\u00f3s o in\u00edcio",
+              "finding": "A aspirina \u00e9 iniciada como preven\u00e7\u00e3o secund\u00e1ria padr\u00e3o para AVC isqu\u00e9mico n\u00e3o cardioemb\u00f3lico.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "Este \u00e9 o tratamento padr\u00e3o para doentes n\u00e3o eleg\u00edveis para reperfus\u00e3o, mas \u00e9 muito menos eficaz do que a trombectomia numa oclus\u00e3o de grande vaso.",
               "media_reference": null,
               "media_type": null,
               "citation": [],
               "duration_minutes": [
-                15,
-                25
+                2,
+                5
               ],
               "is_branch_trigger": false,
               "branch_trigger": null
             }
           ],
           "critical_action_ids": [
-            "B3_A1",
-            "B3_A2",
+            "B3_A1"
+          ],
+          "feedback_on_completion": "Ap\u00f3s 24 horas, o estado neurol\u00f3gico do doente n\u00e3o melhorou. A oportunidade para uma interven\u00e7\u00e3o de reperfus\u00e3o foi perdida.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B3_DP2",
+          "context": "\u00c9 realizada uma RM de controlo 48 horas ap\u00f3s a admiss\u00e3o para documentar a extens\u00e3o da les\u00e3o.",
+          "available_actions": [
+            {
+              "id": "B3_A3",
+              "description": "Interpretar RM de controlo",
+              "finding": "A RM revela um enfarte isqu\u00e9mico extenso e completo em todo o territ\u00f3rio da ACM direita, consistente com a oclus\u00e3o de M1 n\u00e3o tratada. O volume do enfarte \u00e9 superior a 100 mL.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A imagem confirma a consequ\u00eancia da decis\u00e3o de n\u00e3o intervir: a evolu\u00e7\u00e3o de toda a \u00e1rea em risco para tecido infartado, resultando num dano cerebral maci\u00e7o.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                30,
+                45
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
             "B3_A3"
           ],
-          "feedback_on_completion": "A deterioração neurológica foi corretamente identificada como uma provável hemorragia. A perfusão foi parada, a PA controlada e a TC confirmou a transformação hemorrágica. A trombectomia está agora contraindicada. [Source: DGS Via Verde AVC 2017]",
-          "outcome_type": "merge"
+          "feedback_on_completion": "A RM confirma um enfarte extenso. O doente fica com um d\u00e9fice neurol\u00f3gico grave e incapacitante (escala de Rankin modificada de 4-5), que muito provavelmente poderia ter sido evitado com a trombectomia. Este caso ilustra a import\u00e2ncia de seguir os protocolos de imagem avan\u00e7ada para doentes com AVC de in\u00edcio incerto.",
+          "outcome_type": "end"
         }
       ],
-      "merge_point": {
-        "target_stage_id": "S3",
-        "target_dp_id": "DP6",
-        "target_action_id": "A19",
-        "transition_context": "Após a identificação e estabilização da transformação hemorrágica, a trombectomia foi cancelada. O doente é admitido na Unidade de AVC, onde a gestão se foca agora no controlo rigoroso da PA e na monitorização neurológica para prevenir a expansão do hematoma, seguindo os cuidados pós-complicação."
-      }
+      "merge_point": null
     }
   ],
-  "max_branch_length": 3,
+  "max_branch_length": 8,
   "debriefing": [
     {
-      "key_learning": "A imagiologia de perfusão é a chave para a seleção de doentes para reperfusão em janela alargada ou com início desconhecido ('wake-up stroke').",
-      "clinical_reasoning": "Em doentes com AVC isquémico com mais de 4,5 horas de evolução ou com tempo de início desconhecido, a decisão de tratar não se baseia no tempo, mas sim na fisiopatologia. A TC de Perfusão (ou RM com DWI-FLAIR mismatch) permite identificar doentes que, apesar do tempo decorrido, ainda possuem uma área significativa de tecido cerebral em risco (penumbra) que é recuperável com a reperfusão. A presença de um core isquémico pequeno e uma penumbra grande (mismatch favorável) é o principal critério para oferecer trombólise e/ou trombectomia nestes doentes, conforme demonstrado nos ensaios clínicos DAWN e DEFUSE-3.",
+      "key_learning": "A imagem multimodal (Angio-TC e Perfus\u00e3o) \u00e9 crucial na gest\u00e3o de 'wake-up strokes' para selecionar doentes para terap\u00eauticas de reperfus\u00e3o em janela alargada.",
+      "clinical_reasoning": "Em doentes com AVC isqu\u00e9mico de in\u00edcio incerto ou fora da janela terap\u00eautica convencional, o paradigma de tratamento mudou de 'tempo \u00e9 c\u00e9rebro' para 'tecido \u00e9 o alvo'. A neuroimagem avan\u00e7ada, como a TC de Perfus\u00e3o ou a RM com DWI/FLAIR, funciona como um 'rel\u00f3gio biol\u00f3gico', permitindo identificar doentes com tecido cerebral salv\u00e1vel (penumbra) que podem beneficiar de trombectomia mec\u00e2nica at\u00e9 24 horas ap\u00f3s o in\u00edcio. A decis\u00e3o baseada apenas no tempo excluiria muitos doentes que ainda poderiam ter um excelente resultado com o tratamento.",
       "common_errors": [
         {
           "error_type": "omission",
-          "description": "Não requisitar imagiologia de perfusão num doente com 'wake-up stroke'.",
+          "description": "N\u00e3o requisitar imagem avan\u00e7ada (Angio-TC, Perfus\u00e3o) num 'wake-up stroke' com d\u00e9fice significativo.",
           "related_action": {
-            "decision_point": "DP3",
-            "action": "A10"
+            "decision_point": "DP5",
+            "action": "A16"
           },
-          "consequence": "Perda da oportunidade de identificar um doente elegível para tratamento, resultando em incapacidade permanente que poderia ser evitada."
+          "consequence": "Perda da oportunidade de identificar uma oclus\u00e3o de grande vaso trat\u00e1vel, levando a um mau resultado funcional que poderia ser evitado."
         },
         {
           "error_type": "commission",
-          "description": "Administrar trombólise fora da janela de 4,5h sem confirmação por imagem de perfusão.",
+          "description": "Administrar tromb\u00f3lise IV fora da janela temporal padr\u00e3o sem a orienta\u00e7\u00e3o de imagem avan\u00e7ada (mismatch DWI-FLAIR ou perfus\u00e3o).",
           "related_action": {
-            "decision_point": "DP2",
-            "action": "A7"
+            "decision_point": "DP6",
+            "action": "A18"
           },
-          "consequence": "Exposição do doente ao risco de hemorragia sem uma probabilidade razoável de benefício clínico, podendo levar a um resultado catastrófico."
-        },
-        {
-          "error_type": "omission",
-          "description": "Optar por tratamento conservador apesar de um perfil de perfusão favorável.",
-          "related_action": {
-            "decision_point": "DP4",
-            "action": "A14"
-          },
-          "consequence": "Nega ao doente o tratamento mais eficaz, levando à progressão da penumbra para enfarte estabelecido e a um mau prognóstico funcional."
+          "consequence": "Aumento significativo do risco de transforma\u00e7\u00e3o hemorr\u00e1gica sintom\u00e1tica sem claro benef\u00edcio cl\u00ednico, podendo levar a um resultado catastr\u00f3fico."
         }
       ],
       "related_objectives": [
@@ -1052,194 +1579,173 @@
       ],
       "related_actions": [
         {
-          "decision_point": "DP3",
-          "actions": [
-            "A9",
-            "A10"
-          ]
-        },
-        {
-          "decision_point": "DP4",
-          "actions": [
-            "A12",
-            "A13",
-            "A14"
-          ]
-        }
-      ],
-      "citation": [
-        {
-          "source_text": "na pessoa candidata a tratamento endovascular é realizada angioTC do arco aórtico, troncos vasculares supra-aórticos e cerebral",
-          "source": "DGS Via Verde AVC 2017",
-          "section": "NORMA",
-          "location": "dgs_via_verde_avc_2017_chunk_005_via_verde_avc.txt",
-          "location_type": "RAG",
-          "title": ""
-        }
-      ]
-    },
-    {
-      "key_learning": "A identificação de uma oclusão de grande vaso numa janela de até 24 horas com perfil de perfusão favorável é uma indicação para trombectomia mecânica.",
-      "clinical_reasoning": "A trombectomia mecânica é altamente eficaz na remoção de trombos de grandes artérias cerebrais. Em doentes com oclusão da circulação anterior (ex: ACM), a Angio-TC é essencial para o diagnóstico. Quando combinada com a TC de Perfusão, permite selecionar doentes para trombectomia até 24 horas após o início dos sintomas. A estratégia de 'bridging', administrando trombólise IV antes da trombectomia, é segura e recomendada para doentes elegíveis para ambos os tratamentos.",
-      "common_errors": [
-        {
-          "error_type": "omission",
-          "description": "Não realizar Angio-TC em doentes com suspeita de AVC e défice moderado a grave (NIHSS >6).",
-          "related_action": {
-            "decision_point": "DP3",
-            "action": "A9"
-          },
-          "consequence": "Falha no diagnóstico de uma oclusão de grande vaso, impedindo a realização de trombectomia."
-        },
-        {
-          "error_type": "commission",
-          "description": "Escolher apenas trombólise IV para uma oclusão de M1 confirmada.",
-          "related_action": {
-            "decision_point": "DP4",
-            "action": "A15"
-          },
-          "consequence": "Tratamento subótimo, com baixa probabilidade de recanalização e pior resultado funcional comparativamente à trombectomia."
-        },
-        {
-          "error_type": "omission",
-          "description": "Atrasar a ativação da equipa de intervenção enquanto se aguardam outros resultados.",
-          "related_action": null,
-          "consequence": "Aumento do tempo 'porta-punção', o que se correlaciona com piores resultados, pois a penumbra continua a evoluir para enfarte."
-        }
-      ],
-      "related_objectives": [
-        "LO3",
-        "LO7",
-        "LO8"
-      ],
-      "related_actions": [
-        {
-          "decision_point": "DP3",
-          "actions": [
-            "A9"
-          ]
-        },
-        {
-          "decision_point": "DP4",
-          "actions": [
-            "A12",
-            "A13"
-          ]
-        },
-        {
-          "decision_point": "DP5",
+          "decision_point": "DP6",
           "actions": [
             "A17"
           ]
-        }
-      ],
-      "citation": [
-        {
-          "source_text": "A terapêutica endovascular, dada a sua complexidade técnica, deve ser realizada em unidade de saúde com neurorradiologia de intervenção",
-          "source": "DGS Via Verde AVC 2017",
-          "section": "NORMA",
-          "location": "dgs_via_verde_avc_2017_chunk_005_via_verde_avc.txt",
-          "location_type": "RAG",
-          "title": ""
         },
         {
-          "source_text": "In patients with AIS who are eligible for both IVT and EVT, IVT is safe and recommended to improve overall reperfusion efficacy and clinical outcomes.",
-          "source": "AHA/ASA 2026",
-          "section": "4.7.1. Concomitant With IVT",
-          "location": "aha_stroke_2026_chunk_155_475_endovascular_thrombecto.txt",
-          "location_type": "RAG",
-          "title": ""
-        },
-        {
-          "source_text": "",
-          "source": "DGS Via Verde AVC 2017, AHA/ASA 2026",
-          "section": "NORMA",
-          "location": "dgs_via_verde_avc_2017_chunk_005_via_verde_avc.txt",
-          "location_type": "RAG",
-          "title": ""
-        }
-      ]
-    },
-    {
-      "key_learning": "A gestão da pressão arterial e os cuidados pós-reperfusão são cruciais para o sucesso do tratamento e prevenção de complicações.",
-      "clinical_reasoning": "Após a reperfusão, o tecido cerebral é vulnerável. A hipertensão arterial aumenta o risco de transformação hemorrágica e edema cerebral. Por isso, é mandatório um controlo tensional rigoroso, mantendo a PA < 180/105 mmHg nas primeiras 24 horas. A monitorização neurológica seriada com a escala NIHSS permite a deteção precoce de complicações. O internamento numa Unidade de AVC é fundamental para assegurar esta vigilância e cuidados especializados.",
-      "common_errors": [
-        {
-          "error_type": "omission",
-          "description": "Não definir e seguir alvos tensionais rigorosos após a reperfusão.",
-          "related_action": {
-            "decision_point": "DP6",
-            "action": "A19"
-          },
-          "consequence": "Aumento do risco de transformação hemorrágica, que pode anular o benefício da reperfusão."
-        },
-        {
-          "error_type": "commission",
-          "description": "Iniciar anticoagulação ou antiagregação precocemente (<24h) após trombólise.",
-          "related_action": {
-            "decision_point": "DP6",
-            "action": "A22"
-          },
-          "consequence": "Risco muito elevado de hemorragia intracraniana grave."
-        },
-        {
-          "error_type": "omission",
-          "description": "Falha na monitorização neurológica frequente nas horas seguintes ao procedimento.",
-          "related_action": {
-            "decision_point": "DP6",
-            "action": "A20"
-          },
-          "consequence": "Deteção tardia de complicações como ressangramento ou reoclusão, impedindo uma intervenção atempada."
-        }
-      ],
-      "related_objectives": [
-        "LO1",
-        "LO2",
-        "LO8"
-      ],
-      "related_actions": [
-        {
-          "decision_point": "DP6",
+          "decision_point": "DP7",
           "actions": [
-            "A19",
-            "A20",
+            "A19"
+          ]
+        },
+        {
+          "decision_point": "DP8",
+          "actions": [
             "A21"
           ]
         }
       ],
       "citation": [
         {
-          "source_text": "após os procedimentos terapêuticos agudos (fibrinólise ou endovascular) o Caso Confirmado AVC deve ser internado numa U-AVC ou em unidade de cuidados intensivos/neurocríticos (neste caso, quando a gravidade do caso o justifica)",
-          "source": "DGS Via Verde AVC 2017",
-          "section": "NORMA",
-          "location": "dgs_via_verde_avc_2017_chunk_003_via_verde_avc.txt",
-          "location_type": "RAG",
+          "source_text": "A sele\u00e7\u00e3o de doentes para esta terapia em janela alargada \u00e9 guiada por imagem de perfus\u00e3o (por TC ou RM), que permite identificar a exist\u00eancia de uma \u00e1rea de penumbra (tecido em risco, mas ainda vi\u00e1vel) em despropor\u00e7\u00e3o com o n\u00facleo isqu\u00e9mico (tecido j\u00e1 infartado).",
+          "source": "cochranelibrary.com [Web]",
+          "section": null,
+          "location": "",
+          "location_type": "Web",
+          "title": null
+        },
+        {
+          "source_text": "*   **Tromb\u00f3lise Intravenosa Guiada por Imagem:** As diretrizes mais recentes da AHA/ASA estabelecem que doentes com AVC de in\u00edcio desconhecido s\u00e3o eleg\u00edveis para tromb\u00f3lise intravenosa se a Resson\u00e2ncia Magn\u00e9tica (RM) cerebral demonstrar um padr\u00e3o de *mismatch* DWI-FLAIR.",
+          "source": "cochranelibrary.com",
+          "section": "",
+          "location": "",
+          "location_type": "Web",
           "title": ""
         }
       ]
+    },
+    {
+      "key_learning": "O controlo da press\u00e3o arterial no AVC isqu\u00e9mico agudo exige alvos espec\u00edficos dependendo da fase e do tratamento: permissiva antes da reperfus\u00e3o, mais estrita ap\u00f3s a recanaliza\u00e7\u00e3o.",
+      "clinical_reasoning": "Antes da reperfus\u00e3o, uma hipertens\u00e3o moderada (at\u00e9 185/110 mmHg) \u00e9 frequentemente tolerada ('hipertens\u00e3o permissiva') para ajudar a manter a perfus\u00e3o da penumbra atrav\u00e9s da circula\u00e7\u00e3o colateral. No entanto, para administrar tromb\u00f3lise ou realizar trombectomia, a PA deve ser <185/110 mmHg para minimizar o risco hemorr\u00e1gico. Ap\u00f3s uma recanaliza\u00e7\u00e3o bem-sucedida, o alvo torna-se mais estrito (<180/105 mmHg) para prevenir a hemorragia de reperfus\u00e3o no tecido isqu\u00e9mico vulner\u00e1vel. Aplicar o alvo errado na fase errada pode ser prejudicial.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Reduzir agressivamente a PA antes da recanaliza\u00e7\u00e3o (e.g., para <140 mmHg), arriscando hipoperfus\u00e3o da penumbra.",
+          "related_action": {
+            "decision_point": "DP10",
+            "action": "A28"
+          },
+          "consequence": "Expans\u00e3o do core isqu\u00e9mico e pior resultado neurol\u00f3gico, mesmo ap\u00f3s uma trombectomia bem-sucedida."
+        },
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o controlar a PA para <185/110 mmHg antes de iniciar a terap\u00eautica de reperfus\u00e3o.",
+          "related_action": null,
+          "consequence": "Aumento do risco de transforma\u00e7\u00e3o hemorr\u00e1gica sintom\u00e1tica, uma complica\u00e7\u00e3o grave do tratamento."
+        }
+      ],
+      "related_objectives": [
+        "LO8"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP5",
+          "actions": [
+            "A15"
+          ]
+        },
+        {
+          "decision_point": "DP11",
+          "actions": [
+            "A30"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "A press\u00e3o arterial deve ser controlada, mantendo-se abaixo de 185/110 mmHg antes da tromb\u00f3lise e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+          "source": "cochranelibrary.com [Web]",
+          "section": null,
+          "location": "",
+          "location_type": "Web",
+          "title": null
+        },
+        {
+          "source_text": "**Controlo da Press\u00e3o Arterial:** A press\u00e3o arterial deve ser controlada, mantendo-se abaixo de 185/110 mmHg antes da tromb\u00f3lise e abaixo de 180/105 mmHg nas primeiras 24 horas ap\u00f3s a reperfus\u00e3o.",
+          "source": "cochranelibrary.com",
+          "section": "",
+          "location": "",
+          "location_type": "Web",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A identifica\u00e7\u00e3o da etiologia do AVC, particularmente a fibrilha\u00e7\u00e3o auricular, \u00e9 fundamental para uma preven\u00e7\u00e3o secund\u00e1ria eficaz.",
+      "clinical_reasoning": "Ap\u00f3s a gest\u00e3o da fase aguda, a prioridade muda para a preven\u00e7\u00e3o da recorr\u00eancia. A causa mais comum de AVC em doentes idosos \u00e9 a cardioembolia, frequentemente por fibrilha\u00e7\u00e3o auricular (FA) n\u00e3o diagnosticada. A sua dete\u00e7\u00e3o atrav\u00e9s de monitoriza\u00e7\u00e3o card\u00edaca prolongada \u00e9 crucial, pois altera a terap\u00eautica de antiagrega\u00e7\u00e3o para anticoagula\u00e7\u00e3o oral, que \u00e9 significativamente mais eficaz. A investiga\u00e7\u00e3o etiol\u00f3gica completa (monitoriza\u00e7\u00e3o card\u00edaca, ecocardiograma, estudo dos vasos do pesco\u00e7o) \u00e9 uma parte indispens\u00e1vel dos cuidados na Unidade de AVC.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "N\u00e3o realizar monitoriza\u00e7\u00e3o card\u00edaca prolongada (e.g., apenas um ECG inicial), n\u00e3o detetando FA parox\u00edstica.",
+          "related_action": {
+            "decision_point": "DP14",
+            "action": "A38"
+          },
+          "consequence": "O doente tem alta com antiagregantes em vez de anticoagulantes, mantendo um risco elevado e sub-tratado de AVC recorrente."
+        },
+        {
+          "error_type": "commission",
+          "description": "Iniciar anticoagula\u00e7\u00e3o demasiado cedo ap\u00f3s um grande enfarte, antes da imagem de controlo \u00e0s 24h.",
+          "related_action": null,
+          "consequence": "Aumento do risco de transforma\u00e7\u00e3o hemorr\u00e1gica do enfarte isqu\u00e9mico."
+        }
+      ],
+      "related_objectives": [
+        "LO4"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP14",
+          "actions": [
+            "A38",
+            "A39",
+            "A40"
+          ]
+        },
+        {
+          "decision_point": "DP15",
+          "actions": [
+            "A41"
+          ]
+        }
+      ],
+      "citation": null
     }
   ],
   "key_takeaways": [
-    "Num AVC com início desconhecido ('wake-up stroke'), a imagem de perfusão é mandatória para guiar a terapêutica.",
-    "Um perfil de 'mismatch' favorável (core pequeno, penumbra grande) identifica doentes que beneficiam de reperfusão em janela alargada.",
-    "A Angio-TC é essencial para detetar oclusões de grande vaso, que são a principal indicação para trombectomia mecânica. [Source: DGS Via Verde AVC 2017]",
-    "A trombectomia mecânica é o tratamento de primeira linha para oclusões de grande vaso elegíveis, podendo ser realizada até 24 horas do início dos sintomas. [Source: DGS Via Verde AVC 2017]",
-    "A terapêutica de 'bridging' com trombólise IV antes da trombectomia é uma estratégia segura e eficaz em doentes elegíveis. [Source: AHA/ASA 2026]",
-    "O controlo da PA < 180/105 mmHg nas 24 horas após a reperfusão é crítico para prevenir a transformação hemorrágica. [Source: DGS Via Verde AVC 2017]"
+    "Num 'wake-up stroke', a imagem de perfus\u00e3o \u00e9 essencial para guiar a terap\u00eautica e pode identificar candidatos a trombectomia at\u00e9 24 horas ap\u00f3s o in\u00edcio. [Source: cochranelibrary.com [Web]]",
+    "A TC cr\u00e2nio-encef\u00e1lica sem contraste \u00e9 sempre o primeiro passo para excluir hemorragia antes de qualquer terap\u00eautica de reperfus\u00e3o. [Source: cochranelibrary.com [Web]]",
+    "Um perfil de perfus\u00e3o com um core isqu\u00e9mico pequeno e uma grande penumbra (mismatch) \u00e9 favor\u00e1vel \u00e0 recanaliza\u00e7\u00e3o, mesmo em janela alargada.",
+    "A PA deve ser mantida <185/110 mmHg antes da reperfus\u00e3o e <180/105 mmHg nas 24 horas seguintes para minimizar o risco hemorr\u00e1gico. [Source: cochranelibrary.com [Web]]",
+    "A investiga\u00e7\u00e3o da etiologia \u00e9 crucial; a dete\u00e7\u00e3o de fibrilha\u00e7\u00e3o auricular exige a mudan\u00e7a de antiagrega\u00e7\u00e3o para anticoagula\u00e7\u00e3o para uma preven\u00e7\u00e3o secund\u00e1ria eficaz.",
+    "A decis\u00e3o de tratar um AVC de in\u00edcio incerto deve ser multidisciplinar, envolvendo neurologistas e neurorradiologistas. [Source: cochranelibrary.com [Web]]"
   ],
   "metadata": {
-    "scenario_id": "S01",
+    "scenario_id": "692a8c0f-be4b-448e-a8a3-3a06edbced16",
     "version": "1.0.0",
     "domain": "Neurology",
-    "created_at": "2026-05-05T21:05:06.202514",
-    "generation_time_ms": 174522.5920677185,
+    "created_at": "2026-05-06T19:03:09.476996",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "preset_key": "avc_acordar_hemiparesia_esquerda_idoso",
+    "few_shot_used": true,
+    "condition": "C3",
+    "generation_time_ms": 195635.751247406,
     "token_count": {
-      "input": 58305,
-      "output": 18744,
-      "total": 77049
+      "input": 60619,
+      "output": 21203,
+      "total": 81822
     },
-    "revision_count": 0,
-    "retrieval_coverage": 1.0,
+    "revision_count": 1,
+    "sources_consulted": [
+      "DGS Via Verde AVC 2017",
+      "cochranelibrary.com [Web]"
+    ],
+    "retrieval_coverage": 0.91,
     "structural_warnings": []
   }
 }

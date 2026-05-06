@@ -49,7 +49,7 @@
   ],
   "patient": {
     "age": 58,
-    "gender": "Female",
+    "gender": "Feminino",
     "presenting_complaint": "Episódios recorrentes de dor facial direita, súbita e intensa, com qualidade de choque elétrico.",
     "medical_history": [
       "Hipertensão arterial controlada"
@@ -76,9 +76,7 @@
         "heart_rate": "76 bpm",
         "respiratory_rate": "16 cpm",
         "temperature": "36.6°C",
-        "oxygen_saturation": "99% em ar ambiente",
-        "gcs": "E4V5M6 = 15/15",
-        "nihss": null
+        "oxygen_saturation": "99% em ar ambiente"
       },
       "all_optional": [
         {
@@ -308,7 +306,10 @@
           "feedback_on_completion": "O exame neurológico é normal, o que é consistente com um diagnóstico de nevralgia do trigémeo clássica ou idiopática. A ausência de défices torna uma causa secundária estrutural menos provável, mas não a exclui. O próximo passo é considerar o diagnóstico diferencial e planear a investigação."
         }
       ],
-      "progression_criteria": "Completar todas as ações críticas para progredir."
+      "progression_criteria": "Completar todas as ações críticas para progredir.",
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15"
+      }
     },
     {
       "id": "S2",
@@ -320,9 +321,7 @@
         "heart_rate": "76 bpm",
         "respiratory_rate": "16 cpm",
         "temperature": "36.6°C",
-        "oxygen_saturation": "99% em ar ambiente",
-        "gcs": "E4V5M6 = 15/15",
-        "nihss": null
+        "oxygen_saturation": "99% em ar ambiente"
       },
       "all_optional": [
         {
@@ -614,7 +613,10 @@
           "feedback_on_completion": "O plano de tratamento está completo e segue as melhores práticas. Foram requisitadas as análises de segurança e prescrito o fármaco de primeira linha na dose inicial correta. A doente foi agendada para uma consulta de seguimento para avaliar a resposta e a tolerância."
         }
       ],
-      "progression_criteria": "Completar todas as ações críticas para progredir."
+      "progression_criteria": "Completar todas as ações críticas para progredir.",
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15"
+      }
     }
   ],
   "branches": [
@@ -1027,10 +1029,17 @@
     "A ausência de sintomas autonómicos (ex: lacrimejo, olho vermelho) ajuda a diferenciar de cefaleias como a SUNCT/SUNA."
   ],
   "metadata": {
-    "scenario_id": "S11",
+    "scenario_id": "d6b35b69-5206-4fc3-982e-f4b424eb89cb",
     "version": "1.0.0",
     "domain": "Neurology",
     "created_at": "2026-05-05T23:06:37.647236",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "preset_key": "nevralgia_trigemeo_feminino",
+    "few_shot_used": true,
+    "condition": "C3",
     "generation_time_ms": 134521.7490196228,
     "token_count": {
       "input": 57378,
@@ -1038,6 +1047,11 @@
       "total": 73311
     },
     "revision_count": 0,
+    "sources_consulted": [
+      "nih.gov [Web]",
+      "ICHD-3 Classificacao Cefaleias (PT)",
+      "ICHD-3 2018"
+    ],
     "retrieval_coverage": 1.0,
     "structural_warnings": []
   }

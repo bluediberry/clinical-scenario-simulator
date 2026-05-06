@@ -15,7 +15,7 @@
     },
     {
       "id": "LO2",
-      "description": "Identificar e classificar subtipos de aura conforme ICHD-3 (visual, sensorial, fala/linguagem, motora, tronco cerebral, retiniana)",
+      "description": "Identificar e classificar subtipos de aura conforme ICHD-3 (visual, sensitivo, fala/linguagem, motora, tronco cerebral, retiniana)",
       "cognitive_demand": "Intermediate",
       "assessed_at": [
         "DP2"
@@ -48,7 +48,7 @@
   ],
   "patient": {
     "age": 30,
-    "gender": "Male",
+    "gender": "Masculino",
     "presenting_complaint": "Episódios recorrentes de cefaleia unilateral pulsátil, precedida por alterações visuais.",
     "medical_history": [
       "Sem antecedentes médicos de relevo."
@@ -75,9 +75,7 @@
         "heart_rate": "68 bpm",
         "respiratory_rate": "14 cpm",
         "temperature": "36.5°C",
-        "oxygen_saturation": "99% (ar ambiente)",
-        "gcs": "E4V5M6 = 15/15",
-        "nihss": 0
+        "oxygen_saturation": "99% (ar ambiente)"
       },
       "all_optional": [
         {
@@ -486,7 +484,11 @@
           "feedback_on_completion": "A anamnese e o exame neurológico estão completos. Não foram identificados sinais de alarme e o exame é normal. A informação recolhida é suficiente para estabelecer um diagnóstico clínico com base nos critérios internacionais."
         }
       ],
-      "progression_criteria": "Conclusão da anamnese detalhada e do exame neurológico."
+      "progression_criteria": "Conclusão da anamnese detalhada e do exame neurológico.",
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      }
     },
     {
       "id": "S2",
@@ -498,9 +500,7 @@
         "heart_rate": "68 bpm",
         "respiratory_rate": "14 cpm",
         "temperature": "36.5°C",
-        "oxygen_saturation": "99% (ar ambiente)",
-        "gcs": "E4V5M6 = 15/15",
-        "nihss": 0
+        "oxygen_saturation": "99% (ar ambiente)"
       },
       "all_optional": [
         {
@@ -672,7 +672,11 @@
           "feedback_on_completion": "Foi estabelecido um plano de tratamento inicial adequado, centrado em terapêutica aguda de primeira linha e medidas não-farmacológicas. O doente foi instruído a monitorizar a sua resposta. A consulta está concluída."
         }
       ],
-      "progression_criteria": "Estabelecimento do diagnóstico e do plano terapêutico inicial."
+      "progression_criteria": "Estabelecimento do diagnóstico e do plano terapêutico inicial.",
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": 0
+      }
     }
   ],
   "branches": [
@@ -1084,10 +1088,17 @@
     "O diário de cefaleias é uma ferramenta essencial para a gestão a longo prazo da enxaqueca."
   ],
   "metadata": {
-    "scenario_id": "S12",
+    "scenario_id": "5b2e4165-96af-46e4-ba9e-5246b0a092ea",
     "version": "1.0.0",
     "domain": "Neurology",
     "created_at": "2026-05-05T22:53:43.838918",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "web_search_only",
+    "model_backend": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "preset_key": "enxaqueca_com_aura_masculino",
+    "few_shot_used": true,
+    "condition": "C2",
     "generation_time_ms": 124286.98396682739,
     "token_count": {
       "input": 49854,
@@ -1095,6 +1106,9 @@
       "total": 65018
     },
     "revision_count": 0,
+    "sources_consulted": [
+      "nih.gov [Web]"
+    ],
     "retrieval_coverage": 1.0,
     "structural_warnings": []
   }
