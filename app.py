@@ -1,7 +1,4 @@
-"""
-Standalone interactive simulation walkthrough of clinical scenarios.
-Scenarios are loaded from the bundled `scenarios/` folder or uploaded as JSON.
-"""
+"""Standalone interactive simulation walkthrough of clinical scenarios."""
 
 import json
 from pathlib import Path
@@ -14,9 +11,8 @@ st.set_page_config(
     layout="wide",
 )
 
-# Imports — simulation engine lives in simulation.py
 try:
-    from standalone_simulator.simulation import (  # noqa: E402
+    from standalone_simulator.simulation import (
         REVIEW_CSS,
         _t,
         apply_theme,
@@ -28,7 +24,7 @@ try:
         run_phase_router,
     )
 except ImportError:
-    from simulation import (  # type: ignore[no-redef]  # noqa: E402
+    from simulation import (
         REVIEW_CSS,
         _t,
         apply_theme,
@@ -45,7 +41,6 @@ st.markdown(REVIEW_CSS, unsafe_allow_html=True)
 init_session_state()
 
 
-# Scenario loading
 SCENARIOS_DIR = Path(__file__).parent / "scenarios"
 
 _ARCHITECTURE_LABELS = {
@@ -55,7 +50,6 @@ _ARCHITECTURE_LABELS = {
 
 
 def _load_bundled_scenarios() -> list[dict]:
-    """Load all JSON scenario files from the bundled scenarios/ folder."""
     entries: list[dict] = []
     if not SCENARIOS_DIR.exists():
         return entries
@@ -79,19 +73,16 @@ def _load_bundled_scenarios() -> list[dict]:
 
 
 def _format_label(entry: dict) -> str:
-    """Format a scenario entry label for the selector."""
     title = entry.get("title", "Untitled")
     source = entry.get("source", "Unknown")
     return f"[{source}] {title}"
 
 
-# PHASE: SELECT (standalone-specific scenario loading)
 def phase_select():
     render_language_toggle()
     page_header(_t("page_title"), _t("page_subtitle"))
     render_phase_indicator("select")
 
-    # File uploader
     uploaded_files = st.file_uploader(
         _t("upload_label"),
         type=["json"],
@@ -115,7 +106,6 @@ def phase_select():
                 st.error(f"Could not parse {uf.name}")
         st.session_state.uploaded_scenarios = new_uploaded
 
-    # Combine bundled + uploaded
     entries = _load_bundled_scenarios() + st.session_state.get("uploaded_scenarios", [])
 
     if not entries:
@@ -130,7 +120,6 @@ def phase_select():
     if selected_idx is not None:
         scenario = entries[selected_idx]["data"]
 
-        # Quick preview
         with st.expander(_t("preview"), expanded=False):
             st.markdown(f"**{scenario.get('title', 'Untitled')}**")
             st.markdown(f"{scenario.get('domain', '')} \u203a {scenario.get('subdomain', '')}")
@@ -146,20 +135,10 @@ def phase_select():
             )
             st.markdown(f"{len(stages)} stage(s), {total_dps} decision points, {total_actions} actions")
 
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            if st.button(_t("start_simulation"), type="primary", use_container_width=True):
-                reset_simulation()
-                st.session_state.sim_scenario_data = scenario
-                st.session_state.sim_phase = "briefing"
-                st.rerun()
-        with col2:
-            if st.button(_t("view_full_scenario"), use_container_width=True):
-                reset_simulation()
-                st.session_state.sim_scenario_data = scenario
-                st.session_state.sim_phase = "view"
-                st.rerun()
+        if st.button(_t("start_simulation"), type="primary", use_container_width=True):
+            reset_simulation()
+            st.session_state.sim_scenario_data = scenario
+            st.session_state.sim_phase = "briefing"
+            st.rerun()
 
-
-# Main phase router
 run_phase_router(phase_select)

@@ -4,7 +4,6 @@ from html import escape as _esc
 
 import streamlit as st
 
-# Utility
 def format_minutes_as_hours(minutes: int | float | None) -> str:
     """Format a duration in minutes as a human-readable hours string."""
     if minutes is None or minutes == "?":
@@ -18,8 +17,6 @@ def format_minutes_as_hours(minutes: int | float | None) -> str:
         return f"{hours}h"
     return f"{hours}h {remainder}min"
 
-
-# CSS
 REVIEW_CSS = """
 <style>
     .badge-critical { background: #284b63; color: white; padding: 3px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.02em; }
@@ -53,15 +50,9 @@ _RELEVANCE_MAP = {
     "exclusionary": "badge-exclusionary",
     "non contributory": "badge-noncontrib",
     "non_contributory": "badge-noncontrib",
-    # Backward compat for old scenario files
-    "positive": "badge-confirmatory",
-    "negative": "badge-exclusionary",
 }
 
-
-# Badge helpers
 def get_requirement_badge(requirement: str) -> str:
-    """Return an HTML badge for action requirement level."""
     req = (requirement or "optional").lower()
     cls = _REQUIREMENT_MAP.get(req, "badge-optional")
     label = req.title()
@@ -69,7 +60,6 @@ def get_requirement_badge(requirement: str) -> str:
 
 
 def get_relevance_badge(relevance: str) -> str:
-    """Return an HTML badge for finding relevance."""
     rel = (relevance or "non contributory").lower().replace("_", " ")
     cls = _RELEVANCE_MAP.get(rel, "badge-noncontrib")
     label = rel.title()
@@ -77,7 +67,6 @@ def get_relevance_badge(relevance: str) -> str:
 
 
 def get_duration_badge(action: dict) -> str:
-    """Return an HTML badge showing action duration with optional range."""
     dur = action.get("duration_minutes")
     if not dur:
         return ""
@@ -88,83 +77,49 @@ def get_duration_badge(action: dict) -> str:
     return f' <span class="badge-duration">{label}</span>'
 
 
-# Rendering functions
-def render_vital_signs(
-    vital_signs: dict,
-    layout: str = "row",
-    no_data_label: str = "No vital signs recorded",
-) -> None:
-    """Render vital signs, showing only fields present in the data.
-
-    Parameters
-    ----------
-    layout : str
-        ``"row"`` (default) renders one row per vital (for sidebar).
-        ``"grid"`` renders a responsive card grid (for main content / print).
-    no_data_label : str
-        Caption shown when there are no vital signs to display.
-    """
+def render_vital_signs(vital_signs: dict) -> None:
     if not vital_signs:
-        st.caption(no_data_label)
+        st.caption("No vital signs recorded")
         return
+
+    _VITAL_FIELDS = [
+        ("blood_pressure", "Blood Pressure"),
+        ("heart_rate", "Heart Rate"),
+        ("respiratory_rate", "Respiratory Rate"),
+        ("temperature", "Temperature"),
+        ("oxygen_saturation", "SpO2"),
+        ("blood_glucose", "Blood Glucose"),
+        ("gcs", "GCS"),
+        ("nihss", "NIHSS"),
+    ]
 
     present = [(label, vital_signs[key]) for key, label in _VITAL_FIELDS if vital_signs.get(key) is not None]
 
     if not present:
-        st.caption(no_data_label)
+        st.caption("No vital signs recorded")
         return
 
-    if layout == "grid":
-        cards = "".join(
-            f'<div class="vital-card">'
-            f'<span class="vital-label">{_esc(label)}</span>'
-            f'<span class="vital-value">{_esc(str(value))}</span>'
-            f'</div>'
-            for label, value in present
-        )
-        st.markdown(f'<div class="vital-grid">{cards}</div>', unsafe_allow_html=True)
-    else:
-        rows = "".join(
+    for label, value in present:
+        st.markdown(
             f'<div class="vital-row">'
             f'<span class="vital-label">{_esc(label)}</span>'
             f'<span class="vital-value">{_esc(str(value))}</span>'
-            f'</div>'
-            for label, value in present
+            f'</div>',
+            unsafe_allow_html=True,
         )
-        st.markdown(rows, unsafe_allow_html=True)
 
-
-_VITAL_FIELDS = [
-    ("blood_pressure", "Blood Pressure"),
-    ("heart_rate", "Heart Rate"),
-    ("respiratory_rate", "Respiratory Rate"),
-    ("temperature", "Temperature"),
-    ("oxygen_saturation", "SpO2"),
-    ("blood_glucose", "Blood Glucose"),
-    ("gcs", "GCS"),
-    ("nihss", "NIHSS"),
-    ("cardiac_rhythm", "Cardiac Rhythm"),
-]
-
-
-def compute_vital_signs_diff(current: dict, previous: dict) -> dict | None:
-    """Return only the vital signs that changed between two stages.
-
-    Returns ``None`` if nothing changed or if either input is empty.
-    """
-    if not current or not previous:
-        return None
-    changed = {}
-    for key, _label in _VITAL_FIELDS:
-        cur_val = current.get(key)
-        prev_val = previous.get(key)
-        if cur_val is not None and cur_val != prev_val:
-            changed[key] = cur_val
-    return changed if changed else None
+    rhythm = vital_signs.get("cardiac_rhythm")
+    if rhythm:
+        st.markdown(
+            f'<div class="vital-row">'
+            f'<span class="vital-label">Cardiac Rhythm</span>'
+            f'<span class="vital-value">{_esc(str(rhythm))}</span>'
+            f'</div>',
+            unsafe_allow_html=True,
+        )
 
 
 def build_action_index(scenario: dict) -> dict:
-    """Build a lookup from action ID / decision point ID to description."""
     index = {}
     for stage in scenario.get("stages", []):
         for dp in stage.get("decision_points", []):
@@ -184,7 +139,6 @@ def build_action_index(scenario: dict) -> dict:
 
 
 def render_debriefing_point(debrief: dict, action_index: dict | None = None) -> None:
-    """Render a single debriefing point with common errors."""
     if action_index is None:
         action_index = {}
 
@@ -229,7 +183,6 @@ def render_debriefing_point(debrief: dict, action_index: dict | None = None) -> 
 
 
 def render_patient_profile(patient: dict) -> None:
-    """Render patient demographics and history."""
     st.markdown(f"**Age:** {patient.get('age', '?')} years")
     st.markdown(f"**Gender:** {patient.get('gender', '?')}")
     st.markdown(f"**Presenting Complaint:** {patient.get('presenting_complaint', 'N/A')}")
@@ -261,10 +214,7 @@ def render_patient_profile(patient: dict) -> None:
     else:
         st.markdown("- No known allergies")
 
-
-# Interactive Simulation helpers
 def compute_action_duration(action: dict) -> float:
-    """Return the midpoint duration in minutes for an action."""
     dur = action.get("duration_minutes")
     if isinstance(dur, list) and len(dur) == 2:
         return (dur[0] + dur[1]) / 2
@@ -274,7 +224,6 @@ def compute_action_duration(action: dict) -> float:
 
 
 def _render_citation_inline(citation) -> str:
-    """Return HTML string for an inline citation display."""
     if not citation:
         return ""
     if isinstance(citation, str):
@@ -302,7 +251,6 @@ def render_action_card_interactive(
     disabled: bool = False,
     is_critical: bool = False,
 ) -> bool:
-    """Render an action card with a checkbox; findings hidden until revealed."""
     action_id = action.get("id", "?")
     key = f"sim_cb_{dp_id}_{action_id}"
 
@@ -310,15 +258,9 @@ def render_action_card_interactive(
     req = (action.get("requirement") or "optional").lower()
     hint_class = f"action-hint-{req}" if req in ("critical", "supportive", "optional") else "action-hint-optional"
 
-    # Duration badge shown even before submission
+    # Duration badge shown even before selection
     dur_badge = get_duration_badge(action)
     dur_html = f'<span style="float:right;">{dur_badge}</span>' if dur_badge else ""
-
-    # Wrap in a hint div for the subtle border
-    if dur_html and not revealed:
-        st.markdown(f'<div class="{hint_class}">{dur_html}</div>', unsafe_allow_html=True)
-    elif not revealed:
-        st.markdown(f'<div class="{hint_class}" style="min-height:2px;"></div>', unsafe_allow_html=True)
 
     selected = st.checkbox(
         action.get("description", "Unknown action"),
@@ -326,9 +268,10 @@ def render_action_card_interactive(
         disabled=disabled,
     )
 
-    if revealed:
+    # Show finding details when the action is selected OR when all are revealed
+    show_details = selected or revealed
+    if show_details:
         req_badge = get_requirement_badge(action.get("requirement", "optional"))
-        rel_badge = get_relevance_badge(action.get("finding_relevance", "non contributory"))
         dur_badge_full = get_duration_badge(action)
 
         branch_badge = ""
@@ -337,17 +280,16 @@ def render_action_card_interactive(
             branch_id = _esc(str(branch_trigger.get("branch_id", "?")))
             branch_badge = f' <span class="badge-branch-trigger">Branch {branch_id}</span>'
 
-        if is_critical:
+        if is_critical and revealed:
             css_class = "sim-action-hit-critical" if selected else "sim-action-missed-critical"
         else:
             css_class = ""
 
         finding = _esc(action.get("finding", "N/A"))
         rationale = _esc(action.get("rationale", ""))
-        parts = [f"{req_badge} {rel_badge}{dur_badge_full}{branch_badge}", f"<b>Finding:</b> {finding}"]
+        parts = [f"{req_badge}{dur_badge_full}{branch_badge}", f"<b>Finding:</b> {finding}"]
         if rationale:
             parts.append(f'<span style="font-size:0.85rem;color:#6B7280;">Rationale: {rationale}</span>')
-        # Citation
         citation_html = _render_citation_inline(action.get("citation"))
         if citation_html:
             parts.append(citation_html)
@@ -357,49 +299,16 @@ def render_action_card_interactive(
             st.markdown(f'<div class="{css_class}">{inner_html}</div>', unsafe_allow_html=True)
         else:
             st.markdown(inner_html, unsafe_allow_html=True)
+    else:
+        if dur_html:
+            st.markdown(f'<div class="{hint_class}">{dur_html}</div>', unsafe_allow_html=True)
+        else:
+            st.markdown(f'<div class="{hint_class}" style="min-height:2px;"></div>', unsafe_allow_html=True)
 
     return selected
 
 
-def render_action_card_static(action: dict, is_critical: bool = False) -> None:
-    """Render a fully-revealed, read-only action card (no checkbox)."""
-    action_id = action.get("id", "?")
-    description = _esc(action.get("description", "Unknown action"))
-
-    req_badge = get_requirement_badge(action.get("requirement", "optional"))
-    rel_badge = get_relevance_badge(action.get("finding_relevance", "non contributory"))
-    dur_badge = get_duration_badge(action)
-
-    branch_badge = ""
-    branch_trigger = action.get("branch_trigger")
-    if action.get("is_branch_trigger") and branch_trigger:
-        branch_id = _esc(str(branch_trigger.get("branch_id", "?")))
-        branch_badge = f' <span class="badge-branch-trigger">Branch {branch_id}</span>'
-
-    hint_class = "action-hint-critical" if is_critical else "action-hint-supportive" if (action.get("requirement") or "").lower() == "supportive" else "action-hint-optional"
-
-    finding = _esc(action.get("finding", "N/A"))
-    rationale = _esc(action.get("rationale", ""))
-
-    parts = [
-        f'<div class="{hint_class}" style="margin-bottom:0.8rem; padding:0.6rem 0.8rem;">',
-        f'<div style="font-weight:600; margin-bottom:0.3rem;">'
-        f'<code style="font-size:0.75rem; color:#6B7280;">{action_id}</code> {description}</div>',
-        f'<div style="margin-bottom:0.3rem;">{req_badge} {rel_badge}{dur_badge}{branch_badge}</div>',
-        f'<div style="font-size:0.88rem;"><b>Finding:</b> {finding}</div>',
-    ]
-    if rationale:
-        parts.append(f'<div style="font-size:0.85rem; color:#6B7280;">Rationale: {rationale}</div>')
-    citation_html = _render_citation_inline(action.get("citation"))
-    if citation_html:
-        parts.append(citation_html)
-    parts.append('</div>')
-
-    st.markdown("".join(parts), unsafe_allow_html=True)
-
-
 def render_time_tracker(elapsed_minutes: float, time_window: dict | None) -> None:
-    """Render elapsed time with clinical time window context."""
     st.metric("Elapsed Time", f"{elapsed_minutes:.0f} min")
 
     if time_window:
@@ -421,7 +330,6 @@ def compute_simulation_score(
     selected_actions_by_dp: dict[str, set[str]],
     elapsed_minutes: float,
 ) -> dict:
-    """Compute simulation performance metrics."""
     critical_performed = 0
     critical_total = 0
     supportive_performed = 0
@@ -478,7 +386,6 @@ def match_common_errors(
     scenario: dict,
     selected_actions_by_dp: dict[str, set[str]],
 ) -> list[dict]:
-    """Identify debriefing common errors that match the user's action pattern."""
     matched: list[dict] = []
 
     critical_actions: dict[str, str] = {}

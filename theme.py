@@ -1,17 +1,7 @@
-"""Unified theme for the SBL Clinical Scenario Generator.
-
-Import `apply_theme()` at the top of every page to inject the global CSS.
-Use the helper functions for consistent, styled components.
-"""
+"""Unified theme for the SBL Clinical Scenario Generator."""
 
 import streamlit as st
 
-# ---------------------------------------------------------------------------
-# Global CSS — injected once per page via apply_theme()
-# Color palette:
-#   Graphite #353535 | Stormy Teal #3c6e71 | White #ffffff
-#   Dust Grey #d9d9d9 | Yale Blue #284b63
-# ---------------------------------------------------------------------------
 _GLOBAL_CSS = """
 <style>
 /* ── Google Fonts ───────────────────────────────────────────────────── */
@@ -628,237 +618,25 @@ hr {
     font-size: 1rem;
     line-height: 1.5;
 }
-
-/* ── Print styles ────────────────────────────────────────────────── */
-@media print {
-    /* Hide Streamlit chrome */
-    [data-testid="stSidebar"],
-    [data-testid="stHeader"],
-    [data-testid="stToolbar"],
-    .stButton,
-    .stDownloadButton,
-    .sim-phase-indicator,
-    .no-print,
-    [data-testid="stFileUploader"] {
-        display: none !important;
-    }
-
-    /* Full width */
-    [data-testid="stAppViewBlockContainer"] {
-        max-width: 100% !important;
-        padding: 0 1rem !important;
-    }
-
-    .stApp {
-        background: white !important;
-    }
-
-    /* Preserve colors in print */
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-    }
-
-    /* Avoid breaking inside cards */
-    .sim-dp-header,
-    .action-hint-critical,
-    .action-hint-supportive,
-    .action-hint-optional,
-    .key-learning-card,
-    .vital-signs-card {
-        page-break-inside: avoid;
-    }
-
-    /* Reduce spacing for print */
-    .page-header {
-        font-size: 1.8rem;
-    }
-
-    hr {
-        margin: 0.8rem 0 !important;
-    }
-}
-
-/* ── Full scenario view styles ───────────────────────────────────── */
-.view-stage-section {
-    margin-top: 1.5rem;
-}
-
-.view-stage-header {
-    background: var(--c-yale);
-    color: #ffffff;
-    padding: 0.8rem 1.2rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1rem;
-}
-
-.view-stage-header .stage-name {
-    font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.view-stage-header .stage-setting {
-    font-size: 0.85rem;
-    opacity: 0.8;
-    margin-top: 0.2rem;
-}
-
-.view-branch-header {
-    background: linear-gradient(135deg, #DB2777, #9333EA);
-    color: #ffffff;
-    padding: 0.8rem 1.2rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1rem;
-}
-
-.view-branch-header .branch-name {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.view-branch-header .branch-type {
-    font-size: 0.78rem;
-    opacity: 0.8;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.view-section-title {
-    font-family: var(--font-display);
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--c-yale);
-    margin: 1.5rem 0 0.8rem 0;
-    padding-bottom: 0.3rem;
-    border-bottom: 2px solid var(--c-border);
-}
-
-/* Vital signs grid (main content area) */
-.vital-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 0.5rem;
-    margin: 0.5rem 0 1rem 0;
-}
-.vital-card {
-    background: var(--c-surface-alt);
-    border: 1px solid var(--c-border);
-    border-radius: var(--radius-md);
-    padding: 0.6rem 0.8rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.15rem;
-}
-.vital-card .vital-label {
-    font-size: 0.68rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--c-text-muted);
-}
-.vital-card .vital-value {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--c-yale);
-}
-
-/* Keep the row style for sidebar (overridden there) */
-.vital-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 0.4rem 0.6rem;
-    margin-bottom: 0.25rem;
-    background: var(--c-surface-alt);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--c-border);
-}
-.vital-row .vital-label {
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--c-text-muted);
-}
-.vital-row .vital-value {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--c-yale);
-}
-
-/* Quick stats bar for full scenario view */
-.view-stats-bar {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-}
-.view-stat {
-    background: var(--c-surface-alt);
-    border: 1px solid var(--c-border);
-    border-radius: var(--radius-md);
-    padding: 0.6rem 1rem;
-    text-align: center;
-    flex: 1;
-    min-width: 120px;
-}
-.view-stat-value {
-    font-family: var(--font-display);
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: var(--c-yale);
-}
-.view-stat-label {
-    font-size: 0.72rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--c-text-muted);
-}
-
-/* DP summary line in full view */
-.view-dp-summary {
-    font-size: 0.8rem;
-    color: var(--c-text-muted);
-    margin: 0.3rem 0 0.6rem 0;
-}
 </style>
 """
 
 
 def apply_theme() -> None:
-    """Inject the global CSS theme into the current page. Call once per page."""
     st.markdown(_GLOBAL_CSS, unsafe_allow_html=True)
 
 
-# ---------------------------------------------------------------------------
-# Reusable component helpers
-# ---------------------------------------------------------------------------
-
-
 def page_header(title: str, subtitle: str = "") -> None:
-    """Render a styled page header with optional subtitle."""
     st.markdown(f'<p class="page-header">{title}</p>', unsafe_allow_html=True)
     if subtitle:
         st.markdown(f'<p class="page-subtitle">{subtitle}</p>', unsafe_allow_html=True)
 
 
 def section_label(text: str) -> None:
-    """Render a small uppercase section label."""
     st.markdown(f'<p class="section-label">{text}</p>', unsafe_allow_html=True)
 
 
 def config_banner(items: list[tuple[str, str]]) -> None:
-    """Render a dark banner showing current pipeline configuration.
-
-    Parameters
-    ----------
-    items : list of (label, value) tuples
-    """
     inner = ""
     for i, (label, value) in enumerate(items):
         if i > 0:
@@ -873,7 +651,6 @@ def config_banner(items: list[tuple[str, str]]) -> None:
 
 
 def nav_card(icon: str, title: str, description: str) -> None:
-    """Render the HTML part of a navigation card. Place a st.button after this."""
     st.markdown(
         f'<div class="nav-card">'
         f'<span class="nav-card-number">{icon}</span>'
@@ -885,7 +662,6 @@ def nav_card(icon: str, title: str, description: str) -> None:
 
 
 def form_section(title: str) -> None:
-    """Render a styled section heading inside a form."""
     st.markdown(
         f'<div class="form-section-heading">{title}</div>',
         unsafe_allow_html=True,
