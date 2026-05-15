@@ -1,0 +1,981 @@
+{
+  "title": "Avaliação e Gestão de Nevralgia do Trigémeo em Consulta Externa",
+  "domain": "Neurologia",
+  "subdomain": "Diagnóstico de Nevralgia Craniana",
+  "target_learner": "Specialist",
+  "target_learner_label": "Specialist",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Aplicar critérios de diagnóstico ICHD-3 para nevralgia do trigémeo",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Diferenciar nevralgia do trigémeo clássica de secundária e idiopática",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP2",
+        "DP4"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Identificar fatores desencadeantes e características típicas da dor",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Determinar via de investigação adequada incluindo RM e angio-RM para exclusão de contacto neurovascular",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP3"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 25,
+  "difficulty": "Intermediate",
+  "prerequisites": [
+    "Conhecimento básico do exame neurológico dos pares cranianos.",
+    "Familiaridade com os critérios de diagnóstico de cefaleias (ICHD-3).",
+    "Compreensão dos princípios de farmacoterapia para dor neuropática."
+  ],
+  "patient": {
+    "age": 58,
+    "gender": "Feminino",
+    "presenting_complaint": "Episódios recorrentes de dor facial direita, tipo choque elétrico, de curta duração, com três meses de evolução.",
+    "medical_history": [
+      "Sem antecedentes médicos de relevo"
+    ],
+    "medications": [
+      "sem medicação habitual conhecida"
+    ],
+    "allergies": [
+      "sem alergias conhecidas"
+    ],
+    "social_history": "Professora do ensino básico, vive com o marido. Refere que a dor está a afetar significativamente o seu trabalho e qualidade de vida."
+  },
+  "initial_presentation": "Mulher de 58 anos, professora, sem antecedentes médicos relevantes, é referenciada à consulta de Neurologia por dor facial direita com 3 meses de evolução. Descreve múltiplos episódios diários de dor súbita, tipo choque elétrico, com duração de segundos, localizada na bochecha e mandíbula direitas. A dor é frequentemente desencadeada por atividades como lavar os dentes, mastigar ou mesmo pela brisa no rosto. Os sinais vitais na consulta são: PA 132/84 mmHg, FC 76 bpm, FR 14 cpm, T 36.7°C.",
+  "interaction_prompt": "É o(a) neurologista responsável por esta consulta. O seu objetivo é realizar o diagnóstico, planear a investigação e iniciar o tratamento adequado para esta doente.",
+  "clinical_time_window": null,
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Avaliação Inicial e Diagnóstico Diferencial",
+      "setting": "Consulta Externa de Neurologia",
+      "initial_state": "A doente está sentada à sua frente na sala de consulta, aparentando ansiedade mas sem dor aguda no momento.",
+      "vital_signs": {
+        "blood_pressure": "132/84 mmHg",
+        "heart_rate": "76 bpm",
+        "respiratory_rate": "14 cpm",
+        "temperature": "36.7°C",
+        "oxygen_saturation": "99% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "Rever critérios ICHD-3 para Nevralgia do Trigémeo",
+          "finding": "Critérios ICHD-3: A) Paroxismos recorrentes de dor facial unilateral na distribuição do trigémeo; B) Dor com qualidade de choque elétrico, duração de fração de segundo a 2 min; C) Precipitada por estímulos inócuos; D) Não mais bem explicada por outro diagnóstico.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "História familiar",
+          "finding": "Nega história familiar de nevralgia do trigémeo, esclerose múltipla ou outras doenças neurológicas.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Revisão de sistemas",
+          "finding": "A revisão de sistemas é negativa para febre, perda de peso, erupções cutâneas, ou outros sintomas neurológicos como fraqueza, alterações visuais ou desequilíbrio.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "Inicia a consulta com a doente que se queixa de dor facial intensa. É crucial obter uma história clínica detalhada para estabelecer um diagnóstico preciso.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Caracterizar a dor (localização, qualidade, duração, frequência)",
+              "finding": "Dor unilateral direita, afetando a região malar e mandibular (ramos V2 e V3). Qualidade descrita como 'choque elétrico' ou 'facada'. Duração de cada paroxismo é de poucos segundos. Ocorrem vários episódios por dia.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "É essencial caracterizar a dor para verificar se preenche os critérios de diagnóstico clínico da nevralgia do trigémeo, que é a base do diagnóstico.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "O diagnóstico da NT é eminentemente clínico, baseado nas características da dor e nos fatores desencadeantes.",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Investigar fatores desencadeantes e período refratário",
+              "finding": "A doente confirma que a dor é desencadeada pelo toque leve na bochecha direita ('zona gatilho'), ao mastigar ou lavar os dentes. Após um episódio, existe um período de minutos em que os estímulos não desencadeiam dor (período refratário).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A presença de zonas gatilho e de um período refratário são características patognomónicas da nevralgia do trigémeo clássica, ajudando a distingui-la de outras causas de dor facial.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Referenciar para consulta de Medicina Dentária sem mais avaliação",
+              "finding": "A doente é referenciada para Medicina Dentária. Esta ação representa um erro clínico, pois os sintomas são clássicos de uma condição neurológica, e esta referência atrasa o diagnóstico e tratamento corretos, prolongando o sofrimento da doente.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Embora a dor dentária seja um diagnóstico diferencial, as características da dor (paroxística, tipo choque, com gatilhos cutâneos) são altamente específicas para nevralgia do trigémeo e devem ser investigadas neurologicamente primeiro.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O clínico referenciou a doente para Medicina Dentária com base na localização da dor, ignorando as características neurológicas clássicas."
+              }
+            },
+            {
+              "id": "A4",
+              "description": "Questionar sobre tratamentos prévios",
+              "finding": "A doente tentou analgésicos comuns (paracetamol, ibuprofeno) sem qualquer alívio.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Supportive",
+              "rationale": "A ausência de resposta a analgésicos simples é típica da dor neuropática como a nevralgia do trigémeo, apoiando o diagnóstico.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Nevralgia do Trigêmeo (NT), uma condição de dor neuropática crônica que afeta o nervo trigêmeo.",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2"
+          ],
+          "feedback_on_completion": "A história clínica é altamente sugestiva de nevralgia do trigémeo, cumprindo os critérios ICHD-3. A dor é paroxística, lancinante, unilateral na distribuição V2/V3 e com gatilhos típicos. O próximo passo é o exame neurológico para procurar sinais de alarme."
+        },
+        {
+          "id": "DP2",
+          "context": "Após a anamnese, realiza o exame neurológico focado para excluir causas secundárias e refinar o diagnóstico.",
+          "available_actions": [
+            {
+              "id": "A5",
+              "description": "Realizar exame neurológico focado (pares cranianos, sensibilidade facial)",
+              "finding": "Exame dos pares cranianos sem alterações. A sensibilidade tátil e dolorosa está preservada e simétrica nos três ramos do nervo trigémeo (V1, V2, V3). Reflexos corneanos presentes e simétricos. Força dos músculos da mastigação normal.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "É mandatório procurar défices neurológicos. A sua ausência apoia o diagnóstico de nevralgia do trigémeo clássica ou idiopática, enquanto a presença de défices sensitivos levantaria forte suspeita de uma causa secundária (e.g., tumor, esclerose múltipla).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Achados clínicos como défices sensitivos no território do trigêmeo ou envolvimento bilateral podem aumentar a suspeita de uma causa secundária.",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Questionar sobre sintomas autonómicos cranianos",
+              "finding": "A doente nega lacrimejo, vermelhidão ocular, congestão nasal ou rinorreia durante os episódios de dor.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Ajuda a diferenciar de outras nevralgias trigémino-autonómicas, como a SUNCT/SUNA, que cursam com sintomas autonómicos proeminentes e requerem tratamento diferente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A7",
+              "description": "Realizar exame neurológico completo (incluindo membros e marcha)",
+              "finding": "O restante exame neurológico, incluindo força e sensibilidade nos membros, reflexos e coordenação, é inteiramente normal.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Um exame completo fornece um baseline e aumenta a confiança na exclusão de uma doença neurológica disseminada, como a esclerose múltipla.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                8,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A5"
+          ],
+          "feedback_on_completion": "O exame neurológico não revelou défices sensitivos, motores ou dos reflexos do tronco cerebral, o que torna uma causa secundária menos provável, mas não a exclui. A investigação por imagem é o passo seguinte essencial."
+        }
+      ],
+      "progression_criteria": "Diagnóstico clínico de nevralgia do trigémeo estabelecido e exame neurológico realizado, indicando a necessidade de investigação por imagem."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Investigação e Início de Tratamento",
+      "setting": "Consulta Externa de Neurologia",
+      "initial_state": "A avaliação clínica da doente é fortemente sugestiva de nevralgia do trigémeo. Está na consulta para definir o plano de investigação e terapêutico.",
+      "vital_signs": {
+        "blood_pressure": "130/82 mmHg",
+        "heart_rate": "74 bpm",
+        "respiratory_rate": "14 cpm",
+        "temperature": "36.6°C",
+        "oxygen_saturation": "99% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Rever classificação etiológica da NT",
+          "finding": "Classificação: Clássica (compressão vascular), Secundária (tumor, Esclerose Múltipla), Idiopática (sem causa aparente na RM).",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Opções de tratamento de primeira linha",
+          "finding": "O tratamento farmacológico de primeira linha é com carbamazepina ou oxcarbazepina.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_6",
+          "description": "Opções de tratamento cirúrgico",
+          "finding": "Opções cirúrgicas incluem descompressão microvascular e procedimentos neuroablativos, considerados se o tratamento médico falhar.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP3",
+          "context": "O diagnóstico clínico aponta para nevralgia do trigémeo. É necessário decidir qual o exame de imagem mais adequado para confirmar a etiologia e excluir patologia secundária.",
+          "available_actions": [
+            {
+              "id": "A8",
+              "description": "Requisitar RM crânio-encefálica com protocolo para nervo trigémeo",
+              "finding": "Pedido de RM com sequências de alta resolução (FIESTA/CISS) focado nos ângulos ponto-cerebelosos é efetuado.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A RM é o exame de eleição, fundamental para excluir causas secundárias (tumores, esclerose múltipla) e para identificar uma possível compressão neurovascular, o que define a nevralgia como 'clássica' e orienta o tratamento.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "a realização de uma ressonância magnética (RM) cerebral é fortemente recomendada para todos os pacientes com suspeita de NT. O objetivo da RM é excluir causas secundárias, como tumores ou esclerose múltipla, e identificar uma possível compressão neurovascular",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A9",
+              "description": "Requisitar TC crânio-encefálica sem contraste",
+              "finding": "A requisição para TC é feita. Esta é uma escolha subótima, pois a TC tem baixa sensibilidade para detetar compressão neurovascular ou placas de desmielinização, podendo levar a um diagnóstico incorreto de nevralgia idiopática e a um plano terapêutico inadequado.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "A TC é inadequada para a avaliação da fossa posterior e dos nervos cranianos, falhando em identificar a maioria das causas de nevralgia do trigémeo. A RM é o padrão-ouro.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O clínico requisitou uma TC crânio-encefálica em vez de uma RM, que é o exame de eleição para esta patologia."
+              }
+            },
+            {
+              "id": "A10",
+              "description": "Iniciar tratamento empírico sem realizar imagiologia",
+              "finding": "Decide-se iniciar tratamento sem imagem. Esta é uma prática perigosa que viola as recomendações, pois não exclui uma causa secundária potencialmente grave (e.g., tumor cerebral) que necessitaria de uma abordagem completamente diferente.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "A imagiologia é obrigatória para excluir patologia subjacente grave. Iniciar tratamento sem uma RM prévia constitui um erro médico significativo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A8"
+          ],
+          "feedback_on_completion": "A RM crânio-encefálica com protocolo de estudo do trigémeo foi corretamente requisitada. Este é o passo crucial para determinar a etiologia e orientar o tratamento a longo prazo."
+        },
+        {
+          "id": "DP4",
+          "context": "A doente realizou a RM e regressa à consulta com o resultado. É tempo de analisar os achados e estabelecer o plano terapêutico.",
+          "available_actions": [
+            {
+              "id": "A11",
+              "description": "Rever relatório e imagens da RM",
+              "finding": "Relatório da RM: 'Evidencia-se contacto neurovascular entre a artéria cerebelar superior direita e a porção cisternal do nervo trigémeo homolateral, com aparente deformação do nervo. Ausência de outras lesões expansivas ou placas de desmielinização.'",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A análise da RM é fundamental. A confirmação de compressão neurovascular estabelece o diagnóstico de nevralgia do trigémeo 'clássica' e abre a possibilidade de tratamento cirúrgico futuro.",
+              "media_reference": "mri_trigeminal_nvc.jpg",
+              "media_type": "image",
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "Requisitar análises pré-tratamento com carbamazepina",
+              "finding": "Pedido de hemograma, função hepática, função renal e ionograma. Os resultados são recebidos e estão dentro dos valores normais.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "É obrigatório obter análises basais antes de iniciar carbamazepina devido ao risco de efeitos adversos hematológicos (agranulocitose), hepáticos e de hiponatremia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A13",
+              "description": "Iniciar carbamazepina 100 mg PO bid, com plano de titulação",
+              "finding": "Prescrição de carbamazepina 100 mg duas vezes ao dia, com indicação para aumentar para 200 mg duas vezes ao dia após uma semana se tolerado. Doente informada sobre os potenciais efeitos adversos.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A carbamazepina é o fármaco de primeira linha para a nevralgia do trigémeo, com eficácia comprovada. A dose deve ser iniciada baixa e titulada lentamente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "O tratamento farmacológico é a primeira linha de abordagem para todos os pacientes com NT. A carbamazepina é o medicamento de primeira escolha, com evidências robustas da sua eficácia no controlo da dor.",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A14",
+              "description": "Iniciar carbamazepina 100 mg PO bid sem análises pré-tratamento",
+              "finding": "A prescrição é emitida sem a realização de análises sanguíneas. Esta omissão representa um risco de segurança para a doente, pois impede a deteção de alterações basais e a monitorização de efeitos adversos graves como a hiponatremia ou a toxicidade hepática.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Viola o princípio de segurança na prescrição. A carbamazepina pode causar efeitos adversos graves que requerem monitorização analítica, sendo essencial ter valores basais de referência.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O clínico iniciou carbamazepina sem realizar análises sanguíneas basais, omitindo uma etapa de segurança crucial."
+              }
+            },
+            {
+              "id": "A15",
+              "description": "Discutir opções cirúrgicas (descompressão microvascular)",
+              "finding": "A doente é informada que, caso o tratamento médico não seja eficaz ou cause efeitos secundários intoleráveis, a descompressão microvascular é uma opção com altas taxas de sucesso a longo prazo.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Supportive",
+              "rationale": "É boa prática clínica discutir o plano a longo prazo, incluindo opções cirúrgicas, como parte da decisão partilhada, especialmente em casos de nevralgia clássica com alvo cirúrgico definido.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "As opções incluem a descompressão microvascular, que apresenta bons resultados a longo prazo, especialmente em casos de NT clássica com compressão vascular",
+                  "source": "nih.gov",
+                  "section": null,
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A11",
+            "A12",
+            "A13"
+          ],
+          "feedback_on_completion": "A RM confirmou uma compressão neurovascular do nervo trigémeo direito, estabelecendo o diagnóstico de nevralgia do trigémeo clássica. Iniciou-se o tratamento farmacológico de primeira linha com carbamazepina após confirmação de análises basais normais, e foram discutidas as opções cirúrgicas futuras. A doente será reavaliada em 4-6 semanas."
+        }
+      ],
+      "progression_criteria": "Diagnóstico etiológico estabelecido por RM e plano terapêutico de primeira linha iniciado com segurança."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP3",
+      "trigger_action_id": "A9",
+      "trigger_context": "O clínico requisitou uma TC crânio-encefálica em vez de uma RM, que é o exame de eleição para esta patologia.",
+      "consequence_context": "A TC não consegue visualizar adequadamente o nervo trigémeo e as estruturas vasculares adjacentes, resultando num relatório não conclusivo que falha a identificação da causa e pode levar a um diagnóstico e tratamento incorretos.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "O resultado da TC crânio-encefálica está disponível: 'Exame sem evidência de alterações agudas intra-axiais ou extra-axiais. Não se observam lesões expansivas. Estruturas da fossa posterior de difícil avaliação por artefactos ósseos.'",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Concluir que se trata de Nevralgia do Trigémeo Idiopática e iniciar tratamento",
+              "finding": "O diagnóstico de NT Idiopática é assumido com base num exame de imagem inadequado. Inicia-se tratamento com carbamazepina, mas a oportunidade de identificar um alvo para tratamento cirúrgico curativo (compressão vascular) é perdida.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta conclusão é um erro, pois baseia-se num exame com baixa sensibilidade para a patologia em questão. O diagnóstico correto da etiologia é fundamental para o prognóstico e planeamento terapêutico a longo prazo.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A2",
+              "description": "Reconhecer a limitação da TC e requisitar uma RM",
+              "finding": "Reconhece-se que a TC não é suficiente para a avaliação pretendida. É efetuado um novo pedido de imagem, desta vez para uma RM crânio-encefálica com protocolo para nervo trigémeo.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Esta é a ação corretiva. Reconhecer a inadequação do exame inicial e pedir o exame correto (RM) é essencial para evitar um erro diagnóstico e garantir o melhor cuidado para a doente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A2"
+          ],
+          "feedback_on_completion": "Reconheceu corretamente que a TC era insuficiente. A requisição da RM permite corrigir o curso da investigação e evitar um erro diagnóstico. A doente aguardará agora pela RM.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP4",
+        "target_action_id": "A11",
+        "transition_context": "Após a requisição correta da RM, a doente realiza o exame e regressa à consulta. Pode agora rever os resultados da imagiologia adequada."
+      }
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP4",
+      "trigger_action_id": "A14",
+      "trigger_context": "O clínico iniciou carbamazepina sem realizar análises sanguíneas basais, omitindo uma etapa de segurança crucial.",
+      "consequence_context": "Duas semanas depois, a doente contacta o hospital com queixas de náuseas, cefaleia e confusão mental, sintomas sugestivos de hiponatremia induzida pela carbamazepina.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "A doente recorre ao Serviço de Urgência com confusão, náuseas e cefaleia, duas semanas após iniciar carbamazepina. Refere que a dor facial melhorou, mas sente-se 'estranha'.",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Pedir ionograma sérico urgente",
+              "finding": "O ionograma revela uma hiponatremia grave: Sódio 118 mEq/L (Normal: 135-145 mEq/L).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Os sintomas são altamente sugestivos de hiponatremia, um efeito adverso conhecido da carbamazepina. A confirmação analítica é urgente e fundamental para orientar o tratamento.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A2",
+              "description": "Atribuir os sintomas a um efeito adverso 'geral' e aconselhar hidratação",
+              "finding": "A doente é aconselhada a beber mais água, o que agrava a hiponatremia dilucional, levando a uma deterioração do estado de consciência e a uma convulsão.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta é uma ação perigosa. Aconselhar o aumento da ingestão de líquidos livres num doente com suspeita de SIADH (mecanismo da hiponatremia por carbamazepina) pode ter consequências catastróficas.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A3",
+              "description": "Pedir TC crânio-encefálica para investigar a confusão",
+              "finding": "A TC crânio-encefálica não mostra alterações agudas. Esta investigação atrasa o diagnóstico da causa metabólica subjacente (hiponatremia).",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Embora a exclusão de patologia do SNC seja razoável, a suspeita clínica principal deveria ser um efeito adverso do fármaco recém-introduzido, tornando as análises sanguíneas a prioridade.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "O ionograma confirmou hiponatremia grave, explicando os sintomas da doente. A causa é muito provavelmente a carbamazepina. O tratamento imediato é necessário.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B2_DP2",
+          "context": "Confirmada a hiponatremia grave (Sódio 118 mEq/L), a doente necessita de tratamento urgente.",
+          "available_actions": [
+            {
+              "id": "B2_A4",
+              "description": "Suspender a carbamazepina",
+              "finding": "A carbamazepina, o agente causal, é imediatamente suspensa.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A remoção do agente causal é o primeiro e mais importante passo no tratamento de uma toxicidade induzida por fármacos.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A5",
+              "description": "Iniciar restrição hídrica e monitorização",
+              "finding": "A doente é internada, é iniciada restrição hídrica (<1L/dia) e o sódio sérico é monitorizado de perto.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Critical",
+              "rationale": "A restrição hídrica é a base do tratamento da hiponatremia euvolémica/hipervolémica (SIADH). A correção deve ser lenta e controlada para evitar mielinólise pontina.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                10,
+                20
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A6",
+              "description": "Administrar soro salino hipertónico",
+              "finding": "Dado que a doente tem sintomas neurológicos graves (confusão), a administração cuidadosa de soro salino hipertónico (3%) pode ser considerada para aumentar o sódio sérico mais rapidamente no início.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Supportive",
+              "rationale": "O soro hipertónico está reservado para casos de hiponatremia sintomática grave, mas a sua utilização requer monitorização em cuidados intermédios/intensivos devido ao risco de correção excessivamente rápida.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                15,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A4",
+            "B2_A5"
+          ],
+          "feedback_on_completion": "A carbamazepina foi suspensa e a hiponatremia está a ser corrigida de forma segura. Este evento adverso sublinha a importância da monitorização analítica basal e de seguimento.",
+          "outcome_type": "end"
+        }
+      ],
+      "merge_point": null
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP1",
+      "trigger_action_id": "A3",
+      "trigger_context": "O clínico referenciou a doente para Medicina Dentária com base na localização da dor, ignorando as características neurológicas clássicas.",
+      "consequence_context": "A doente passa várias semanas em avaliações dentárias, que são negativas, enquanto a sua dor neuropática persiste e piora, levando a um atraso no diagnóstico e tratamento corretos.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "Um mês depois, a doente regressa à consulta. Traz um relatório do médico dentista que afirma: 'Exame oral e ortopantomografia sem alterações que justifiquem a dor facial descrita. Sugere-se reavaliação por Neurologia.' A dor da doente piorou.",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Retomar a anamnese focada nas características da dor",
+              "finding": "Ao refazer a história, as características clássicas de nevralgia do trigémeo (paroxística, tipo choque, com gatilhos) tornam-se evidentes, confirmando que a avaliação inicial foi incompleta.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Esta é a ação corretiva. É necessário voltar ao início e realizar a anamnese correta que deveria ter sido feita na primeira consulta para chegar ao diagnóstico correto.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                10,
+                15
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B3_A2",
+              "description": "Assumir que a dor é psicossomática",
+              "finding": "O clínico considera um diagnóstico de dor facial atípica ou somatização. Esta via de raciocínio ignora os sinais e sintomas claros e levaria a mais atrasos e tratamentos inadequados.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Atribuir a dor a causas psicossomáticas sem uma avaliação neurológica completa perante sintomas tão típicos é um erro grave.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "Após reavaliar a história, o diagnóstico de nevralgia do trigémeo torna-se claro. O atraso causado pela referência inadequada sublinha a importância de uma anamnese cuidadosa na avaliação da dor facial.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S1",
+        "target_dp_id": "DP2",
+        "target_action_id": "A5",
+        "transition_context": "Com o diagnóstico clínico de nevralgia do trigémeo agora estabelecido, procede-se ao exame neurológico focado, retomando a via de investigação correta."
+      }
+    }
+  ],
+  "max_branch_length": 5,
+  "debriefing": [
+    {
+      "key_learning": "O diagnóstico da nevralgia do trigémeo é primariamente clínico, baseado numa anamnese detalhada que avalia as características da dor segundo os critérios ICHD-3.",
+      "clinical_reasoning": "A abordagem correta à dor facial começa com uma história clínica meticulosa. As características da nevralgia do trigémeo são muito específicas: dor paroxística, unilateral, tipo choque elétrico, com duração de segundos a minutos, e desencadeada por estímulos inócuos em 'zonas gatilho'. A identificação destes elementos é crucial e permite distinguir esta condição de outras causas de dor, como patologia dentária ou cefaleias trigémino-autonómicas. Ignorar estas características leva a investigações e referências desnecessárias, atrasando o tratamento.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "Não caracterizar adequadamente a dor (qualidade, duração, gatilhos).",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A1"
+          },
+          "consequence": "Falha em reconhecer o padrão clássico da NT, levando a um diagnóstico diferencial incorreto."
+        },
+        {
+          "error_type": "commission",
+          "description": "Referenciar prematuramente para outras especialidades (e.g., Medicina Dentária) antes de uma avaliação neurológica completa.",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A3"
+          },
+          "consequence": "Atraso no diagnóstico e tratamento, prolongando o sofrimento do doente e levando a custos desnecessários no sistema de saúde."
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO3"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP1",
+          "actions": [
+            "A1",
+            "A2",
+            "A3"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "O diagnóstico da NT é eminentemente clínico, baseado nas características da dor e nos fatores desencadeantes.",
+          "source": "nih.gov",
+          "section": null,
+          "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+          "location_type": "Web",
+          "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+        }
+      ]
+    },
+    {
+      "key_learning": "A RM crânio-encefálica com protocolo focado no nervo trigémeo é o exame de imagem mandatório para todos os doentes com suspeita de nevralgia do trigémeo.",
+      "clinical_reasoning": "Embora o diagnóstico seja clínico, a imagiologia é crucial para a classificação etiológica. A RM é fortemente recomendada para excluir causas secundárias (como tumores ou esclerose múltipla) e para identificar uma compressão neurovascular. A TC não tem resolução suficiente para esta avaliação. A identificação de uma compressão vascular (NT Clássica) é importante porque informa o prognóstico e identifica doentes que podem beneficiar de descompressão microvascular se o tratamento médico falhar.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Requisitar uma TC crânio-encefálica em vez de uma RM.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A9"
+          },
+          "consequence": "Exame não diagnóstico, que pode falhar a identificação da causa (compressão vascular) ou de patologia secundária grave, levando a um plano terapêutico subótimo."
+        },
+        {
+          "error_type": "omission",
+          "description": "Iniciar tratamento farmacológico sem qualquer estudo de imagem.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A10"
+          },
+          "consequence": "Risco de não diagnosticar uma condição subjacente grave (e.g., tumor do ângulo ponto-cerebeloso) que se manifesta como nevralgia do trigémeo."
+        },
+        {
+          "error_type": "omission",
+          "description": "Não procurar ativamente por défices sensitivos no exame neurológico, que são um sinal de alarme para causa secundária.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A5"
+          },
+          "consequence": "Menor suspeição de uma causa secundária, podendo diminuir a urgência percebida para a realização da RM."
+        }
+      ],
+      "related_objectives": [
+        "LO2",
+        "LO4"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP2",
+          "actions": [
+            "A5"
+          ]
+        },
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A8",
+            "A9"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A11"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "a realização de uma ressonância magnética (RM) cerebral é fortemente recomendada para todos os pacientes com suspeita de NT. O objetivo da RM é excluir causas secundárias",
+          "source": "nih.gov",
+          "section": null,
+          "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+          "location_type": "Web",
+          "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+        }
+      ]
+    },
+    {
+      "key_learning": "O tratamento de primeira linha para a nevralgia do trigémeo é farmacológico com carbamazepina, o que exige monitorização analítica basal por segurança.",
+      "clinical_reasoning": "A carbamazepina é o fármaco com melhor evidência para o controlo da dor na nevralgia do trigémeo. No entanto, a sua prescrição acarreta responsabilidades. É essencial realizar análises sanguíneas basais (hemograma, função hepática e renal, ionograma) antes de iniciar o tratamento devido ao risco de efeitos adversos significativos, incluindo agranulocitose, hepatotoxicidade e hiponatremia. A omissão desta etapa de segurança pode levar a complicações graves e evitáveis. O tratamento deve ser iniciado com doses baixas e titulado gradualmente para otimizar a tolerabilidade.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "Iniciar carbamazepina sem análises sanguíneas prévias.",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A14"
+          },
+          "consequence": "Risco de não detetar uma contraindicação ou de não conseguir monitorizar adequadamente o desenvolvimento de efeitos adversos graves, como a hiponatremia sintomática."
+        },
+        {
+          "error_type": "commission",
+          "description": "Iniciar tratamento com uma dose inicial demasiado elevada de carbamazepina.",
+          "related_action": null,
+          "consequence": "Maior probabilidade de efeitos adversos do sistema nervoso central (sonolência, tonturas, ataxia), levando à não adesão ao tratamento."
+        },
+        {
+          "error_type": "commission",
+          "description": "Utilizar analgésicos simples ou AINEs, que são ineficazes para a dor neuropática da NT.",
+          "related_action": null,
+          "consequence": "Controlo inadequado da dor e frustração da doente."
+        }
+      ],
+      "related_objectives": [
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A12",
+            "A13",
+            "A14"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "O tratamento farmacológico é a primeira linha de abordagem para todos os pacientes com NT. A carbamazepina é o medicamento de primeira escolha, com evidências robustas da sua eficácia no controlo da dor.",
+          "source": "nih.gov",
+          "section": null,
+          "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyhMEzn6Yh3lwNZBW1QF01Z2RN0Fykog7-MIJK0x8cRio-6Hduv3F2BsVxBLz-JkiGaYJl78KM7Yw35vnfnHS44yLxbjI-_-ctXpQmr62IRxCiqH-ficqWxmyNq1veh6tp66E=",
+          "location_type": "Web",
+          "title": "Diagnóstico de Nevralgia do Trigêmeo em Mulher de 58 Anos"
+        }
+      ]
+    }
+  ],
+  "key_takeaways": [
+    "A caracterização detalhada da dor facial (qualidade, duração, gatilhos) é a chave para o diagnóstico clínico de nevralgia do trigémeo. [Source: nih.gov]",
+    "A RM cerebral com protocolo para nervo trigémeo é obrigatória para excluir causas secundárias e identificar compressão neurovascular. [Source: nih.gov]",
+    "Um exame neurológico sem défices sensitivos na face apoia o diagnóstico de nevralgia do trigémeo clássica ou idiopática. [Source: nih.gov]",
+    "A carbamazepina é o tratamento de primeira linha, devendo ser iniciada em doses baixas e titulada lentamente. [Source: nih.gov]",
+    "É mandatório realizar análises sanguíneas (hemograma, ionograma, função hepática/renal) antes de iniciar tratamento com carbamazepina.",
+    "A referenciação para Medicina Dentária só deve ser considerada após uma avaliação neurológica completa ter excluído uma causa neurológica provável."
+  ],
+  "metadata": {
+    "scenario_id": "c85a66d3-b318-4718-8461-854d6832e46d",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-05-14T14:13:29.771638",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "web_search_only",
+    "model_backend": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "preset_key": "nevralgia_trigemeo",
+    "few_shot_used": true,
+    "condition": "C2",
+    "generation_time_ms": 143369.72284317017,
+    "token_count": {
+      "input": 52177,
+      "output": 15143,
+      "total": 67320
+    },
+    "revision_count": 0,
+    "sources_consulted": [
+      "nih.gov [Web]"
+    ],
+    "retrieval_coverage": 1.0,
+    "structural_warnings": []
+  }
+}

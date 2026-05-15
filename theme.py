@@ -148,7 +148,7 @@ h1, h2, h3, .main-header {
     position: relative;
 }
 [data-testid="stSidebarNav"] li:first-child a::after {
-    content: 'Home';
+    content: 'Início';
     visibility: visible;
     position: absolute;
     left: 1rem;

@@ -52,17 +52,30 @@ _RELEVANCE_MAP = {
     "non_contributory": "badge-noncontrib",
 }
 
+_REQUIREMENT_LABELS = {
+    "critical": "Crítica",
+    "supportive": "Suporte",
+    "optional": "Opcional",
+}
+
+_RELEVANCE_LABELS = {
+    "confirmatory": "Confirmatória",
+    "exclusionary": "Exclusão",
+    "non contributory": "Não Contributiva",
+}
+
+
 def get_requirement_badge(requirement: str) -> str:
     req = (requirement or "optional").lower()
     cls = _REQUIREMENT_MAP.get(req, "badge-optional")
-    label = req.title()
+    label = _REQUIREMENT_LABELS.get(req, req.title())
     return f'<span class="{cls}">{label}</span>'
 
 
 def get_relevance_badge(relevance: str) -> str:
     rel = (relevance or "non contributory").lower().replace("_", " ")
     cls = _RELEVANCE_MAP.get(rel, "badge-noncontrib")
-    label = rel.title()
+    label = _RELEVANCE_LABELS.get(rel, rel.title())
     return f'<span class="{cls}">{label}</span>'
 
 
@@ -79,16 +92,16 @@ def get_duration_badge(action: dict) -> str:
 
 def render_vital_signs(vital_signs: dict) -> None:
     if not vital_signs:
-        st.caption("No vital signs recorded")
+        st.caption("Sem sinais vitais registados")
         return
 
     _VITAL_FIELDS = [
-        ("blood_pressure", "Blood Pressure"),
-        ("heart_rate", "Heart Rate"),
-        ("respiratory_rate", "Respiratory Rate"),
-        ("temperature", "Temperature"),
+        ("blood_pressure", "Pressão Arterial"),
+        ("heart_rate", "Frequência Cardíaca"),
+        ("respiratory_rate", "Frequência Respiratória"),
+        ("temperature", "Temperatura"),
         ("oxygen_saturation", "SpO2"),
-        ("blood_glucose", "Blood Glucose"),
+        ("blood_glucose", "Glicemia"),
         ("gcs", "GCS"),
         ("nihss", "NIHSS"),
     ]
@@ -96,7 +109,7 @@ def render_vital_signs(vital_signs: dict) -> None:
     present = [(label, vital_signs[key]) for key, label in _VITAL_FIELDS if vital_signs.get(key) is not None]
 
     if not present:
-        st.caption("No vital signs recorded")
+        st.caption("Sem sinais vitais registados")
         return
 
     for label, value in present:
@@ -112,7 +125,7 @@ def render_vital_signs(vital_signs: dict) -> None:
     if rhythm:
         st.markdown(
             f'<div class="vital-row">'
-            f'<span class="vital-label">Cardiac Rhythm</span>'
+            f'<span class="vital-label">Ritmo Cardíaco</span>'
             f'<span class="vital-value">{_esc(str(rhythm))}</span>'
             f'</div>',
             unsafe_allow_html=True,
@@ -146,27 +159,28 @@ def render_debriefing_point(debrief: dict, action_index: dict | None = None) -> 
         f'<div class="key-learning-card"><strong>{_esc(debrief.get("key_learning", ""))}</strong></div>',
         unsafe_allow_html=True,
     )
-    st.markdown(f"**Clinical Reasoning:** {debrief.get('clinical_reasoning', '')}")
+    st.markdown(f"**Raciocínio Clínico:** {debrief.get('clinical_reasoning', '')}")
 
     if debrief.get("related_objectives"):
-        st.markdown(f"**Related Objectives:** {', '.join(debrief['related_objectives'])}")
+        st.markdown(f"**Objetivos Relacionados:** {', '.join(debrief['related_objectives'])}")
 
     if debrief.get("related_actions"):
         parts = []
         for ra in debrief["related_actions"]:
             parts.append(f"{ra['decision_point']}: {', '.join(ra['actions'])}")
-        st.markdown(f"**Related Actions:** {' | '.join(parts)}")
+        st.markdown(f"**Ações Relacionadas:** {' | '.join(parts)}")
 
     errors = debrief.get("common_errors", [])
     if errors:
-        st.markdown("**Common Errors:**")
+        st.markdown("**Erros Comuns:**")
         for error in errors:
             error_type = (error.get("error_type") or "unknown").lower()
             badge_cls = "badge-commission" if error_type == "commission" else "badge-omission"
-            badge = f'<span class="{badge_cls}">{error_type.upper()}</span>'
+            err_label = {"commission": "COMISSÃO", "omission": "OMISSÃO"}.get(error_type, error_type.upper())
+            badge = f'<span class="{badge_cls}">{err_label}</span>'
 
             st.markdown(f"{badge} **{_esc(error.get('description', ''))}**", unsafe_allow_html=True)
-            st.markdown(f"*Consequence:* {error.get('consequence', 'N/A')}")
+            st.markdown(f"*Consequência:* {error.get('consequence', 'N/D')}")
 
             ra = error.get("related_action")
             if ra:
@@ -178,41 +192,41 @@ def render_debriefing_point(debrief: dict, action_index: dict | None = None) -> 
                     ref_parts.append(f"**{action_id}**")
                 if action_desc:
                     ref_parts.append(f"*{action_desc}*")
-                st.caption(f"Related to: {' / '.join(ref_parts)}")
+                st.caption(f"Relacionado com: {' / '.join(ref_parts)}")
             st.markdown("---")
 
 
 def render_patient_profile(patient: dict) -> None:
-    st.markdown(f"**Age:** {patient.get('age', '?')} years")
-    st.markdown(f"**Gender:** {patient.get('gender', '?')}")
-    st.markdown(f"**Presenting Complaint:** {patient.get('presenting_complaint', 'N/A')}")
+    st.markdown(f"**Idade:** {patient.get('age', '?')} anos")
+    st.markdown(f"**Sexo:** {patient.get('gender', '?')}")
+    st.markdown(f"**Queixa Principal:** {patient.get('presenting_complaint', 'N/D')}")
     social = patient.get("social_context") or patient.get("social_history")
     if social:
-        st.markdown(f"**Social Context:** {social}")
+        st.markdown(f"**Contexto Social:** {social}")
 
     history = patient.get("medical_history", [])
-    st.markdown("**Medical History:**")
+    st.markdown("**Antecedentes Médicos:**")
     if history:
         for item in history:
             st.markdown(f"- {item}")
     else:
-        st.markdown("- None reported")
+        st.markdown("- Nenhum reportado")
 
     meds = patient.get("medications", [])
-    st.markdown("**Medications:**")
+    st.markdown("**Medicação:**")
     if meds:
         for item in meds:
             st.markdown(f"- {item}")
     else:
-        st.markdown("- None reported")
+        st.markdown("- Nenhuma reportada")
 
     allergies = patient.get("allergies", [])
-    st.markdown("**Allergies:**")
+    st.markdown("**Alergias:**")
     if allergies:
         for item in allergies:
             st.markdown(f"- {item}")
     else:
-        st.markdown("- No known allergies")
+        st.markdown("- Sem alergias conhecidas")
 
 def compute_action_duration(action: dict) -> float:
     dur = action.get("duration_minutes")
@@ -227,7 +241,7 @@ def _render_citation_inline(citation) -> str:
     if not citation:
         return ""
     if isinstance(citation, str):
-        return f'<div class="citation-inline">Citation: {_esc(citation)}</div>'
+        return f'<div class="citation-inline">Citação: {_esc(citation)}</div>'
     if isinstance(citation, list):
         labels = []
         for entry in citation:
@@ -236,11 +250,11 @@ def _render_citation_inline(citation) -> str:
                 sec = entry.get("section", "")
                 label = src
                 if sec:
-                    label += f", Section {sec}"
+                    label += f", Secção {sec}"
                 labels.append(label)
             else:
                 labels.append(str(entry))
-        return f'<div class="citation-inline">Citation: {_esc("; ".join(labels))}</div>'
+        return f'<div class="citation-inline">Citação: {_esc("; ".join(labels))}</div>'
     return ""
 
 
@@ -263,7 +277,7 @@ def render_action_card_interactive(
     dur_html = f'<span style="float:right;">{dur_badge}</span>' if dur_badge else ""
 
     selected = st.checkbox(
-        action.get("description", "Unknown action"),
+        action.get("description", "Ação desconhecida"),
         key=key,
         disabled=disabled,
     )
@@ -278,18 +292,18 @@ def render_action_card_interactive(
         branch_trigger = action.get("branch_trigger")
         if action.get("is_branch_trigger") and branch_trigger:
             branch_id = _esc(str(branch_trigger.get("branch_id", "?")))
-            branch_badge = f' <span class="badge-branch-trigger">Branch {branch_id}</span>'
+            branch_badge = f' <span class="badge-branch-trigger">Ramo {branch_id}</span>'
 
         if is_critical and revealed:
             css_class = "sim-action-hit-critical" if selected else "sim-action-missed-critical"
         else:
             css_class = ""
 
-        finding = _esc(action.get("finding", "N/A"))
+        finding = _esc(action.get("finding", "N/D"))
         rationale = _esc(action.get("rationale", ""))
-        parts = [f"{req_badge}{dur_badge_full}{branch_badge}", f"<b>Finding:</b> {finding}"]
+        parts = [f"{req_badge}{dur_badge_full}{branch_badge}", f"<b>Achado:</b> {finding}"]
         if rationale:
-            parts.append(f'<span style="font-size:0.85rem;color:#6B7280;">Rationale: {rationale}</span>')
+            parts.append(f'<span style="font-size:0.85rem;color:#6B7280;">Justificação: {rationale}</span>')
         citation_html = _render_citation_inline(action.get("citation"))
         if citation_html:
             parts.append(citation_html)
@@ -309,7 +323,7 @@ def render_action_card_interactive(
 
 
 def render_time_tracker(elapsed_minutes: float, time_window: dict | None) -> None:
-    st.metric("Elapsed Time", f"{elapsed_minutes:.0f} min")
+    st.metric("Tempo Decorrido", f"{elapsed_minutes:.0f} min")
 
     if time_window:
         remaining = time_window.get("remaining_window_minutes", 0)
@@ -318,11 +332,11 @@ def render_time_tracker(elapsed_minutes: float, time_window: dict | None) -> Non
             st.progress(used_fraction)
             left = remaining - elapsed_minutes
             if left > 15:
-                st.caption(f"{left:.0f} min remaining")
+                st.caption(f"{left:.0f} min restantes")
             elif left > 0:
-                st.warning(f"Only {left:.0f} min left!")
+                st.warning(f"Apenas {left:.0f} min restantes!")
             else:
-                st.error("Time window exceeded!")
+                st.error("Janela temporal excedida!")
 
 
 def compute_simulation_score(

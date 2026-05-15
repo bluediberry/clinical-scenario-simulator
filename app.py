@@ -6,7 +6,7 @@ from pathlib import Path
 import streamlit as st
 
 st.set_page_config(
-    page_title="Clinical Scenario Simulator",
+    page_title="Simulador de Cenários Clínicos",
     page_icon="\U0001f3ae",
     layout="wide",
 )
@@ -18,10 +18,10 @@ try:
         apply_theme,
         init_session_state,
         page_header,
-        render_language_toggle,
         render_phase_indicator,
         reset_simulation,
         run_phase_router,
+        translate_difficulty,
     )
 except ImportError:
     from simulation import (
@@ -30,10 +30,10 @@ except ImportError:
         apply_theme,
         init_session_state,
         page_header,
-        render_language_toggle,
         render_phase_indicator,
         reset_simulation,
         run_phase_router,
+        translate_difficulty,
     )
 
 apply_theme()
@@ -44,8 +44,8 @@ init_session_state()
 SCENARIOS_DIR = Path(__file__).parent / "scenarios"
 
 _ARCHITECTURE_LABELS = {
-    "context_engineering": "Context Engineering",
-    "multi_agent": "Multi-Agent",
+    "context_engineering": "arch_context_engineering",
+    "multi_agent": "arch_multi_agent",
 }
 
 
@@ -62,7 +62,8 @@ def _load_bundled_scenarios() -> list[dict]:
         if isinstance(scenario, dict):
             meta = scenario.get("metadata", {})
             arch = meta.get("architecture", "")
-            label = _ARCHITECTURE_LABELS.get(arch, "Bundled")
+            label_key = _ARCHITECTURE_LABELS.get(arch)
+            label = _t(label_key) if label_key else _t("source_bundled")
             entries.append({
                 "data": scenario,
                 "source": label,
@@ -73,13 +74,12 @@ def _load_bundled_scenarios() -> list[dict]:
 
 
 def _format_label(entry: dict) -> str:
-    title = entry.get("title", "Untitled")
-    source = entry.get("source", "Unknown")
+    title = entry.get("title", _t("untitled"))
+    source = entry.get("source", _t("source_unknown"))
     return f"[{source}] {title}"
 
 
 def phase_select():
-    render_language_toggle()
     page_header(_t("page_title"), _t("page_subtitle"))
     render_phase_indicator("select")
 
@@ -98,12 +98,12 @@ def phase_select():
                 if isinstance(scenario, dict):
                     new_uploaded.append({
                         "data": scenario,
-                        "source": "Uploaded",
+                        "source": _t("source_uploaded"),
                         "title": scenario.get("title", uf.name),
                         "scenario_id": uf.name.replace(".json", ""),
                     })
             except (json.JSONDecodeError, Exception):
-                st.error(f"Could not parse {uf.name}")
+                st.error(_t("file_parse_error", filename=uf.name))
         st.session_state.uploaded_scenarios = new_uploaded
 
     entries = _load_bundled_scenarios() + st.session_state.get("uploaded_scenarios", [])
@@ -121,11 +121,11 @@ def phase_select():
         scenario = entries[selected_idx]["data"]
 
         with st.expander(_t("preview"), expanded=False):
-            st.markdown(f"**{scenario.get('title', 'Untitled')}**")
+            st.markdown(f"**{scenario.get('title', _t('untitled'))}**")
             st.markdown(f"{scenario.get('domain', '')} \u203a {scenario.get('subdomain', '')}")
             st.markdown(
-                f"Difficulty: {(scenario.get('difficulty') or 'N/A').title()} | "
-                f"Duration: ~{scenario.get('estimated_duration_minutes', '?')} min"
+                f"{_t('difficulty_label')}: {translate_difficulty(scenario.get('difficulty'))} | "
+                f"{_t('duration_label')}: ~{scenario.get('estimated_duration_minutes', '?')} min"
             )
             stages = scenario.get("stages", [])
             total_dps = sum(len(s.get("decision_points", [])) for s in stages)
@@ -133,7 +133,7 @@ def phase_select():
                 len(dp.get("available_actions", []))
                 for s in stages for dp in s.get("decision_points", [])
             )
-            st.markdown(f"{len(stages)} stage(s), {total_dps} decision points, {total_actions} actions")
+            st.markdown(_t("preview_stats", stages=len(stages), dps=total_dps, actions=total_actions))
 
         if st.button(_t("start_simulation"), type="primary", use_container_width=True):
             reset_simulation()

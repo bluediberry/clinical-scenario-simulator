@@ -1,0 +1,1109 @@
+{
+  "title": "Diagnóstico de Enxaqueca com Aura em Consulta Externa",
+  "domain": "Neurologia",
+  "subdomain": "Diagnóstico de Cefaleia Primária",
+  "target_learner": "Specialist",
+  "target_learner_label": "Specialist",
+  "learning_objectives": [
+    {
+      "id": "LO1",
+      "description": "Aplicar critérios de diagnóstico ICHD-3 para enxaqueca com aura",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP3"
+      ]
+    },
+    {
+      "id": "LO2",
+      "description": "Quantificar a frequência dos episódios de cefaleia para orientação diagnóstica e decisão terapêutica",
+      "cognitive_demand": "Intermediate",
+      "assessed_at": [
+        "DP1"
+      ]
+    },
+    {
+      "id": "LO3",
+      "description": "Identificar e classificar subtipos de aura conforme ICHD-3 (visual, sensitiva, fala/linguagem, motora, tronco cerebral, retiniana)",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP1",
+        "DP3"
+      ]
+    },
+    {
+      "id": "LO4",
+      "description": "Diferenciar aura de enxaqueca de acidente isquémico transitório (AIT)",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP1"
+      ]
+    },
+    {
+      "id": "LO5",
+      "description": "Reconhecer apresentações atípicas de aura que requerem investigação adicional",
+      "cognitive_demand": "Advanced",
+      "assessed_at": [
+        "DP2"
+      ]
+    }
+  ],
+  "estimated_duration_minutes": 25,
+  "difficulty": "Intermediate",
+  "prerequisites": [
+    "Conhecimento dos critérios ICHD-3 para cefaleias primárias.",
+    "Capacidade de realizar um exame neurológico focado.",
+    "Familiaridade com os sinais de alerta ('red flags') em cefaleias."
+  ],
+  "patient": {
+    "age": 27,
+    "gender": "Feminino",
+    "presenting_complaint": "Episódios recorrentes de cefaleia unilateral pulsátil, precedida por 'luzes cintilantes' na visão.",
+    "medical_history": [
+      "Sem antecedentes médicos de relevo"
+    ],
+    "medications": [
+      "Contraceptivo oral combinado (etinilestradiol/levonorgestrel) 20 mcg/100 mcg id"
+    ],
+    "allergies": [
+      "Sem alergias conhecidas"
+    ],
+    "social_history": "Estudante de mestrado, vive com o companheiro. Nega tabagismo. Consumo social e ocasional de álcool."
+  },
+  "initial_presentation": "Mulher de 27 anos, estudante universitária, é observada em consulta de Neurologia por episódios de cefaleia com início na adolescência, mas com agravamento da frequência nos últimos 6 meses. Descreve uma dor de cabeça unilateral, pulsátil, de intensidade moderada a grave, associada a náuseas e fotofobia. Refere que, cerca de 20 minutos antes da dor, apresenta sempre uma perturbação visual com 'luzes cintilantes' e 'linhas em ziguezague' que se expandem no campo visual. Encontra-se assintomática no momento da consulta. Ao exame, os seus sinais vitais são: PA 124/78 mmHg, FC 68 bpm, FR 14 cpm, T 36.6°C, SpO2 99% em ar ambiente. GCS 15/15.",
+  "interaction_prompt": "É o(a) neurologista responsável pela consulta. O seu objetivo é realizar uma avaliação completa, estabelecer um diagnóstico e delinear um plano terapêutico e de aconselhamento adequado para esta doente.",
+  "clinical_time_window": null,
+  "stages": [
+    {
+      "id": "S1",
+      "name": "Stage 1: Avaliação Diagnóstica",
+      "setting": "Consulta de Neurologia",
+      "initial_state": "A doente, Ana, está na sua primeira consulta de Neurologia, referenciada pelo seu médico de família por cefaleias recorrentes. Apresenta-se calma e colaborante.",
+      "vital_signs": {
+        "blood_pressure": "124/78 mmHg",
+        "heart_rate": "68 bpm",
+        "respiratory_rate": "14 cpm",
+        "temperature": "36.6°C",
+        "oxygen_saturation": "99% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_1",
+          "description": "História familiar de cefaleias",
+          "finding": "A mãe da doente também sofre de 'enxaquecas', mas sem perturbações visuais associadas.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_2",
+          "description": "Detalhes sobre o estilo de vida",
+          "finding": "Refere um período de maior stress académico nos últimos meses, coincidindo com o aumento da frequência das crises. Padrão de sono regular. Dieta equilibrada.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_3",
+          "description": "Medicação para as crises",
+          "finding": "A doente refere tomar paracetamol 1g ou ibuprofeno 400mg quando a dor começa, com alívio parcial após 1-2 horas.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP1",
+          "context": "Inicia a anamnese para caracterizar detalhadamente a queixa da doente.",
+          "available_actions": [
+            {
+              "id": "A1",
+              "description": "Caracterizar detalhadamente a cefaleia (localização, qualidade, intensidade, duração)",
+              "finding": "Cefaleia hemicraniana, alternando os lados entre as crises. Qualidade pulsátil, intensidade 8/10. Duração de 6 a 24 horas se não medicada. Associada a náuseas, fotofobia e fonofobia. Agrava com atividade física.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Essencial para aplicar os critérios de diagnóstico ICHD-3. As características descritas são típicas da enxaqueca.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Duração de 4 a 72 horas. Pelo menos duas das seguintes características: localização unilateral, qualidade pulsátil, intensidade moderada a forte, e agravamento por atividade física de rotina.",
+                  "source": "nice.org.uk [Web]",
+                  "section": "",
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZq-Hf5BsM7EIcjkrgOfuk_bMrcRYYMxRygbHEeGiv3Jyb5suWNgHUYcKCL_mwxey4Okps0uSWW_tpwUX9_ZsQOlyL_XRLQyMq3fl7HHStRgmPN5tdMSntOF2Nk2yR63SUrXdPG5VByxYQqz_D_F5uisLkdZSz3hvV",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Cefaleia Primária: Abordagem Clínica para Mulher de 27 Anos com Cefaleia Unilateral Pulsátil e Aura Visual"
+                },
+                {
+                  "source_text": "**Características da Cefaleia:** A dor de cabeça que se segue à aura tipicamente apresenta as características da enxaqueca sem aura:\n    *   Duração de 4 a 72 horas.",
+                  "source": "nice.org.uk",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A2",
+              "description": "Caracterizar os sintomas visuais pré-cefaleia (aura)",
+              "finding": "A doente descreve o aparecimento gradual de luzes cintilantes e linhas em ziguezague no campo visual direito ou esquerdo, que se expandem ao longo de 15-20 minutos e desaparecem completamente antes do início da cefaleia. Nega perda de visão, diplopia ou outros sintomas.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Fundamental para diagnosticar o subtipo 'com aura'. A natureza visual, positiva, com progressão gradual e duração <60 min é característica da aura de enxaqueca, distinguindo-a de um AIT.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A3",
+              "description": "Quantificar a frequência das crises",
+              "finding": "A doente refere ter tido cerca de 4 a 5 crises por mês nos últimos 6 meses. Anteriormente, a frequência era de 1 a 2 crises por mês.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A frequência das crises é um critério essencial para o diagnóstico (enxaqueca episódica vs. crónica) e para avaliar a necessidade de tratamento profilático.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A4",
+              "description": "Inquirir sobre medicação habitual, incluindo contraceptivos",
+              "finding": "A doente confirma tomar um contracetivo oral combinado (etinilestradiol/levonorgestrel) de forma contínua há 5 anos.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A utilização de contracetivos orais combinados é uma contraindicação relativa em mulheres com enxaqueca com aura, devido ao aumento do risco de AVC isquémico. Esta informação é crucial para o aconselhamento e gestão.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A5",
+              "description": "Rastrear sintomas trigemino-autonómicos",
+              "finding": "Nega lacrimejo, congestão nasal, rinorreia, injeção conjuntival ou ptose associados às crises de cefaleia.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Ajuda a excluir Cefaleias Trigémino-Autonómicas (CTAs), como a cefaleia em salvas ou a hemicrânia paroxística, que podem partilhar a característica de dor unilateral.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "At least one of the following cranial autonomic symptoms or signs, ipsilateral to the pain: - conjunctival hyperaemia and/or tearing - nasal congestion and/or rhinorrhoea",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "14.1",
+                  "location": "ichd3_headache_pt_chunk_051_primary_stabbing_headache_is_m.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A6",
+              "description": "Rastrear alterações da consciência ou síncope",
+              "finding": "Nega qualquer episódio de perda de consciência, confusão (além da dificuldade de concentração pela dor) ou síncope durante ou entre as crises.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "A presença de alterações da consciência ou síncope seria um sinal de alerta, necessitando de investigação para excluir causas secundárias, como patologia vascular ou epilepsia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Relationship of seizure variables to personality disorders in epilepsy. J Neuropsychiatry Clin Neurosci 1993; 5: 283-286.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "14.1",
+                  "location": "ichd3_headache_pt_chunk_250_examples_include_the_concha_bu.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A7",
+              "description": "Rastrear sintomas de fraqueza motora",
+              "finding": "Nega qualquer sensação de fraqueza, perda de força ou dificuldade em mover os membros durante a aura ou a cefaleia. Os sintomas são puramente visuais.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "A ausência de défice motor ajuda a classificar a aura como 'típica' e a excluir a enxaqueca hemiplégica, uma forma rara que requer uma abordagem diagnóstica e terapêutica diferente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Evidence for a separate type of migraine with aura: sporadic hemiplegic migraine. Neurology 2003; 60: 595-601.",
+                  "source": "ICHD-3 2018",
+                  "section": "1. Migraine in general > 1.2 Migraine with aura > 1.2.3 Hemiplegic migraine",
+                  "location": "ichd3_headache_2018_chunk_006_123_hemiplegic_migraine.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A8",
+              "description": "Referenciar para avaliação urgente por suspeita de AIT",
+              "finding": "A referenciação para o serviço de urgência é efetuada. A investigação subsequente, incluindo Angio-TC e ecocardiograma, é normal, causando ansiedade desnecessária à doente e atrasando o diagnóstico correto.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta ação representa um erro de diagnóstico. A natureza gradual e os fenómenos visuais positivos da aura da doente são atípicos para um AIT, que geralmente se manifesta com défices negativos (perda de função) de início súbito.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B3",
+                "condition": "O clínico interpreta erradamente a aura visual da enxaqueca como um Acidente Isquémico Transitório (AIT), devido à presença de sintomas neurológicos focais."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A1",
+            "A2",
+            "A3",
+            "A4"
+          ],
+          "feedback_on_completion": "A história clínica é altamente consistente com Enxaqueca com Aura Típica. A frequência de 4-5 crises/mês é significativa. A utilização de um contracetivo oral combinado é um fator de risco importante que necessita de ser abordado."
+        },
+        {
+          "id": "DP2",
+          "context": "Após a colheita da história clínica detalhada, procede ao exame objetivo para excluir sinais de alarme ('red flags') e confirmar a natureza primária da cefaleia.",
+          "available_actions": [
+            {
+              "id": "A9",
+              "description": "Realizar exame neurológico completo",
+              "finding": "O exame neurológico é rigorosamente normal. Pares cranianos, força motora, sensibilidade, coordenação e reflexos osteotendinosos sem alterações. Sem sinais meníngeos.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "É mandatório realizar um exame neurológico completo. Um exame normal entre as crises suporta o diagnóstico de uma cefaleia primária, como a enxaqueca, e ajuda a excluir causas secundárias.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Em casos de enxaqueca primária, o exame é tipicamente normal. O objetivo é identificar quaisquer sinais de alerta ('red flags') que possam sugerir uma causa secundária para a cefaleia.",
+                  "source": "nice.org.uk [Web]",
+                  "section": "",
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZq-Hf5BsM7EIcjkrgOfuk_bMrcRYYMxRygbHEeGiv3Jyb5suWNgHUYcKCL_mwxey4Okps0uSWW_tpwUX9_ZsQOlyL_XRLQyMq3fl7HHStRgmPN5tdMSntOF2Nk2yR63SUrXdPG5VByxYQqz_D_F5uisLkdZSz3hvV",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Cefaleia Primária: Abordagem Clínica para Mulher de 27 Anos com Cefaleia Unilateral Pulsátil e Aura Visual"
+                }
+              ],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A10",
+              "description": "Realizar exame físico geral e medir PA",
+              "finding": "Bom estado geral, eupneica, apirética. Auscultação cardíaca e pulmonar sem alterações. Pressão arterial: 126/80 mmHg. IMC: 22 kg/m².",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Um exame físico geral completo contribui para a avaliação global da saúde da doente e para a exclusão de patologias sistémicas que possam manifestar-se com cefaleias.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                8
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A11",
+              "description": "Realizar fundoscopia",
+              "finding": "As papilas óticas apresentam contornos nítidos, sem evidência de edema (papiledema) ou outras alterações.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "A fundoscopia é importante para excluir papiledema, um sinal de hipertensão intracraniana, que constituiria um sinal de alerta major e obrigaria a investigação imagiológica urgente.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Headache attributed to cerebral venous thrombosis does not present specific characteristics, but is usually diffuse, progressive, of high intensity, and associated with other signs of intracranial hypertension.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "6.6.1",
+                  "location": "ichd3_headache_pt_chunk_115_headache_attributed_to_cerebra.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                4
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A12",
+              "description": "Prescrever sumatriptano 50 mg PO para as crises",
+              "finding": "A prescrição de um triptano é efetuada. Esta ação é prematura, pois ignora a recomendação de iniciar com AINEs e não aborda o risco vascular aumentado pela toma de contracetivo oral combinado.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta é uma abordagem subótima. Os triptanos são segunda linha no tratamento agudo. Mais importante, prescrevê-los sem antes discutir o risco vascular associado ao uso de contracetivos em doentes com enxaqueca com aura é uma falha no aconselhamento de segurança.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B2",
+                "condition": "O clínico prescreve sumatriptano, um vasoconstritor, sem uma avaliação completa do risco vascular da doente (enxaqueca com aura + uso de COC)."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A9"
+          ],
+          "feedback_on_completion": "O exame físico e neurológico sem alterações reforça a suspeita de uma cefaleia primária. A ausência de sinais de alerta torna a realização de neuroimagem desnecessária nesta fase."
+        }
+      ],
+      "progression_criteria": "A avaliação clínica (anamnese e exame objetivo) está completa, permitindo formular um diagnóstico e plano terapêutico."
+    },
+    {
+      "id": "S2",
+      "name": "Stage 2: Plano Terapêutico e Aconselhamento",
+      "setting": "Consulta de Neurologia",
+      "initial_state": "Com base na história e no exame físico normal, está em posição de estabelecer o diagnóstico definitivo e discutir o plano de tratamento com a doente.",
+      "vital_signs": {
+        "blood_pressure": "124/78 mmHg",
+        "heart_rate": "68 bpm",
+        "respiratory_rate": "14 cpm",
+        "temperature": "36.6°C",
+        "oxygen_saturation": "99% em ar ambiente"
+      },
+      "neurological_assessment": {
+        "gcs": "E4V5M6 = 15/15",
+        "nihss": null
+      },
+      "all_optional": [
+        {
+          "id": "INFO_4",
+          "description": "Rever critérios ICHD-3 para Enxaqueca com Aura",
+          "finding": "Ataques que preenchem critérios para Enxaqueca com aura e pelo menos dois ataques com: A) Um ou mais sintomas de aura totalmente reversíveis; B) Pelo menos 3 de 6 características da aura (ex: progressão gradual, duração 5-60 min, unilateral); C) Cefaleia acompanha ou segue a aura em 60 min.",
+          "media_reference": null,
+          "media_type": null
+        },
+        {
+          "id": "INFO_5",
+          "description": "Critérios para tratamento profilático",
+          "finding": "A profilaxia deve ser considerada se as crises forem frequentes (tipicamente ≥4/mês), graves, ou se o tratamento agudo for ineficaz ou contraindicado.",
+          "media_reference": null,
+          "media_type": null
+        }
+      ],
+      "decision_points": [
+        {
+          "id": "DP3",
+          "context": "O exame neurológico é normal e a história é clássica. É tempo de formalizar o diagnóstico e delinear o tratamento para as crises agudas.",
+          "available_actions": [
+            {
+              "id": "A13",
+              "description": "Estabelecer o diagnóstico de Enxaqueca com Aura",
+              "finding": "Comunica à doente que o seu quadro clínico preenche os critérios para o diagnóstico de Enxaqueca com Aura (código 1.2 da ICHD-3), explicando que se trata de uma cefaleia primária comum.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A aplicação formal dos critérios ICHD-3 é o padrão-ouro para o diagnóstico de cefaleias primárias. A história da doente (pelo menos 2 ataques com aura visual típica, seguida de cefaleia com características de enxaqueca) cumpre esses critérios.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Para um diagnóstico definitivo, o paciente deve ter apresentado pelo menos duas crises que cumpram os seguintes critérios: Presença de Aura... A aura é acompanhada, ou seguida dentro de 60 minutos, por cefaleia.",
+                  "source": "nice.org.uk [Web]",
+                  "section": "",
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZq-Hf5BsM7EIcjkrgOfuk_bMrcRYYMxRygbHEeGiv3Jyb5suWNgHUYcKCL_mwxey4Okps0uSWW_tpwUX9_ZsQOlyL_XRLQyMq3fl7HHStRgmPN5tdMSntOF2Nk2yR63SUrXdPG5VByxYQqz_D_F5uisLkdZSz3hvV",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Cefaleia Primária: Abordagem Clínica para Mulher de 27 Anos com Cefaleia Unilateral Pulsátil e Aura Visual"
+                },
+                {
+                  "source_text": "**História Clínica:** A descrição da paciente — cefaleia unilateral, pulsátil, com náuseas e vômitos, precedida por aura visual (\"luzes cintilantes\") — é altamente sugestiva de enxaqueca com aura.",
+                  "source": "nice.org.uk",
+                  "section": "",
+                  "location": "",
+                  "location_type": "Web",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A14",
+              "description": "Recomendar tratamento de 1ª linha para crises (AINE)",
+              "finding": "Aconselha a doente a tomar ibuprofeno 600 mg ou naproxeno 500 mg por via oral, logo no início da cefaleia (não durante a aura).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Os anti-inflamatórios não esteroides (AINEs) em doses adequadas são o tratamento de primeira linha recomendado para o alívio da dor na enxaqueca aguda, devido à sua eficácia e perfil de segurança.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                3,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A15",
+              "description": "Discutir tratamento de 2ª linha (Triptano)",
+              "finding": "Explica que, se os AINEs não forem eficazes após 1-2 horas, ou em crises muito intensas, um triptano (ex: sumatriptano 50 mg PO) pode ser usado. Reforça que esta opção será mais segura após a questão contracetiva ser resolvida.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Supportive",
+              "rationale": "Os triptanos são eficazes e específicos para a enxaqueca, atuando como segunda linha. É importante educar o doente sobre a sequência correta de tratamento e as condições para o seu uso seguro.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A16",
+              "description": "Recomendar ressonância magnética (RM) cerebral para confirmação",
+              "finding": "A RM cerebral é solicitada. Os resultados não mostram alterações estruturais, confirmando a natureza primária da cefaleia, mas a investigação não era estritamente necessária e atrasou o início do aconselhamento terapêutico.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Optional",
+              "rationale": "Numa doente jovem com uma história e exame neurológico típicos de enxaqueca com aura, a neuroimagem não é rotineiramente indicada. Esta ação representa um excesso de investigação.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "Para pacientes que preenchem os critérios clínicos para enxaqueca e não apresentam sinais de alerta, exames de imagem como tomografia computadorizada ou ressonância magnética não são rotineiramente necessários para o diagnóstico.",
+                  "source": "nice.org.uk [Web]",
+                  "section": "",
+                  "location": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZq-Hf5BsM7EIcjkrgOfuk_bMrcRYYMxRygbHEeGiv3Jyb5suWNgHUYcKCL_mwxey4Okps0uSWW_tpwUX9_ZsQOlyL_XRLQyMq3fl7HHStRgmPN5tdMSntOF2Nk2yR63SUrXdPG5VByxYQqz_D_F5uisLkdZSz3hvV",
+                  "location_type": "Web",
+                  "title": "Diagnóstico de Cefaleia Primária: Abordagem Clínica para Mulher de 27 Anos com Cefaleia Unilateral Pulsátil e Aura Visual"
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A17",
+              "description": "Prescrever tramadol 50 mg para controlo da dor",
+              "finding": "A prescrição de um opioide é efetuada. Esta ação viola as diretrizes de tratamento da enxaqueca, que desaconselham o uso de opioides devido ao risco de dependência e de cronificação da cefaleia (cefaleia por uso excessivo de medicação).",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "O uso de opioides para a enxaqueca deve ser evitado. É uma prática incorreta que pode levar a piores resultados a longo prazo, incluindo o desenvolvimento de cefaleia por uso excessivo de medicação.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [
+                {
+                  "source_text": "When a headache that follows a head injury becomes permanent, the possibility of 8.2 Medication overuse headache should be considered.",
+                  "source": "ICHD-3 Classificacao Cefaleias (PT)",
+                  "section": "5.6",
+                  "location": "ichd3_headache_pt_chunk_053_daily_persistent_headache_from.txt",
+                  "location_type": "RAG",
+                  "title": ""
+                }
+              ],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "A13",
+            "A14"
+          ],
+          "feedback_on_completion": "O diagnóstico de Enxaqueca com Aura foi estabelecido e comunicado. Foi iniciado um plano de tratamento para as crises agudas com um AINE, que é a abordagem de primeira linha recomendada."
+        },
+        {
+          "id": "DP4",
+          "context": "Com o diagnóstico e o plano para as crises agudas definidos, é imperativo abordar o risco vascular associado à medicação atual da doente.",
+          "available_actions": [
+            {
+              "id": "A18",
+              "description": "Aconselhar sobre o risco de AVC com contracetivos orais combinados (COC)",
+              "finding": "Explica à doente que a combinação de enxaqueca com aura e o uso de COCs aumenta significativamente o risco de Acidente Vascular Cerebral (AVC) isquémico e que a sua suspensão é fortemente recomendada.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Este é um ponto de segurança crítico. A evidência demonstra uma associação sinérgica entre enxaqueca com aura e COCs no aumento do risco de AVC, tornando o aconselhamento para a suspensão uma intervenção essencial para a redução de risco.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A19",
+              "description": "Recomendar a suspensão imediata do COC",
+              "finding": "Recomenda formalmente a interrupção do contracetivo oral combinado atual, explicando que os benefícios de continuar não superam os riscos.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "A recomendação para suspender o COC é a consequência direta da identificação do risco. É uma ação mandatória para mitigar o risco de um evento cerebrovascular adverso.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                1,
+                3
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A20",
+              "description": "Discutir alternativas contracetivas seguras",
+              "finding": "Discute métodos alternativos mais seguros, como dispositivos intrauterinos (DIU de cobre ou hormonal), o implante subdérmico ou contracetivos orais apenas com progestativo. Recomenda discutir as opções com o seu Ginecologista/Médico de Família.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Não basta recomendar a suspensão; é crucial fornecer orientação sobre alternativas seguras para garantir a continuidade da contraceção e a adesão da doente ao plano, numa abordagem de decisão partilhada.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "A21",
+              "description": "Manter medicação atual e reavaliar em 6 meses",
+              "finding": "O clínico decide não abordar a questão do contracetivo, considerando-a não prioritária. A doente continua a medicação, mantendo um risco elevado e evitável de AVC.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta é uma omissão grave. Ignorar a contraindicação do uso de COCs em doentes com enxaqueca com aura é uma falha na gestão de risco e viola as boas práticas clínicas, expondo a doente a um perigo desnecessário.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                1,
+                2
+              ],
+              "is_branch_trigger": true,
+              "branch_trigger": {
+                "branch_id": "B1",
+                "condition": "O clínico falha em reconhecer a contraindicação do uso de contracetivos orais combinados (COC) em doentes com enxaqueca com aura, não aconselhando a sua suspensão."
+              }
+            }
+          ],
+          "critical_action_ids": [
+            "A18",
+            "A19",
+            "A20"
+          ],
+          "feedback_on_completion": "Realizou um aconselhamento de segurança crucial ao abordar o risco associado ao contracetivo oral combinado. A recomendação de suspensão e a discussão de alternativas são passos essenciais na gestão a longo prazo desta doente, minimizando o risco de AVC."
+        }
+      ],
+      "progression_criteria": "O plano terapêutico e o aconselhamento de risco foram concluídos."
+    }
+  ],
+  "branches": [
+    {
+      "id": "B1",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S2",
+      "trigger_dp_id": "DP4",
+      "trigger_action_id": "A21",
+      "trigger_context": "O clínico falha em reconhecer a contraindicação do uso de contracetivos orais combinados (COC) em doentes com enxaqueca com aura, não aconselhando a sua suspensão.",
+      "consequence_context": "A doente continua a tomar o COC. Três meses depois, contacta o seu médico por um episódio de sintomas neurológicos transitórios, levantando a suspeita de um evento isquémico.",
+      "decision_points": [
+        {
+          "id": "B1_DP1",
+          "context": "Três meses após a consulta, recebe um telefonema da doente. Ela relata um episódio súbito de 'dormência e formigueiro' no braço e face do lado esquerdo, que durou cerca de 15 minutos e resolveu completamente. Está muito ansiosa.",
+          "available_actions": [
+            {
+              "id": "B1_A1",
+              "description": "Aconselhar a doente a dirigir-se ao Serviço de Urgência imediatamente",
+              "finding": "A doente é aconselhada a procurar observação médica urgente para excluir um Acidente Isquémico Transitório (AIT).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Sintomas neurológicos focais de início súbito, mesmo que transitórios, requerem avaliação urgente para excluir um AIT, especialmente numa doente com fatores de risco (enxaqueca com aura + COC).",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A2",
+              "description": "Tranquilizar a doente e agendar consulta para a semana seguinte",
+              "finding": "A doente é tranquilizada, mas a oportunidade de uma avaliação urgente é perdida. Se se tratasse de um AIT de alto risco, o risco de AVC nas horas/dias seguintes estaria aumentado.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Esta é uma decisão incorreta. Atrasar a avaliação de um potencial AIT viola as diretrizes clínicas e aumenta o risco para a doente. Os sintomas sensitivos podem ser uma forma de aura, mas a exclusão de AIT é prioritária.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A1"
+          ],
+          "feedback_on_completion": "A doente foi corretamente encaminhada para o Serviço de Urgência. A avaliação subsequente irá clarificar a natureza do evento e realçar a importância da gestão de risco que foi omitida.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B1_DP2",
+          "context": "No Serviço de Urgência, a doente é avaliada. O exame neurológico é normal. A investigação com TC e Angio-TC cerebral não mostra alterações. É contactado como neurologista assistente.",
+          "available_actions": [
+            {
+              "id": "B1_A3",
+              "description": "Reconhecer a omissão e suspender o COC imediatamente",
+              "finding": "Reconhece que o evento, seja um AIT ou uma aura sensitiva, ocorreu num contexto de risco elevado evitável. Recomenda a suspensão imediata do COC e o início de aspirina 100 mg, enquanto se completa o estudo.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Este é o passo corretivo essencial. A ocorrência de um evento neurológico focal torna a suspensão do COC imperativa e inadiável para prevenir futuros eventos.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B1_A4",
+              "description": "Manter o COC e solicitar estudo cardíaco exaustivo",
+              "finding": "A decisão de manter o COC é tomada, focando a investigação noutras possíveis causas. Esta ação não aborda o fator de risco mais significativo e modificável, mantendo a doente em perigo.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Falha em corrigir o erro inicial. Manter o COC após um evento neurológico focal em doente com enxaqueca com aura é uma má prática clínica grave.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B1_A3"
+          ],
+          "feedback_on_completion": "O erro inicial foi corrigido. A suspensão do contracetivo era a medida mais importante para a segurança da doente. O episódio serviu como um alerta crítico para a importância da gestão de fatores de risco.",
+          "outcome_type": "end"
+        }
+      ],
+      "merge_point": null
+    },
+    {
+      "id": "B2",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP2",
+      "trigger_action_id": "A12",
+      "trigger_context": "O clínico prescreve sumatriptano, um vasoconstritor, sem uma avaliação completa do risco vascular da doente (enxaqueca com aura + uso de COC).",
+      "consequence_context": "A doente toma o sumatriptano durante a sua crise seguinte e desenvolve efeitos secundários que mimetizam um evento cardíaco, gerando ansiedade e a necessidade de reavaliação.",
+      "decision_points": [
+        {
+          "id": "B2_DP1",
+          "context": "Uma semana depois, a doente telefona a relatar que tomou o sumatriptano para uma crise e, 30 minutos depois, sentiu uma 'pressão forte no peito e pescoço'. Os sintomas duraram cerca de uma hora. A cefaleia melhorou. Está assustada.",
+          "available_actions": [
+            {
+              "id": "B2_A1",
+              "description": "Reconhecer como um efeito secundário comum dos triptanos",
+              "finding": "Explica à doente que a sensação de pressão ou aperto no peito, pescoço ou garganta são efeitos secundários conhecidos e geralmente benignos dos triptanos, não sendo de origem cardíaca. Aconselha-a a não tomar mais até nova avaliação em consulta.",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "É crucial diferenciar os 'sintomas de triptanos' de uma verdadeira isquemia cardíaca. Reconhecer este efeito adverso comum permite tranquilizar a doente e planear a alteração terapêutica.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B2_A2",
+              "description": "Aconselhar a ida ao Serviço de Urgência para excluir enfarte do miocárdio",
+              "finding": "A doente é enviada para o SU. O estudo cardiológico (ECG, enzimas cardíacas) é negativo, mas o evento causa grande ansiedade e custos desnecessários. A confiança na terapêutica fica abalada.",
+              "finding_relevance": "Non Contributory",
+              "requirement": "Optional",
+              "rationale": "Embora cautelosa, esta abordagem é provavelmente um exagero num doente jovem sem outros fatores de risco cardíaco e com sintomas clássicos de efeito adverso de triptano. Uma boa anamnese telefónica poderia ter evitado a ida à urgência.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                2,
+                5
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B2_A1"
+          ],
+          "feedback_on_completion": "O efeito adverso do triptano foi corretamente identificado. Este episódio sublinha a importância de discutir os potenciais efeitos secundários com os doentes e de avaliar cuidadosamente o risco vascular antes de prescrever vasoconstritores.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S2",
+        "target_dp_id": "DP3",
+        "target_action_id": "A14",
+        "transition_context": "Após a experiência com o triptano, a abordagem terapêutica é reiniciada, focando-se agora corretamente na terapêutica de primeira linha (AINEs) e na gestão de risco."
+      }
+    },
+    {
+      "id": "B3",
+      "branch_type": "consequence",
+      "trigger_stage_id": "S1",
+      "trigger_dp_id": "DP1",
+      "trigger_action_id": "A8",
+      "trigger_context": "O clínico interpreta erradamente a aura visual da enxaqueca como um Acidente Isquémico Transitório (AIT), devido à presença de sintomas neurológicos focais.",
+      "consequence_context": "A doente é submetida a uma investigação de urgência extensa e desnecessária para AIT, o que gera ansiedade, custos e atrasa o diagnóstico e tratamento corretos.",
+      "decision_points": [
+        {
+          "id": "B3_DP1",
+          "context": "A doente é observada no Serviço de Urgência. A história é de sintomas visuais transitórios seguidos de cefaleia. O exame neurológico atual é normal. Qual a sua abordagem investigativa?",
+          "available_actions": [
+            {
+              "id": "B3_A1",
+              "description": "Pedir TC cerebral sem contraste",
+              "finding": "TC cerebral sem contraste não revela hemorragia aguda ou sinais de isquemia estabelecida.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Critical",
+              "rationale": "Numa suspeita de evento neurológico agudo, a TC é o primeiro passo para excluir hemorragia.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                20,
+                30
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            },
+            {
+              "id": "B3_A2",
+              "description": "Pedir Angio-TC dos vasos cerebrais e cervicais",
+              "finding": "A Angio-TC não mostra oclusões ou estenoses significativas nos vasos intracranianos ou nas artérias carótidas/vertebrais.",
+              "finding_relevance": "Exclusionary",
+              "requirement": "Supportive",
+              "rationale": "Parte do estudo de AIT para procurar a fonte embólica ou estenose. Neste caso, é de baixo rendimento, dado a história ser mais sugestiva de enxaqueca.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                25,
+                35
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A1"
+          ],
+          "feedback_on_completion": "A investigação imagiológica inicial é negativa para patologia vascular aguda. Isto deveria levar a uma reconsideração do diagnóstico diferencial.",
+          "outcome_type": "progress"
+        },
+        {
+          "id": "B3_DP2",
+          "context": "A investigação imagiológica de urgência é negativa. A doente permanece sob observação. Um colega mais experiente sugere rever a semiologia dos sintomas visuais.",
+          "available_actions": [
+            {
+              "id": "B3_A3",
+              "description": "Re-questionar sobre a progressão e características da aura",
+              "finding": "Ao ser re-questionada, a doente enfatiza que as 'luzes' começam pequenas e 'crescem' ao longo de vários minutos, e são fenómenos 'extra' (positivos), não uma 'perda' de visão (negativo).",
+              "finding_relevance": "Confirmatory",
+              "requirement": "Critical",
+              "rationale": "Este é o passo chave para a correção do diagnóstico. A progressão gradual e os fenómenos positivos são as características que distinguem a aura da enxaqueca da maioria dos AITs.",
+              "media_reference": null,
+              "media_type": null,
+              "citation": [],
+              "duration_minutes": [
+                5,
+                10
+              ],
+              "is_branch_trigger": false,
+              "branch_trigger": null
+            }
+          ],
+          "critical_action_ids": [
+            "B3_A3"
+          ],
+          "feedback_on_completion": "A reavaliação da história clarificou as características típicas da aura de enxaqueca. O diagnóstico de AIT é agora muito improvável.",
+          "outcome_type": "merge"
+        }
+      ],
+      "merge_point": {
+        "target_stage_id": "S1",
+        "target_dp_id": "DP2",
+        "target_action_id": "A9",
+        "transition_context": "Após a investigação de urgência ter sido negativa e a reavaliação da história ter clarificado as características de aura de enxaqueca, a doente tem alta do SU com orientação para prosseguir a avaliação em consulta, regressando ao ponto do exame neurológico."
+      }
+    }
+  ],
+  "max_branch_length": 5,
+  "debriefing": [
+    {
+      "key_learning": "A aplicação rigorosa dos critérios de diagnóstico ICHD-3 é fundamental para distinguir a enxaqueca com aura de outras condições neurológicas, como o AIT.",
+      "clinical_reasoning": "O diagnóstico de enxaqueca com aura é clínico. As características da aura, como a progressão gradual (≥5 minutos), a duração (5-60 minutos) e a presença de fenómenos positivos (luzes, formigueiro), são cruciais para a distinguir de um AIT, que tipicamente tem um início súbito e défices negativos. Uma anamnese detalhada evita investigações desnecessárias e ansiedade para o doente.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Confundir aura visual com AIT, levando a investigação de urgência desnecessária.",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A8"
+          },
+          "consequence": "Atraso no diagnóstico correto, custos acrescidos para o sistema de saúde, e ansiedade iatrogénica para o doente."
+        },
+        {
+          "error_type": "omission",
+          "description": "Não questionar detalhadamente sobre a semiologia da aura (progressão, duração, fenómenos positivos vs. negativos).",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A2"
+          },
+          "consequence": "Incapacidade de aplicar corretamente os critérios de diagnóstico, levando a incerteza e potencial erro diagnóstico."
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO3",
+        "LO4"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP1",
+          "actions": [
+            "A2",
+            "A8"
+          ]
+        },
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A13"
+          ]
+        },
+        {
+          "decision_point": "B3_DP2",
+          "actions": [
+            "B3_A3"
+          ]
+        }
+      ],
+      "citation": [
+        {
+          "source_text": "**História Clínica:** A descrição da paciente — cefaleia unilateral, pulsátil, com náuseas e vômitos, precedida por aura visual (\"luzes cintilantes\") — é altamente sugestiva de enxaqueca com aura.",
+          "source": "nice.org.uk",
+          "section": "",
+          "location": "",
+          "location_type": "Web",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "key_learning": "A identificação e gestão de fatores de risco vascular é uma componente crítica da consulta de cefaleias, especialmente em mulheres jovens.",
+      "clinical_reasoning": "A enxaqueca com aura é um fator de risco independente para AVC isquémico. A sua associação com contracetivos orais combinados aumenta este risco de forma sinérgica. É mandatório que o clínico investigue ativamente o uso destes fármacos e aconselhe a sua suspensão, orientando para alternativas mais seguras. Falhar nesta intervenção é uma omissão grave com potenciais consequências devastadoras.",
+      "common_errors": [
+        {
+          "error_type": "omission",
+          "description": "Não perguntar especificamente sobre o uso de contracetivos orais.",
+          "related_action": {
+            "decision_point": "DP1",
+            "action": "A4"
+          },
+          "consequence": "Perda da oportunidade de identificar um fator de risco major e modificável para AVC."
+        },
+        {
+          "error_type": "commission",
+          "description": "Desvalorizar a associação entre COC e enxaqueca com aura, não recomendando a sua suspensão.",
+          "related_action": {
+            "decision_point": "DP4",
+            "action": "A21"
+          },
+          "consequence": "Manutenção de um risco de AVC elevado e evitável, com potencial para um evento neurológico grave."
+        }
+      ],
+      "related_objectives": [
+        "LO5"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP1",
+          "actions": [
+            "A4"
+          ]
+        },
+        {
+          "decision_point": "DP4",
+          "actions": [
+            "A18",
+            "A19",
+            "A20",
+            "A21"
+          ]
+        },
+        {
+          "decision_point": "B1_DP2",
+          "actions": [
+            "B1_A3"
+          ]
+        }
+      ],
+      "citation": null
+    },
+    {
+      "key_learning": "O tratamento da enxaqueca aguda segue uma abordagem escalonada, iniciando-se com AINEs, sendo os triptanos uma opção de segunda linha.",
+      "clinical_reasoning": "As diretrizes recomendam uma abordagem por passos no tratamento agudo da enxaqueca. AINEs (como ibuprofeno ou naproxeno) são a primeira linha. Os triptanos, embora muito eficazes, são reservados para casos em que os AINEs falham ou para crises de grande intensidade desde o início. O uso de opioides deve ser evitado devido ao risco de abuso e de cefaleia por uso excessivo de medicação.",
+      "common_errors": [
+        {
+          "error_type": "commission",
+          "description": "Prescrever um triptano como tratamento de primeira linha sem tentar primeiro um AINE.",
+          "related_action": {
+            "decision_point": "DP2",
+            "action": "A12"
+          },
+          "consequence": "Uso desnecessário de uma medicação mais específica e com mais potenciais efeitos secundários, quando uma opção mais simples poderia ser eficaz."
+        },
+        {
+          "error_type": "commission",
+          "description": "Prescrever opioides para o tratamento de enxaqueca.",
+          "related_action": {
+            "decision_point": "DP3",
+            "action": "A17"
+          },
+          "consequence": "Aumento do risco de dependência, tolerância e, paradoxalmente, cronificação da cefaleia (cefaleia por uso excessivo de medicação)."
+        }
+      ],
+      "related_objectives": [
+        "LO1",
+        "LO2"
+      ],
+      "related_actions": [
+        {
+          "decision_point": "DP3",
+          "actions": [
+            "A14",
+            "A15",
+            "A17"
+          ]
+        }
+      ],
+      "citation": null
+    }
+  ],
+  "key_takeaways": [
+    "O diagnóstico de enxaqueca com aura é clínico, baseado nos critérios ICHD-3; a neuroimagem raramente é necessária na ausência de sinais de alerta. [Source: nice.org.uk [Web]]",
+    "A caracterização da aura (progressão gradual, fenómenos positivos, duração 5-60 min) é essencial para a diferenciar de um AIT. [Source: nice.org.uk [Web]]",
+    "A combinação de enxaqueca com aura e contracetivos orais combinados aumenta significativamente o risco de AVC isquémico e exige a suspensão do contracetivo.",
+    "A quantificação da frequência das crises (nº/mês) é fundamental para decidir sobre a necessidade de terapêutica profilática.",
+    "O tratamento de primeira linha para crises agudas de enxaqueca são os AINEs; os triptanos são segunda linha.",
+    "O rastreio de sintomas trigemino-autonómicos, alterações da consciência e défices motores é importante para excluir outras cefaleias primárias e secundárias."
+  ],
+  "metadata": {
+    "scenario_id": "cea6d3a5-48f0-4f53-9726-6fb4a8c16eb4",
+    "version": "1.0.0",
+    "domain": "Neurology",
+    "created_at": "2026-05-14T16:29:50.833559",
+    "architecture": "context_engineering",
+    "retrieval_strategy": "rag_search",
+    "model_backend": "gemini-2.5-pro",
+    "model": "gemini-2.5-pro",
+    "preset_key": "enxaqueca_com_aura_feminino",
+    "few_shot_used": true,
+    "condition": "C3",
+    "generation_time_ms": 157526.30925178528,
+    "token_count": {
+      "input": 71092,
+      "output": 14985,
+      "total": 86077
+    },
+    "revision_count": 1,
+    "sources_consulted": [
+      "ICHD-3 2018",
+      "nice.org.uk [Web]",
+      "ICHD-3 Classificacao Cefaleias (PT)"
+    ],
+    "retrieval_coverage": 0.91,
+    "structural_warnings": []
+  }
+}

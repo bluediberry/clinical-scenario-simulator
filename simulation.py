@@ -37,144 +37,140 @@ except ImportError:
 
 
 _STRINGS = {
-    "en": {
-        "page_title": "Clinical Scenario Simulator",
-        "page_subtitle": "Step-by-step interactive walkthrough of clinical scenarios",
-        "upload_label": "Upload scenario JSON files",
-        "upload_help": "Upload one or more scenario JSON files to simulate them.",
-        "choose_scenario": "Choose a scenario",
-        "start_simulation": "Start Simulation",
-        "begin_simulation": "Begin Simulation",
-        "submit_decisions": "Submit Decisions",
-        "next_dp": "Next Decision Point",
-        "next": "Next",
-        "try_again": "Try Again",
-        "choose_another": "Choose Another Scenario",
-        "patient_profile": "Patient Profile",
-        "initial_presentation": "Initial Presentation",
-        "your_role": "Your Role",
-        "clinical_time_window": "Clinical Time Window",
-        "learning_objectives": "Learning Objectives",
-        "available_actions": "Available Actions",
-        "performance_summary": "Performance Summary",
-        "dp_breakdown": "Decision Point Breakdown",
-        "errors_identified": "Errors Identified",
-        "clinical_debriefing": "Clinical Debriefing",
-        "key_takeaways": "Key Takeaways",
-        "critical_actions": "Critical Actions",
-        "supportive_actions": "Supportive Actions",
-        "elapsed_time": "Elapsed Time",
-        "preview": "Preview",
-        "back": "Back",
-        "no_scenarios": "No scenarios available. Upload a scenario JSON file or add files to the scenarios/ folder.",
-        "no_errors": "No common errors matched your performance \u2014 well done!",
-        "feedback": "Feedback",
-        "critical_performed": "Critical Actions Performed",
-        "critical_hit_total": "Critical Hit / Total",
-        "symptom_onset": "Symptom onset",
-        "treatment_window": "Treatment window",
-        "remaining": "Remaining",
-        "language_label": "Language",
-        "simulation": "Simulation",
-        "stage": "Stage",
-        "decision_point": "Decision Point",
-        "vital_signs": "Vital Signs",
-        "always_available_info": "Always Available Info",
-        "additional_info": "Additional Information",
-        "stage_progress": "Stage {current} of {total}",
-        "dp_progress": "Decision Point {current} of {total}",
-        "branch_context": "Branch context",
-        "branch_dp": "Branch DP {current} of {total}",
-        "explore_branch": "Explore Branch",
-        "branch_trigger_msg": "Your action **{action}** has triggered a branch: *{context}*",
-        "branch_terminal": "This branch leads to a terminal outcome. The scenario will now end.",
-        "branch_terminal_consequence": "Consequence",
-        "go_to_debrief": "Go to Debrief",
-        "performance_debrief": "Performance Debrief",
-        "within_window": "Completed within the {remaining}-minute treatment window.",
-        "exceeded_window": "Exceeded the {remaining}-minute treatment window by {exceeded:.0f} minutes.",
-        "critical_actions_count": "{hit}/{total} critical actions",
-        "lo_assessed": "Learning Objectives Assessed",
-        "lo_assessed_at": "Assessed at",
-        "debrief_citation": "Reference",
-        "phase_select": "Select",
-        "phase_briefing": "Briefing",
-        "phase_simulation": "Simulation",
-        "phase_branch": "Branch",
-        "phase_debrief": "Debrief",
-    },
-    "pt": {
-        "page_title": "Simulador de Cen\u00e1rios Cl\u00ednicos",
-        "page_subtitle": "Simula\u00e7\u00e3o interativa passo a passo de cen\u00e1rios cl\u00ednicos",
-        "upload_label": "Carregar ficheiros JSON de cen\u00e1rios",
-        "upload_help": "Carregue um ou mais ficheiros JSON de cen\u00e1rios para simul\u00e1-los.",
-        "choose_scenario": "Escolher um cen\u00e1rio",
-        "start_simulation": "Iniciar Simula\u00e7\u00e3o",
-        "begin_simulation": "Iniciar Simula\u00e7\u00e3o",
-        "submit_decisions": "Submeter Decis\u00f5es",
-        "next_dp": "Pr\u00f3ximo Ponto de Decis\u00e3o",
-        "next": "Pr\u00f3ximo",
-        "try_again": "Tentar Novamente",
-        "choose_another": "Escolher Outro Cen\u00e1rio",
-        "patient_profile": "Perfil do Paciente",
-        "initial_presentation": "Apresenta\u00e7\u00e3o Inicial",
-        "your_role": "O Seu Papel",
-        "clinical_time_window": "Janela Temporal Cl\u00ednica",
-        "learning_objectives": "Objetivos de Aprendizagem",
-        "available_actions": "A\u00e7\u00f5es Dispon\u00edveis",
-        "performance_summary": "Resumo de Desempenho",
-        "dp_breakdown": "An\u00e1lise por Ponto de Decis\u00e3o",
-        "errors_identified": "Erros Identificados",
-        "clinical_debriefing": "Debriefing Cl\u00ednico",
-        "key_takeaways": "Pontos-Chave",
-        "critical_actions": "A\u00e7\u00f5es Cr\u00edticas",
-        "supportive_actions": "A\u00e7\u00f5es de Suporte",
-        "elapsed_time": "Tempo Decorrido",
-        "preview": "Pr\u00e9-visualiza\u00e7\u00e3o",
-        "back": "Voltar",
-        "no_scenarios": "Nenhum cen\u00e1rio dispon\u00edvel. Carregue um ficheiro JSON ou adicione ficheiros \u00e0 pasta scenarios/.",
-        "no_errors": "Nenhum erro comum identificado \u2014 bom trabalho!",
-        "feedback": "Feedback",
-        "critical_performed": "A\u00e7\u00f5es Cr\u00edticas Realizadas",
-        "critical_hit_total": "Cr\u00edticas Acertadas / Total",
-        "symptom_onset": "In\u00edcio dos sintomas",
-        "treatment_window": "Janela de tratamento",
-        "remaining": "Restante",
-        "language_label": "Idioma",
-        "simulation": "Simula\u00e7\u00e3o",
-        "stage": "Fase",
-        "decision_point": "Ponto de Decis\u00e3o",
-        "vital_signs": "Sinais Vitais",
-        "always_available_info": "Informa\u00e7\u00e3o Sempre Dispon\u00edvel",
-        "additional_info": "Informa\u00e7\u00e3o Adicional",
-        "stage_progress": "Fase {current} de {total}",
-        "dp_progress": "Ponto de Decis\u00e3o {current} de {total}",
-        "branch_context": "Contexto do ramo",
-        "branch_dp": "PD do Ramo {current} de {total}",
-        "explore_branch": "Explorar Ramo",
-        "branch_trigger_msg": "A sua a\u00e7\u00e3o **{action}** desencadeou um ramo: *{context}*",
-        "branch_terminal": "Este ramo conduz a um desfecho terminal. O cen\u00e1rio ir\u00e1 terminar agora.",
-        "branch_terminal_consequence": "Consequ\u00eancia",
-        "go_to_debrief": "Ir para Debriefing",
-        "performance_debrief": "Debriefing de Desempenho",
-        "within_window": "Conclu\u00eddo dentro da janela de tratamento de {remaining} minutos.",
-        "exceeded_window": "Excedeu a janela de tratamento de {remaining} minutos em {exceeded:.0f} minutos.",
-        "critical_actions_count": "{hit}/{total} a\u00e7\u00f5es cr\u00edticas",
-        "lo_assessed": "Objetivos de Aprendizagem Avaliados",
-        "lo_assessed_at": "Avaliado em",
-        "debrief_citation": "Refer\u00eancia",
-        "phase_select": "Selecionar",
-        "phase_briefing": "Briefing",
-        "phase_simulation": "Simula\u00e7\u00e3o",
-        "phase_branch": "Ramo",
-        "phase_debrief": "Debriefing",
-    },
+    "page_title": "Simulador de Cen\u00e1rios Cl\u00ednicos",
+    "page_subtitle": "Simula\u00e7\u00e3o interativa passo a passo de cen\u00e1rios cl\u00ednicos",
+    "upload_label": "Carregar ficheiros JSON de cen\u00e1rios",
+    "upload_help": "Carregue um ou mais ficheiros JSON de cen\u00e1rios para simul\u00e1-los.",
+    "choose_scenario": "Escolher um cen\u00e1rio",
+    "start_simulation": "Iniciar Simula\u00e7\u00e3o",
+    "begin_simulation": "Iniciar Simula\u00e7\u00e3o",
+    "submit_decisions": "Submeter Decis\u00f5es",
+    "next_dp": "Pr\u00f3ximo Ponto de Decis\u00e3o",
+    "next": "Pr\u00f3ximo",
+    "try_again": "Tentar Novamente",
+    "choose_another": "Escolher Outro Cen\u00e1rio",
+    "patient_profile": "Perfil do Paciente",
+    "initial_presentation": "Apresenta\u00e7\u00e3o Inicial",
+    "your_role": "O Seu Papel",
+    "clinical_time_window": "Janela Temporal Cl\u00ednica",
+    "learning_objectives": "Objetivos de Aprendizagem",
+    "available_actions": "A\u00e7\u00f5es Dispon\u00edveis",
+    "performance_summary": "Resumo de Desempenho",
+    "dp_breakdown": "An\u00e1lise por Ponto de Decis\u00e3o",
+    "errors_identified": "Erros Identificados",
+    "clinical_debriefing": "Debriefing Cl\u00ednico",
+    "key_takeaways": "Pontos-Chave",
+    "critical_actions": "A\u00e7\u00f5es Cr\u00edticas",
+    "supportive_actions": "A\u00e7\u00f5es de Suporte",
+    "elapsed_time": "Tempo Decorrido",
+    "preview": "Pr\u00e9-visualiza\u00e7\u00e3o",
+    "back": "Voltar",
+    "no_scenarios": "Nenhum cen\u00e1rio dispon\u00edvel. Carregue um ficheiro JSON ou adicione ficheiros \u00e0 pasta scenarios/.",
+    "no_errors": "Nenhum erro comum identificado \u2014 bom trabalho!",
+    "feedback": "Feedback",
+    "critical_performed": "A\u00e7\u00f5es Cr\u00edticas Realizadas",
+    "critical_hit_total": "Cr\u00edticas Acertadas / Total",
+    "symptom_onset": "In\u00edcio dos sintomas",
+    "treatment_window": "Janela de tratamento",
+    "remaining": "Restante",
+    "simulation": "Simula\u00e7\u00e3o",
+    "stage": "Fase",
+    "decision_point": "Ponto de Decis\u00e3o",
+    "vital_signs": "Sinais Vitais",
+    "always_available_info": "Informa\u00e7\u00e3o Sempre Dispon\u00edvel",
+    "additional_info": "Informa\u00e7\u00e3o Adicional",
+    "stage_progress": "Fase {current} de {total}",
+    "dp_progress": "Ponto de Decis\u00e3o {current} de {total}",
+    "branch_context": "Contexto do ramo",
+    "branch_dp": "PD do Ramo {current} de {total}",
+    "explore_branch": "Explorar Ramo",
+    "branch_trigger_msg": "A sua a\u00e7\u00e3o **{action}** desencadeou um ramo: *{context}*",
+    "branch_terminal": "Este ramo conduz a um desfecho terminal. O cen\u00e1rio ir\u00e1 terminar agora.",
+    "branch_terminal_consequence": "Consequ\u00eancia",
+    "go_to_debrief": "Ir para Debriefing",
+    "performance_debrief": "Debriefing de Desempenho",
+    "within_window": "Conclu\u00eddo dentro da janela de tratamento de {remaining} minutos.",
+    "exceeded_window": "Excedeu a janela de tratamento de {remaining} minutos em {exceeded:.0f} minutos.",
+    "critical_actions_count": "{hit}/{total} a\u00e7\u00f5es cr\u00edticas",
+    "lo_assessed": "Objetivos de Aprendizagem Avaliados",
+    "lo_assessed_at": "Avaliado em",
+    "debrief_citation": "Refer\u00eancia",
+    "phase_select": "Selecionar",
+    "phase_briefing": "Briefing",
+    "phase_simulation": "Simula\u00e7\u00e3o",
+    "phase_branch": "Ramo",
+    "phase_debrief": "Debriefing",
+    # Scenario banner & metadata labels
+    "domain_label": "Dom\u00ednio",
+    "difficulty_label": "Dificuldade",
+    "target_label": "Destinat\u00e1rio",
+    "duration_label": "Dura\u00e7\u00e3o",
+    "duration_value": "~{duration} min",
+    # App-level labels
+    "file_parse_error": "N\u00e3o foi poss\u00edvel processar {filename}",
+    "untitled": "Sem t\u00edtulo",
+    "n_a": "N/D",
+    "source_bundled": "Inclu\u00eddo",
+    "source_uploaded": "Carregado",
+    "source_unknown": "Desconhecido",
+    "preview_stats": "{stages} fase(s), {dps} pontos de decis\u00e3o, {actions} a\u00e7\u00f5es",
+    # Architecture labels
+    "arch_context_engineering": "Engenharia de Contexto",
+    "arch_multi_agent": "Multi-Agente",
+    # Difficulty values (input is Title Case English from scenario JSON)
+    "diff_beginner": "Iniciante",
+    "diff_intermediate": "Interm\u00e9dio",
+    "diff_advanced": "Avan\u00e7ado",
+    "diff_expert": "Especialista",
+    # Target learner values
+    "learner_specialist": "Especialista",
+    "learner_generalist": "Generalista",
+    "learner_resident": "Interno",
+    "learner_student": "Estudante",
+    "learner_attending": "M\u00e9dico Assistente",
+    # Scenario viewer \u2014 patient profile
+    "patient_age": "Idade",
+    "patient_age_unit": "anos",
+    "patient_gender": "Sexo",
+    "patient_complaint": "Queixa Principal",
+    "patient_social": "Contexto Social",
+    "patient_history": "Antecedentes M\u00e9dicos",
+    "patient_medications": "Medica\u00e7\u00e3o",
+    "patient_allergies": "Alergias",
+    "none_reported": "Nenhuma reportada",
+    "no_known_allergies": "Sem alergias conhecidas",
+    # Scenario viewer \u2014 vital signs & time tracker
+    "no_vitals_recorded": "Sem sinais vitais registados",
+    "cardiac_rhythm": "Ritmo Card\u00edaco",
+    "min_remaining": "{left:.0f} min restantes",
+    "min_left_warning": "Apenas {left:.0f} min restantes!",
+    "time_window_exceeded": "Janela temporal excedida!",
+    # Scenario viewer \u2014 debriefing & action card
+    "clinical_reasoning_label": "Racioc\u00ednio Cl\u00ednico",
+    "related_objectives_label": "Objetivos Relacionados",
+    "related_actions_label": "A\u00e7\u00f5es Relacionadas",
+    "common_errors_label": "Erros Comuns",
+    "consequence_label": "Consequ\u00eancia",
+    "related_to": "Relacionado com",
+    "key_learning_label": "Aprendizagem Chave",
+    "citation_label": "Cita\u00e7\u00e3o",
+    "citation_section": "Sec\u00e7\u00e3o",
+    "branch_badge": "Ramo {branch_id}",
+    "finding_label": "Achado",
+    "rationale_label": "Justifica\u00e7\u00e3o",
+    "unknown_action": "A\u00e7\u00e3o desconhecida",
+    # Requirement badge labels
+    "req_critical": "Cr\u00edtica",
+    "req_supportive": "Suporte",
+    "req_optional": "Opcional",
+    # Error type badge labels
+    "err_commission": "COMISS\u00c3O",
+    "err_omission": "OMISS\u00c3O",
 }
 
 
 def _t(key: str, **kwargs) -> str:
-    lang = st.session_state.get("lang", "pt")
-    text = _STRINGS.get(lang, _STRINGS["en"]).get(key, _STRINGS["en"].get(key, key))
+    text = _STRINGS.get(key, key)
     if kwargs:
         try:
             return text.format(**kwargs)
@@ -183,22 +179,40 @@ def _t(key: str, **kwargs) -> str:
     return text
 
 
-def render_language_toggle():
-    with st.sidebar:
-        lang_options = {"English": "en", "Portugu\u00eas": "pt"}
-        current = st.session_state.get("lang", "pt")
-        current_label = "Portugu\u00eas" if current == "pt" else "English"  # noqa: F841
-        selected = st.radio(
-            _t("language_label"),
-            list(lang_options.keys()),
-            index=list(lang_options.values()).index(current),
-            horizontal=True,
-            key="lang_radio",
-        )
-        new_lang = lang_options[selected]
-        if new_lang != current:
-            st.session_state.lang = new_lang
-            st.rerun()
+_DIFFICULTY_KEYS = {
+    "beginner": "diff_beginner",
+    "intermediate": "diff_intermediate",
+    "advanced": "diff_advanced",
+    "expert": "diff_expert",
+}
+
+
+_LEARNER_KEYS = {
+    "specialist": "learner_specialist",
+    "generalist": "learner_generalist",
+    "resident": "learner_resident",
+    "student": "learner_student",
+    "attending": "learner_attending",
+}
+
+
+def translate_difficulty(raw) -> str:
+    if not raw:
+        return _t("n_a")
+    key = _DIFFICULTY_KEYS.get(str(raw).strip().lower())
+    return _t(key) if key else str(raw).title()
+
+
+def translate_target_learner(scenario: dict) -> str:
+    """Prefer the human-readable PT label if the scenario provides one."""
+    label = scenario.get("target_learner_label")
+    if label:
+        return label
+    raw = scenario.get("target_learner")
+    if not raw:
+        return ""
+    key = _LEARNER_KEYS.get(str(raw).strip().lower())
+    return _t(key) if key else str(raw)
 
 
 _DEFAULTS: dict[str, object] = {
@@ -215,7 +229,6 @@ _DEFAULTS: dict[str, object] = {
     "sim_branch_selected": {},
     "sim_completed_branches": set(),
     "uploaded_scenarios": [],
-    "lang": "pt",
 }
 
 
@@ -227,13 +240,11 @@ def init_session_state():
 
 
 def reset_simulation():
-    """Reset all simulation state, preserving uploads and language."""
+    """Reset all simulation state, preserving uploads."""
     uploaded = st.session_state.get("uploaded_scenarios", [])
-    lang = st.session_state.get("lang", "pt")
     for key, default in _DEFAULTS.items():
         st.session_state[key] = default
     st.session_state.uploaded_scenarios = uploaded
-    st.session_state.lang = lang
 
 
 _PHASES = ["select", "briefing", "play", "debrief"]
@@ -271,16 +282,16 @@ def render_scenario_banner(scenario: dict):
     subdomain = scenario.get("subdomain", "")
     if domain:
         label = f"{domain} \u203a {subdomain}" if subdomain else domain
-        items.append(("Domain", label))
+        items.append((_t("domain_label"), label))
     difficulty = scenario.get("difficulty")
     if difficulty:
-        items.append(("Difficulty", difficulty.title()))
-    target = scenario.get("target_learner")
+        items.append((_t("difficulty_label"), translate_difficulty(difficulty)))
+    target = translate_target_learner(scenario)
     if target:
-        items.append(("Target", target))
+        items.append((_t("target_label"), target))
     duration = scenario.get("estimated_duration_minutes")
     if duration:
-        items.append(("Duration", f"~{duration} min"))
+        items.append((_t("duration_label"), _t("duration_value", duration=duration)))
     if items:
         config_banner(items)
 
@@ -305,7 +316,6 @@ def _get_current_stage(scenario):
 
 
 def phase_briefing():
-    render_language_toggle()
     scenario = st.session_state.sim_scenario_data
     page_header(_t("page_title"), scenario.get("title", ""))
     render_phase_indicator("briefing")
@@ -378,7 +388,6 @@ def phase_briefing():
 
 
 def phase_play():
-    render_language_toggle()
     scenario = st.session_state.sim_scenario_data
     stage = _get_current_stage(scenario)
     dps = _get_current_dps(scenario)
@@ -545,7 +554,6 @@ def _check_branch_triggers_auto(scenario, dp, selected_actions) -> bool:
 
 
 def phase_branch():
-    render_language_toggle()
     scenario = st.session_state.sim_scenario_data
     branch_id = st.session_state.sim_active_branch_id
 
@@ -653,7 +661,6 @@ def phase_branch():
 
 
 def phase_debrief():
-    render_language_toggle()
     scenario = st.session_state.sim_scenario_data
     page_header(_t("page_title"), _t("performance_debrief"))
     render_phase_indicator("debrief")
@@ -752,7 +759,8 @@ def phase_debrief():
                     else:
                         mark = "\u2611\ufe0f" if was_selected else "\u2610"
 
-                    req_label = req.title()
+                    req_key = {"critical": "req_critical", "supportive": "req_supportive"}.get(req, "req_optional")
+                    req_label = _t(req_key)
                     st.markdown(f"{mark} `{aid}` [{req_label}] {action.get('description', '')}")
 
     st.markdown("---")
@@ -779,14 +787,15 @@ def phase_debrief():
         for error in matched_errors:
             error_type = error.get("_match_reason", "unknown")
             badge_cls = "badge-commission" if error_type == "commission" else "badge-omission"
+            err_label = _t("err_commission") if error_type == "commission" else _t("err_omission")
             st.markdown(
-                f'<span class="{badge_cls}">{_esc(error_type.upper())}</span> '
+                f'<span class="{badge_cls}">{_esc(err_label)}</span> '
                 f"**{_esc(error.get('description', ''))}**",
                 unsafe_allow_html=True,
             )
-            st.markdown(f"*Consequence:* {error.get('consequence', 'N/A')}")
+            st.markdown(f"*{_t('consequence_label')}:* {error.get('consequence', _t('n_a'))}")
             if error.get("_key_learning"):
-                st.caption(f"Key Learning: {error['_key_learning']}")
+                st.caption(f"{_t('key_learning_label')}: {error['_key_learning']}")
             st.markdown("")
     else:
         st.success(_t("no_errors"))
